@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>理论中国网-2022年第4期</title>
+    
+  <meta name="keywords" content="党的历史和理论,党史和文献,党史,党的历史,中央党史和文献研究院,文献研究室,党史研究室,中央编译局,马克思主义,理论研究,新时代,马恩经典,马克思主义中国化,国际传播,中国故事,中国话语体系,中国特色社会主义,人类命运共同体,毛泽东,周恩来,邓小平,理论动态,今日中国,国际交流,领导人著作,党的文献,人大文献,政府文献,政协文献,中央文献,党和国家重要文献"/>
+  <meta name="description" content="理论中国网是中央党史和文献研究院主管主办的多语种理论外宣网站，通过中文，英文，法文，德文，日文，俄文，西班牙文，阿拉伯文8个语种，对外宣介习近平新时代中国特色社会主义思想、党的历史和理论，权威讲述中国共产党故事、党的领袖故事、中国故事。"/>
+    
+  <link rel="stylesheet" href="/template/css/reset.css"> 
+  <link rel="stylesheet" href="/template/css/zhongwen.css">
+  <link rel="stylesheet" href="/template/css/list.css">
+  <link rel="stylesheet" href="/template/css/list_qkyl.css">
+    
+  
+  <script src='/template/js/jquery.js'></script>
+    <script src='/template/js/column.js'></script>
+    <style>
+    .detail_right{float:right}
+    </style>
+</head>
+<body> 
+  
+  <div class='p1'>
+
+    <!-- 头部 -->
+       
+<base target="_blank" />
+<script>
+$(function(){
+  try{
+  	$(".pagebar").find("a").attr("target","_self");
+  }catch(e){}
+})
+</script>
+<div class='top'>
+      <div class='top_list clearfix'>
+        <ul class='top_left'>
+          <li><a href="https://www.theorychina.org.cn">中文</a></li>
+          <li><a href="https://en.theorychina.org.cn">English</a></li>
+          <li><a href="https://fr.theorychina.org.cn">Français</a></li>
+          <li><a href="https://ru.theorychina.org.cn">Pусский</a></li>
+          <li><a href="https://sp.theorychina.org.cn">Español</a></li>
+          <li><a href="https://ge.theorychina.org.cn">Deutsch</a></li>
+          <li><a href="https://jp.theorychina.org.cn">日本語</a></li>
+          <li><a href="https://ab.theorychina.org.cn">العربية</a></li>
+        </ul>
+        <div class='top_right'><a href="http://www.dswxyjy.org.cn/">中共中央党史和文献研究院</a></div>
+      </div>
+    </div>
+ 
+     <!-- p1导航 -->
+    <div class='p1_logo_literature clearfix'>
+      <div class="p1_logo">
+        <a href="http://www.theorychina.org/"><img src="/template/images/big_logo.png" alt=""></a>
+      </div>
+      <div class='p1_literature'>
+        <div class='p1_search'>
+          <input type="text"  class='search_txt' value='' name='searchword'>
+          <div class='search_bt' onclick='doSearch()' style='cursor:pointer'>检索</div>
+        </div>
+        <ul class='clearfix'>
+           <li><a href="/llzgxs/lxzz_894/" >领导人著作</a></li> 
+          <li><a href="/llzgxs/ddwx/zggcddescqgdbdh/" >党的文献</a></li>
+          <li><a href="/llzgxs/rdwx/dssjqgrmdbdh_444/" >人大文献</a></li>
+          <li><a href="/llzgxs/zfwx/2023n_704/" >政府文献</a></li>
+          <li><a href="/llzgxs/zxwx/qgzxdssjqgwyhhy_787/" >政协文献</a></li>
+          <li><a href="/yjcg/" >研究成果</a></li>
+         
+        </ul>
+      </div>
+      <div class='official_account' style='display:none;'>
+        <img src="/template/images/qr_code.png" alt="">
+        <p>扫描关注官方公众号</p>
+      </div>
+    </div>
+    <div class='p1_nav'>
+      <ul class="clearfix">
+          <li><a href="https://www.theorychina.org.cn/">首页</a></li>
+          <li><a href="/llzgxs/lldt_235/" >理论动态</a></li>
+          <li><a href="/llzgxs/llqy_79/" >理论前沿</a></li>
+          <li><a href="/llzgxs/jrzg_923/" >今日中国</a></li>
+          <li><a href="/gjjl/" >国际交流</a></li>          
+          <li class="top_menu">
+			<a href="javascript:void(0);" target="_self">书刊信息</a>
+				<div class="two_menu">
+                    <a href="/llzgxs/xsjs_576/">新书推荐</a>                  
+                    <a href="/llzg-xs/qkyl_28/">期刊要览</a>
+                </div>
+          </li>
+          <!-- <li><a href='#'>专题集锦</a></li>-->
+          <li><a href="/ztjj/" >专题集锦</a></li>
+          <li><a href="/yxzl/" >影像资料</a></li>
+          <li><a href="/c/2012-12-05/1269233.shtml">关于我们</a></li>
+       
+      </ul>
+    </div>
+        
+ <script>
+
+  function doSearch(){
+    var siteUrl = "https://www.theorychina.org.cn/";
+    if(!$(".search_txt").val() || !$(".search_txt").val().trim()){
+      alert('搜索内容不能为空')
+      return;
+    }
+    if((window.location.href).indexOf('search')>-1){
+      var url=siteUrl+"/template/search/search.shtml?SiteID=170&query="+encodeURIComponent($(".search_txt").val());
+      window.location.href=url;
+    }else{
+      var url=siteUrl+"/template/search/search.shtml?SiteID=170&query="+encodeURIComponent($(".search_txt").val());
+      window.open(url);
+    }
+    // var url="http://cms.peopletech.cn/preview/kfw/template/search/search.shtml?SiteID=170&query="+encodeURIComponent($(".search_txt").val());
+   //http://en.theorychina.org/search.shtml
+  }
+
+  $(".search_txt").keydown(function(event){
+    if(event.keyCode ==13){
+      doSearch();
+      console.log('enter');
+    }
+  });
+
+</script> 
+     <!-- 通栏图1 -->
+      
+
+ <div class="banner1">
+    <div class="swiper-banner1">
+         <div class="swiper-wrapper">
+                
+                    
+                         <div class="swiper-slide">
+                            <a href="http://www.dswxyjy.org.cn/GB/427277/422505/index.html" target="_blank">
+                              <img src="https://www.theorychina.org.cn/upload/resources/image/2021/06/23/1919472_1207x120c.png" alt="" />                      
+                           </a>
+                      </div>
+                                                             
+           </div>    
+      </div>
+</div>
+
+
+<!--list--> 
+ <div class="bread"><a href='/'>首页</a> > <a href='/llzg-xs/qkyl_28/'>期刊要览</a> > <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/'>中共中央党校（国家行政学院）学报</a> > <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2022nd4q/'>2022年第4期</a></div>
+    
+    <div class='detail_title'>书刊信息</div>
+    <div class='detail_bkyl clearfix '> 
+         <div class='detail_left'>
+            <!-- <cms:article   catalogID="${Catalog.ID}"  level="Current" count="1" loadExtend='true' loadContent='true' >
+               <z:list>
+                   <h3>${Article.Title}</h3>
+              		${(Article.Content)}
+                </z:list>
+           </cms:article >-->
+          
+             
+              
+                 <h3>《中共中央党校(国家行政学院)学报》2022年第4期</h3>
+              		<p style="text-align: center;">目录</p><p style="text-align: justify;">习近平新时代中国特色社会主义思想研究</p><p style="text-align: justify;">中国特色社会主义政治经济学视角下的中国式现代化道路</p><p style="text-align: justify;">张素峰</p><p style="text-align: justify;">坚持人民至上的观念认知、制度支撑及运行机制</p><p style="text-align: justify;">陈家刚;陈凌宇</p><p style="text-align: justify;">论发展全过程人民民主与新时代民生建设</p><p style="text-align: justify;">杨渊浩;程竹汝</p><p style="text-align: justify;">&nbsp;</p><p style="text-align: justify;">中共党史</p><p style="text-align: justify;">中华优秀传统文化与马克思主义中国化的三次飞跃</p><p style="text-align: justify;">张卫波</p><p style="text-align: justify;">中共党史学“三大体系”建设的历史性契机</p><p style="text-align: justify;">宋学勤;马骋</p><p style="text-align: justify;">&nbsp;</p><p style="text-align: justify;">专题·社会治理</p><p style="text-align: justify;">新发展阶段社会建设与构建新发展格局</p><p style="text-align: justify;">杨典;向静林</p><p style="text-align: justify;">基本公共服务均等化的政策逻辑与深化:共同富裕视角</p><p style="text-align: justify;">袁威</p><p style="text-align: justify;">老少边穷地区公共文化服务软治理路径建构研究</p><p style="text-align: justify;">熊皇;宫慧颖 ;许艳艳</p><p style="text-align: justify;">&nbsp;</p><p style="text-align: justify;">专题·构建新发展格局</p><p style="text-align: justify;">全球价值链视角下的发展格局:结构、循环与效应分析</p><p style="text-align: justify;">刘志彪</p><p style="text-align: justify;">新发展格局下区域协调发展的战略骨架与路径构想</p><p style="text-align: justify;">孙久文;蒋治</p><p style="text-align: justify;">新发展阶段我国经济增长动能转换及路径优化——基于需求侧与供给侧双轮驱动框架</p><p style="text-align: justify;">张红凤;李晓婷;蒲存秀</p><p style="text-align: justify;">&nbsp;</p><p style="text-align: justify;">专题·中国国际传播能力建设</p><p style="text-align: justify;">智能传播时代如何塑造中国国际形象——以2022年北京冬奥会国际传播为视角</p><p style="text-align: justify;">史小今;吴金希</p><p style="text-align: justify;">国际战略视域下的中国国际传播能力建设评估体系研究</p><p style="text-align: justify;">刘佳</p><p style="text-align: justify;">政治学与公共管理</p><p style="text-align: justify;">论中国式治理现代化个性</p><p style="text-align: justify;">宋世明</p><p style="text-align: justify;">不同培养方式对领导干部发展影响效能的比较</p><p style="text-align: justify;">萧鸣政;张睿超</p><p style="text-align: justify;">&nbsp;</p><p style="text-align: justify;">法学</p><p style="text-align: justify;">环境法独立性阐释与环境法典编纂</p><p style="text-align: justify;">张璐</p><p style="text-align: justify;">我国行政诉讼功能模式的演进、局限及其转型</p><p style="text-align: justify;">邓刚宏</p><p><br/></p>                             
+            
+                                  
+          
+           
+           
+         </div>
+         <div class='detail_right'>
+             <h3>2022年第4期</h3>
+             <div class='detail_img'>
+               
+                   
+                     
+                       <img src="/upload/resources/image/2022/09/29/1929993.jpg" alt="">
+                     
+                
+             </div>
+             <ul class='detail_right_list clearfix'>
+                 
+                   
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2022nd4q/'> <p>
+                                         2022年第4期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2022nd2q/'> <p>
+                                         2022年第3期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2022nd2q/'> <p>
+                                         2022年第2期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2022nd1q/'> <p>
+                                         2022年第1期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2021nd6q/'> <p>
+                                         2021年第6期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2021nd5q/'> <p>
+                                         2021年第5期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2021nd4q/'> <p>
+                                         2021年第4期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2021nd3q/'> <p>
+                                         2021年第3期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2021nd2q/'> <p>
+                                         2021年第2期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2021nd1q/'> <p>
+                                         2021年第1期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2020nd6q/'> <p>
+                                         2020年第6期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2020nd5q/'> <p>
+                                         2020年第5期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2020nd4q/'> <p>
+                                         2020年第4期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/qkyl/zgzydxgjxzxyxb_949/2020nd3q/'> <p>
+                                         2020年第3期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/zgzydxgjxzxyxb/2020nd2q_318/'> <p>
+                                         2020年第2期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/zgzydxgjxzxyxb/2020nd1q_417/'> <p>
+                                         2020年第1期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/zgzydxgjxzxyxb/2019nd6q_903/'> <p>
+                                         2019年第6期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/zgzydxgjxzxyxb/2019nd5q_823/'> <p>
+                                         2019年第5期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/zgzydxgjxzxyxb/2019nd4q_312/'> <p>
+                                         2019年第4期
+                                    </p></a>  
+                        
+                      </li> 
+                   	<li>
+                        <a href='/llzg-xs/zgzydxgjxzxyxb/2019nd3q_314/'> <p>
+                                         2019年第3期
+                                    </p></a>  
+                        
+                      </li>  
+             	 
+             </ul>
+             <div class='detail_btn_more'>点击查看更多</div>
+             <div class='detail_btn_more_hide'>点击收起</div>
+         </div>
+    </div>
+
+       
+
+   
+  </div>
+       
+<div class="footer">
+   <!-- 友情链接 -->
+      
+
+
+<style>
+.footer {
+    min-height: 275px;
+    height: auto;
+}
+.friendLink {
+    width: 100%;
+    height: auto;
+    background: #FFEBCF;
+    border: 1px solid #ffce8b;
+    padding: 10px 0 20px;
+}
+.friendLink .friendLink_title{
+    float: left;
+}
+.friendLink .friendLink_title h3{
+    float: left;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    line-height: 50px;
+    margin-top: 35px;
+    border-bottom: 2px solid #c22800;
+    padding-left: 25px;
+    background: url('/template/images/two.png') left no-repeat;
+}
+.friendLink ul {
+    display: block;
+    float: left;
+}
+.friendLink ul li{
+    display: block;
+    height: auto;
+    float: left;
+    padding: 0 70px 0 70px;
+    border-left: 1px solid #dbdbdb;
+    font-size: 14px;
+    line-height: 2;
+    font-family: SimSun;
+    text-align: left;
+    color: #333;
+}
+.friendLink ul li:first-child{
+    border-left: none;
+}
+.friendLink ul li a {
+    display: block;
+    color: #333;
+}
+.friendLink div.ewm{
+    display: block;
+    float: right;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+</style>
+
+<div class="friendLink clearfix">
+    <div class="friendLink_list w1180 clearfix">
+        <div class="friendLink_title clearfix">
+          <h3>友情链接</h3>
+        </div>
+        <ul>
+            <li>
+          	
+            
+			<a href="http://www.qstheory.cn/" target="_blank">求是网</a>
+            
+			<a href="http://www.gongwei.org.cn/" target="_blank">旗帜网</a>
+            
+			<a href="http://www.71.cn/" target="_blank">宣讲家网</a>
+            
+			<a href="http://www.cssn.cn/" target="_blank">中国社会科学网</a>
+            
+			<a href="http://www.cntheory.com/" target="_blank">中央党校网理论网</a>
+            
+            </li><li>
+            
+			<a href="http://www.nopss.gov.cn/" target="_blank">全国哲学社会科学工作办公室</a>
+            
+			<a href="http://hprc.cssn.cn/" target="_blank">中华人民共和国国史网</a>
+            
+			<a href="http://theory.people.com.cn/" target="_blank">人民网理论频道</a>
+            
+			<a href="http://www.xinhuanet.com/theory/" target="_blank">新华网理论频道</a>
+            
+			<a href="http://china.chinadaily.com.cn/theory" target="_blank">中国日报网理论频道</a>
+            
+            </li><li>
+            
+			<a href="http://theory.gmw.cn/" target="_blank">光明网理论频道</a>
+            
+			<a href="https://www.ccpph.com.cn/" target="_blank">中国理论网</a>
+            
+			<a href="http://views.ce.cn/" target="_blank">中国经济网理论频道</a>
+            
+			<a href="http://www.chinanews.com/theory/" target="_blank">中新网理论频道</a>
+            
+			<a href="http://www.81.cn/theory/index.htm" target="_blank">中国军网理论频道</a>
+            </li>
+        </ul>
+        <div class="ewm">
+            <img src="/template/images/qr_code.png" alt="">
+            <p>扫描关注官方公众号</p>
+        </div>
+    </div>
+</div>
+
+
+     <!-- 尾部 -->
+      
+
+<div class='copy'>
+      <div class='copy_list clearfix'>
+        <span class='code'><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript   src='//dcs.conac.cn/js/33/000/0000/40672318/CA330000000406723180002.js' type='text/javascript'%3E%3C/script%3E"));</script></span>
+        <p>版权所有中央党史和文献研究院</p>
+        <p>建议以IE8.0以上版本浏览器浏览本页面京ICP备11039383号-6京
+          公网安备11010202000010  </p>
+      </div>
+ </div>
+</div>
+
+
+
+<script src="https://www.theorychina.org.cn/zcms/stat/front/stat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_stat)_zcms_stat("SiteID=170&CatalogInnerCode=002285000006000058&Type=null&Dest=https://www.theorychina.org.cn/zcms/front/stat/dealer");
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9f4b13cdfc6794f1520f9029e4ebd768";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="//s25.cnzz.com/stat.php?id=4378561&web_id=4378561&show=pic" language="JavaScript"></script>
+<script src='//www.theorychina.org.cn/template/js/track.js'></script>
+<!-- App=CMS(CMS内容管理系统) 3.1.17,CostTime=45,PublishDate=2022-09-29 13:46:42 -->
+</body>
+<script>
+    $(function(){
+        $('.detail_btn_more').click(function(){
+            
+            $('.detail_btn_more_hide').show();
+            $('.detail_right ul').addClass('h');
+            $('.detail_btn_more').hide();
+        })
+        $('.detail_btn_more_hide').click(function(){
+             
+            $('.detail_btn_more_hide').hide();
+            $('.detail_right ul').removeClass('h');
+            $('.detail_btn_more').show();
+        })
+        
+    })
+</script>
+</html>

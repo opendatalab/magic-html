@@ -1,0 +1,1222 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>中国艺术品网</title>
+<meta name="keywords" content="中国艺术,中国艺术品,中国工艺品,艺术,艺术品,工艺品,画家,艺术家,艺术品投资,艺术新闻,展览,美术馆,画廊,艺博会,现当代艺术,艺术史,碑帖,古代艺术,国画,版画,油画,水彩,雕塑,书法篆刻,摄影">
+<meta name="description" content="中国艺术品网(www.cnarts.net) “集艺术瑰宝,驾艺术桥梁” 中国领先的艺术类专业门户网站 具有：艺术新闻,网上展览，艺术资讯，工艺资讯，展会发布，展览预告的中国艺术品收藏资讯平台。合作伙伴：国家博物馆;上海双年展;上海艺术博览会;上海春季艺术沙龙了上海美术馆;刘海粟美术馆;上海艺术博览会;上海春季艺术沙龙;上海油画雕塑院;上海油画雕塑院美术馆;上海大学美术学院网站;中国艺术视窗网;上海游艇会">
+<meta name="Author" content="集艺术瑰宝，架艺术桥梁——中国艺术品网">
+<meta name="Robots" content="all">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="/cweb/css/fonts.css" rel="stylesheet" type="text/css">
+<link href="/cweb/css/css.css" rel="stylesheet" type="text/css">
+<link href="/cweb/css/index_layout.css" rel="stylesheet" type="text/css">
+<link href="/cweb/css/header.2.1.css" rel="stylesheet" type="text/css">
+<!--[if IE]>
+<SCRIPT src="/cweb/js/html5.js"></SCRIPT>
+<![endif]-->
+<script src="/cweb/js/jquery-1.4.4.min.js"></script>
+<script src="/cweb/js/slides.min.jquery.js"></script>
+<script src="/cweb/js/Jquery_marquee.js"></script>
+<script type="text/javascript" src="/cweb/js/jquery.clearfield.js"></script>
+<script type="text/javascript" src="/cweb/js/header.js"></script>
+<!--[首页广告图JS]-->
+<script type="text/javascript">
+
+</script>
+<!--[首页广告图JS] 结束-->
+
+<script>
+//WshShell.RegWrite("HKCU\\Software\\Microsoft\\Internet Explorer\\New Windows\\PopupMgr","no");
+<!--
+/*tab切换脚本*/
+function setTab(name,cursel,n){
+/*参数意义:name为标签id标识,即不带数字的,cursel为标签数字,n为一共有几个标签*/
+    for(i=1;i<=n;i++){
+        var menu=document.getElementById(name+i); /*循环取得所有标签*/
+        var con=document.getElementById("tab_"+name+"_"+i); /*循环取得所有的内容块*/
+        menu.className=i==cursel?"con":""; /*判断自身的数字是否等于con*/
+        con.style.display=i==cursel?"block":"none"; /*如果是则显示出当前标签所应的内容块,否则隐藏*/
+    }
+}
+//-->
+$(function(){
+        $('#slides').slides({
+            effect: 'fade',
+            fadein: 'fast',
+            preload: false,
+            preloadImage: '/cweb/images/loading.gif',
+            play: 6000,
+            pause: 2500,
+            hoverPause: true,
+            animationStart: function(current){
+                $('.captiono').animate({
+                    bottom:-35
+                },100);
+                //alert("2222");
+                if (window.console && console.log) {
+                    // example return of current slide number
+                    console.log('animationStart on slide: ', current);
+                };
+            },
+            animationComplete: function(current){
+                $('.captiono').animate({
+                    bottom:4
+                },200);
+                if (window.console && console.log) {
+                    // example return of current slide number
+                    console.log('animationComplete on slide: ', current);
+                };
+            },
+            slidesLoaded: function() {
+                $('.captiono').animate({
+                    bottom:4
+                },200);
+            }
+        });
+		//
+
+        $('#focus').slides({
+            effect: 'fade',
+            fadein: 'fast',
+            preload: false,
+            preloadImage: '/cweb/images/loading.gif',
+            play: 7000,
+            pause: 5000,
+            hoverPause: true
+		});
+    //艺术展厅JS——start
+        $('#art_exhibition_content_flist').slides({
+            //container: 'art_exhibition_content_flist',
+            play: 15000,
+            pause: 2500,
+            hoverPause: true,
+            paginationClass: 'pagination1',
+            hoverPause: true,
+            generateNextPrev: false
+        });
+    });
+    //艺术展厅JS——end
+    //首页顶部滚动鼠标经过变色
+    $(function(){ //文档加载
+     $(".top_lab").css("width","172px"); //设置表格背景颜色为黑色
+     $(".top_lab").hover(
+     function(){
+               $(this).addClass("top_lab_hover");    //鼠标经过添加hover样式
+     },
+     function(){
+               $(this).removeClass("top_lab_hover");   //鼠标离开移除hover样式
+     }
+     );
+});
+</script>
+</head>
+<!--2016NewYear add by Pan Start-->
+<!--<body style="background:url(/cweb/images/2014newyear/2014newyear_02.jpg) no-repeat center 269px #e5a641">
+<div style="height:269px; width:100%; background:url(/cweb/images/2014newyear/2014newyear_01.jpg) no-repeat center;"></div>
+<div style="width:110px; position:fixed; left:50%; margin-left:-620px; top:206px;"><img src="/uploadimages/cweb/news/2016-02/2016-02-07/shangilian2016.jpg" border="0" width="107"  /></div>
+<div style="width:110px; position:fixed; right:50%; margin-right:-620px; top:206px;"><img src="/uploadimages/cweb/news/2016-02/2016-02-07/xialian2016.jpg" border="0" width="107" /></div>-->
+<!--2016NewYear End-->
+<!--<DIV align="center" style=" padding:0; margin:0;border:0;" id=js_ads_banner_top_slide><IMG src="/uploadimages/cweb/news/2013-02/2013-02-06/2013-02-06_18151129.jpg" width=1000 height=245  style="border:0;"></DIV>-->
+
+<body><div style="width:1000px; margin:0 auto; background:#ffffff;">
+
+<script type="text/javascript" src="/cweb/js/iepngfix_tilebg.js"></script>
+<style>
+img, div, input { behavior: url("/cweb/js/iepngfix.htc") }
+</style>
+<link rel="dns-prefetch" href="img.cnarts.net.cn">
+<link href="/cweb/css/header.2.1.css" rel="stylesheet" type="text/css">
+<div id="top_bg">
+<div class="top_bg1">
+<div class="top_bg2">
+ <ul>
+<!--  <li><a href="#">网站地图</a></li>
+  <li>|</li>
+  <li><a href="#">English</a></li>
+  <li>|</li>
+  <li><a href="#">主编邮箱</a></li>-->
+ </ul>
+ <script>
+  var   CalendarData=new   Array(20);
+  var   madd=new   Array(12);
+  var   TheDate=new   Date();
+  var   tgString="甲乙丙丁戊己庚辛壬癸";
+  var   dzString="子丑寅卯辰巳午未申酉戌亥";
+  var   numString="一二三四五六七八九十";
+  var   monString="正二三四五六七八九十冬腊";
+  var   weekString="日一二三四五六";
+  var   sx="鼠牛虎兔龙蛇马羊猴鸡狗猪";
+  var   cYear;
+  var   cMonth;
+  var   cDay;
+  var   cHour;
+  var   cDateString;
+  var   DateString;
+  var   Browser=navigator.appName;
+
+  function   init()
+  {
+      CalendarData[0]=0x41A95;
+      CalendarData[1]=0xD4A;
+      CalendarData[2]=0xDA5;
+      CalendarData[3]=0x20B55;
+      CalendarData[4]=0x56A;
+      CalendarData[5]=0x7155B;
+      CalendarData[6]=0x25D;
+      CalendarData[7]=0x92D;
+      CalendarData[8]=0x5192B;
+      CalendarData[9]=0xA95;
+      CalendarData[10]=0xB4A;
+      CalendarData[11]=0x416AA;
+      CalendarData[12]=0xAD5;
+      CalendarData[13]=0x90AB5;
+      CalendarData[14]=0x4BA;
+      CalendarData[15]=0xA5B;
+      CalendarData[16]=0x60A57;
+      CalendarData[17]=0x52B;
+      CalendarData[18]=0xA93;
+      CalendarData[19]=0x40E95;
+      madd[0]=0;
+      madd[1]=31;
+      madd[2]=59;
+      madd[3]=90;
+      madd[4]=120;
+      madd[5]=151;
+      madd[6]=181;
+      madd[7]=212;
+      madd[8]=243;
+      madd[9]=273;
+      madd[10]=304;
+      madd[11]=334;
+    }
+
+  function   GetBit(m,n)
+  {
+        return   (m>>n)&1;
+  }
+
+  function   e2c()
+  {
+      var   total,m,n,k;
+      var   isEnd=false;
+      var   tmp=TheDate.getYear();
+      if   (tmp<1900)     tmp+=1900;
+      total=(tmp-2001)*365
+          +Math.floor((tmp-2001)/4)
+          +madd[TheDate.getMonth()]
+          +TheDate.getDate()
+          -23;
+      if   (TheDate.getYear()%4==0&&TheDate.getMonth()>1)
+          total++;
+      for(m=0;;m++)
+      {
+          k=(CalendarData[m]<0xfff)?11:12;
+          for(n=k;n>=0;n--)
+          {
+              if(total<=29+GetBit(CalendarData[m],n))
+              {
+                  isEnd=true;
+                  break;
+              }
+              total=total-29-GetBit(CalendarData[m],n);
+          }
+          if(isEnd)break;
+      }
+      cYear=2001   +   m;
+      cMonth=k-n+1;
+      cDay=total;
+      if(k==12)
+      {
+          if(cMonth==Math.floor(CalendarData[m]/0x10000)+1)
+              cMonth=1-cMonth;
+          if(cMonth>Math.floor(CalendarData[m]/0x10000)+1)
+              cMonth--;
+      }
+      cHour=Math.floor((TheDate.getHours()+3)/2);
+  }
+
+  function   GetcDateString()
+  {   var   tmp="";
+      tmp+=tgString.charAt((cYear-4)%10);       //年干
+      tmp+=dzString.charAt((cYear-4)%12);       //年支
+      tmp+="年(";
+      tmp+=sx.charAt((cYear-4)%12);
+      tmp+=")   ";
+      if(cMonth<1)
+      {
+        tmp+="闰";
+          tmp+=monString.charAt(-cMonth-1);
+      }
+      else
+          tmp+=monString.charAt(cMonth-1);
+      tmp+="月";
+      tmp+=(cDay<11)?"初":((cDay<20)?"十":((cDay<30)?"廿":"卅"));
+      if(cDay%10!=0||cDay==10)
+          tmp+=numString.charAt((cDay-1)%10);
+      tmp+="";
+      if(cHour==13)tmp+="";
+          tmp+="";
+      tmp+="";
+      cDateString=tmp;
+      return   tmp;
+  }
+
+  function   GetDateString()
+  {
+      var   tmp="";
+      var   t1=TheDate.getYear();
+      if   (t1<1900)t1+=1900;
+      tmp+=t1
+                +"年"
+                +(TheDate.getMonth()+1)+"月"
+                +TheDate.getDate()+"日   "
+                +"   星期"+weekString.charAt(TheDate.getDay());
+      DateString=tmp;
+      return   tmp;
+  }
+    init();
+  e2c();
+  GetDateString();
+  GetcDateString();
+  document.write(DateString,"    | 农历  ",cDateString);
+
+</script>2024年4月28日      星期日    | 农历  甲辰年(龙)   二月十二
+ <div class="so">
+  <ul>
+   <li><a target="_blank" href="http://dz.cnarts.net.cn/forum.php">登录</a></li><li>|</li><li><a target="_blank" href="http://dz.cnarts.net.cn/member.php?mod=register">注册</a></li><!--<li>|</li><li><a href="#">帮助</a></li><li class="input"><input name="text" type="text" class="search-text" id="text" onFocus="if (value =='站内信息搜索'){value =''}" onblur="if (value ==''){value='站内信息搜索'}" value='站内信息搜索'  /></li><li class="input"><input type="image" name="imageField" id="imageField" src="images/so1.jpg" /></li--></ul>
+ </div>
+</div></div>
+</div>
+<header>
+
+<!-- Start: Primary navigation -->
+<nav id="primnav" class="clearfix">
+<ul id="header_topnav">
+  <li id="ch1" class="channels chsy"><a class="dropdown" href="/cweb/index.asp">主页</a><span></span>
+  </li><li id="ch2" class="channels chYsxw"><a class="dropdown" href="/cweb/news/">艺术新闻</a><span></span>
+  <div id="sect1" class="sections clearfix">
+  <ul>
+    <li><a target="_blank" href="/cweb/news/news_list.asp?kind=%E8%89%BA%E6%9C%AF">艺术传真</a></li>
+    <li><a target="_blank" href="/cweb/news/news_list.asp?kind=%E5%B1%95%E8%A7%88">展览资讯</a></li>
+    <li><a target="_blank" href="/cweb/news/news_list.asp?kind=%E9%9B%86%E8%97%8F">集藏信息</a></li>
+    <li><a target="_blank" href="/cweb/news/news_list.asp?kind=%E6%8B%8D%E5%8D%96">拍卖快讯</a></li>
+    <li><a target="_blank" href="/cweb/news/zt_news_list.asp?kind=%E4%B8%93%E9%A2%98">专题新闻</a></li>
+  </ul>
+  <ul class="last">
+    <!--<LI><A  target='_blank'  href="#">林明杰专题</A> -->
+    <li><a target="_blank" href="/cweb/news/zt_read.asp?masterid=62&amp;topic=%E5%BC%A0%E6%8C%AF%E5%AE%87%E2%80%94%E2%80%94%E7%88%B1%E7%89%A9%E7%90%90%E8%AE%B0">张振宇——爱物琐记</a> </li>
+	</ul>
+  <div class="header_navpromo">
+	<a target="_blank" href="/cweb/news/read.asp?kind=滚动&amp;id=479749"><img height="95" width="150" alt="从“澄泥砚”学起" src="http://img.cnarts.net.cn/cweb/news/2022-06/2022-06-21/2022621102923.jpg"></a><h4><a target="_blank" href="/cweb/news/read.asp?kind=滚动&amp;id=479749">从“澄泥砚”学起</a></h4>
+  </div></div>
+
+  </li><li id="ch3" class="channels chyszt"><a class="dropdown" href="/cweb/Exhibition/">艺术展厅</a><span></span>
+  <div id="sect2" class="sections clearfix">
+  <ul>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=painting&amp;kind=%E5%9B%BD%E7%94%BB">国画</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=oil&amp;kind=%E6%B2%B9%E7%94%BB">油画</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=watercolour&amp;kind=%E6%B0%B4%E5%BD%A9">水彩</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=print&amp;kind=%E7%89%88%E7%94%BB">版画</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=handwriting&amp;kind=%E4%B9%A6%E6%B3%95">书法</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=sculpture&amp;kind=%E9%9B%95%E5%A1%91">雕塑</a></li>
+  </ul>
+  <ul class="last">
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=photograph&amp;kind=%E6%91%84%E5%BD%B1">摄影</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=colligate&amp;kind=%E7%BB%BC%E5%90%88">综合</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=mjyy&amp;kind=%E5%90%8D%E5%AE%B6%E8%89%BA%E8%8B%91">名家艺苑</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=gdys&amp;kind=%E5%8F%A4%E4%BB%A3%E8%89%BA%E6%9C%AF">古代艺术</a></li>
+    <li><a href="/cweb/Exhibition/gallery.asp?type=hlml&amp;kind=%E7%94%BB%E5%BB%8A%E5%90%8D%E5%BD%95">画廊名录</a></li>
+	</ul>
+  <div class="header_navpromo">
+	<a target="_blank" href="http://www.cnarts.net.cn/cweb/Exhibition/show/chenyongqun/"><img height="95" width="150" alt="万萻默伏——陈永群作品展" src="http://img.cnarts.net.cn/exhibition_logo/201877173845.jpg"></a><h4><a target="_blank" href="http://www.cnarts.net.cn/cweb/Exhibition/show/chenyongqun/">万萻默伏——陈永群作品展</a></h4>
+  </div>
+  </div>
+
+  </li><li id="ch4" class="channels chysdc"><a class="dropdown" href="/cweb/art_collection/">艺术典藏</a><span></span>
+  <div id="sect3" class="sections clearfix">
+  <ul>
+    <li><a target="_blank" href="/cweb/art_collection/index_read.asp">当代艺术</a></li>
+
+    <li><a target="_blank" href="http://www.cnarts.net.cn/cweb/Exhibition/show/100guohua/">国画百年</a></li>
+    <li><a target="_blank" href="http://www.cnarts.net.cn/cweb/Exhibition/show/100youhua/">油画百年</a></li>
+    <li><a target="_blank" href="http://www.cnarts.net.cn/cweb/Exhibition/show/100banhua/">版画百年</a></li>
+  </ul>
+  <ul class="last">
+    <li><a target="_blank" href="/cweb/art_collection/beitie.asp">历代碑帖</a></li>
+	<li><a target="_blank" href="/cweb/Exhibition/index.asp?type=mjyy&amp;kind=%E5%90%8D%E5%AE%B6%E8%89%BA%E8%8B%91">名家艺苑</a></li>
+    <li><a target="_blank" href="/cweb/Exhibition/index.asp?type=gdys&amp;kind=%E5%8F%A4%E4%BB%A3%E8%89%BA%E6%9C%AF">古代艺术</a></li>
+    </ul>
+
+  <div class="header_navpromo">
+	<a target="_blank" href="/cweb/art_collection/index_read.asp?kind=&amp;msid=404"><img height="95" width="150" alt="肖形印" src="http://img.cnarts.net.cn/cweb/artw/arts/uploadworks/2012520175525.jpg"></a><h4><a target="_blank" href="/cweb/art_collection/index_read.asp?kind=&amp;msid=404">肖形印</a></h4>
+  </div></div>
+
+  </li><li id="ch5" class="channels chysyj"><a class="dropdown" href="/cweb/arti/">艺术研究</a><span></span>
+  <div id="sect4" class="sections clearfix">
+  <ul>
+	<li><a target="_blank" href="/cweb/arti/digest_lmj.asp?type=%E8%89%BA%E6%9C%AF%E7%84%A6%E7%82%B9&amp;bid=2">艺术焦点</a></li>
+    <li><a target="_blank" href="/cweb/arti/digest_lmj.asp?type=%E4%B8%8D%E5%90%8C%E8%89%BA%E8%A7%81&amp;bid=4">不同艺见</a></li>
+	<li><a target="_blank" href="/cweb/arti/digest_lmj.asp?type=%E5%90%8D%E5%AE%B6%E8%8D%90%E8%89%BA&amp;bid=6">名家荐艺</a></li>
+	<li><a target="_blank" href="/cweb/arti/digest_lmj.asp?type=%E5%AA%92%E4%BD%93%E5%85%B3%E6%B3%A8&amp;bid=8">媒体关注</a></li>
+  </ul>
+
+  <ul class="last">
+	 <li><a target="_blank" href="/cweb/arti/digest.asp?type=%E8%89%BA%E6%9C%AF%E6%96%87%E6%91%98">艺术文摘</a></li>
+	 <li><a target="_blank" href="/cweb/arti/news.asp?type=%E5%AE%9E%E4%BA%8B%E8%BF%B0%E8%AF%84">实事述评</a></li>
+    <li><a target="_blank" href="/cweb/arti/teach.asp?type=%E6%95%99%E5%AD%A6%E8%AF%BE%E5%A0%82">教学课堂</a></li></ul>
+  <div class="header_navpromo">
+	<a target="_blank" title="“梵高奶奶” " href="/cweb/arti/digest_lmj.asp?id=351771&amp;bid=2"><img height="95" width="150" alt="“梵高奶奶” " src="http://img.cnarts.net.cn/cweb/news/2016-04/2016-04-06/201646213237.jpg"></a><h4><a target="_blank" title="“梵高奶奶” " href="/cweb/arti/digest_lmj.asp?id=351771&amp;bid=2">“梵高奶奶” </a></h4>
+  </div></div>
+
+  </li><li id="ch6" class="channels chgybk mid"><a class="dropdown" href="/cweb/Process/">工艺百科</a><span></span>
+  <div id="sect5" class="sections clearfix">
+  <ul>
+    <li><a target="_blank" href="/cweb/Process/index_read.asp?kind=%E5%B7%A5%E8%89%BA%E4%BF%A1%E6%81%AF&amp;select_kind=%E5%B7%A5%E8%89%BA%E4%BF%A1%E6%81%AF">工艺信息</a></li>
+	<li><a target="_blank" href="/cweb/Process/artk.asp?kind=%E5%AE%B6%E5%85%B7&amp;select_kind=%E5%AE%B6%E5%85%B7">古典家具</a></li>
+    <li><a target="_blank" href="/cweb/Process/artk.asp?kind=%E9%99%B6%E7%93%B7&amp;select_kind=%E9%99%B6%E7%93%B7">陶瓷艺术</a></li>
+    <li><a target="_blank" href="/cweb/Process/artk.asp?kind=%E5%88%BA%E7%BB%A3&amp;select_kind=%E5%88%BA%E7%BB%A3">刺绣艺术</a></li>
+    <li><a target="_blank" href="/cweb/Process/artk.asp?kind=%E7%9F%B3%E9%9B%95&amp;select_kind=%E7%9F%B3%E9%9B%95">石雕艺术</a></li>
+
+
+	</ul>
+  <ul class="last">
+	<li><a target="_blank" href="/cweb/Process/artk.asp?kind=%E7%8F%A0%E5%AE%9D&amp;select_kind=%E7%8F%A0%E5%AE%9D">珠宝玉器</a></li>
+    <li><a target="_blank" href="/cweb/Process/artk.asp?kind=%E9%93%9C%E9%9B%95&amp;select_kind=%E9%93%9C%E9%9B%95">铜雕艺术</a></li>
+    <li><a target="_blank" href="/cweb/Process/artk.asp?kind=%E6%9D%82%E9%A1%B9&amp;select_kind=%E6%9D%82%E9%A1%B9">杂项</a></li>
+    <li><a target="_blank" href="/cweb/Process/zhuanti.asp?kind=%E5%B7%A5%E8%89%BA%E4%B8%93%E9%A2%98">工艺专题</a></li></ul>
+  <div class="header_navpromo">
+	<a target="_blank" title="寿山石雕中国工艺美术大师作品展艺耀福建" href="/cweb/Process/index_read.asp?typeid=2&amp;page=1&amp;id=10764"><img height="95" width="150" alt="寿山石雕中国工艺美术大师作品展艺耀福建" src="http://img.cnarts.net.cn/cweb/artk/gyxx/files/2021-04/202141617430.jpg"></a><h4><a target="_blank" title="寿山石雕中国工艺美术大师作品展艺耀福建" href="/cweb/Process/index_read.asp?typeid=2&amp;page=1&amp;id=10764">寿山石雕中国工艺美术大师作品展艺耀福建</a></h4>
+  </div></div>
+
+  </li><li id="ch7" class="channels chjssc mid2"><a class="dropdown" href="/cweb/Appreciation_collection/">鉴赏收藏</a><span></span>
+  <div id="sect6" class="sections clearfix">
+  <ul>
+    <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?kind=%E6%94%B6%E8%97%8F%E6%96%87%E6%91%98">收藏文摘</a></li>
+    <li><a target="_blank" href="/cweb/Appreciation_collection/dailypic.asp?kind=%E5%90%8D%E5%93%81%E6%AC%A3%E8%B5%8F">名品欣赏</a></li>
+    <li><a target="_blank" href="/cweb/Appreciation_collection/collector.asp?kind=%E6%94%B6%E8%97%8F%E5%AE%B6">收藏家</a></li>
+    <li><a target="_blank" href="/cweb/Appreciation_collection/seal.asp?kind=%E4%B9%A6%E7%94%BB%E5%8D%B0%E9%89%B4">书画印鉴</a></li>
+    <li><a target="_blank" href="/cweb/Appreciation_collection/zhuanti.asp?kind=%E8%97%8F%E5%93%81%E4%B8%93%E9%A2%98">藏品专题</a></li></ul>
+  <div class="header_navpromo">
+	<a title="如何分辨俄罗斯白玉与新疆和田玉" target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=" '&page="1&amp;id=47218'"><img height="95" width="150" alt="如何分辨俄罗斯白玉与新疆和田玉" src="http://img.cnarts.net.cn/cweb/collect/scwx/files/2021-07/202179155253.jpg"></a><h4><a title="如何分辨俄罗斯白玉与新疆和田玉" target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=" '&page="1&amp;id=47218'">如何分辨俄罗斯白玉与新疆和田玉</a></h4>
+  </div></div>
+
+  </li><li id="ch8" class="channels chzlxx"><a class="dropdown" href="/cweb/information/">展览信息</a><span></span>
+  <div id="sect7" class="sections clearfix">
+  <div class="header_navpromo">
+	<a target="_blank" title="徐小国个展：星光" href="/cweb/information/index_read.asp?id=2714"><img height="95" width="150" alt="徐小国个展：星光" src="http://img.cnarts.net.cn/cweb/info/2022-05-03/20220503100205343.jpg"></a><h4><a target="_blank" href="/cweb/information/index_read.asp?id=2714">徐小国个展：星光</a></h4>2022/4/30～2022/6/26
+	</div>
+  <ul>
+    <li><a target="_blank" href="/cweb/information/index_kind.asp?kind=1">美术馆、博览会</a></li>
+    <li><a target="_blank" href="/cweb/information/index_kind.asp?kind=2">画廊</a></li>
+
+    </ul></div>
+
+  </li><li id="ch9" class="channels chyslt"><a class="dropdown" href="/cweb/ubbs/">艺术论坛</a><span></span>
+  <div id="sect8" class="sections clearfix">
+  <div class="header_navpromo">
+	<a target="_blank" title="艺海视觉" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=14229"><img height="95" width="150" alt="艺海视觉" src="http://img.cnarts.net.cn/cweb/ubbs/2012-07/2012-07-17/2012717153723.jpg"></a><h4><a target="_blank" title="艺海视觉" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=14229"> 艺海视觉</a></h4>
+  </div>
+  <ul class="last">
+    <li><a href="http://dz.cnarts.net.cn/forum.php" target="_blank">论坛社区</a></li>
+	<li><a href="http://dz.cnarts.net.cn/forum.php?gid=17" target="_blank">收藏交流</a></li>
+	<li><a href="http://dz.cnarts.net.cn/forum.php?gid=18" target="_blank">谈天说地</a></li>
+    <li><a href="http://dz.cnarts.net.cn/forum.php?gid=15" target="_blank">站务社区</a></li>
+	</ul>
+  <ul>
+    <li><a href="http://dz.cnarts.net.cn/forum.php?gid=21" target="_blank">个人展馆</a></li>
+    <li><a href="http://dz.cnarts.net.cn/forum.php?gid=16" target="_blank">艺术沙龙</a></li>
+    <li><a href="http://dz.cnarts.net.cn/forum.php?gid=29" target="_blank">品茶评壶</a></li>
+    <li><a href="http://dz.cnarts.net.cn/forum.php?gid=41" target="_blank">文化走廊</a></li>
+	</ul></div>
+
+  </li><li id="ch11" class="channels chysbz"><a class="dropdown" href="/cweb/ysbz/">艺术壁纸</a>
+  <div id="sect10" class="sections clearfix">
+  <div class="header_navpromo topysbzimg">
+	<a target="_blank" href="/cweb/ysbz/"><img height="95" width="150" alt="巴厘岛风情" src="http://img.cnarts.net.cn/cweb/service/ysbz/wallpaper/2017-05-03/201753121714.jpg"></a>
+  </div>
+  <ul class="last">
+	<li><a href="/cweb/ysbz/kind.asp?category=14&amp;kind=%E5%BB%BA%E7%AD%91" target="_blank">建筑</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=4&amp;kind=%E8%AE%BE%E8%AE%A1" target="_blank">设计</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=2&amp;kind=%E4%B8%BD%E4%BA%BA" target="_blank">丽人</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=3&amp;kind=%E8%8A%B1%E5%8D%89" target="_blank">花卉</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=1&amp;kind=%E5%85%B6%E4%BB%96" target="_blank">其他</a></li>
+	</ul>
+  <ul>
+	<li><a href="/cweb/ysbz/kind.asp?category=9&amp;kind=%E6%B0%B4%E5%BD%A9%E7%94%BB" target="_blank">水彩画</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=10&amp;kind=%E7%89%88%E7%94%BB" target="_blank">版画</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=5&amp;kind=%E4%BD%93%E8%82%B2" target="_blank">体育</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=6&amp;kind=%E5%8A%A8%E7%89%A9" target="_blank">动物</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=12&amp;kind=%E9%A3%8E%E5%85%89" target="_blank">风光</a></li>
+	</ul>
+  <ul>
+    <li><a href="/cweb/ysbz/kind.asp?category=16&amp;kind=%E8%AE%BE%E8%AE%A1%E9%AB%98%E7%B2%BE%E5%BA%A6%E7%B4%A0%E6%9D%90" target="_blank">高精度素材</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=15&amp;kind=%E5%90%8D%E4%BA%BA" target="_blank">名人</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=11&amp;kind=%E5%B7%A5%E8%89%BA%E5%93%81" target="_blank">工艺品</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=7&amp;kind=%E4%B9%A6%E7%94%BB" target="_blank">书画</a></li>
+    <li><a href="/cweb/ysbz/kind.asp?category=8&amp;kind=%E6%B2%B9%E7%94%BB" target="_blank">油画</a></li>
+	</ul>
+	</div>
+  </li><li id="ch13" class="channels chswpd"><a class="dropdown" href="/cweb/commerce/">商务频道</a><span></span>
+</li>
+	</ul>
+</nav>
+
+<script type="text/javascript" src="/cweb/js/jquery.clearfield.js"></script>
+<script type="text/javascript" src="/cweb/js/header.js"></script>
+<!--<SCRIPT type=text/javascript src="../js/jquery.clearfield.js"></SCRIPT>
+<SCRIPT type=text/javascript src="../js/header.js"></SCRIPT> -->
+<script src="/cweb/js/jquery.nicescroll.js?20121131panadd"></script>
+<!--<script src="../js/jquery.nicescroll.js?20121131panadd"></script>
+<script>
+  $(document).ready(function() {
+	var nice = $("html").niceScroll();
+    $("#boxscroll2").niceScroll("#contentscroll2",{cursorcolor:"#F00",cursoropacitymax:0.7,boxzoom:true,touchbehavior:true});
+    $("#boxframe").niceScroll("#boxscroll3",{cursorcolor:"#0F0",cursoropacitymax:0.7,boxzoom:true,touchbehavior:true});
+    $("#boxscroll4").niceScroll("#boxscroll4 .wrapper",{boxzoom:true});
+  });
+</script>-->
+    <!-- End: Primary navigation --></header>
+
+
+<div style="margin:0 auto; width:1000px; padding:10px 0; clear:both; height:70px;"><div style="float:left"><img alt="" src="/cweb/images/index_logo.jpg"></div><div style="float:left"><a href="http://www.jbzfc.com" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2014-03/2014-03-01/2014-03-01_14361739.jpg"></a></div></div>
+<!--滚动推荐条 start-->
+<div class="inner">
+    <div style=" width:1000px; margin:0 auto;">
+        <div class="slide_v">
+        <ul>
+        <li><a href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=290833&amp;page=1&amp;extra=#pid98519"><img src="http://img.cnarts.net.cn/cweb/news/2016-01/2016-01-08/20161802539.jpg" width="45" height="42"><span>怀念敬爱的周总理</span></a></li><li><a href="/cweb/news/read.asp?id=338677&amp;kind=%D2%D5%CA%F5"><img src="http://img.cnarts.net.cn/cweb/news/2015-12/2015-12-03/201512395558.jpg" width="45" height="42"><span>陈逸飞健在时就有流传的故事</span></a></li>
+        </ul>
+        </div>
+
+        <div class="marquee level" direction="left" speed="0" step="1" pause="6000">
+        <ul style="width: 2064px;">
+        <li class="top_lab" style="width: 172px;"><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=289722&amp;page=1&amp;extra=#pid97387"><img src="http://img.cnarts.net.cn/cweb/news/2015-12/2015-12-03/2015123101531.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">1999版纸币收藏价值</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?id=338686&amp;kind=%BC%AF%B2%D8"><img src="http://img.cnarts.net.cn/cweb/news/2015-12/2015-12-03/2015123101531.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">人民币收藏入门快被不断追捧</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?id=315405&amp;kind=%C5%C4%C2%F4"><img src="http://img.cnarts.net.cn/cweb/news/2013-02/2013-02-10/2013210134458.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">骆坚群：黄宾虹的用色从重墨开</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?kind=%BC%AF%B2%D8&amp;id=245387"><img src="http://img.cnarts.net.cn/cweb/news/2013-01/2013-01-31/2013131151543.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">如何看懂翡翠鉴定证书</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?id=245502&amp;kind=%BC%AF%B2%D8"><img src="http://img.cnarts.net.cn/cweb/news/2013-01/2013-01-31/201313115321.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">陈月娥论紫砂的审美定位</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?id=244813&amp;kind=%BC%AF%B2%D8"><img src="http://img.cnarts.net.cn/cweb/news/2013-01/2013-01-24/2013124105959.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">钟表收藏没有门槛价</span></a></li>
+
+        <li class="top_lab" style="width: 172px;"><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=289722&amp;page=1&amp;extra=#pid97387"><img src="http://img.cnarts.net.cn/cweb/news/2015-12/2015-12-03/2015123101531.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">1999版纸币收藏价值</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?id=338686&amp;kind=%BC%AF%B2%D8"><img src="http://img.cnarts.net.cn/cweb/news/2015-12/2015-12-03/2015123101531.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">人民币收藏入门快被不断追捧</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?id=315405&amp;kind=%C5%C4%C2%F4"><img src="http://img.cnarts.net.cn/cweb/news/2013-02/2013-02-10/2013210134458.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">骆坚群：黄宾虹的用色从重墨开</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?kind=%BC%AF%B2%D8&amp;id=245387"><img src="http://img.cnarts.net.cn/cweb/news/2013-01/2013-01-31/2013131151543.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">如何看懂翡翠鉴定证书</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?id=245502&amp;kind=%BC%AF%B2%D8"><img src="http://img.cnarts.net.cn/cweb/news/2013-01/2013-01-31/201313115321.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">陈月娥论紫砂的审美定位</span></a></li><li class="top_lab" style="width: 172px;"><a target="_blank" href="/cweb/news/read.asp?id=244813&amp;kind=%BC%AF%B2%D8"><img src="http://img.cnarts.net.cn/cweb/news/2013-01/2013-01-24/2013124105959.jpg" width="68" height="42"><span style="margin-top:5px; width:85px;">钟表收藏没有门槛价</span></a></li></ul>
+        </div>
+
+    </div>
+</div>
+<!--滚动推荐条 end-->
+
+<!--第二通栏数据处理　start-->
+
+<!--艺术新闻-->
+
+<!--展览资讯-->
+
+<!--展览预告-->
+
+<!--艺术展厅-->
+
+<!--集藏信息-->
+
+<!--拍卖-->
+
+<!--爱物琐记-->
+
+<!--艺术研究-->
+
+<!--鉴赏收藏-->
+
+<!--工艺百科-->
+
+<!--论坛-->
+
+<!--壁纸-->
+
+<!--第一通栏数据处理　end-->
+
+<!--第一通拦 start-->
+<div id="first_column">
+
+<!--要文幻灯片 start-->
+
+  <div id="example">
+	<div id="slides">
+		<div class="slides_container" style="overflow: hidden; position: relative; display: block;">
+        <div class="slides_control" style="position: relative; width: 1170px; height: 259px; left: -390px;"><div class="slide" style="position: absolute; top: 0px; left: 390px; z-index: 0; display: none;">
+<a href="/cweb/news/read.asp?id=490880" target="_blank" title="4月4-7日旅美艺术家朱者赤新作品“源之纠缠”系列亮相纽约国际艺术博览会"><img src="http://img.cnarts.net.cn/cweb/news/2024-04/2024-04-03/03.jpg" alt="Slide 0"></a>
+<div class="captiono" style="bottom: 4px;">
+<div class="caption" style="bottom:0"></div>
+<div class="wz"><a href="/cweb/news/read.asp?id=490880" target="_blank">4月4-7日旅美艺术家朱者赤新作品“源之纠缠”系列亮相纽约国际...</a> </div>
+</div>
+</div><div class="slide" style="position: absolute; top: 0px; left: 390px; z-index: 0; display: block;">
+<a href="/cweb/news/read.asp?id=490736" target="_blank"><img src="http://img.cnarts.net.cn/cweb/news/2024-03/2024-03-24/20240324205006386.jpg" alt="Slide 1"></a>
+<div class="captiono" style="bottom: 4px;">
+<div class="caption"></div>
+<div class="wz"><a href="/cweb/news/read.asp?id=490736" target="_blank">安徽画家陈廷友笔下的“大美黄山”亮相扬州</a></div>
+</div>
+</div><div class="slide" style="position: absolute; top: 0px; left: 390px; z-index: 0; display: none;">
+<a href="/cweb/news/zt_news_read.asp?topic=%E6%B1%9F%E8%8B%8F%E7%9C%81%E4%B8%AD%E5%9B%BD%E7%94%BB%E5%AD%A6%E4%BC%9A&amp;id=490701" target="_blank"><img src="http://img.cnarts.net.cn/cweb/news/2024-03/2024-03-23/2024-03-23_10511916.jpg" alt="Slide 2"></a>
+<div class="captiono" style="bottom: 4px;">
+<div class="caption"></div>
+<div class="wz"><a href="/cweb/news/zt_news_read.asp?topic=%E6%B1%9F%E8%8B%8F%E7%9C%81%E4%B8%AD%E5%9B%BD%E7%94%BB%E5%AD%A6%E4%BC%9A&amp;id=490701" target="_blank">“天香国韵”绽放南京大学留学生课堂</a></div>
+</div>
+</div><div class="slide" style="position: absolute; top: 0px; left: 390px; z-index: 0; display: none;">
+<a href="/cweb/news/zt_news_read.asp?topic=%E6%B1%9F%E8%8B%8F%E7%9C%81%E4%B8%AD%E5%9B%BD%E7%94%BB%E5%AD%A6%E4%BC%9A&amp;id=490700" target="_blank"><img src="http://img.cnarts.net.cn/cweb/news/2024-03/2024-03-23/2024-03-23_1047213.jpg" alt="Slide 3"></a>
+<div class="captiono" style="bottom: 4px;">
+<div class="caption"></div>
+<div class="wz"><a href="/cweb/news/zt_news_read.asp?topic=%E6%B1%9F%E8%8B%8F%E7%9C%81%E4%B8%AD%E5%9B%BD%E7%94%BB%E5%AD%A6%E4%BC%9A&amp;id=490700" target="_blank">江苏省中国画学会副会长兼秘书长翟优应邀在南京市宁海中学举办...</a></div>
+</div>
+</div><div class="slide" style="position: absolute; top: 0px; left: 390px; z-index: 0; display: none;">
+<a href="/cweb/news/zt_news_read.asp?topic=%E6%B1%9F%E8%8B%8F%E7%9C%81%E4%B8%AD%E5%9B%BD%E7%94%BB%E5%AD%A6%E4%BC%9A&amp;id=490547" target="_blank"><img src="http://img.cnarts.net.cn/cweb/news/2024-03/2024-03-09/2024-03-09_19372836.jpg" alt="Slide 4"></a>
+<div class="captiono" style="bottom: 4px;">
+<div class="caption"></div>
+<div class="wz"><a href="/cweb/news/zt_news_read.asp?topic=%E6%B1%9F%E8%8B%8F%E7%9C%81%E4%B8%AD%E5%9B%BD%E7%94%BB%E5%AD%A6%E4%BC%9A&amp;id=490547" target="_blank">祥龙献瑞——2024农历新年中外艺术家全球送福拜年活动圆满收官...</a></div>
+</div>
+</div></div>
+
+
+
+
+
+		</div>
+	<ul class="pagination"><li class=""><a href="#0">1</a></li><li class="current"><a href="#1">2</a></li><li class=""><a href="#2">3</a></li><li class=""><a href="#3">4</a></li><li class=""><a href="#4">5</a></li></ul></div>
+</div>
+<!--要文幻灯片 end-->
+
+<!--艺术新闻 start-->
+
+ <div id="yishu">
+
+     <div class=" quanju ysxw">
+      <h1><a href="/cweb/news/" target="_blank"><img alt="艺术新闻" src="/cweb/images/space.gif" width="85" height="29">艺术新闻</a></h1>
+      <div class="quanju ysxw_right yishu_title"> <span><a target="_blank" href="news">更多&gt;&gt;</a></span>
+      <ul>
+      <li><a target="_blank" href="/cweb/news/zt_news_list.asp?kind=%D7%A8%CC%E2">专题 </a></li>
+       <li><a href="/cweb/news/news_list.asp?kind=%C5%C4%C2%F4" target="_blank">拍卖</a></li>
+     <li><a href="/cweb/news/news_list.asp?kind=%BC%AF%B2%D8" target="_blank">集藏</a></li>
+       <li><a href="/cweb/news/news_list.asp?kind=%D5%B9%C0%C0" target="_blank">展讯</a></li>
+        <li><a href="/cweb/news/news_list.asp?kind=%D2%D5%CA%F5" target="_blank">艺术</a></li>
+      </ul>
+      </div>
+     </div>
+     <div class="yishu_content">
+      <ul>
+       <li><b><a href="/cweb/news/read.asp?id=491021&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="陈履生：1986年关于传统讨论的往事">陈履生：1986年关于传统讨论的往事</a></b></li> <li><b><a href="/cweb/news/read.asp?id=491020&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="“古韵流芳-嵇亚林作品展”在江苏东台西溪盛大举行">“古韵流芳-嵇亚林作品展”在江苏东台西溪盛大...</a></b></li> <li><b><a href="/cweb/news/read.asp?id=491019&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="文脉传承美育浸润——南京市宁海中学美术班皖南查济写生活动圆满收官">文脉传承美育浸润——南京市宁海中学美术班皖...</a></b></li> <li><a href="/cweb/news/read.asp?id=491183&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="江苏省中国画学会理事杜岩为南京大学留学生传授书法艺术">江苏省中国画学会理事杜岩为南京大学留学生传授...</a></li> <li><a href="/cweb/news/read.asp?id=491182&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="即将开幕 | 际会天地 无问东西——唐承华、陈向东双个展（艺术家推介：唐承华）">即将开幕|际会天地无问东西——唐承华、陈向东...</a></li> <li><a href="/cweb/news/read.asp?id=491181&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="即将开幕 | 际会天地 无问东西——唐承华、陈向东双个展（艺术家推介：陈向东）">即将开幕|际会天地无问东西——唐承华、陈向东...</a></li> <li><a href="/cweb/news/read.asp?id=491180&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="展览预告 | 际会天地 无问东西——唐承华、陈向东双个展">展览预告|际会天地无问东西——唐承华、陈向东...</a></li> <li><a href="/cweb/news/read.asp?id=491179&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="曾成钢当选上海市美协主席">曾成钢当选上海市美协主席</a></li> <li><a href="/cweb/news/read.asp?id=491178&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="“扎根”于“美丽中国”的美术行动">“扎根”于“美丽中国”的美术行动</a></li> <li><a href="/cweb/news/read.asp?id=491177&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="彩之云南的美丽诗篇——“云之诗——云南省女艺术家油画作品展”举办">彩之云南的美丽诗篇——“云之诗——云南省女艺...</a></li> <li><a href="/cweb/news/read.asp?id=491176&amp;kind=%E8%89%BA%E6%9C%AF" target="_blank" title="在书山里寻觅睿智的创造——记“睿寻”——北京城市图书馆首届公共艺术展">在书山里寻觅睿智的创造——记“睿寻”——北京...</a></li>
+      </ul>
+     </div>
+  </div>
+<!--艺术新闻 end-->
+
+<!--展览资讯 展览预告 start-->
+
+ <div id="zhanlan">
+     <div class="zhanlan_title quanju ">
+     <ul>
+    <li><h2><a href="/cweb/news/news_list.asp?kind=%D5%B9%C0%C0" id="one1" onmouseover="setTab('one',1,2)" class="con">展览资讯</a></h2></li>
+    <li><h2><a href="/cweb/information/" id="one2" onmouseover="setTab('one',2,2)">展览预告</a></h2></li>
+    </ul>
+    </div>
+     <div class="newsbody" id="tab_one_1">
+     <ul>
+      <li><a href="/cweb/news/read.asp?id=491182&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="即将开幕 | 际会天地 无问东西——唐承华、陈向东双个展（艺术家推介：唐承华）">即将开幕|际会天地无问东西——唐承华...</a></li><li><a href="/cweb/news/read.asp?id=491181&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="即将开幕 | 际会天地 无问东西——唐承华、陈向东双个展（艺术家推介：陈向东）">即将开幕|际会天地无问东西——唐承华...</a></li><li><a href="/cweb/news/read.asp?id=491180&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="展览预告 | 际会天地 无问东西——唐承华、陈向东双个展">展览预告|际会天地无问东西——唐承华...</a></li><li><a href="/cweb/news/read.asp?id=491177&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="彩之云南的美丽诗篇——“云之诗——云南省女艺术家油画作品展”举办">彩之云南的美丽诗篇——“云之诗——云...</a></li><li><a href="/cweb/news/read.asp?id=491175&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="水墨之境界，随心随笔在随意——“笃行——罗公染随笔水墨”展览印象">水墨之境界，随心随笔在随意——“笃行...</a></li><li><a href="/cweb/news/read.asp?id=491172&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="第八届画廊周北京将于5月24日开启，主题“漂留”">第八届画廊周北京将于5月24日开启，主题...</a></li><li><a href="/cweb/news/read.asp?id=491171&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="御窑遗韵 瓷上丹青——晚清浅绛三大家瓷画作品展">御窑遗韵瓷上丹青——晚清浅绛三大家瓷...</a></li><li><a href="/cweb/news/read.asp?id=491170&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="“四合缘——曹力、陈文骥、马路、谭平抽象作品展”将在京开幕">“四合缘——曹力、陈文骥、马路、谭平...</a></li><li><a href="/cweb/news/read.asp?id=491169&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="劳动最光荣——《铁人王进喜》绘本手稿展将在合肥开展">劳动最光荣——《铁人王进喜》绘本手稿...</a></li><li><a href="/cweb/news/read.asp?id=491168&amp;kind=%E5%B1%95%E8%A7%88" target="_blank" title="“梅兰芳主题当代美术创作作品巡展”弘扬艺术精神">“梅兰芳主题当代美术创作作品巡展”弘...</a></li>
+
+     </ul>
+     </div>
+
+
+     <div class="newsbody zhanlanxinxi" id="tab_one_2" style=" display:none">
+     <ul>
+     <li><a target="_blank" href="/cweb/information/index_read.asp?id=2643&amp;kind=%E7%BE%8E%E6%9C%AF%E9%A6%86%E3%80%81%E5%8D%9A%E8%A7%88%E4%BC%9A" title="海上明月共潮生—— 中华艺术宫藏华人美术名家捐赠作品展">海上明月共潮生—— 中华艺术宫藏华人美术名家捐赠作品展</a><div><a target="_blank" href="/cweb/information/index_read.asp?unitid=1">上海中华艺术宫</a> 5/1～5/31</div></li><li><a target="_blank" href="/cweb/information/index_read.asp?id=2644&amp;kind=%E7%BE%8E%E6%9C%AF%E9%A6%86%E3%80%81%E5%8D%9A%E8%A7%88%E4%BC%9A" title="江山如此多娇——中国艺术的文心与诗意">江山如此多娇——中国艺术的文心与诗意</a><div><a target="_blank" href="/cweb/information/index_read.asp?unitid=1">上海中华艺术宫</a> 5/1～5/31</div></li><li><a target="_blank" href="/cweb/information/index_read.asp?id=2645&amp;kind=%E7%BE%8E%E6%9C%AF%E9%A6%86%E3%80%81%E5%8D%9A%E8%A7%88%E4%BC%9A" title="俞云阶馆藏精品展">俞云阶馆藏精品展</a><div><a target="_blank" href="/cweb/information/index_read.asp?unitid=1">上海中华艺术宫</a> 5/1～5/31</div></li><li><a target="_blank" href="/cweb/information/index_read.asp?id=2646&amp;kind=%E7%BE%8E%E6%9C%AF%E9%A6%86%E3%80%81%E5%8D%9A%E8%A7%88%E4%BC%9A" title="多媒体版清明上河图">多媒体版清明上河图</a><div><a target="_blank" href="/cweb/information/index_read.asp?unitid=1">上海中华艺术宫</a> 5/1～5/31</div></li><li><a target="_blank" href="/cweb/information/index_read.asp?id=2647&amp;kind=%E7%BE%8E%E6%9C%AF%E9%A6%86%E3%80%81%E5%8D%9A%E8%A7%88%E4%BC%9A" title="上海历史文脉美术创作工程成果展">上海历史文脉美术创作工程成果展</a><div><a target="_blank" href="/cweb/information/index_read.asp?unitid=1">上海中华艺术宫</a> 5/1～5/31</div></li>
+
+     </ul>
+     </div>
+  </div>
+<!--展览资讯 展览预告 end-->
+
+</div>
+<!--第一通拦 end-->
+
+<!--第二通拦 start-->
+<div id="two_columns">
+  <div id="art_exhibition">
+<!--艺术展厅头部 start-->
+ <div class=" quanju  art_exhibition">
+  <h1><a href="/cweb/Exhibition/" target="_blank"><img alt="艺术展厅" src="/cweb/images/space.gif" width="85" height="29">艺术展厅</a></h1>
+  <div class="quanju  art_exhibition_right  yishu_title">
+  <span><a href="/cweb/Exhibition/" target="_blank">更多&gt;&gt;</a></span>
+  <ul>
+   <li><a href="/cweb/Exhibition/index.asp?type=%C3%FB%BC%D2%D2%D5%D4%B7" target="_blank">名家</a></li>
+   <li><a href="/cweb/Exhibition/index.asp?type=%B0%E6%BB%AD" target="_blank">版画 </a></li>
+    <li><a href="/cweb/Exhibition/index.asp?type=%D3%CD%BB%AD" target="_blank">油画</a></li>
+    <li><a href="/cweb/Exhibition/index.asp?type=%B9%FA%BB%AD" target="_blank">国画</a></li>
+  </ul>
+  </div>
+ </div>
+ <!--艺术展厅头部 end-->
+
+ <!--艺术展list才父容器 start-->
+
+<div id="art_exhibition_content_flist">
+    <div class="slides_container" style="overflow: hidden; position: relative; display: block;">
+
+<div class="slides_control" style="position: relative; width: 1164px; height: 232px; left: -388px;"><div class="picshownew art_exhibition_content" style="position: absolute; top: 0px; left: 388px; z-index: 5; display: block;">
+<ul>
+    <li><dl><dd><a title="意境雲山外——张尧俊石纹山水创意摄影展" href="http://www.cnarts.net.cn/cweb/exhibition/show/zhangyaojun2/" target="_blank"><img alt="意境雲山外——张尧俊石纹山水创意摄影展" src="http://img.cnarts.net.cn/exhibition_logo/2021411161832.jpg" width="150" height="92"></a></dd><dt><h2><a title="意境雲山外——张尧俊石纹山水创意摄影展" href="http://www.cnarts.net.cn/cweb/exhibition/show/zhangyaojun2/" target="_blank">意境雲山外——张尧俊石纹山水...</a>&nbsp;[摄影]</h2><p>张尧俊以风光摄影见长，“太湖风光”等系列为其代表作。近年来致力于水韵摄影和树皮畅想、风光、花卉小品和石纹山水的探索和创作。<span> [<a href="http://www.cnarts.net.cn/cweb/exhibition/show/zhangyaojun2/" target="_blank">详细</a>]</span></p></dt></dl></li><li><dl><dd><a title="张士东书法艺术" href="http://www.cnarts.net.cn/cweb/exhibition/show/zhangshidong3/" target="_blank"><img alt="张士东书法艺术" src="http://img.cnarts.net.cn/exhibition_logo/201851710253.jpg" width="150" height="92"></a></dd><dt><h2><a title="张士东书法艺术" href="http://www.cnarts.net.cn/cweb/exhibition/show/zhangshidong3/" target="_blank">张士东书法艺术</a>&nbsp;[书法]</h2><p>张士东。中国书法家协会会员，中国沧浪书社社员。书法作品数十次入选全国性、国际性大展，十多次获奖。作品被多家纪念馆、博...<span> [<a href="http://www.cnarts.net.cn/cweb/exhibition/show/zhangshidong3/" target="_blank">详细</a>]</span></p></dt></dl></li>
+</ul>
+</div><div class="picshownew art_exhibition_content" style="position: absolute; top: 0px; left: 388px; z-index: 0; display: none;">
+<ul>
+<li><dl><dd><a title="姜玥皜作品展" href="http://www.cnarts.net.cn/cweb/exhibition/show/jyhart/" target="_blank"><img alt="姜玥皜作品展" src="http://img.cnarts.net.cn/exhibition_logo/2018420141825.jpg" width="150" height="92"></a></dd><dt><h2><a title="姜玥皜作品展" href="http://www.cnarts.net.cn/cweb/exhibition/show/jyhart/" target="_blank">姜玥皜作品展</a>&nbsp;[综合]</h2><p>轻松的视觉语言和国际化的艺术视野背后，我们能感受到这代艺术家的生存感受。<span> [<a href="http://www.cnarts.net.cn/cweb/exhibition/show/jyhart/" target="_blank">详细</a>]</span></p></dt></dl></li><li><dl><dd><a title="李俊兰柴烧艺术作品专题展" href="http://www.cnarts.net.cn/cweb/exhibition/show/lijunlan/" target="_blank"><img alt="李俊兰柴烧艺术作品专题展" src="http://img.cnarts.net.cn/exhibition_logo/201792315240.jpg" width="150" height="92"></a></dd><dt><h2><a title="李俊兰柴烧艺术作品专题展" href="http://www.cnarts.net.cn/cweb/exhibition/show/lijunlan/" target="_blank">李俊兰柴烧艺术作品专题展</a>&nbsp;[工艺陶瓷]</h2><p>陶艺家李俊兰用闪亮的黑斑星光来诠释柴烧，象是黑夜将走、昼光将至的剎那，一点点感伤、一点点喜悦、一点点踌躇、一点点渴望...<span> [<a href="http://www.cnarts.net.cn/cweb/exhibition/show/lijunlan/" target="_blank">详细</a>]</span></p></dt></dl></li>
+</ul>
+</div><div class="picshownew art_exhibition_content" style="position: absolute; top: 0px; left: 388px; z-index: 0; display: none;">
+<ul>
+<li><dl><dd><a title="钟有辉作品展" href="http://www.cnarts.net.cn/cweb/exhibition/show/zhongyouhui/" target="_blank"><img alt="钟有辉作品展" src="http://img.cnarts.net.cn/exhibition_logo/2017814175619.jpg" width="150" height="92"></a></dd><dt><h2><a title="钟有辉作品展" href="http://www.cnarts.net.cn/cweb/exhibition/show/zhongyouhui/" target="_blank">钟有辉作品展</a>&nbsp;[版画]</h2><p>钟有辉并不是依他的生活方式来创造，而是活出他的创造之道。<span> [<a href="/cweb/exhibition/show/zhongyouhui/" target="_blank">详细</a>]</span></p></dt></dl></li><li><dl><dd><a title="林雪卿作品展" href="http://www.cnarts.net.cn/cweb/exhibition/show/linxueqing/" target="_blank"><img alt="林雪卿作品展" src="http://img.cnarts.net.cn/exhibition_logo/2017814174420.jpg" width="150" height="92"></a></dd><dt><h2><a title="林雪卿作品展" href="http://www.cnarts.net.cn/cweb/exhibition/show/linxueqing/" target="_blank">林雪卿作品展</a>&nbsp;[版画]</h2><p>台湾「版画学」第一人<span> [<a href="http://www.cnarts.net.cn/cweb/exhibition/show/linxueqing/" target="_blank">详细</a>]</span></p></dt></dl></li>
+       </ul>
+     </div></div>
+
+
+    </div>
+<ul class="pagination1"><li class="current"><a href="#0">1</a></li><li class=""><a href="#1">2</a></li><li class=""><a href="#2">3</a></li></ul></div>
+  <!--艺术展list才父容器 end-->
+</div>
+ <div id="two_columns_center">
+ <div id="jicang">
+ <div class=" quanju jicang_title">
+  <h1><a href="/cweb/news/news_list.asp?kind=%BC%AF%B2%D8" target="_blank"><img alt="集藏信息" src="/cweb/images/space.gif" width="85" height="29">集藏信息</a></h1>
+  <div class="quanju ysxw_right ">
+
+
+  </div>
+ </div>
+
+ <div class="yishu_content">
+  <ul>
+  <li><a href="/cweb/news/read.asp?id=491165&amp;kind=%E9%9B%86%E8%97%8F" title="诗书画的历史：从苏东坡到郑板桥" target="_blank">诗书画的历史：从苏东坡到郑板桥</a></li>
+<li><a href="/cweb/news/read.asp?id=491164&amp;kind=%E9%9B%86%E8%97%8F" title="书香飘逸方寸间" target="_blank">书香飘逸方寸间</a></li>
+<li><a href="/cweb/news/read.asp?id=491030&amp;kind=%E9%9B%86%E8%97%8F" title="丹青千载说牡丹" target="_blank">丹青千载说牡丹</a></li>
+<li><a href="/cweb/news/read.asp?id=490946&amp;kind=%E9%9B%86%E8%97%8F" title="故宫邮局推出《四季故宫》藏书票及龙年个性化邮票" target="_blank">故宫邮局推出《四季故宫》藏书票及龙年个性化邮票</a></li>
+<li><a href="/cweb/news/read.asp?id=490857&amp;kind=%E9%9B%86%E8%97%8F" title="王友石：曾经叱咤燕赵齐鲁间的书画大家" target="_blank">王友石：曾经叱咤燕赵齐鲁间的书画大家</a></li>
+
+
+  </ul>
+ </div>
+</div>
+<div id="paimai">
+ <div class=" quanju paimai_title">
+  <h1><a href="/cweb/news/news_list.asp?kind=%C5%C4%" target="_blank"><img alt="拍卖信息" src="/cweb/images/space.gif" width="85" height="29">拍卖信息</a></h1>
+  <div class="quanju ysxw_right "> </div>
+ </div>
+
+ <div class="yishu_content">
+  <ul>
+   <li><a href="/cweb/news/read.asp?id=491057&amp;kind=%E6%8B%8D%E5%8D%96" title="二十周年庆！西泠拍卖4月21日至22日济南公开征集藏品" target="_blank">二十周年庆！西泠拍卖4月21日至22日济南公开征集...</a></li>
+<li><a href="/cweb/news/read.asp?id=491052&amp;kind=%E6%8B%8D%E5%8D%96" title="贵州聚宝轩拍卖盛宴：艺术珍品璀璨登场，收藏爱好者的天堂！" target="_blank">贵州聚宝轩拍卖盛宴：艺术珍品璀璨登场，收藏爱好...</a></li>
+<li><a href="/cweb/news/read.asp?id=490972&amp;kind=%E6%8B%8D%E5%8D%96" title="二十周年庆！西泠拍卖本周末绍兴公开征集藏品" target="_blank">二十周年庆！西泠拍卖本周末绍兴公开征集藏品</a></li>
+<li><a href="/cweb/news/read.asp?id=490798&amp;kind=%E6%8B%8D%E5%8D%96" title="二十周年庆！西泠拍卖本周末合肥公开征集藏品" target="_blank">二十周年庆！西泠拍卖本周末合肥公开征集藏品</a></li>
+<li><a href="/cweb/news/read.asp?id=490610&amp;kind=%E6%8B%8D%E5%8D%96" title="香港苏富比" 2024="" 年古代书画春季拍卖="" target="_blank">香港苏富比2024年古代书画春季拍卖</a></li>
+
+  </ul>
+ </div>
+</div>
+ </div>
+ <div id="two_columns_right">
+<!--爱物琐记-->
+ <div id="zhangzhenyu">
+ <div class="zhangzhenyu_title"><a target="_blank" href="/cweb/news/zt_read.asp?masterid=62"><img src="/cweb/images/3zhangzhenyu.jpg" width="250" alt="张振宇——爱物琐记"></a></div>
+<div class="zhangzhenyu_content">
+<ul>
+<li><a href="/cweb/news/zt_news_read.asp?id=434908&amp;masterid=62" target="_blank" title="爱物琐记——依看人间万般情">依看人间万般情</a></li><li><a href="/cweb/news/zt_news_read.asp?id=416156&amp;masterid=62" target="_blank" title="爱物琐记——只为人间无限好">只为人间无限好</a></li><li><a href="/cweb/news/zt_news_read.asp?id=406945&amp;masterid=62" target="_blank" title="爱物琐记——风雨过后又启航">风雨过后又启航</a></li><li><a href="/cweb/news/zt_news_read.asp?id=378805&amp;masterid=62" target="_blank" title="爱物琐记——大道而成的胜景">大道而成的胜景</a></li><li><a href="/cweb/news/zt_news_read.asp?id=346175&amp;masterid=62" target="_blank" title="爱物琐记——我当凌波耀世开">我当凌波耀世开</a></li><li><a href="/cweb/news/zt_news_read.asp?id=330277&amp;masterid=62" target="_blank" title="爱物琐记——我的祖国万年青">我的祖国万年青</a></li><li><a href="/cweb/news/zt_news_read.asp?id=327009&amp;masterid=62" target="_blank" title="爱物琐记——老到的花样年华">老到的花样年华</a></li><li><a href="/cweb/news/zt_news_read.asp?id=320203&amp;masterid=62" target="_blank" title="爱物琐记——瑶夜藏春一天水">瑶夜藏春一天水</a></li><li><a href="/cweb/news/zt_news_read.asp?id=310349&amp;masterid=62" target="_blank" title="爱物琐记——我既择之不言苦">我既择之不言苦</a></li><li><a href="/cweb/news/zt_news_read.asp?id=305171&amp;masterid=62" target="_blank" title="爱物琐记——三十年风花雪夜">三十年风花雪夜</a></li><li><a href="/cweb/news/zt_news_read.asp?id=299055&amp;masterid=62" target="_blank" title="爱物琐记——轻盈总是甜美的">轻盈总是甜美的</a></li><li><a href="/cweb/news/zt_news_read.asp?id=296632&amp;masterid=62" target="_blank" title="爱物琐记——一渡大河国运开">一渡大河国运开</a></li><li><a href="/cweb/news/zt_news_read.asp?id=295672&amp;masterid=62" target="_blank" title="爱物琐记——让生命又获重生">让生命又获重生</a></li><li><a href="/cweb/news/zt_news_read.asp?id=291656&amp;masterid=62" target="_blank" title="爱物琐记——又逢月凉如水时">又逢月凉如水时</a></li><li><a href="/cweb/news/zt_news_read.asp?id=289142&amp;masterid=62" target="_blank" title="爱物琐记——革命理想高于天">革命理想高于天</a></li><li><a href="/cweb/news/zt_news_read.asp?id=286876&amp;masterid=62" target="_blank" title="爱物琐记——不能失却的热血">不能失却的热血</a></li><li><a href="/cweb/news/zt_news_read.asp?id=284088&amp;masterid=62" target="_blank" title="爱物琐记——师法自然的德者">师法自然的德者</a></li><li><a href="/cweb/news/zt_news_read.asp?id=281410&amp;masterid=62" target="_blank" title="爱物琐记——往事如烟心能系">往事如烟心能系</a></li><li><a href="/cweb/news/zt_news_read.asp?id=278890&amp;masterid=62" target="_blank" title="爱物琐记——钢铁这样炼成的">钢铁这样炼成的</a></li><li><a href="/cweb/news/zt_news_read.asp?id=277044&amp;masterid=62" target="_blank" title="爱物琐记——纳进千祥因慈悲">纳进千祥因慈悲</a></li><li><a href="/cweb/news/zt_news_read.asp?id=274693&amp;masterid=62" target="_blank" title="爱物琐记——敢教天地换新颜">敢教天地换新颜</a></li><li><a href="/cweb/news/zt_news_read.asp?id=271912&amp;masterid=62" target="_blank" title="爱物琐记——流芳溢彩话春情">流芳溢彩话春情</a></li>
+</ul>
+</div>
+
+ </div>
+ </div>
+</div>
+
+
+<!--第二通拦 end-->
+
+<!--广告 star-->
+<div class="adv">
+	<div id="focus">
+		<ul class="slides_container" style="overflow: hidden; position: relative; display: block;">
+         <div class="slides_control" style="position: relative; width: 2220px; height: 380px; left: -740px;"><li style="position: absolute; top: 0px; left: 740px; z-index: 0; display: list-item;"><div><a href="http://ma.m.taobao.com/bjxjs"><img style="HEIGHT: 90px; BORDER-TOP-COLOR: ; WIDTH: 741px; BORDER-LEFT-COLOR: ; BORDER-BOTTOM-COLOR: ; FILTER: none; BORDER-RIGHT-COLOR: " border="0" hspace="0" alt="" src="http://img.cnarts.net.cn/cweb/news/2017-01/2017-01-18/2017-01-18_19422596.jpg" width="741" height="90"></a></div></li><li style="position: absolute; top: 0px; left: 740px; z-index: 0; display: none;"><div><a href="/cweb/news/zt_read.asp?topic=%C9%CF%BA%A3%B2%C9%B7%E7"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2013-05/2013-05-22/2013-05-22_17341357.jpg"></a></div></li></div>
+
+		</ul>
+	<ul class="pagination"><li class="current"><a href="#0">1</a></li><li class=""><a href="#1">2</a></li></ul></div>
+  <div style="padding:0; margin-left:10px"><p><a href="/yishizhai" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2014-09/2014-09-28/2014-09-28_12511315.jpg"></a></p></div>
+</div>
+<!--广告 end-->
+
+<!--第三通栏数据取出 start -->
+
+
+<!--第三通栏 start -->
+<div id="article_tongLan">
+<div class="left">
+<!--艺术研究-->
+
+<div id="collection" class="ysyj bgc">
+ <div class=" quanju  research_title">
+  <h1><a target="_blank" href="/cweb/arti/"><img alt="艺术研究" src="/cweb/images/space.gif" width="85" height="29">艺术研究</a></h1>
+  <div class="quanju  research_title_right yishu_title"><span><a target="_blank" href="/cweb/arti/">更多&gt;&gt;</a></span>
+  <ul>
+	  <li><a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3">教学课堂</a></li>
+      <li><a target="_blank" href="/cweb/arti/news.asp?type=%CA%B5%CA%C2%CA%F6%C6%C0">实事述评</a></li>
+      <li><a target="_blank" href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA">艺术文摘</a></li>
+      <li><a target="_blank" href="/cweb/arti/digest_lmj.asp?type=媒体关注&amp;bid=8">媒体关注</a></li>      <li><a target="_blank" href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA">艺术文摘</a></li>
+      <li><a target="_blank" href="/cweb/arti/digest_lmj.asp?type=%C3%FB%BC%D2%BC%F6%D2%D5&amp;bid=6">名家荐艺</a></li>
+      <li><a target="_blank" href="/cweb/arti/digest_lmj.asp?type=%B2%BB%CD%AC%D2%D5%BC%FB&amp;bid=4">不同艺见</a></li>
+      <li><a target="_blank" href="/cweb/arti/digest_lmj.asp?type=%D2%D5%CA%F5%BD%B9%B5%E3&amp;bid=2">艺术焦点</a></li>
+  </ul>
+  </div>
+ </div>
+ <div class="ysyj_all">
+  <div class="ysyj_c  ">
+	<div class="c1">
+        <a target="_blank" href="/cweb/arti/digest_lmj.asp?type=%D2%D5%CA%F5%BD%B9%B5%E3&amp;bid=2"><img src="/cweb/images/ysjd.gif" width="190" height="100"></a>
+    	<ul>
+           <li><a href="/cweb/arti/digest_lmj.asp?type=%D2%D5%CA%F5%BD%B9%B5%E3&amp;id=430487&amp;bid=2&amp;top=lmj" target="_blank" title="人没有同理心，说什么“情人节”">人没有同理心，说什么“...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%D2%D5%CA%F5%BD%B9%B5%E3&amp;id=429283&amp;bid=2&amp;top=lmj" target="_blank" title="冬日里最值得的投资，是从头暖到脚的精致">冬日里最值得的投资，是...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%D2%D5%CA%F5%BD%B9%B5%E3&amp;id=427699&amp;bid=2&amp;top=lmj" target="_blank" title="天冷了，怎么暖暖手？">天冷了，怎么暖暖手？</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%D2%D5%CA%F5%BD%B9%B5%E3&amp;id=427698&amp;bid=2&amp;top=lmj" target="_blank" title="笑痛肚皮的特“色”圣诞节">笑痛肚皮的特“色”圣诞...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%D2%D5%CA%F5%BD%B9%B5%E3&amp;id=427043&amp;bid=2&amp;top=lmj" target="_blank" title="“拈花惹草”实战7招数">“拈花惹草”实战7招数...</a></li>
+        </ul>
+    </div>
+    <div class="c2">
+        	<ul>
+            <li><a href="/cweb/arti/digest_lmj.asp?type=%B2%BB%CD%AC%D2%D5%BC%FB&amp;id=353059&amp;bid=4&amp;top=lmj" target="_blank" title="艺术不是对环境的苟且">艺术不是对环境的苟且...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%B2%BB%CD%AC%D2%D5%BC%FB&amp;id=340023&amp;bid=4&amp;top=lmj" target="_blank" title="特纳奖为何颁给“泥瓦匠”">特纳奖为何颁给“泥瓦...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%B2%BB%CD%AC%D2%D5%BC%FB&amp;id=337741&amp;bid=4&amp;top=lmj" target="_blank" title="陈逸飞画得出这么多作品吗？">陈逸飞画得出这么多作...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%B2%BB%CD%AC%D2%D5%BC%FB&amp;id=335627&amp;bid=4&amp;top=lmj" target="_blank" title="艺术潮流不是“大姨妈”">艺术潮流不是“大姨妈...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%B2%BB%CD%AC%D2%D5%BC%FB&amp;id=334955&amp;bid=4&amp;top=lmj" target="_blank" title="两个极端">两个极端</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%B2%BB%CD%AC%D2%D5%BC%FB&amp;id=331663&amp;bid=4&amp;top=lmj" target="_blank" title="看不懂真的很重要吗？">看不懂真的很重要吗？...</a></li>
+            </ul>
+    </div>
+    <div class="c3">
+        	<ul>
+            <li><a href="/cweb/arti/digest_lmj.asp?type=%C3%FB%BC%D2%BC%F6%D2%D5&amp;id=317700&amp;bid=6&amp;top=lmj" target="_blank" title="一道新的艺术与视觉文化风景线">一道新的艺术与视觉文化...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%FB%BC%D2%BC%F6%D2%D5&amp;id=316533&amp;bid=6&amp;top=lmj" target="_blank" title="他冲破海上传统中国画的寂寞">他冲破海上传统中国画的...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%FB%BC%D2%BC%F6%D2%D5&amp;id=304707&amp;bid=6&amp;top=lmj" target="_blank" title="《上海少女》落户“上海中心”">《上海少女》落户“上海...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%FB%BC%D2%BC%F6%D2%D5&amp;id=302038&amp;bid=6&amp;top=lmj" target="_blank" title="上海画坛需要推动更需要刺激">上海画坛需要推动更需要...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%FB%BC%D2%BC%F6%D2%D5&amp;id=294229&amp;bid=6&amp;top=lmj" target="_blank" title="“画牛”鼓牛劲你“牛”我也“牛”">“画牛”鼓牛劲你“牛”...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%FB%BC%D2%BC%F6%D2%D5&amp;id=292875&amp;bid=6&amp;top=lmj" target="_blank" title="克勒门艺术沙龙明亮相书展">克勒门艺术沙龙明亮相书...</a></li>
+            </ul>
+    </div>
+    <div class="c4">
+        	<ul>
+            <li><a href="/cweb/arti/digest_lmj.asp?type=%C3%BD%CC%E5%B9%D8%D7%A2&amp;id=329387&amp;bid=8&amp;top=lmj" target="_blank" title="书展中的新民人">书展中的新民人</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%BD%CC%E5%B9%D8%D7%A2&amp;id=328248&amp;bid=8&amp;top=lmj" target="_blank" title="刻画社会百态入木三分">刻画社会百态入木三分</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%BD%CC%E5%B9%D8%D7%A2&amp;id=325092&amp;bid=8&amp;top=lmj" target="_blank" title="忘了“登陆”密码的“灿鸿”">忘了“登陆”密码的“灿...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%BD%CC%E5%B9%D8%D7%A2&amp;id=322650&amp;bid=8&amp;top=lmj" target="_blank" title="如何从学术催眠和商业鼓噪中出走">如何从学术催眠和商业鼓...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%BD%CC%E5%B9%D8%D7%A2&amp;id=304703&amp;bid=8&amp;top=lmj" target="_blank" title="上海文艺评论专项基金文艺评论奖揭晓">上海文艺评论专项基金文...</a></li><li><a href="/cweb/arti/digest_lmj.asp?type=%C3%BD%CC%E5%B9%D8%D7%A2&amp;id=292262&amp;bid=8&amp;top=lmj" target="_blank" title="市民惊吓报警质疑污染">市民惊吓报警质疑污染</a></li>
+            </ul>
+    </div>
+  </div>
+  <div class="ysyj_b">
+	<div class="wrap">
+    <div class="b1">实事述评</div>
+    <div class="b2">
+    	<ul>
+        <li><a href="/cweb/arti/news.asp?type=%CA%B5%CA%C2%CA%F6%C6%C0&amp;page=1&amp;id=7212" target="_blank">多元化时代的国家收藏之难 </a></li><li><a href="/cweb/arti/news.asp?type=%CA%B5%CA%C2%CA%F6%C6%C0&amp;page=1&amp;id=7211" target="_blank">雕塑界该提升什么?</a></li><li><a href="/cweb/arti/news.asp?type=%CA%B5%CA%C2%CA%F6%C6%C0&amp;page=1&amp;id=7207" target="_blank">关于展览的比较 </a></li><li><a href="/cweb/arti/news.asp?type=%CA%B5%CA%C2%CA%F6%C6%C0&amp;page=1&amp;id=7206" target="_blank">整合资源，化小为大</a></li>
+        </ul>
+    </div>  </div>
+
+	<div class="wrap">
+    <div class="b1">艺术文摘</div>
+    <div class="b2">
+    	<ul>
+        <li><a target="_blank" href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA&amp;cat=8"><span>评论</span></a>| <a href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA&amp;cat=8&amp;id=1384" target="_blank">小心艺术天才的神话</a></li><li><a target="_blank" href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA&amp;cat=5"><span>设计</span></a>| <a href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA&amp;cat=5&amp;id=1383" target="_blank">被忽略的LV设计</a></li><li><a target="_blank" href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA&amp;cat=9"><span>历史</span></a>| <a href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA&amp;cat=9&amp;id=1382" target="_blank">关于邓拓先生的收藏</a></li><li><a target="_blank" href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA&amp;cat=8"><span>评论</span></a>| <a href="/cweb/arti/digest.asp?type=%D2%D5%CA%F5%CE%C4%D5%AA&amp;cat=8&amp;id=1381" target="_blank">对话“启蒙”</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="wrap">
+    <div class="b1">教学课堂</div>
+    <div class="b3">
+    	<a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=1">国画</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=9">油画</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=10">版画</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=11">摄影</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=12">水彩</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=14">书法</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=15">篆刻</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=16">雕塑</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=21">图形图像设计</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=13">设计杂文</a>
+        <a target="_blank" href="/cweb/arti/teach.asp?type=%BD%CC%D1%A7%BF%CE%CC%C3&amp;typeid=22">网页设计</a>
+    </div>
+    <div class="b4">
+        <a target="_blank" href="/cweb/Exhibition/show/newchina/">新中国美术史</a>
+        <a target="_blank" href="/cweb/Exhibition/show/history/">中国绘画史</a>
+        <a target="_blank" href="/cweb/Exhibition/show/shuicai/">中国水彩画史</a>
+    </div>
+    </div>
+  </div>
+ </div>
+ </div>
+<!--艺术研究-->
+
+<!--鉴赏收藏开始-->
+
+<div id="collection" class="scjs">
+ <div class=" quanju collection ">
+  <h1><a target="_blank" href="/cweb/Appreciation_collection/"><img alt="鉴赏收藏" src="/cweb/images/space.gif" width="85" height="29">鉴赏收藏</a></h1>
+  <div class="quanju  collection_right yishu_title"><span><a href="Appreciation_collection">更多&gt;&gt;</a></span>
+  <ul>
+   <li><a target="_blank" href="/cweb/Appreciation_collection/zhuanti.asp">藏品专题</a></li>
+   <li><a target="_blank" href="/cweb/Appreciation_collection/seal.asp">书画印鉴</a></li>
+   <li><a target="_blank" href="/cweb/Appreciation_collection/collector.asp">收藏家</a></li>
+   <li><a target="_blank" href="/cweb/Appreciation_collection/dailypic.asp">名品欣赏</a></li>
+   <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp">收藏文摘</a></li>
+  </ul>
+  </div>
+ </div>
+ <div class="collection_content">
+  <div class="picshownew collection_content_left">
+  <dl><dd><a target="_blank" href="Appreciation_collection/index_read.asp?typeid=&amp;page=1&amp;id=47218"><img src="http://img.cnarts.net.cn/cweb/collect/scwx/files/2021-07/202179155253.jpg" alt="如何分辨俄罗斯白玉与新疆和田..." width="150" height="92"></a></dd><dt><h2><a target="_blank" href="Appreciation_collection/index_read.asp?typeid=&amp;page=1&amp;id=47218">如何分辨俄罗斯白玉与新疆和田...</a></h2><p>在以往的文字之中我们多是探讨一些难度较高的和田玉鉴赏问题。虽然也都是出自笔者的诚意之作，但难免有曲高唱寡，脱离爱好者们所面...<span> [<a target="_blank" href="Appreciation_collection/index_read.asp?typeid=&amp;page=1&amp;id=47218">详细</a>]</span></p></dt></dl>
+<dl><dd><a target="_blank" href="Appreciation_collection/index_read.asp?typeid=&amp;page=1&amp;id=47217"><img src="http://img.cnarts.net.cn/cweb/collect/scwx/files/2021-06/202162913148.jpg" alt="古玉镶嵌：人见人爱的玉蝉配饰,..." width="150" height="92"></a></dd><dt><h2><a target="_blank" href="Appreciation_collection/index_read.asp?typeid=&amp;page=1&amp;id=47217">古玉镶嵌：人见人爱的玉蝉配饰,...</a></h2><p>前言在战国时期，玉更被视作“美德”的象征，诸子百家崇玉、王孙贵族爱玉，佩戴玉蝉已成为一种风尚！何来文化自信？文化自信是对文化...<span> [<a target="_blank" href="Appreciation_collection/index_read.asp?typeid=&amp;page=1&amp;id=47217">详细</a>]</span></p></dt></dl>
+
+
+
+     <div class="collection_content_bottom ccb">
+     <h3>收藏家</h3>
+     <p class="mortitle" style="width:290px;">
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=20">张振宇</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=19">周绍良</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=18">史树青</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=17">王　度</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=16">矫大羽</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=13">于志豪</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=12">孙振阳</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=10">李伯琴</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=9">刘国鼎</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=8">周道祥</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=7">杨鲁安</a>
+<a target="_blank" href="/cweb/Appreciation_collection/collector.asp?msid=6">王世定</a>
+
+
+
+     </p>
+     </div>
+  </div>
+  <div class="collection_content_right">
+   <ul>
+   <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36"><span>中国美术</span></a>| <a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36&amp;page=1&amp;id=47594" title="诗书画的历史：从苏东坡到郑板桥">诗书画的历史：从苏东坡到郑板桥</a></li>
+<li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=21"><span>集邮</span></a>| <a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=21&amp;page=1&amp;id=47593" title="书香飘逸方寸间">书香飘逸方寸间</a></li>
+<li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36"><span>中国美术</span></a>| <a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36&amp;page=1&amp;id=47592" title="丹青千载说牡丹">丹青千载说牡丹</a></li>
+<li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=21"><span>集邮</span></a>| <a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=21&amp;page=1&amp;id=47591" title="故宫邮局推出《四季故宫》藏书票及龙年个性化邮票">故宫邮局推出《四季故宫》藏书票...</a></li>
+<li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36"><span>中国美术</span></a>| <a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36&amp;page=1&amp;id=47590" title="春来万物皆入墨 无限风光在画卷">春来万物皆入墨无限风光在画卷</a></li>
+<li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36"><span>中国美术</span></a>| <a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36&amp;page=1&amp;id=47589" title="天开图画供丹青">天开图画供丹青</a></li>
+<li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=47"><span>外国美术</span></a>| <a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=47&amp;page=1&amp;id=47588" title="传统文化的“救生船”——二十世纪六十年代至八十年代的莱比锡画派">传统文化的“救生船”——二十世...</a></li>
+<li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36"><span>中国美术</span></a>| <a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36&amp;page=1&amp;id=47587" title="山水无声壁上观——敦煌早期壁画中的配景山水">山水无声壁上观——敦煌早期壁画...</a></li>
+
+
+   </ul>
+   <div class="collection_content_right_bottom">
+   <h3><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp"><img alt="收藏文摘" src="/cweb/images/space.gif" width="36" height="92"></a></h3>
+   <div class="mortitlee">
+     <ul>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=9">家具</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=10">刺绣</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=11">瓷器</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=12">紫砂陶艺</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=13">石雕</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=14">铜器</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=15">玉器</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=16">珠宝</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=18">漆器</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=19">其他</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=20">磁卡</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=21">集邮</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=22">钱币</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=23">书籍</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=24">文房四宝</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=25">票证</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=49">钟表</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=27">市场</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=29">纪念章</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=32">火花烟标</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=34">赏石</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=35">竹木牙雕</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=36">中国美术</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=42">收藏知识</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=41">海报</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=43">投资理财</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=44">书法篆刻</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=47">外国美术</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=48">酒文化</a></li>
+      <li><a target="_blank" href="/cweb/Appreciation_collection/index_read.asp?typeid=26">连环画</a></li>
+     </ul>
+   </div>
+   </div>
+  </div>
+ </div>
+</div>
+<!--鉴赏收藏结束-->
+</div>
+
+<!--电子杂志和艺术壁纸开始-->
+<div class="right">
+<div class="zazhi">
+
+ <div class="quanju zazhi_title">
+<!-- <h2><a target='_blank' href="/cweb/magazine/">电子杂志</a></h2>
+ <span><a target='_blank' href="/cweb/magazine/">更多>></a></span>
+ </div>
+ <div class="zazhi_content"></div>-->
+<h2><a target="_blank" href="/cweb/news/zt_read.asp?masterid=93">陈履生美术馆</a></h2>
+ <span><a target="_blank" href="/cweb/news/zt_read.asp?masterid=93">更多&gt;&gt;</a></span>
+ </div>
+
+ <div class="newsbody"><ul>
+ <li><a href="/cweb/news/zt_news_read.asp?id=491021&amp;masterid=93" target="_blank" title="陈履生：1986年关于传统讨论的往事">1986年关于传统讨论的往事</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490721&amp;masterid=93" target="_blank" title="艺术批评中的街谈巷议">艺术批评中的街谈巷议</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490720&amp;masterid=93" target="_blank" title="陈履生：当代艺术评论的两大阵营">当代艺术评论的两大阵营</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490719&amp;masterid=93" target="_blank" title="书画江湖化越来越严重">书画江湖化越来越严重</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490718&amp;masterid=93" target="_blank" title="陈履生：艺术评论与消遣、消费">艺术评论与消遣、消费</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490427&amp;masterid=93" target="_blank" title="陈履生：美术评论的职业视角">美术评论的职业视角</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490426&amp;masterid=93" target="_blank" title="陈履生：美术批评的对比视角">美术批评的对比视角</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490425&amp;masterid=93" target="_blank" title="陈履生：美术批评的专业视角">美术批评的专业视角</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490424&amp;masterid=93" target="_blank" title="陈履生：美术评论的群体与个体的视角">美术评论的群体与个体的视角</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490369&amp;masterid=93" target="_blank" title="陈履生：美术评论的现实视角">美术评论的现实视角</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490368&amp;masterid=93" target="_blank" title="陈履生：美术评论的艺术视角">美术评论的艺术视角</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=490286&amp;masterid=93" target="_blank" title="陈履生：批评的历史视角">批评的历史视角</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=489206&amp;masterid=93" target="_blank" title="陈履生：博物馆与城市文化资源">博物馆与城市文化资源</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=489188&amp;masterid=93" target="_blank" title="画不够" 景来凑：说说美术馆中“沉浸式="">画不够景来凑：说说美术馆中“沉浸式</a></li>
+ <li><a href="/cweb/news/zt_news_read.asp?id=488958&amp;masterid=93" target="_blank" title="陈履生：我与《美术报》|" 庆祝《美术报》30年="">我与《美术报》|庆祝《美术报》30年</a></li>
+</ul>
+</div>
+</div>
+<!--艺术典藏开始-->
+<div class="wallpaper">
+ <div class="quanju  art_collection">
+ <h2><a target="_blank" href="/cweb/art_collection/">艺术典藏</a></h2>
+ <span><a target="_blank" href="/cweb/art_collection/">更多&gt;&gt;</a></span>
+ </div>
+ <div class="art_collection_content">
+ <ul>
+ <h2><a target="_blank" href="/cweb/art_collection/">艺术家</a></h2>
+  <li>
+  <a target="_blank" href="/cweb/art_collection/index.asp?type=gh&amp;kind=%B9%FA%BB%AD">国画 </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=sc&amp;kind=%CB%AE%B2%CA">水彩 </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=yh&amp;kind=%D3%CD%BB%AD">油画 </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=bh&amp;kind=%B0%E6%BB%AD">版画 </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=ds&amp;kind=%B5%F1%CB%DC">雕塑<br>
+  </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=sj&amp;kind=%C9%E8%BC%C6">设计 </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=jz&amp;kind=%BD%A8%D6%FE">建筑 </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=zz&amp;kind=%D7%B0%D6%C3">装置 </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=sf&amp;kind=%CA%E9%B7%A8%D7%AD%BF%CC">书法篆刻 </a> <a target="_blank" href="/cweb/art_collection/index.asp?type=sy&amp;kind=%C9%E3%D3%B0%D2%D5%CA%F5">摄影</a></li>
+ </ul>
+ <a target="_blank" href="/cweb/Exhibition/show/100guohua/"><img alt="国画百年" src="/cweb/images/collection_pic2.jpg"></a>
+ <a target="_blank" href="/cweb/Exhibition/show/100youhua/"><img alt="油画百年" src="/cweb/images/collection_pic3.jpg"></a>
+ <a target="_blank" href="/cweb/Exhibition/show/100banhua/"><img alt="版画百年" src="/cweb/images/collection_pic4.jpg"></a>
+ <a target="_blank" href="/cweb/art_collection/beitie.asp"><img alt="历代碑帖" src="/cweb/images/collection_pic5.jpg"></a>
+ </div>
+</div>
+<!--艺术典藏结束-->
+</div>
+<!--电子杂志和艺术壁纸结束-->
+</div>
+<div class="adv">
+ <a href="http://www.tai-hwa.com/taihwacart/"><img src="http://img.cnarts.net.cn/cweb/news/2017-08/2017-08-21/2017-08-21_142356184.jpg" border="0"></a></div>
+<!--第三通栏 end -->
+<div id="article_tongLan">
+<!--第三通栏左边 end -->
+
+
+<!-- 第三通栏数据读取-->
+
+
+
+<!--取出艺术典藏数据-->
+<!--取出艺术典藏数据　end-->
+
+
+
+<!--取出商务频道数据-->
+<!--取出商务频道数据　end-->
+
+<!-- 第三通栏数据读取　end-->
+<div class="left">
+  <!--工艺百科开始-->
+
+
+  <div id="gybk" class="gybk">
+    <div class=" quanju  process_title ">
+      <h1><a target="_blank" href="/cweb/Process/"><img alt="艺术新闻" src="/cweb/images/space.gif" width="85" height="29">艺术新闻</a></h1>
+      <div class="quanju process_title_right yishu_title"><span><a target="_blank" href="/cweb/Process/">更多&gt;&gt;</a></span>
+        <ul>
+          <li><a target="_blank" href="/cweb/Process/zhuanti.asp">工艺专题</a></li>
+          <li><a target="_blank" href="/cweb/Process/index_read.asp">杂项</a></li>
+          <li><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%CD%AD%B5%F1">铜雕艺术</a></li>
+          <li><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%D6%E9%B1%A6">珠宝玉器</a></li>
+          <li><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%CA%AF%B5%F1">石雕艺术</a></li>
+          <li><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%B4%CC%D0%E5">刺绣艺术</a></li>
+          <li><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%CC%D5%B4%C9">陶瓷艺术</a></li>
+          <li><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%BC%D2%BE%DF">古典家具</a></li>
+          <li><a target="_blank" href="/cweb/Process/index_read.asp">工艺信息</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="collection_content">
+      <div class="picshownew process_content_left"><dl><dd><a target="_blank" href="Process/index_read.asp?typeid=2&amp;page=1&amp;id=10764"><img src="http://img.cnarts.net.cn/cweb/artk/gyxx/files/2021-04/202141617430.jpg" alt="寿山石雕中国工艺美术大师作品..." width="150" height="92"></a></dd><dt><h2><a target="_blank" href="/cweb/Process/index_read.asp?typeid=2&amp;page=1&amp;id=10764" title="寿山石雕中国工艺美术大师作品展艺耀福建">寿山石雕中国工艺美术大师作品...</a></h2><p>由中国工艺美术大师林飞创作的石雕作品《四大美女》吸引观众观展艺耀东南——寿山石雕中国工艺美术大师作品展，14日在福建省海峡民...<span> [<a target="_blank" href="/cweb/Process/index_read.asp?typeid=2&amp;page=1&amp;id=10764">详细</a>]</span></p></dt></dl>
+
+        <div class="process_content_bottom">
+          <ul>
+            <li> 中国扇艺：<span><a target="_blank" href="/cweb/Exhibition/show/fan/history/index.htm">扇子的渊源与发展</a><br>
+              <a target="_blank" href="/cweb/Exhibition/show/fan/fan/index.htm">扇子的结构与特征</a><br>
+              <a target="_blank" href="/cweb/Exhibition/show/fan/fan/index.htm">百花争艳的民间扇艺扇子的收藏与保养</a></span></li>
+            <li>文房四宝：<span><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%E6%9D%82%E9%A1%B9&amp;id=86">笔</a> <a target="_blank" href="/cweb/Process/artk.asp?select_kind=杂项&amp;id=87">墨</a> <a target="_blank" href="/cweb/Process/artk.asp?select_kind=%E6%9D%82%E9%A1%B9&amp;id=88">纸</a> <a target="_blank" href="/cweb/Process/artk.asp?select_kind=杂项&amp;id=89">砚</a></span></li>
+            <li>剪纸艺术：<span><a target="_blank" href="/cweb/Exhibition/show/jianzhi/">民间传世剪纸纹样</a></span></li>
+            <li>漆艺：<span><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%E6%9D%82%E9%A1%B9&amp;id=92">中国漆器</a> <a target="_blank" href="/cweb/Exhibition/show/qiqi/">楚秦汉漆器艺术</a></span></li>
+            <li>琉璃：<span><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%E6%9D%82%E9%A1%B9&amp;id=130">中国琉璃艺术</a></span></li>
+            <li>雕刻：<span><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%D4%D3%CF%EE&amp;id=94">紫檀雕</a> <a target="_blank" href="/cweb/Process/artk.asp?select_kind=%D4%D3%CF%EE&amp;id=95">黄杨木雕</a> <a target="_blank" href="/cweb/Process/artk.asp?select_kind=%D4%D3%CF%EE&amp;id=96">根雕</a> <a target="_blank" href="/cweb/Process/artk.asp?select_kind=%D4%D3%CF%EE&amp;id=97">竹刻</a><br>
+              <a target="_blank" href="/cweb/Process/artk.asp?select_kind=%D4%D3%CF%EE&amp;id=98">骨雕</a> <a target="_blank" href="/cweb/Process/artk.asp?select_kind=%D4%D3%CF%EE&amp;id=119">微雕</a> <a target="_blank" href="/cweb/Process/artk.asp?select_kind=%D4%D3%CF%EE&amp;id=120">牙雕</a></span></li>
+            <li>其它：<span><a target="_blank" href="/cweb/Process/artk.asp?select_kind=%E6%9D%82%E9%A1%B9&amp;id=99">鼻烟壶</a> <a target="_blank" href="/cweb/Exhibition/show/datongzhang/">中国当代大铜章</a></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="process_content_right">
+        <div class="process_content_right_title">
+          <h2><a target="_blank" href="/cweb/Process/index_read.asp"><img alt="工艺信息" src="/cweb/images/process_tiile.gif" width="63" height="16"></a></h2>
+          <span><a target="_blank" href="/cweb/Process/index_read.asp?typeid=1">资讯</a> <a target="_blank" href="/cweb/Process/index_read.asp?typeid=2">展会</a> <a target="_blank" href="/cweb/Process/index_read.asp?typeid=3">名家</a> <a target="_blank" href="/cweb/Process/index_read.asp?typeid=4">园林</a> <a target="_blank" href="/cweb/Process/index_read.asp?typeid=5">珍宝</a></span> </div>
+        <ul>
+           <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=3"><span>工艺名家</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=3&amp;page=1&amp;id=10781" title="中国工艺美术大师倪东方去世，享年96岁">中国工艺美术大师倪东方去世，享年...</a></li>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=1"><span>工艺资讯</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=1&amp;page=1&amp;id=10780" title="银壶十大名牌">银壶十大名牌</a></li>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=1"><span>工艺资讯</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=1&amp;page=1&amp;id=10779" title="朱炳仁钟连盛大师联袂创作《福禄中国尊》铜雕景泰蓝在杭首发">朱炳仁钟连盛大师联袂创作《福禄...</a></li>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=3"><span>工艺名家</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=3&amp;page=1&amp;id=10778" title="指尖玲珑核雕壶，方寸核壁繁华簇">指尖玲珑核雕壶，方寸核壁繁华簇</a></li>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=1"><span>工艺资讯</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=1&amp;page=1&amp;id=10777" title="一生精作——王金山缂丝艺术首次个展于苏博开幕">一生精作——王金山缂丝艺术首次...</a></li>
+</ul>
+<ul>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=1"><span>工艺资讯</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=1&amp;page=1&amp;id=10776" title="一寸缂丝一寸金，寸寸缂丝寸寸心">一寸缂丝一寸金，寸寸缂丝寸寸心</a></li>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=1"><span>工艺资讯</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=1&amp;page=1&amp;id=10775" title="展览预告器象万千红船情——全国茶器具大师大作献展">展览预告器象万千红船情——全国...</a></li>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=3"><span>工艺名家</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=3&amp;page=1&amp;id=10774" title="致敬大师，“陶缘·刘传”石湾陶塑藏品研究展在新石湾美术馆开幕">致敬大师，“陶缘·刘传”石湾陶塑...</a></li>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=2"><span>展会动态</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=2&amp;page=1&amp;id=10773" title="知者创物感工艺之美——第二届全国工艺美术作品展亮相国博">知者创物感工艺之美——第二届全...</a></li>
+ <li><a target="_blank" href="/cweb/Process/index_read.asp?typeid=3"><span>工艺名家</span></a>| <a target="_blank" href="/cweb/Process/index_read.asp?typeid=3&amp;page=1&amp;id=10772" title="天凉了，你的扇子先别收！">天凉了，你的扇子先别收！</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--工艺百科结束-->
+
+  <!--论坛社区开始-->
+
+  <div id="collectionn">
+    <div class=" quanju bbs_title">
+      <h1><a target="_blank" href="/cweb/ubbs/"><img alt="艺术论坛" src="/cweb/images/space.gif" width="85" height="29">艺术论坛</a></h1>
+      <div class="quanju bbs_title_right yishu_title"><span><a target="_blank" href="http://dz.cnarts.net.cn/forum.php">更多&gt;&gt;</a></span>
+        <ul>
+          <li><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?gid=15">站务社区</a></li>
+          <li><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?gid=18">谈天说地</a></li>
+          <li><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?gid=17">收藏交流</a></li>
+          <li><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?gid=41">文化走廊</a></li>
+          <li><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?gid=29">品茶评壶</a></li>
+          <li><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?gid=16">艺术沙龙</a></li>
+          <li><a target="_blank" href="http://dz.cnarts.net.cn/forum.php?gid=21">个人展馆</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="collection_content">
+      <div class="bbs_left">
+        <div class="bbs_left_img"> <h2><a href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=14229" target="_blank" title="艺海视觉"><img alt="艺海视觉" width="150" height="95" src="http://img.cnarts.net.cn/cweb/ubbs/2012-07/2012-07-17/2012717153723.jpg"></a></h2><h2><a href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=24466" target="_blank" title="王小明书画作品"><img alt="王小明书画作品" width="150" height="95" src="http://img.cnarts.net.cn/cweb/ubbs/2012-07/2012-07-05/201275132915.jpg"></a></h2></div>
+        <div class="bbs_left_wz">
+          <ul>
+            <li><a href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=14229" target="_blank" title="艺海视觉">艺海视觉</a></li><li><a href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=24466" target="_blank" title="王小明书画作品">王小明书画作品</a></li><li><a href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=254219" target="_blank" title="可以发微博的相机三星NX20评测">可以发微博的相机三星NX20评...</a></li><li><a href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=254175" target="_blank" title="16个超赞超有爱英文字体设计">16个超赞超有爱英文字体设计...</a></li><li><a href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=254072" target="_blank" title="1977年一篇感人肺腑的高考范文">1977年一篇感人肺腑的高考范...</a></li><li><a href="http://www.cnarts.net.cn/dv/dispbbs.asp?boardid=22&amp;Id=24466&amp;page=1&amp;star=7" target="_blank" title="王小明书画作品">王小明书画作品</a></li><li><a href="http://www.cnarts.net.cn/dv/dispbbs.asp?boardid=39&amp;Id=253195" target="_blank" title="茶痴钱栋宁">茶痴钱栋宁</a></li><li><a href="http://www.cnarts.net.cn/dv/dispbbs.asp?boardid=26&amp;Id=253758" target="_blank" title="“五良大甫吴祥瑞造”青花松鼠碗">“五良大甫吴祥瑞造”青花松...</a></li><li><a href="http://www.cnarts.net.cn/dv/dispbbs.asp?boardid=52&amp;id=253837" target="_blank" title="棉里裹铁玉筋线遒美劲健节奏明">棉里裹铁玉筋线遒美劲健节奏...</a></li><li><a href="http://www.cnarts.net.cn/dv/dispbbs.asp?boardid=28&amp;id=253885" target="_blank" title="艺术孕育无可复制生命力">艺术孕育无可复制生命力</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bbs_right">
+        <ul>
+          <li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=7" target="_blank" title="浏览该版块">文艺之窗</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=270300&amp;extra=page%3D1&amp;page=2" title="“不完美”方为文人写意画艺术之本味">“不完美”方为文人写意画艺术之本...</a></li><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=25" target="_blank" title="浏览该版块">邮卡币章</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=272831&amp;extra=page%3D1" title="《北京申办2022年冬奥会成功纪念》邮票发行">《北京申办2022年冬奥会成功纪念》...</a></li><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=31" target="_blank" title="浏览该版块">故事精粹</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=263608" title="中日围棋擂台赛演义三十年对决从一场逆转开始">中日围棋擂台赛演义三十年对决从一...</a></li><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=24" target="_blank" title="浏览该版块">藏品展厅</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=257675&amp;extra=page%3D1" title="发现北京猿人80周年纪念章设计构思">发现北京猿人80周年纪念章设计构思...</a></li><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=3" target="_blank" title="浏览该版块">收藏百味</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=257678&amp;extra=" title="一锭清墨价值过万古墨收藏逐年升温">一锭清墨价值过万古墨收藏逐年升温...</a></li></ul><ul><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=31" target="_blank" title="浏览该版块">故事精粹</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=257671&amp;extra=&amp;page=1" title="解放你的心灵：生命的重建">解放你的心灵：生命的重建</a></li><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=25" target="_blank" title="浏览该版块">邮卡币章</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=257648&amp;extra=page%3D1" title="最具收藏潜力的鼠年贺岁纪念币">最具收藏潜力的鼠年贺岁纪念币</a></li><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=25" target="_blank" title="浏览该版块">邮卡币章</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=29919&amp;extra=page%3D1" title="第二到五套人民币发行与回收年表">第二到五套人民币发行与回收年表</a></li><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=25" target="_blank" title="浏览该版块">邮卡币章</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=257601" title="中国古钱大王张叔驯传奇">中国古钱大王张叔驯传奇</a></li><li><span><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=3" target="_blank" title="浏览该版块">收藏百味</a></span>| <a target="_blank" href="http://dz.cnarts.net.cn/forum.php?mod=viewthread&amp;tid=257540" title="金价昨再跳水创3年新低">金价昨再跳水创3年新低</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--论坛社区结束-->
+  <div class="marquee1 index_ubbs_adv" direction="left" speed="0" step="1" pause="1000">
+    <ul style="width: 5280px;">
+	<li><a href="http://www.chnmuseum.cn/tabid/40/Default.aspx" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_12040136.jpg"></a></li><li><a href="http://www.cnartw.com/cweb/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_12000825.jpg"></a></li><li><a href="http://www.ccm.gov.cn/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_11534761.jpg"></a></li><li><a href="http://www.99artspace.com/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_11513477.jpg"></a></li><li><a href="http://www.shanghaiprintart.com/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_11472993.jpg"></a></li><li><a href="http://www.shanghaibiennale.com/2012/cweb/index.asp" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_11173659.jpg"></a></li><li><a href="http://www.sartfair.com/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_10584733.jpg"></a></li><li><a href="http://ifc.cafa.edu.cn/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-05/2012-05-17/2012-05-17_20065830.jpg"></a></li><li><a href="http://www.lhs-arts.org/"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-04/2012-04-27/2012-04-27_15181520.jpg"></a></li><li><a href="http://www.youdiao.com.cn/"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-05/2012-05-03/2012-05-03_14030139.jpg"></a></li><li><a href="http://www.sh-artmuseum.org.cn/"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-04/2012-04-27/2012-04-27_15175258.jpg"></a></li>
+    <li><a href="http://www.chnmuseum.cn/tabid/40/Default.aspx" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_12040136.jpg"></a></li><li><a href="http://www.cnartw.com/cweb/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_12000825.jpg"></a></li><li><a href="http://www.ccm.gov.cn/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_11534761.jpg"></a></li><li><a href="http://www.99artspace.com/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_11513477.jpg"></a></li><li><a href="http://www.shanghaiprintart.com/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_11472993.jpg"></a></li><li><a href="http://www.shanghaibiennale.com/2012/cweb/index.asp" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_11173659.jpg"></a></li><li><a href="http://www.sartfair.com/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-06/2012-06-10/2012-06-10_10584733.jpg"></a></li><li><a href="http://ifc.cafa.edu.cn/" target="_blank"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-05/2012-05-17/2012-05-17_20065830.jpg"></a></li><li><a href="http://www.lhs-arts.org/"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-04/2012-04-27/2012-04-27_15181520.jpg"></a></li><li><a href="http://www.youdiao.com.cn/"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-05/2012-05-03/2012-05-03_14030139.jpg"></a></li><li><a href="http://www.sh-artmuseum.org.cn/"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-04/2012-04-27/2012-04-27_15175258.jpg"></a></li></ul>
+  </div>
+</div>
+<!--第三通栏左边 -->
+<!--艺术典藏和商务频道开始-->
+<div class="right">
+<div class="wallpaper">
+
+ <div class="quanju wallpaper_title">
+ <h2><a target="_blank" href="/cweb/ysbz/">艺术壁纸</a></h2>
+ <span><a target="_blank" href="/cweb/ysbz/">更多&gt;&gt;</a></span>
+ </div>
+ <div class="wallpaper_content"><a target="_blank" href="/cweb/ysbz/read.asp?id=5458"><img alt="艺术壁纸" src="http://img.cnarts.net.cn/cweb/service/ysbz/wallpaper/2017-05-03/201753121714.jpg" height="160" width="210"></a>
+ <ul>
+  <li>
+  <a target="_blank" href="/cweb/ysbz/kind.asp?category=16&amp;kind=%C9%E8%BC%C6%B8%DF%BE%AB%B6%C8%CB%D8%B2%C4">设计高精度素材</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=15&amp;kind=%C3%FB%C8%CB">名人</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=11&amp;kind=%B9%A4%D2%D5%C6%B7">工艺品</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=7&amp;kind=%CA%E9%BB%AD">书画</a> </li>
+  <li><a target="_blank" href="/cweb/ysbz/kind.asp?category=8&amp;kind=%D3%CD%BB%AD">油画</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=9&amp;kind=%CB%AE%B2%CA%BB%AD">水彩画</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=10&amp;kind=%B0%E6%BB%AD">版画</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=5&amp;kind=%CC%E5%D3%FD">体育</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=6&amp;kind=%B6%AF%CE%EF">动物</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=12&amp;kind=%B7%E7%B9%E2">风光</a></li>
+  <li> <a target="_blank" href="/cweb/ysbz/kind.asp?category=14&amp;kind=%BD%A8%D6%FE">建筑</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=4&amp;kind=%C9%E8%BC%C6">设计</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=2&amp;kind=%C0%F6%C8%CB">丽人</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=3&amp;kind=%BB%A8%BB%DC">花卉</a> <a target="_blank" href="/cweb/ysbz/kind.asp?category=1&amp;kind=%C6%E4%CB%FB">其他</a>
+  </li>
+ </ul>
+ </div>
+</div>
+
+<!--商务频道-->
+<div class="business">
+ <div class=" quanju business_title">
+  <h2><a href="#">商务频道</a></h2>
+  <span><a href="#">更多&gt;&gt;</a></span>
+ </div>
+ <div class="business_content"> <a href="#"><img alt="商务频道" src="/cweb/images/business_pic.jpg"></a>
+   <p><a href="#">笑佛(A货翡翠挂件 有鉴定证书)</a></p>
+   <ul>
+    <li><a href="#">• 吴养木画集 ￥190 </a></li>
+    <li><a href="#">•  笑佛(A货翡翠挂件 有鉴... ￥99 </a></li>
+    <li><a href="#">•  吉祥如意(A货翡翠挂件... ￥99</a></li>
+    <li><a href="#">•  观音(A货翡翠挂件 有鉴... ￥99</a></li>
+   </ul>
+ </div>
+</div>
+<!--商务频道-->
+</div>
+<!--艺术典藏和商务频道结束-->
+</div>
+<div class="adv">
+ <a href="http://dz.cnarts.net/forum.php?mod=forumdisplay&amp;fid=27"><img border="0" src="http://img.cnarts.net.cn/cweb/news/2012-04/2012-04-16/2012-04-16_15072582.jpg"></a></div>
+
+</div>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.copyright a {
+	text-align: center;
+	color: #000;
+}
+</style>
+<div class="copyright">
+  <div class="copyright1"> <ul>
+  <li><a href="/cweb/adve/index.asp" target="_blank">公司简介</a></li>
+  <li>|</li>
+  <li><a href="/cweb/adve/navigation.asp" target="_blank">站点导航</a></li>
+  <li>|</li>
+<!--  <li><a href="/cweb/adve/service.asp"  target="_blank">广告服务</a></li>
+  <li>|</li>-->
+  <li><a href="/cweb/adve/Cooperation.asp" target="_blank">关于合作</a></li>
+  <li>|</li>
+  <li><a href="/cweb/link/index.asp" target="_blank">友情链接</a></li>
+  <li>|</li>
+  <li><a href="/cweb/adve/about.asp" target="_blank">联系我们</a></li>
+  <li>|</li>
+  <li><a href="javascript:window.external.addFavorite('http://www.cnarts.net/','中国艺术品')" class="index_link" target="_blank">加入收藏</a> </li>
+  <li>|</li>
+  <li><a href="http://dz.cnarts.net.cn/forum.php?mod=forumdisplay&amp;fid=49" target="_blank">给我们留言</a></li>
+<!--  <li>|</li>
+  <li><a href="mailto:476944718@qq.com" class="index_link"target="_blank">总编信箱</a></li>-->
+  </ul> </div>
+
+  <div class="copyright2"><a href="https://beian.miit.gov.cn/" title="沪ICP备06027390号-2" target="_blank">沪ICP备06027390号-2</a>
+    <br>
+    版权所有 2000-2020 上海麟驾艺术品信息有限公司<br>
+Copyright  2000-2020 Cnarts.net Incorporated. All rights reserved
+
+<table cellpadding="0" cellspacing="10" border="0" align="center">
+<tbody><tr>
+<td><script language="JavaScript">
+document.writeln("<a href='http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=185zgp97qbn8rtluc8utb3agbupjm6xu5hbsw5ec6y9kr4s12c'><img src='/cweb/images/icon.gif' border=0></a>")</script><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=185zgp97qbn8rtluc8utb3agbupjm6xu5hbsw5ec6y9kr4s12c"><img src="/cweb/images/icon.gif" border="0"></a>
+
+</td>
+<td><a href="http://www.zx110.org/picp?sn=310101100042191" style="display:inline-block;*display:inline;zoom:1;width:150px;height:52px;position:relative;text-decoration:none;">
+   <img src="/cweb/images/cnarts.net.png" alt="沪公网备" border="0">
+</a></td>
+<td><a target="_blank" href="http://www.cyberpolice.cn/"><img src="/cweb/images/copyright_pic.jpg"></a></td>
+<td><a target="_blank" href="http://www.cyberpolice.cn/"><img src="/cweb/images/copyright_pic1.jpg"></a></td>
+<td><a target="_blank" href="http://net.china.com.cn/"><img src="/cweb/images/copyright_pic3.jpg"></a></td>
+<td><a target="_blank" href="http://www.wenming.cn/"><img src="/cweb/images/copyright_pic4.jpg"></a></td>
+<td><img src="/cweb/images/ghs.png" height="39"></td>
+<td align="center">
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102006431"><span style="height:20px; line-height:20px; margin: 0px 0px 0px 0px; color:#000000; ">沪公网安备<br>31010102006431号</span></a>
+</td>
+<td><!--<div>
+<a href="https://vip.scanv.com/" target="_blank" >
+<img border="0"  width="0" height="0" id="scanv" src="https://anfu.scanv.com/scanv-detection.jpg"/>
+</a>
+</div>-->
+</td>
+</tr></tbody></table>
+
+<!--<span style="display: none;"><script src="http://s11.cnzz.com/z_stat.php?id=1258444139&web_id=1258444139" language="JavaScript"></script></span>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+//document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1bbea4f410645d5a1935e9459bb342f7' type='text/javascript'%3E%3C/script%3E"));
+</script>-->
+</div>
+<!--<a href="http://webscan.360.cn/index/checkwebsite/url/www2.cnarts.net"><img border="0" src="http://webscan.360.cn/status/pai/hash/fa6f6e28745f185d3176bb716dfa793f"/></a>-->
+
+
+</div></body></html>
