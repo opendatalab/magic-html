@@ -1,1 +1,1 @@
-tests/* linguist-detectable=false
+tests/** linguist-detectable=false
