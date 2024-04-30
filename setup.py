@@ -42,12 +42,11 @@ requires = parse_requirements("requirements.txt")
 
 setup(
     name="common_html_extractor",
-    # version="0.1.3",
     version=get_version(),
     packages=["common_html_extractor"],
+    package_data={"common_html_extractor": ["mmltex/*.xsl"]},
     install_requires=requires,
     python_requires=">=3.8",
-    include_package_data=True,
     zip_safe=False,
 )
-# python setup.py sdist bdist_wheel
+# python setup.py bdist_wheel

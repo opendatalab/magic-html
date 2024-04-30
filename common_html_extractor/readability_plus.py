@@ -39,7 +39,7 @@ htmlstrip = re.compile(
     + "= *(?:%s|%s|%s)"  # undesirable attributes
     % (non_space, single_quoted, double_quoted)
     + "([^>]*)"  # value  # postfix
-    ">",  # end
+      ">",  # end
     re.I,
 )
 
@@ -54,15 +54,15 @@ class Document:
     """Class to build a etree document out of html."""
 
     def __init__(
-        self,
-        input,
-        url=None,
-        min_text_length=25,
-        retry_length=250,
-        xpath=False,
-        handle_failures="discard",
-        xp_num="others",
-        need_comment=False,
+            self,
+            input,
+            url=None,
+            min_text_length=25,
+            retry_length=250,
+            xpath=False,
+            handle_failures="discard",
+            xp_num="others",
+            need_comment=False,
     ):
         self.input = input
         self.html = None
@@ -207,8 +207,8 @@ class Document:
                 append = True
             sibling_key = sibling
             if (
-                sibling_key in candidates
-                and candidates[sibling_key]["content_score"] >= sibling_score_threshold
+                    sibling_key in candidates
+                    and candidates[sibling_key]["content_score"] >= sibling_score_threshold
             ):
                 append = True
 
@@ -220,9 +220,9 @@ class Document:
                 if node_length > 80 and link_density < 0.25:
                     append = True
                 elif (
-                    node_length <= 80
-                    and link_density == 0
-                    and re.search(r"\.( |$)", node_content)
+                        node_length <= 80
+                        and link_density == 0
+                        and re.search(r"\.( |$)", node_content)
                 ):
                     append = True
 
@@ -350,16 +350,16 @@ class Document:
             if len(s) < 2:
                 continue
             if (
-                self.REGEXES["unlikelyCandidatesRe"].search(s)
-                and (not self.REGEXES["okMaybeItsACandidateRe"].search(s))
-                and elem.tag not in ["html", "body"]
+                    self.REGEXES["unlikelyCandidatesRe"].search(s)
+                    and (not self.REGEXES["okMaybeItsACandidateRe"].search(s))
+                    and elem.tag not in ["html", "body"]
             ):
                 elem.drop_tree()
 
     def transform_misused_divs_into_paragraphs(self):
         for elem in self.tags(self.html, "div"):
             if not self.REGEXES["divToPElementsRe"].search(
-                str(b"".join(map(tostring, list(elem))))
+                    str(b"".join(map(tostring, list(elem))))
             ):
                 elem.tag = "p"
 
@@ -397,7 +397,7 @@ class Document:
 
         for elem in self.tags(node, "iframe"):
             if "src" in elem.attrib and self.REGEXES["videoRe"].search(
-                elem.attrib["src"]
+                    elem.attrib["src"]
             ):
                 elem.text = "VIDEO"
             else:
@@ -406,7 +406,7 @@ class Document:
         allowed = {}
         # Conditionally clean <table>s, <ul>s, and <div>s
         for el in self.reverse_tags(
-            node, "table", "ul", "div", "aside", "header", "footer", "section"
+                node, "table", "ul", "div", "aside", "header", "footer", "section"
         ):
             if el in allowed:
                 continue
@@ -452,14 +452,14 @@ class Document:
                     to_remove = True
                 elif content_length < MIN_LEN and counts["img"] == 0:
                     reason = (
-                        "too short content length %s without a single image"
-                        % content_length
+                            "too short content length %s without a single image"
+                            % content_length
                     )
                     to_remove = True
                 elif content_length < MIN_LEN and counts["img"] > 2:
                     reason = (
-                        "too short content length %s and too many images"
-                        % content_length
+                            "too short content length %s and too many images"
+                            % content_length
                     )
                     to_remove = True
                 elif weight < 25 and link_density > 0.2:

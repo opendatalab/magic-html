@@ -9,6 +9,7 @@ from lxml import etree
 from lxml.html import Element, HtmlElement, HTMLParser, fromstring, tostring
 from lxml.html.clean import Cleaner
 from urllib3.response import HTTPResponse
+from common_html_extractor.config import Unique_ID
 
 try:
     import brotli
@@ -82,7 +83,7 @@ asciimath2tex = ASCIIMath2Tex(log=False)
 
 def lcs_of_2(a, b):
     match = SequenceMatcher(None, a, b).find_longest_match(0, len(a), 0, len(b))
-    return a[match[0] : match[0] + match[2]]
+    return a[match[0]: match[0] + match[2]]
 
 
 def lcs_of_list(*args):
@@ -223,10 +224,10 @@ def text_len(s):
     japanese_characters = re.findall(r"[\u3040-\u309F\u30A0-\u30FF]", s)
     arabic_characters = re.findall(r"[\u0600-\u06FF]", s)
     return (
-        len(english_words)
-        + len(chinese_characters)
-        + len(japanese_characters)
-        + len(arabic_characters)
+            len(english_words)
+            + len(chinese_characters)
+            + len(japanese_characters)
+            + len(arabic_characters)
     )
 
 
@@ -239,7 +240,7 @@ def alias(element):
         return tag
     attribs = [tag]
     for k, v in element.attrib.items():
-        if k == "all_ids_pjtest_20300101_921b9a":
+        if k == Unique_ID:
             continue
         k, v = re.sub(r"\s*", "", k), re.sub(r"\s*", "", v)
         v = re.sub(r"-\d+", "", v)
@@ -258,7 +259,7 @@ def alias(element):
             continue
         attribs = [child.tag]
         for k, v in child.attrib.items():
-            if k == "all_ids_pjtest_20300101_921b9a":
+            if k == Unique_ID:
                 continue
             k, v = re.sub(r"\s*", "", k), re.sub(r"\s*", "", v)
             v = re.sub(r"-\d+", "", v)
@@ -367,7 +368,7 @@ def link_density_test(element, text, favor_precision=False):
                 return True, mylist
             if density_of_a_text(element, 0.5):
                 if linklen > threshold * elemlen or (
-                    elemnum > 1 and shortelems / elemnum > 0.8
+                        elemnum > 1 and shortelems / elemnum > 0.8
                 ):
                     return True, mylist
     return False, mylist

@@ -1,13 +1,7 @@
-beautifulsoup4
 Brotli
 cchardet
 charset_normalizer
-jieba
-ltp
-lxml
+lxml<5.2.0
 numpy
 py_asciimath
-rouge_score
-tabulate
-trafilatura
 urllib3

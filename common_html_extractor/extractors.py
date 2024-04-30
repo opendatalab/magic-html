@@ -55,7 +55,7 @@ class BaseExtractor:
 
         return result_body, xp_num, drop_list
 
-    def get_content(self, cleaned_tree_backup, xp_num="others", base_url=""):
+    def get_content_html(self, cleaned_tree_backup, xp_num="others", base_url=""):
         # readability_plus
         doc = DocumentPlus(
             cleaned_tree_backup,
@@ -64,9 +64,8 @@ class BaseExtractor:
             need_comment=self.need_comment,
         )
         body = doc.summary(html_partial=True)
-        content = ""
 
-        return content, body
+        return body
 
     def prune_unwanted_nodes(self, tree, nodelist, with_backup=False):
         if with_backup is True:
@@ -82,13 +81,13 @@ class BaseExtractor:
                 if "hidden" in expr:
                     try:
                         if re.findall(
-                            "overflow-x:\s*hidden", subtree.attrib["style"]
+                                "overflow-x:\s*hidden", subtree.attrib["style"]
                         ) or re.findall(
                             "overflow-y:\s*hidden", subtree.attrib["style"]
                         ):
                             continue
                         if re.findall(
-                            "overflow:\s*hidden", subtree.attrib["style"]
+                                "overflow:\s*hidden", subtree.attrib["style"]
                         ) and re.findall("height:", subtree.attrib["style"]):
                             height_px = re.findall(
                                 "height:\s*(\d+)", subtree.attrib["style"]
@@ -130,7 +129,7 @@ class BaseExtractor:
                     previous.tail = node.tail
 
         if parent is not None:
-            idx = node.attrib.get("all_ids_pjtest_20300101_921b9a", "")
+            idx = node.attrib.get(Unique_ID, "")
             parent.remove(node)
             if idx:
                 self.drop_ids.append(int(idx))
@@ -173,11 +172,11 @@ class BaseExtractor:
         for node in iter_node(element):
             l_tag = node.tag.lower()
             if l_tag not in ["html", "body"]:
-                node.attrib["all_ids_pjtest_20300101_921b9a"] = str(idx)
+                node.attrib[Unique_ID] = str(idx)
                 idx += 1
 
     def clean_unique_id(self, raw_element, content_html):
-        ids = re.findall(' all_ids_pjtest_20300101_921b9a="(\d+)"', content_html)
+        ids = re.findall(f' {Unique_ID}="(\d+)"', content_html)
         self.drop_ids = list(set(self.drop_ids))
         self.drop_ids.sort()
         skip_ids = [-1]
@@ -185,14 +184,14 @@ class BaseExtractor:
             if int(x) > int(skip_ids[-1]):
                 skip_ids.append(int(x))
                 drop_node = raw_element.xpath(
-                    f"//*[@all_ids_pjtest_20300101_921b9a='{x}']"
+                    f"//*[@{Unique_ID}='{x}']"
                 )
                 if drop_node:
                     new_div = Element("div")
                     for j in self.drop_ids:
                         if int(j) > int(skip_ids[-1]):
                             append_element = drop_node[0].xpath(
-                                f".//*[@all_ids_pjtest_20300101_921b9a='{j}']"
+                                f".//*[@{Unique_ID}='{j}']"
                             )
                             if append_element:
                                 skip_ids.append(j)
@@ -201,8 +200,8 @@ class BaseExtractor:
                                         [
                                             int(pjid)
                                             for pjid in append_element[0].xpath(
-                                                ".//*/@all_ids_pjtest_20300101_921b9a"
-                                            )
+                                            f".//*/@{Unique_ID}"
+                                        )
                                         ]
                                     )
                                 append_element[0].tail = None
@@ -216,10 +215,10 @@ class BaseExtractor:
                     except:
                         pass
 
-        content_html = re.sub(' all_ids_pjtest_20300101_921b9a="\d+"', "", content_html)
+        content_html = re.sub(f' {Unique_ID}="\d+"', "", content_html)
 
         drop_html = re.sub(
-            ' all_ids_pjtest_20300101_921b9a="\d+"',
+            f' {Unique_ID}="\d+"',
             "",
             tostring(raw_element, encoding=str),
         )
@@ -289,7 +288,7 @@ class BaseExtractor:
             if node_class:
                 class_list = node_class.split(" ")
                 if any(
-                    [img_class in class_list for img_class in latex_image_class_names]
+                        [img_class in class_list for img_class in latex_image_class_names]
                 ):
                     alt = node.get("alt")
                     if text_strip(alt):
@@ -609,7 +608,7 @@ class BaseExtractor:
         return element
 
     def delete_by_link_density(
-        self, subtree, tagname, backtracking=False, favor_precision=False
+            self, subtree, tagname, backtracking=False, favor_precision=False
     ):
         need_del_par = []
         skip_par = []
@@ -687,7 +686,7 @@ class BaseExtractor:
 
             if a_num < len(siblings):
                 if a_num >= 15 and (
-                    tagname == "div" or tagname == "article" or tagname == "section"
+                        tagname == "div" or tagname == "article" or tagname == "section"
                 ):
                     pass
                 else:
@@ -715,7 +714,7 @@ class BaseExtractor:
                 pass
             elif similarity_with_siblings_nums < 0.84:
                 if len(siblings) >= 15 and (
-                    tagname == "div" or tagname == "article" or tagname == "section"
+                        tagname == "div" or tagname == "article" or tagname == "section"
                 ):
                     pass
                 else:
@@ -723,17 +722,17 @@ class BaseExtractor:
             # 父div中包含多同级div 且div class post-时，删除其余节点，保留第一篇文章
             class_attr = descendant.get("class") if descendant.get("class") else ""
             if (
-                re.findall("post-", class_attr, re.I)
-                or re.findall("-post", class_attr, re.I)
-                or re.findall("blog|aricle", class_attr, re.I)
+                    re.findall("post-", class_attr, re.I)
+                    or re.findall("-post", class_attr, re.I)
+                    or re.findall("blog|aricle", class_attr, re.I)
             ):
                 drop_list = True
                 sk_flg = True
                 for dl in siblings:
                     if (
-                        text_len("".join(descendant.xpath(".//text()"))) * 2
-                        < text_len("".join(dl.xpath(".//text()")))
-                        and sk_flg
+                            text_len("".join(descendant.xpath(".//text()"))) * 2
+                            < text_len("".join(dl.xpath(".//text()")))
+                            and sk_flg
                     ):
                         self.remove_node(descendant)
                         sk_flg = False
@@ -894,7 +893,7 @@ class ArticleExtractor(BaseExtractor):
     def __init__(self) -> None:
         super().__init__()
 
-    def extract(self, html="", base_url="", lang="", save_drop_html=False) -> dict:
+    def extract(self, html="", base_url="") -> dict:
         html = html.replace("&nbsp;", " ").replace("&#160;", " ")
         tree = load_html(html)
         if tree is None:
@@ -907,9 +906,6 @@ class ArticleExtractor(BaseExtractor):
 
         if base_href and "http" in base_href[0]:
             base_url = base_href[0]
-        if save_drop_html:
-            self.generate_unique_id(tree)
-            raw_tree = deepcopy(tree)
 
         # 标签转换, 增加数学标签处理
         format_tree = self.convert_tags(tree, base_url=base_url)
@@ -920,21 +916,14 @@ class ArticleExtractor(BaseExtractor):
         subtree, xp_num, drop_list = self.xp_1_5(normal_tree)
         if xp_num == "others":
             subtree, drop_list = self.prune_unwanted_sections(normal_tree)
-        result, body_html = self.get_content(subtree, xp_num, base_url)
-
-        if save_drop_html:
-            body_html, drop_html = self.clean_unique_id(raw_tree, body_html)
-        else:
-            drop_html = ""
+        body_html = self.get_content_html(subtree, xp_num, base_url)
 
         return {
-            "text": result,
             "xp_num": xp_num,
             "drop_list": drop_list,
             "html": body_html,
             "title": title,
             "base_url": base_url,
-            "drop_html": drop_html,
         }
 
 
@@ -942,7 +931,7 @@ class WeixinExtractor(BaseExtractor):
     def __init__(self) -> None:
         super().__init__()
 
-    def extract(self, html="", base_url="", lang="", save_drop_html=False) -> dict:
+    def extract(self, html="", base_url="") -> dict:
         html = html.replace("&nbsp;", " ")
         tree = load_html(html)
         if tree is None:
@@ -956,10 +945,6 @@ class WeixinExtractor(BaseExtractor):
 
         if base_href and "http" in base_href[0]:
             base_url = base_href[0]
-
-        if save_drop_html:
-            self.generate_unique_id(tree)
-            raw_tree = deepcopy(tree)
 
         # 文章区域
         body_tree = tree.xpath('.//*[@id="img-content"]')[0]
@@ -984,7 +969,7 @@ class WeixinExtractor(BaseExtractor):
             self.remove_node(mp)
             # 特殊的wx卡片介绍
         for mp in body_tree.xpath(
-            ".//section[contains(@class, 'wx_profile_msg_inner')]"
+                ".//section[contains(@class, 'wx_profile_msg_inner')]"
         ):
             self.remove_node(mp)
 
@@ -1019,19 +1004,12 @@ class WeixinExtractor(BaseExtractor):
 
         body_html = tostring(body_tree, encoding=str)
 
-        if save_drop_html:
-            body_html, drop_html = self.clean_unique_id(raw_tree, body_html)
-        else:
-            drop_html = ""
-
         return {
-            "text": "",
             "xp_num": "weixin",
             "drop_list": False,
             "html": body_html,
             "title": title,
-            "base_url": base_url,
-            "drop_html": drop_html,
+            "base_url": base_url
         }
 
     @staticmethod
@@ -1049,7 +1027,7 @@ class ForumExtractor(BaseExtractor):
     def __init__(self) -> None:
         super().__init__()
 
-    def extract(self, html="", base_url="", lang="", save_drop_html=False) -> dict:
+    def extract(self, html="", base_url="") -> dict:
         self.need_comment = True
         html = html.replace("&nbsp;", " ").replace("&#160;", " ")
         tree = load_html(html)
@@ -1073,7 +1051,7 @@ class ForumExtractor(BaseExtractor):
         subtree, xp_num, drop_list = self.xp_1_5(normal_tree)
         if xp_num == "others":
             subtree, drop_list = self.prune_unwanted_sections(normal_tree)
-        result, body_html = self.get_content(subtree, xp_num, base_url)
+        body_html = self.get_content_html(subtree, xp_num, base_url)
 
         # 论坛等独有
         body_html_tree = fromstring(body_html)
@@ -1082,11 +1060,11 @@ class ForumExtractor(BaseExtractor):
         except:
             body_tree = Element("body")
             body_tree.extend(body_html_tree)
-        main_ids = body_tree.xpath("./*/@all_ids_pjtest_20300101_921b9a")
+        main_ids = body_tree.xpath(f"./*/@{Unique_ID}")
 
         for main_id in main_ids:
             main_tree = normal_tree.xpath(
-                f".//*[@all_ids_pjtest_20300101_921b9a={main_id}]"
+                f".//*[@{Unique_ID}={main_id}]"
             )
             if main_tree:
                 self.remove_node(main_tree[0])
@@ -1100,13 +1078,13 @@ class ForumExtractor(BaseExtractor):
                 x = normal_tree.xpath(c_xpath)[0]
                 self.remove_node(x)
                 if (
-                    "header" in x.attrib.get("class", "").lower()
-                    or "header" in x.attrib.get("id", "").lower()
+                        "header" in x.attrib.get("class", "").lower()
+                        or "header" in x.attrib.get("id", "").lower()
                 ):
                     continue
                 try:
-                    if int(x.attrib.get("all_ids_pjtest_20300101_921b9a", "0")) > int(
-                        main_ids[-1]
+                    if int(x.attrib.get(Unique_ID, "0")) > int(
+                            main_ids[-1]
                     ):
                         body_tree.append(x)
                     else:
@@ -1115,19 +1093,19 @@ class ForumExtractor(BaseExtractor):
                         need_prefix = False
                         need_suffix = False
                         while x.xpath(
-                            f".//*[number(@all_ids_pjtest_20300101_921b9a) > {int(main_ids[-1])}]"
+                                f".//*[number(@{Unique_ID}) > {int(main_ids[-1])}]"
                         ):
                             tmp_x = x.xpath(
-                                f".//*[number(@all_ids_pjtest_20300101_921b9a) > {int(main_ids[-1])}]"
+                                f".//*[number(@{Unique_ID}) > {int(main_ids[-1])}]"
                             )[0]
                             self.remove_node(tmp_x)
                             suffix_div.append(tmp_x)
                             need_suffix = True
                         while x.xpath(
-                            f".//*[number(@all_ids_pjtest_20300101_921b9a) < {int(main_ids[-1])}]"
+                                f".//*[number(@{Unique_ID}) < {int(main_ids[-1])}]"
                         ):
                             tmp_x = x.xpath(
-                                f".//*[number(@all_ids_pjtest_20300101_921b9a) < {int(main_ids[-1])}]"
+                                f".//*[number(@{Unique_ID}) < {int(main_ids[-1])}]"
                             )[0]
                             self.remove_node(tmp_x)
                             prefix_div.append(tmp_x)
@@ -1140,16 +1118,16 @@ class ForumExtractor(BaseExtractor):
                 except:
                     pass
 
-        body_html = tostring(body_tree, encoding=str)
-
-        drop_html = ""
+        body_html = re.sub(
+            f' {Unique_ID}="\d+"',
+            "",
+            tostring(body_tree, encoding=str),
+        )
 
         return {
-            "text": result,
             "xp_num": xp_num,
             "drop_list": drop_list,
             "html": body_html,
             "title": title,
-            "base_url": base_url,
-            "drop_html": drop_html,
+            "base_url": base_url
         }

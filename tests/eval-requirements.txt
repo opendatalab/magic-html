@@ -1,0 +1,7 @@
+beautifulsoup4
+jieba
+ltp
+numpy
+rouge_score
+tabulate
+trafilatura

@@ -97,7 +97,7 @@ with open("data/article/base.json", "r", encoding="utf-8") as f:
 
 
 def run_common_html_extractor(name):
-    from common_html_extractor.content_plus import GeneralExtractor
+    from common_html_extractor import GeneralExtractor
 
     datas = deepcopy(global_datas)
     extractor = GeneralExtractor()

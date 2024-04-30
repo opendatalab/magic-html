@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 
+Unique_ID = "all_ids_pjtest_20300101_921b9a"
 
 PAYWALL_DISCARD_XPATH = [
     """.//*[(self::div or self::p)][
