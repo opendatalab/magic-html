@@ -23,7 +23,7 @@ def parse_requirements(filename):
 def get_version():
     command = ["git", "describe", "--tags"]
     try:
-        version = subprocess.check_output(command).decode().strip()
+        version = subprocess.check_output(command).strip()
         version_parts = version.split("-")
         if len(version_parts) > 1 and version_parts[0].startswith(
             "common_html_extractor"
@@ -50,3 +50,4 @@ setup(
     include_package_data=True,
     zip_safe=False,
 )
+# python setup.py sdist bdist_wheel
