@@ -1,3 +1,4 @@
 tests/** linguist-detectable=false
+benchmark/** linguist-detectable=false
 *.xsl linguist-documentation=true
 

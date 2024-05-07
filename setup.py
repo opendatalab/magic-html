@@ -26,12 +26,12 @@ def get_version():
         version = subprocess.check_output(command).strip()
         version_parts = version.split("-")
         if len(version_parts) > 1 and version_parts[0].startswith(
-            "common_html_extractor"
+            "magic_html"
         ):
             return version_parts[1]
         else:
             raise ValueError(
-                f"Invalid version tag {version}. Expected format is common_html_extractor-<version>-released."
+                f"Invalid version tag {version}. Expected format is magic_html-<version>-released."
             )
     except Exception as e:
         print(e)
@@ -41,10 +41,10 @@ def get_version():
 requires = parse_requirements("requirements.txt")
 
 setup(
-    name="common_html_extractor",
+    name="magic_html",
     version=get_version(),
-    packages=["common_html_extractor"],
-    package_data={"common_html_extractor": ["mmltex/*.xsl"]},
+    packages=["magic_html", "magic_html.extractors"],
+    package_data={"magic_html": ["mmltex/*.xsl"]},
     install_requires=requires,
     python_requires=">=3.8",
     zip_safe=False,

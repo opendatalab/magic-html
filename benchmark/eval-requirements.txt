@@ -1,0 +1,12 @@
+beautifulsoup4
+jieba
+ltp
+numpy
+rouge_score
+tabulate
+trafilatura
+readability-lxml
+newspaper3k
+goose3
+justext
+gne

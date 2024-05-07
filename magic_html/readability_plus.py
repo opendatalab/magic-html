@@ -3,7 +3,7 @@
 from lxml.etree import tounicode
 from lxml.html import document_fromstring, fragment_fromstring
 
-from common_html_extractor.utils import *
+from magic_html.utils import *
 
 
 def to_int(x):

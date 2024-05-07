@@ -1,12 +1,12 @@
-# common-html-extractor - 通用HTML数据提取器
+# magic-html - 通用HTML数据提取器
 
-欢迎使用common-html-extractor，这是一个旨在简化从HTML中提取主体区域内容的Python库。
+欢迎使用magic-html，这是一个旨在简化从HTML中提取主体区域内容的Python库。
 
 
 
 ## 项目描述
 
-common-html-extractor提供了一套工具，能够轻松地从HTML中提取主体区域内容。无论您处理的是复杂的HTML结构还是简单的网页，这个库都旨在为您的HTML抽取需求提供一个便捷高效的接口。
+magic-html提供了一套工具，能够轻松地从HTML中提取主体区域内容。无论您处理的是复杂的HTML结构还是简单的网页，这个库都旨在为您的HTML抽取需求提供一个便捷高效的接口。
 
 
 
@@ -22,12 +22,12 @@ common-html-extractor提供了一套工具，能够轻松地从HTML中提取主�
 ## 使用
 
 ```python
-from common_html_extractor import GeneralExtractor
+from magic_html import GeneralExtractor
 
 # 初始化提取器
 extractor = GeneralExtractor()
 
-# http://example.com/
+url = "http://example.com/"
 html = """
 
 <!doctype html>
@@ -51,8 +51,15 @@ html = """
 </html>
 """
 
-# 从HTML中提取数据
-data = extractor.extract(html)
+# 文章类型HTML提取数据
+data = extractor.extract(html, base_url=url)
+
+# 论坛类型HTML提取数据
+# data = extractor.extract(html, base_url=url, html_type="forum")
+
+# 微信文章HTML提取数据
+# data = extractor.extract(html, base_url=url, html_type="weixin")
+
 print(data)
 ```
 
@@ -67,5 +74,5 @@ print(data)
 ## 鸣谢
 
 - [trafilatura](https://github.com/adbar/trafilatura)
-- [python-readability](https://github.com/buriy/python-readability)
+- [readability-lxml](https://github.com/buriy/python-readability)
 

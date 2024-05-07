@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from urllib.parse import urlparse
-
-from common_html_extractor.extractors import *
+from magic_html.extractors.article_extractor import ArticleExtractor
+from magic_html.extractors.weixin_extractor import WeixinExtractor
+from magic_html.extractors.forum_extractor import ForumExtractor
 
 
 class GeneralExtractor:

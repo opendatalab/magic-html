@@ -9,7 +9,7 @@ from lxml import etree
 from lxml.html import Element, HtmlElement, HTMLParser, fromstring, tostring
 from lxml.html.clean import Cleaner
 from urllib3.response import HTTPResponse
-from common_html_extractor.config import Unique_ID
+from magic_html.config import Unique_ID
 
 try:
     import brotli
