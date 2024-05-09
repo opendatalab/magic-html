@@ -674,11 +674,14 @@ class BaseExtractor:
                         if self.need_comment:
                             # 增加判断是否包含评论 再决定是否删除
                             break_flg = False
-                            for c_xpath in Forum_XPATH:
+                            for c_xpath in Forum_XPATH[:-1]:
                                 if j.xpath(c_xpath.replace(".//*", "self::*")):
                                     break_flg = True
                                     break
                             if break_flg:
+                                continue
+                        if tagname == "li":
+                            if text_len("".join(j.xpath(".//text()[not(ancestor::a)]"))) > 50:
                                 continue
                         a_num += 1
 
@@ -775,7 +778,7 @@ class BaseExtractor:
                 if self.need_comment:
                     # 增加判断是否包含评论 再决定是否删除
                     break_flg = False
-                    for c_xpath in Forum_XPATH:
+                    for c_xpath in Forum_XPATH[:-1]:
                         if elem.xpath(c_xpath.replace(".//*", "self::*")):
                             break_flg = True
                             break
@@ -789,7 +792,7 @@ class BaseExtractor:
     def prune_unwanted_sections(self, tree):
         tmp_OVERALL_DISCARD_XPATH = OVERALL_DISCARD_XPATH
         if self.need_comment:
-            tmp_OVERALL_DISCARD_XPATH = tmp_OVERALL_DISCARD_XPATH[:2]
+            tmp_OVERALL_DISCARD_XPATH = tmp_OVERALL_DISCARD_XPATH[:-1]
         tree = self.prune_unwanted_nodes(
             tree, tmp_OVERALL_DISCARD_XPATH, with_backup=True
         )

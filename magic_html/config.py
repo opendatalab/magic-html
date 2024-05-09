@@ -236,10 +236,10 @@ BODY_XPATH = [
     contains(@class, "article__content") or contains(@id, "article-body") or
     contains(@class, "article-body") or contains(@id, "article__body") or
     contains(@class, "article__body") or @itemprop="articleBody" or
-    contains(translate(@id, "B", "b"), "articlebody") or contains(translate(@class, "B", "b"), "articleBody")
+    contains(translate(@id, "B", "b"), "articlebody") or contains(translate(@class, "B", "b"), "articlebody")
     or @id="articleContent" or contains(@class, "ArticleContent") or
     contains(@class, "page-content") or contains(@class, "text-content") or
-    contains(@id, "body-text") or contains(@class, "body-text") or
+    contains(@id, "body-text") or contains(@class, "body-text") or contains(translate(@class, "B", "b"), "textbody") or 
     contains(@class, "article__container") or contains(@id, "art-content") or contains(@class, "art-content")][1]""",
     "(.//article)[1]",
     """(.//*[(self::article or self::div or self::main or self::section)][
@@ -265,17 +265,19 @@ BODY_XPATH = [
 ]
 
 Forum_XPATH = [
-    """.//*[(self::article or self::div or self::main or self::section or self::li)][
+    """.//*[(self::article or self::div or self::main or self::section or self::li or self::tr)][
     contains(@id, 'question') or contains(@class, 'question')]""",
-    """.//*[(self::article or self::div or self::main or self::section or self::li)][
+    """.//*[(self::article or self::div or self::main or self::section or self::li or self::tr)][
     contains(@id, 'answer') or contains(@class, 'answer')]""",
-    """.//*[(self::article or self::div or self::main or self::section or self::li)][
+    """.//*[(self::article or self::div or self::main or self::section or self::li or self::tr)][
     contains(@id, 'comment') or contains(@class, 'comment') or contains(@class, 'Comment')]""",
-    """.//*[(self::article or self::div or self::main or self::section or self::li)][contains(@class, "message-container") or contains(@id, "message_container") or contains(@class, "Messages_container")]""",
-    """.//*[(self::article or self::div or self::main or self::section or self::p or self::span or self::li)][
+    """.//*[(self::article or self::div or self::main or self::section or self::li or self::tr)][contains(@class, "message-container") or contains(@id, "message_container") or contains(@class, "Messages_container")]""",
+    """.//*[(self::article or self::div or self::main or self::section or self::p or self::span or self::li or self::tr)][
     contains(@id, 'comment-content') or contains(@class, 'comment-content') or contains(@class, 'comment-body') or contains(@class, 'comment-body') or contains(@class, "post-text") or contains(@class, "post_text") or
-    contains(@class, "post-body") or contains(@class, "postbody") or contains(@class, "post-entry") or contains(@class, "postentry") or
-    contains(@class, "post-content") or contains(@class, "post_content") or contains(@class, "p_content") or contains(@class, "Post_content") or contains(@class, "reply_content") or contains(@class, "reply-content") or contains(@class, "reply_post") or contains(@class, "post-reply") or contains(@class, "message-post") or contains(@class, "js-post")]""",
+    contains(@class, "post-body") or contains(@class, "postbody") or contains(@class, "post-entry") or contains(@class, "postentry") or contains(@component, 'post') or 
+    contains(@class, "post-content") or contains(@class, "post_content") or contains(@class, "p_content") or contains(@class, "Post_content") or contains(@class, "reply_content") or contains(@class, "reply-content") or contains(@class, "reply_post") or contains(@class, "post-reply") or contains(@id, "reply") or contains(@class, "message-post") or contains(@class, "js-post")]""",
+    # id 包含post-加数字组成的形式
+    """.//*[(self::article or self::div or self::main or self::section or self::p or self::span or self::li or self::tr)][contains(@id, 'post-') or contains(@id, 'post_')]"""
 ]
 
 METAS = [

@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+import re
 
 from magic_html.config import Forum_XPATH, Unique_ID
 from magic_html.utils import *
@@ -60,6 +61,9 @@ class ForumExtractor(BaseExtractor):
             while normal_tree.xpath(c_xpath):
                 x = normal_tree.xpath(c_xpath)[0]
                 self.remove_node(x)
+                if "'post-'" in c_xpath:
+                    if not (re.findall('post-\d+', x.attrib.get("id", "").lower()) or re.findall('post_\d+', x.attrib.get("id", "").lower())):
+                        continue
                 if (
                         "header" in x.attrib.get("class", "").lower()
                         or "header" in x.attrib.get("id", "").lower()
