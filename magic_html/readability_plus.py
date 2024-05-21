@@ -305,6 +305,9 @@ class Document:
 
                     if self.REGEXES["positiveRe"].search(feature):
                         weight += 25
+                else:
+                    if self.REGEXES["positiveRe"].search(feature):
+                        weight += 25
 
                 if self.positive_keywords and self.positive_keywords.search(feature):
                     weight += 25
@@ -428,12 +431,12 @@ class Document:
 
                 content_length = text_length(el)
                 link_density = self.get_link_density(el)
-                parent_node = el.getparent()
-                if parent_node is not None:
-                    if parent_node in candidates:
-                        content_score = candidates[parent_node]["content_score"]
-                    else:
-                        content_score = 0
+                # parent_node = el.getparent()
+                # if parent_node is not None:
+                #     if parent_node in candidates:
+                #         content_score = candidates[parent_node]["content_score"]
+                #     else:
+                #         content_score = 0
 
                 to_remove = False
                 reason = ""
@@ -463,6 +466,11 @@ class Document:
                     )
                     to_remove = True
                 elif weight < 25 and link_density > 0.2:
+                    if tag == "div":
+                        ptest = el.xpath(".//text()[not(ancestor::a)]")
+                        ptest_len = text_len("".join(ptest))
+                        if ptest_len >= MIN_LEN and link_density <= 0.3:
+                            continue
                     reason = "too many links %.3f for its weight %s" % (
                         link_density,
                         weight,
