@@ -1,0 +1,797 @@
+<head>
+	<title>Agreper - Minimal, no-JS web forum software</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="Agreper - minimal, no-JS forum software">
+	<meta content="utf-8" http-equiv="encoding">
+	<link rel="stylesheet" href="/static/theme.css">
+<style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.immersive-translate-loading-spinner {
+  vertical-align: middle !important;
+  width: 10px !important;
+  height: 10px !important;
+  display: inline-block !important;
+  margin: 0 4px !important;
+  border: 2px rgba(221, 244, 255, 0.6) solid !important;
+  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+}
+
+@-webkit-keyframes immersive-translate-loading-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes immersive-translate-loading-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.immersive-translate-input-loading {
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+}
+
+@keyframes immersiveTranslateShadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+  }
+
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+  }
+
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+  }
+
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+  }
+
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+.immersive-translate-search-recomend {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  font-size: 16px;
+}
+
+.immersive-translate-search-enhancement-en-title {
+  color: #4d5156;
+}
+
+/* dark */
+@media (prefers-color-scheme: dark) {
+  .immersive-translate-search-recomend {
+    border: 1px solid #3c4043;
+  }
+
+  .immersive-translate-close-action svg {
+    fill: #bdc1c6;
+  }
+
+  .immersive-translate-search-enhancement-en-title {
+    color: #bdc1c6;
+  }
+}
+
+
+.immersive-translate-search-settings {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-search-recomend::before {
+  /* content: " "; */
+  /* width: 20px; */
+  /* height: 20px; */
+  /* top: 16px; */
+  /* position: absolute; */
+  /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
+}
+
+.immersive-translate-search-title {}
+
+.immersive-translate-search-title-wrapper {}
+
+.immersive-translate-search-time {
+  font-size: 12px;
+  margin: 4px 0 24px;
+  color: #70757a;
+}
+
+.immersive-translate-expand-items {
+  display: none;
+}
+
+.immersive-translate-search-more {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.immersive-translate-modal {
+  display: none;
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.immersive-translate-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 40px 24px 24px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 270px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative
+}
+
+.immersive-translate-modal .immersive-translate-modal-content-in-input {
+  max-width: 500px;
+}
+.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+  text-align: left;
+  max-height: unset;
+}
+
+.immersive-translate-modal-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.immersive-translate-modal-body {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  word-break: break-all;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .immersive-translate-modal-body {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}
+
+.immersive-translate-close {
+  color: #666666;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.immersive-translate-close:hover,
+.immersive-translate-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.immersive-translate-modal-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.immersive-translate-btn {
+  width: fit-content;
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  font-size: 16px;
+  margin: 0 8px;
+  padding: 9px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-translate-btn:hover {
+  background-color: #f082ac;
+}
+
+.immersive-translate-cancel-btn {
+  /* gray color */
+  background-color: rgb(89, 107, 120);
+}
+
+
+.immersive-translate-cancel-btn:hover {
+  background-color: hsl(205, 20%, 32%);
+}
+
+.immersive-translate-action-btn {
+  background-color: transparent;
+  color: #EA4C89;
+  border: 1px solid #EA4C89
+}
+
+.immersive-translate-btn svg {
+  margin-right: 5px;
+}
+
+.immersive-translate-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #007bff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-primary-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #ea4c89;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-modal input[type="radio"] {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.immersive-translate-modal label {
+  cursor: pointer;
+}
+
+.immersive-translate-close-action {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+}</style></head>
+<img class="safum-vpn-status" id="ehjolcpljogfgggnkddgefpecllepcba-img" src="chrome-extension://ehjolcpljogfgggnkddgefpecllepcba/web_accessible_resources/status_on.png" alt="status"><body>
+	<nav>
+		<a class="logo" href="/">A</a>
+		<div style="margin:auto"></div><a href="/login/">Login</a><span> | </span>
+		<a href="/help/">Help</a>
+	</nav>
+	<main>
+		<h1>Agreper - Minimal, no-JS web forum software</h1><span class="small"><i><a href="/user/1/">demindiro</a> - 2 years ago (last modified 2 years ago)</i></span>
+<p></p><p>
+Agreper is a minimal forum board with a focus on ease of management.
+</p><p>
+I originally made this to learn SQL, but at the same time I wanted to make something that would be useful in the long term.
+</p><p>
+The main feature to make it stand out from other forum software is being quick to set up and low maintenance.
+Any further developments will mainly focus on this.
+</p><p>
+Being free of Javascript is important to be useful for users who do not trust their browser's JS VM to be free of security issues.
+</p><p>
+- Website: here :)
+<br>
+- Repository: <a href="https://github.com/Demindiro/agreper">https://github.com/Demindiro/agreper</a>
+</p><p></p><div class="comment"><span class="small">
+<i><a href="/user/53/">mariorojas</a> - 1 year ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+I wonder which hosting you're using
+</p><sup><a href="/comment/172/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/155/">qzjqwpaixwjh</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Great work! Thanks for making this open source. I’ve always wondered how a JavaScript free forum would look like. Cheers. 
+</p><sup><a href="/comment/171/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/154/">vltunabjlgjo</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Great! I want run my own Agreper-based forum
+</p><sup><a href="/comment/170/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/138/">xuhxdceraesc</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+nice!
+</p><sup><a href="/comment/154/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/129/">zodman</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+give a little love add styles to the buttons
+</p><sup><a href="/comment/138/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/103/">elon musketman</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+This is dopeeeee
+</p><sup><a href="/comment/117/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/114/">aagha</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/117/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Word
+</p><sup><a href="/comment/127/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/53/">mariorojas</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/127/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+hello
+</p><sup><a href="/comment/150/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/150/">vsvheiuikptz</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/150/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yup
+</p><sup><a href="/comment/166/">reply</a></sup></div>
+</div></div>
+</div></div>
+</div></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/95/">gigachad</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yo
+</p><sup><a href="/comment/109/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/94/">mark</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+This is extremely cool software
+</p><sup><a href="/comment/107/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/65/">rtnf</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Now i need a php port of this.. (Since cpanel-based hosting is much cheaper and more widely available than python-based hosting).. 
+</p><sup><a href="/comment/56/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/24/">user24</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/56/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+It's a wonder that most shared hosters still don't support Python.
+</p><sup><a href="/comment/101/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/65/">rtnf</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/56/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Especially with no dependency at all, even no sql dependency. Pmwiki is one of great example of minimal, no-dependency, php webapp.
+</p><sup><a href="/comment/57/">reply</a></sup></div>
+</div></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/56/">zuck</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Why is it called agreper?
+</p><sup><a href="/comment/45/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/1/">demindiro</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/45/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+I was originally going to call it 'Agrepy' from 'aggregator' and 'Python', but that name is already used by another Python project.
+</p><p>
+I then considered calling it 'Agrepo' but agrepo.com is already taken by HugeDomains.
+</p><p>
+Finally I came up with Agreper which didn't seem to be used by anyone.
+</p><sup><a href="/comment/123/">reply</a></sup></div>
+</div></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/54/">yoyo</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yo
+</p><sup><a href="/comment/37/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/72/">cos</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/37/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yoyo
+</p><sup><a href="/comment/86/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/55/">lil' homie</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/37/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yo
+</p><sup><a href="/comment/40/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/56/">zuck</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/40/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+another yo
+</p><sup><a href="/comment/49/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/1/">demindiro</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/49/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Please don't spam.
+</p><sup><a href="/comment/54/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/69/">2kwatts</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/54/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+and so died the forum.
+</p><sup><a href="/comment/63/">reply</a></sup></div>
+</div></div>
+</div></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/56/">zuck</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/40/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yo
+</p><sup><a href="/comment/46/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/57/">⚔😾⚔</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/46/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yo
+</p><sup><a href="/comment/47/">reply</a></sup></div>
+</div></div>
+</div></div>
+</div></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/47/">nathias</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+very cool forum
+</p><sup><a href="/comment/32/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/36/">showdead</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Sweet idea! Feels a lot like Hacker News 
+</p><sup><a href="/comment/26/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/39/">abcc</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/26/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+true af
+</p><sup><a href="/comment/28/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/54/">yoyo</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/28/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yo
+</p><sup><a href="/comment/38/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/55/">lil' homie</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/38/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+yo
+</p><sup><a href="/comment/43/">reply</a></sup></div>
+</div></div>
+</div></div>
+</div></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/27/">testus</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+&lt;script&gt;alert('hmmm');&lt;/script&gt;
+</p><sup><a href="/comment/21/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/36/">showdead</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/21/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+HN does pen testing.
+</p><sup><a href="/comment/25/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/64/">cookie</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/25/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Sadly no blinking text today
+</p><sup><a href="/comment/55/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/76/">yourmom</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/55/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Maybe something like...? (probably won't work)&lt;/p&gt;&lt;/div&gt;&lt;script&gt;alert("huh?");&lt;/script&gt;&lt;div&gt;&lt;p&gt;
+</p><sup><a href="/comment/88/">reply</a></sup></div>
+</div></div>
+</div></div>
+</div></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/18/">balance0291</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Neat. Captures the spirit of how the web should be.
+</p><sup><a href="/comment/17/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/14/">hybrid</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Excellent stuff!
+</p><sup><a href="/comment/16/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/13/">rahul</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Nice work.
+</p><sup><a href="/comment/14/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/6/">jklsemicolon</a> - 2 years ago (last modified 2 years ago)</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+While the board looks and works fine in Emacs (eww mode) and links, the message list gets flattened out, obscuring the message hierarchy. If you represented message trees as nested ordered lists, where the messages are the leaf items, you could get even browsers that are oblivious to CSS to display correctly.
+</p><p>
+Even so, this is a very nice board to use; excellent work!
+</p><p>
+[Edited for clarity, and to test the editing function.]
+</p><sup><a href="/comment/12/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/7/">testtest</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+testing this out
+</p><sup><a href="/comment/10/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/4/">felipebueno</a> - 2 years ago (last modified 2 years ago)</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Cool project!
+</p><p>
+UPDATE: testing
+</p><sup><a href="/comment/3/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/5/">superkuh</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a></span><input type="checkbox" class="collapse small">
+<div><p>
+This is pretty great. Thanks for making it no-JS and minimal dependencies.
+</p><sup><a href="/comment/6/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/7/">testtest</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/6/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+I agree! :D
+</p><sup><a href="/comment/11/">reply</a></sup></div>
+</div><div class="comment"><span class="small">
+<i><a href="/user/6/">jklsemicolon</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/6/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Testing threaded display.
+</p><sup><a href="/comment/7/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/4/">felipebueno</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/7/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+It works!
+</p><sup><a href="/comment/8/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/12/">yyy</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/8/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+That's cool.
+</p><p>
+Let's check the basic XSS protections:
+</p><p>
+&lt;script&gt;alert('hmmm');&lt;/script&gt;
+</p><p>
+but also "&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+</p><p>
+</p><p>
+;) Let's see how it goes.
+</p><p>
+But that's a pretty cool forum. Looks pretty minimalist to me.
+</p><sup><a href="/comment/15/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/26/">foo</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/15/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+This is pretty cool! Nice work :)
+</p><sup><a href="/comment/20/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/30/">lemon</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/20/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+looks like hacker news which is a good thing
+</p><sup><a href="/comment/22/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/32/">buttlicker99</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/22/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+how deep can we go?
+</p><sup><a href="/comment/23/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/40/">dan</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/23/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+We going deeper
+</p><sup><a href="/comment/29/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/46/">mathmonkeyman</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/29/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+and on we go
+</p><sup><a href="/comment/31/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/52/">donquichelorraine</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/31/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+still going
+</p><sup><a href="/comment/36/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/56/">zuck</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/36/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+where?
+</p><sup><a href="/comment/41/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/55/">lil' homie</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/41/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+where is the end?
+</p><sup><a href="/comment/44/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/57/">⚔😾⚔</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/44/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+w̴̧̢̧̡͇̱͙̤͓̘̦̱͇̟͎̞̜̠͍̼̗̫̣̗̤͎̺̣̜̻̲̺̘̠̼̥̪͔̗̮̦̖̠̱̰̋̅̿̔͗̀̑͜͜͜͝ͅͅḩ̵̢̛̫̠̪͓̠̙͙̪͖̳͖͖̫̺͔̭͔͔̝̦̮̬̫̜̦͓͚͍̇̀͑͆͂͐̑̀̔̀͊́̽͆̔͑̂́̇̌̀͒̃́̊̂͐̆͛́̀́̊͐̃̀̄͆̒̚͘̕͜͝͝͠ͅͅä̴̛͉́͆̇̓͛̄͛̐̓̆̉̓̀̑̾͂̇̈́̔̒̑́̒̉̍͋́̿̽̔̇̏͋̌̽͒̾̌͛̑̌͐̌͗̍̍̑̊͂̓̏͐̽̌̋̆͑̅̋͆̌́̎̓̓̎̊̃͋́̇̑́̌̉̊̆̔͋̊̓͘̚̚̕̚͠͝͠͝͝͠͠͝͠t̴̢̧̧̢̧̡̨̨̫̠͉̗̹̙͍͈̮̜͙̫̳̥͍̜͓̘̯̜͈̤̥̩̜͓̜̟͉͍̹͔͙̳̱̩̳̼̰̞͚̤̫̬͓̦̞̹̰̞̩͋͊̋̓̉͋̾̂̽̉͜͜͠͠ͅͅͅͅ'̵̧̨̢̡̡̡̡̧̢͚͈̮͕̥͕̲͍̻̤̟̻̻͓̺͇̪͉̩̠͎͖̼͙͔̗̦̪̼̘̘̗͍͍̠̝̜̞̼̭̞̘̤̺̗͍̺̩͇̞̳͙̦̖̩̘̼̥̮͉̻̣̙̩͔͎̣͈̣̦͍̲̾̌͛̈́̊̅̋̓̿̑̅̽͐͜ͅͅͅs̵̨̨̡̢̨̛̟̜̣̹̝̮͕͍̺̳͇̥̰͓̖͍̣̙͈̦̪̜̳̪̦̣̞̣̬̱̤͎̮̱̭̰̜͈̺̯̭̤̞̤͖̜̤̝̥̻̹̣͚̣̲̠̠̭̲͍͕̣̥̘͚͍̫̭̰̼̖̺̊͛́̓̂͊͊͐́̈́͑̆̅͛͋̈́̈́̅̆̅̐̋̌̌̊͌̀̽̀̀͛̌̈̓̿̆͋͐̓̾̎͆̈́̅̔̂̔̈͂̎̽͊̈̇̀̌̆̾͘̚͘̕̚͠͝͝ ̸̨̡̨̢̨̧̨̧̡̨̧̨̧̢̛̬̭̭̣͎̜̰̳̩̘͚͈͕̤̼̬̬̝̪̟̗̲͔̰̞̗̤͍̦͉͕̘͔̮͖̩͚̪͚̭̞͖̲̝̮̰̞͇̠̩̗͍̯̣̮̻̰̼̰͈̠͙̙͉̩̙̩̪̙̲͕͚̠͕̦͚̤͖̘̘̩̼͖̱͔̳̪͍̳̘̥̮͗́͌̋̌̂͋̌͑͒͆̔̌̓̑̓͋̏͊̌̉͑̃̽̎̐́̀͌͘͝͠͠͠͠͝ư̷̧̡̧̢̨̡̡̢̝̱͕̦͓̪̘̺͈̰͖͈̖̘̝̭̲̣̩̙̙͙̣͈͓͇̱̳̭͓̩̭͔͈͕͚̮͈̰̲̬̬̼̟͍͈̙̖͓̬͓̼̳̻̠͕̘̠͚͔͎̙̱͔̠͈͉̦̘̘̠̼̝̦͓̥̮̈̈́͛̉́͂̉̑̉̀̐̈́͛͛̍̔̂̀͗̎̇͋́̕̕͘̕̕͜͝͝ͅͅp̵̧̢̨̢̡̧̨̧̢̧̧̢̢̡̛̛̛̛͉̯̞̘͙̼͙̻̟̳̫̼͙͖̲͔̞̺̰̥͓͉̻̳̬̯͙̜̠̟͚͎̩͎̻̞̩̣͓͉͉̯͉̤̗̝͈̩̹̻̙͇͈̻̮̻̰̥͖̺̪͓͎̜̺̲̪̝̰̙̱̌̐̿̓̈̋̓̐̈́̏͂̉̀̄͛̃̐̈́̽̓̉̂͆̌̓̈́̒̎͂͋̋̄̏̾̎͒͒̄̀̓͗́̂̌̅́̈̆͐̈́̔̅̄̀͛́̿̍́̆̀͒̑̀̉̓̓̈́̓̕̚̚͘͠͝͠͝͝ͅ ̶̢̡̨̡̨̛̻̭̥͉͉̘͎̳̜͕̼̪͕̪̻͇̪̣̺͚͔̭̙̩̫͙͇̞̱̝͈̻͎̭͓͇͙̞̖̙͔̼̺̤̲̟͖͈̀̌̎̀͂̀͐̀̈́̃͂̽̎́́͗̓̀͂̔̊̈̇̋͗́̿̈̈́̎̈́̓̀̉̌͆̊͛̈̃͛͌̎͑̌͛̾̋͆͌́̃͒̎̄̊͛̄̇͂̿́͒̎̀̏̚̕̕̕̕͘͘͜͜͝͠͝͠͝͝͝͝͝l̶̢̧̨̢̧̛͈͔̬̥͕̤̣͉̲̤̜̮̗̘̼̣͖̜̞̹̟̟̹̮̩̝͉̰̘̳̖̼͇͈̣̫̲̭͚͚̿͂̈́̇͊̔̄́̐̑̅̿̇̈̽͋͌̑͑͂̈́̔͐́̕͘i̷̧̢̧̡̧̢̧̡̨̨̨̧̨̼̫̬͎͔̺̞̮̲͈͚̙̱̼̯̣̞͎͓̬̖̬̭̗͚̰̹̻͕͕͈͈̥̣̫̼̹͓̯͙̥͈͙̮̭̦̙͈̼̳̦̼̭̩͙̱̙̖̭̪̫͇̱͔̱̬̹̝̭̫̟̲͉̯̠̙̩͈̟̯̩̟͈̜̗̪̳͚̊͒̈́̎̄͛̓̂̎̑̀̕͘̚̚͘͘͜͝͠͝ͅͅͅļ̷̡̨̢̢̧̨̨̧̡̧͖̺̝̻̯̹̥̖͓̗̱͚̘̭͖̲͙̻̫͕͍͍͍̦͇̤̟̭̣͙͎͖̦̠̥̬͍̤͖̥̼̬̪̩͕̟͓̳̩͓͙̪̼̱̻͉̳͍̦͕͚͈̼̮̳̱͔͕̤̠̼̮̰̙͖̥̗̳͈̦͚͕̘̙̣̭̓́͑̈͑̿̏͆̈́̊̊̌̅̈́̾̔̒̉͝͝ͅ'̵̨̨̢̡̡̢̡̨̧̛̫̺̻̫͍̖͓͍͈͇͔͓̠͙̙̗̳̲̮͇͈͕͈͍̞̝̜̻̞͍̗̻̫̻̺̺͕̥̭̟̫̭͙̳̰̣̲̳͙̖̖͚͕̗͎̩͖͉͉͇̜̖͎̰̜̟͔̖̲͔̖͉̳͖̞̮̻̻̬͈͍̟̆͛́̓̓̈̈́̿̓̍̔̈͌̐̂͆̋͊́͌̽̅̀̈̀̍̏̋̽̀̃̓́̐́̇̉̅̀̀̈͑̈́̽̈́̄͂̅̃́̾͑̚̕̕͘͘͜͜͜͜͠͝͝ͅ ̶̧̢̜̬̦̙͓͕̼̤͎͖̘͖̜̰͔̠͚̫̜̟̯̪͔̙̖̞̼̤̼͇̙̈́̉̐̐̽̋̄͑͗̌͐̎̿̍̒̔̽̉̀̑̽͂̊́͑̍͋̿̓̌̾̓̆̇̂͂̓̀͐̈́̂̓͑̏̽̓̓̆̌̀͌̊̊͐̕͘͝͝͝͠ͅḥ̶̡̢̨̡̛̛̛̳͇̜̟͎̫̞̲̙̦̹̘̯̼̠̪̝̹̦̭͇͈̰̮͖̬̙̥̟̹̜͉̘̼̺͙̬̰̯̱̥̱̥̘̙̯̣͎͙̯̦̜͈̜̿̊̓͒͌̌̓́̓͊̀͛̄̃̾̐̓͋̓̽̅̀̆̑̆̈̽̋̍̒̽̉͌́̽̄̒͑͛̐͑̀̾͆̿̒̋́̓͆̀͋̀̾̔͒̊͆̈́͑͐̀̀̆̽̂̍͘͘̕̚̚͜͜͜͜͜͝͝͝͠ơ̷̧̡̨̢̧̧̧̨̧̨̨̛̙̬̻̞͍̪͍͕̝̝̞̭͍͉̠̟̻̯͍͈̹̬͎͙̤̤͓͔̣̙͙̰̯̼̯̪̗̫͕̼̪̹̩͍͕̹̖̹̜̯̠̰̟͖͎̳͙̯̱͔̳̤͈͉̹̺̜̳͕̝̬̖̘̬̜̱̞̍̀̄͂̀̏́̉͊̓̎͂̈́̑͋̀͐̃̇͑̌͊͑̓̿̎͋̅̒̑͒̊̍̈́̽͐͌̂̀̓̉̊̍͌̈́̏͊̿͗̄͒̂̉̈́͌͛̃̂̿̑͛͐́͆̍͌͊͛̽̀̆̑̏͑́͂͂̇̿̓̇̑̈́̅͐̏͆̕̚̕̚̕͜͝͝͠͝͠͝͝͠͝͝͝ͅͅͅͅͅͅḿ̶̨̧̧̡̨̧̢̢̡̨̛̛̭̩̞̺̺̠͙͕͈̠̟̰̣̱̳̹̳̩͓̝̤͍̯̠̖̻̱̬͕̟̻̺̟̪̳̪̬̹͕̙͈̹͚͇͎̩̱͎̮͍̲̥̳̱̭͈̥͍̮͕̭̹̮̪̠̥̠̗̲̬͈̳̜̭̱̲̼͚̭̻̦̜͔͈̩͛̅̋͗͊͌̈́̀̋̀͒̓̒͐̄̌̈́̄͐̍̓̑̋͋̀̈́̃̿̈̅̌̑̈́̈́̉͆̀́̄͋̓͗̆́͒̉̽̆̋͛̒̆̎̂̿̃̀͌͒͗̎̈́̓̇̑̕̕͘̕͘̚̚̚̚͘͘͜͜͜͠͝͝͝͝͠͠į̵̡̢̧̧̧̡̢̡̨̛̛̛̛͔̥͖͍̦̩̫̱̦̭̭͙͈̟͉̮͓̗͇̙̤̟̗̜̫͈͎̲̝͔͎̘͎͚͚̣̮͔͓̱͙̙͙̥͔̮̫̼̺͉̳̤̱̮͍̦͈͔̠̗̣͉̤̮̤̯̼̻̼̪̻͓̤̳͇̫̼͕̱̗̱͔͙̃̈́͌̎̈͛͑̀͗̈́̄̂̅̇́͛̉̅̂͛̍͐͛̃̑͗͊͋͐̆͋̈́́͌͂̂̽́̒̆̈́͂̌̎͑͗̀̅̃͛̇̌́̍͛̇̔̂̃̈́̔̆͆̑̓͗̐́͐̓͆̆̈́͘̚̚͘͜͜͠͝͠͝͝͝͝ȩ̴̜̗̬̹͊̽́̾͋̈̇͒?̵̧̨̢̨̢̢̧̡̧̢̧̧̡̛̬̦̮̺̞̹̥͇̲̼̲̯͚̺̣̰̳͙̗͙̥̳̼̝̙̞͕̹̞͎̦̪͖͈̻͚̗̲̞͇̪̝̰͎̭̘̖̖͈̰̪̼͚̬̗̹̦͇̘̱͎̭͓̞̣̭̬̠͍̠̹͔̹̱͖̲̟̗͚͉̻̘̯̬̒̅͐̓͆̐̄̄́̈̀̂̔̉̽̀͊̎͗͛̂̀͒̊͂̇͌̉̓͊̌̋̒́̀́̿̓̅͋̃̈́͆̓̋͌̎̅͐̈́͌̽̊̿̍̊̄̈́̍́͒̏̌́́͆̾͗̈́̈́̄́̅͘̚͜͜͜͜͠͠͝͠͠ͅͅͅͅͅͅ
+</p><sup><a href="/comment/48/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/70/">ale</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/48/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+🦦
+</p><sup><a href="/comment/81/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/70/">ale</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/81/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec tortor sed eros pharetra consequat eu ut risus. Fusce laoreet a lorem porta porttitor. Vivamus eget lacinia ligula. Morbi vulputate tristique vestibulum. Duis elit tortor, egestas et justo sit amet, feugiat accumsan enim. Aenean sagittis lorem justo, vitae malesuada lorem sodales ut. Phasellus magna tellus, ornare quis posuere eget, bibendum nec urna. Phasellus dictum fringilla porta. Nam tempor porttitor bibendum. Vivamus aliquet turpis elementum, feugiat elit quis, dictum felis. Donec venenatis lobortis euismod.
+</p><sup><a href="/comment/82/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/73/">this_user</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/82/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+go deeper here
+</p><sup><a href="/comment/87/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/76/">yourmom</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/87/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Gotta get to digging; haven't found oil yet
+</p><sup><a href="/comment/89/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/24/">user24</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/89/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+Even at &gt;10 nested replies, it remains very readable.
+</p><sup><a href="/comment/116/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/103/">elon musketman</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/116/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+great I will buy this for $1b and back out of the deal at the last minute
+</p><sup><a href="/comment/118/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/124/">ahaha</a> - 2 years ago</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/118/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+after i sold all of my perfume :)
+</p><sup><a href="/comment/130/">reply</a></sup><div class="comment"><span class="small">
+<i><a href="/user/124/">ahaha</a> - 2 years ago (last modified 2 years ago)</i> |
+
+<a href="/thread/1/#"> thread</a><a href="/comment/130/#"> parent</a></span><input type="checkbox" class="collapse small">
+<div><p>
+reply my own reply
+</p><sup><a href="/comment/131/">reply</a></sup></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></main>
+</body>

@@ -1,0 +1,776 @@
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>kernel compile eror chagelog - Debian User Forums</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Debian User Forums" href="/app.php/feed?sid=d4bed9b26276765e5cb13437508c3c0a">	<link rel="alternate" type="application/atom+xml" title="Feed - News" href="/app.php/feed/news?sid=d4bed9b26276765e5cb13437508c3c0a">	<link rel="alternate" type="application/atom+xml" title="Feed - All forums" href="/app.php/feed/forums?sid=d4bed9b26276765e5cb13437508c3c0a">	<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/app.php/feed/topics?sid=d4bed9b26276765e5cb13437508c3c0a">	<link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="/app.php/feed/topics_active?sid=d4bed9b26276765e5cb13437508c3c0a">			
+	<link rel="canonical" href="https://forums.debian.net/viewtopic.php?t=159270">
+
+<!--
+	phpBB style name: Allan Style - SUBSILVER
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Based on style:   subsilver2 (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by old:   Merlin, Allan
+	Modified by :   SKRS
+-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js" async=""></script><script>
+	WebFontConfig = {
+		google: {
+			families: ['Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese']
+		}
+	};
+
+	(function(d) {
+		var wf = d.createElement('script'), s = d.scripts[0];
+		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+		wf.async = true;
+		s.parentNode.insertBefore(wf, s);
+	})(document);
+</script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="./styles/AllanStyle-SUBSILVER/theme/stylesheet.css?assets_version=241" rel="stylesheet">
+<link href="./styles/AllanStyle-SUBSILVER/theme/en/stylesheet.css?assets_version=241" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/AllanStyle-SUBSILVER/theme/tweaks.css?assets_version=241" rel="stylesheet">
+<![endif]-->
+
+<script>
+let saveallbutton = true; 
+let windowposition = false; 
+let klarohiddenwindows = false;
+let tothecookiesettings = false;
+let windowfixinthemiddle = false;
+let klaronote = false;
+let showdeclinebutton = false;
+let htmlcodeprocessing = true; 
+let groupformation = true;
+let nameofcookie = "klaro";
+let klarodivcontainer = "klaro";
+let cookieruntime = "120";
+let cookiedomain = "forums.debian.net";
+let storageversion = "cookie";
+let youtube_bbcode_switch = true; 
+let vimeo_bbcode_switch = true; 
+let spotify_bbcode_switch = false; 
+let google_translator_switch = true; 
+let google_analytics_no_tm_switch = false;
+let matomo_switch = false;
+let cookie_icon_selection = "<i class=\"opt-in-cookie-icon cok_men\"><\/i>";
+let new_line = "";
+const all_accept = 'Accept\u0020All';
+const accept = 'Accept';
+const accept_selected = 'Accept\u0020selected';
+const decline = 'Decline';
+const save = 'Save';
+const close = 'Close';
+const powerd_by = 'Realized\u0020with\u0020Klaro\u0021';
+const first_infos = 'A\u0020few\u0020settings\u0020are\u0020required\u0020to\u0020be\u0020able\u0020to\u0020use\u0020certain\u0020functions.\u0020This\u0020controls\u0020whether\u0020a\u0020service\u0020is\u0020allowed\u0020to\u0020set\u0020cookies\u0020or\u0020not.\u003Cbr\u003E\u003Cbr\u003ECookies\u0020are\u0020set\u0020for\u0020the\u0020following\u0020services\u003A\u003Cbr\u003E\u003Cbr\u003E\u007Bpurposes\u007D.\u0020\u003Cbr\u003E\u003Cbr\u003EThe\u0020settings\u0020can\u0020be\u0020changed\u0020later\u0020at\u0020any\u0020time.\u003Cbr\u003E\u003Cbr\u003E';
+const the_cookie_settings = 'To\u0020the\u0020Cookie\u002DSettings';
+const all_switch_explain = 'With\u0020this\u0020switch\u0020you\u0020can\u0020activate\u0020or\u0020deactivate\u0020all\u0020services.';
+const all_switch = 'Activate\u0020or\u0020deactivate\u0020all\u0020services';
+const optout_info = 'These\u0020services\u0020are\u0020loaded\u0020by\u0020default\u0020\u0028but\u0020you\u0020can\u0020disable\u0020them\u0029';
+const klaro_purpose = 'Purpose';
+const klaro_purposes = 'Purposes';
+const allways_required_service = 'This\u0020service\u0020is\u0020always\u0020required\u0021';
+const allways_required = '\u0028always\u0020required\u0029';
+const klaro_service = 'Service';
+const klaro_services = 'Services';
+const settings_for_cookie = 'Settings\u0020for\u0020the\u0020Cookie\u00B4s';
+const second_infos = 'The\u0020settings\u0020for\u0020cookies\u0020can\u0020be\u0020made\u0020here,\u0020which\u0020may\u0020be\u0020set.\u003Cbr\u003E\u003Cbr\u003E\u0020For\u0020general\u0020notes\u0020and\u0020information,\u0020please\u0020refer\u0020to\u0020our\u0020\u003Ca\u0020href\u003D\u0022.\/ucp.php\u003Fmode\u003Dprivacy\u0026amp\u003Bsid\u003Dd4bed9b26276765e5cb13437508c3c0a\u0022\u003E\u003Cstrong\u003EData\u0020protection\u003C\/strong\u003E\u003C\/a\u003E\u0020respectively\u0020\u003Ca\u0020href\u003D\u0022.\/ucp.php\u003Fmode\u003Dterms\u0026amp\u003Bsid\u003Dd4bed9b26276765e5cb13437508c3c0a\u0022\u003E\u003Cstrong\u003E\u0020Terms\u0020of\u0020Use\u003C\/strong\u003E\u003C\/a\u003E.';
+const cookies_must_have = 'These\u0020cookies\u0020are\u0020preset\u0020values\u0020and\u0020must\u0020be\u0020accepted\u0020as\u0020they\u0020are\u0020necessary\u0020for\u0020the\u0020website\u0020to\u0020operate.';
+const technical_cookies = 'Technically\u0020necessary\u0020cookies';
+const extern_cookies_explain = 'Options\u0020are\u0020provided\u0020here\u0020that\u0020make\u0020it\u0020possible\u0020to\u0020play\u0020videos\u0020or\u0020external\u0020media\u0020directly\u0020in\u0020the\u0020forum.';
+const extern_cookies = 'External\u0020Media';
+const new_changes = 'There\u0020have\u0020been\u0020changes\u0020since\u0020your\u0020last\u0020visit,\u0020please\u0020renew\u0020your\u0020consent.';
+const tools = 'Visitor\u0020Statistics';
+const tools_cookies = 'Services\u0020can\u0020be\u0020selected\u0020here\u0020that\u0020are\u0020used\u0020to\u0020collect\u0020visitor\u0020statistics.';
+const another_ext = 'Compatible\u0020extensions';
+const another_ext_explain = 'Here\u0020you\u0020will\u0020find\u0020selection\u0020options\u0020for\u0020compatible\u0020extensions';
+const load_external_content = 'Would\u0020you\u0020like\u0020to\u0020load\u0020external\u0020content\u0020provided\u0020by\u0020\u007Btitle\u007D\u003F';
+const allow_once = 'Allow\u0020once';
+const permit_permanently = 'Permit\u0020permanently\u0020\u0028you\u0020can\u0020change\u0020the\u0020settings\u0020at\u0020any\u0020time\u0021\u0029';
+const google_analytics_id = '';
+const matomo_url = '';
+const cs_techcookie = 'Login,\u0020Session\u0020Cookies';
+const cs_youtube = 'Youtube';
+const cs_matomo = 'Matomo';
+const cs_vimeo = 'Vimeo';
+const cs_spotify = 'Spotify';
+const cs_google_translator = 'Google\u0020Translator';
+const cs_google_analytics = 'Google\u0020Analytics';
+const ds_youtube = 'If\u0020these\u0020cookies\u0020are\u0020allowed,\u0020the\u0020videos\u0020in\u0020the\u0020forum\u0020that\u0020are\u0020integrated\u0020via\u0020youtube.com\u0020can\u0020be\u0020played.\u0020Data\u0020can\u0020be\u0020sent\u0020to\u0020the\u0020servers\u0020of\u0020youtube.com.';
+const ds_vimeo = 'If\u0020these\u0020cookies\u0020are\u0020allowed,\u0020the\u0020videos\u0020in\u0020the\u0020forum\u0020that\u0020are\u0020integrated\u0020via\u0020vimeo.com\u0020can\u0020be\u0020played.\u0020Data\u0020will\u0020be\u0020sent\u0020to\u0020the\u0020vimeo.com\u0020servers.';
+const ds_spotify = 'If\u0020these\u0020cookies\u0020are\u0020allowed,\u0020playlists\u0020or\u0020videos\u0020from\u0020Spotify.com\u0020can\u0020be\u0020included\u0020and\u0020used\u0020in\u0020the\u0020forum\u0020within\u0020bbcodes.\u0020Data\u0020can\u0020be\u0020exchanged\u0020with\u0020Spotify.com\u0020servers.';
+const ds_google_translator = 'This\u0020is\u0020important\u0020for\u0020the\u0020function\u0020of\u0020the\u0020Google\u0020translator.\u0020Cookies\u0020are\u0020created\u0020and\u0020data\u0020is\u0020sent\u0020between\u0020this\u0020server\u0020and\u0020Google.';
+const ds_google_analytics_no_tm = 'Google\u0020Analytics\u0020is\u0020an\u0020analytics\u0020service\u0020provided\u0020by\u0020Google.\u0020Cookies\u0020are\u0020created\u0020and\u0020data\u0020is\u0020forwarded\u0020to\u0020the\u0020Google\u0020servers.';
+const ds_matomo = 'Matomo\u0020Analytics\u0020is\u0020a\u0020simple\u0020analytics\u0020service\u0020that\u0020runs\u0020externally\u0020on\u0020one\u0020of\u0020the\u0020\u003Ca\u0020href\u003D\u0022https\u003A\/\/matomo.org\/\u0022\u0020target\u003D\u0022_blank\u0022\u003E\u003Cb\u003Ehttps\u003A\/\/matomo.org\/\u003C\/b\u003E\u003C\/a\u003E\u0020servers.\u0020Cookies\u0020are\u0020created\u0020and\u0020data\u0020is\u0020forwarded\u0020to\u0020the\u0020Matomo\u0020servers.';
+let klarostyle = "dark";
+</script>
+<script>
+	var dl_help_path = '\/app.php\/dlext\/help\u003Fsid\u003Dd4bed9b26276765e5cb13437508c3c0a';
+</script>
+<style type="text/css">
+    .mention {
+        color: #ff0000;
+    }
+</style>
+
+<link href="./ext/chris1278/cookie/styles/all/theme/cookie.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/chris1278/cookie/styles/all/theme/cookie_icon.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/chris1278/cookie/styles/all/theme/youtube_bbcode_switch_on.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/chris1278/cookie/styles/all/theme/vimeo_bbcode_switch_on.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/chris1278/cookie/styles/all/theme/spotify_bbcode_switch_of.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/dmzx/scheduledmaintenance/styles/prosilver/theme/scheduledmaintenance.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/oxpus/dlext/styles/prosilver/theme/dl_ext.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/paul999/mention/styles/all/theme/mention.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/phpbbde/pastebin/styles/prosilver/theme/pastebin.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/vse/abbc3/styles/all/theme/abbc3_common.min.css?assets_version=241" rel="stylesheet" media="screen">
+<link href="./ext/chris1278/cookie/styles/all/theme/cookie_no_java.css?assets_version=241" rel="stylesheet" media="screen"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" media="all">
+
+
+
+
+<style data-context="klaro-styles">.klaro{font-family:inherit;font-family:var(--font-family, inherit);font-size:14px;font-size:var(--font-size, 14px)}.klaro button{font-family:inherit;font-family:var(--font-family, inherit);font-size:14px;font-size:var(--font-size, 14px)}.klaro.cm-as-context-notice{height:100%;padding-bottom:12px;padding-top:12px}.klaro .cookie-modal .cm-switch-container,.klaro .context-notice .cm-switch-container,.klaro .cookie-notice .cm-switch-container{border-bottom-style:solid;border-bottom-style:var(--border-style, solid);border-bottom-width:1px;border-bottom-width:var(--border-width, 1px);border-bottom-color:#c8c8c8;border-bottom-color:var(--light2, #c8c8c8);display:block;position:relative;padding:10px;padding-left:66px;line-height:20px;vertical-align:middle;min-height:40px}.klaro .cookie-modal .cm-switch-container:last-child,.klaro .context-notice .cm-switch-container:last-child,.klaro .cookie-notice .cm-switch-container:last-child{border-bottom:0}.klaro .cookie-modal .cm-switch-container:first-child,.klaro .context-notice .cm-switch-container:first-child,.klaro .cookie-notice .cm-switch-container:first-child{margin-top:0}.klaro .cookie-modal .cm-switch-container p,.klaro .context-notice .cm-switch-container p,.klaro .cookie-notice .cm-switch-container p{margin-top:0}.klaro .cookie-modal .cm-switch,.klaro .context-notice .cm-switch,.klaro .cookie-notice .cm-switch{position:relative;display:inline-block;width:50px;height:30px}.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input:checked+.cm-list-label .slider{background-color:#1a936f;background-color:var(--green1, #1a936f)}.klaro .cookie-modal .cm-list-input.half-checked:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input.half-checked:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.half-checked:checked+.cm-list-label .slider{background-color:#1a936f;background-color:var(--green1, #1a936f);opacity:0.6}.klaro .cookie-modal .cm-list-input.half-checked:checked+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input.half-checked:checked+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input.half-checked:checked+.cm-list-label .slider::before{-ms-transform:translateX(10px);transform:translateX(10px)}.klaro .cookie-modal .cm-list-input.only-required+.cm-list-label .slider,.klaro .context-notice .cm-list-input.only-required+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.only-required+.cm-list-label .slider{background-color:#24cc9a;background-color:var(--green2, #24cc9a);opacity:0.8}.klaro .cookie-modal .cm-list-input.only-required+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input.only-required+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input.only-required+.cm-list-label .slider::before{-ms-transform:translateX(10px);transform:translateX(10px)}.klaro .cookie-modal .cm-list-input.required:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input.required:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.required:checked+.cm-list-label .slider{background-color:#24cc9a;background-color:var(--green2, #24cc9a);opacity:0.8;cursor:not-allowed}.klaro .cookie-modal .slider,.klaro .context-notice .slider,.klaro .cookie-notice .slider{box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}.klaro .cookie-modal .cm-list-input,.klaro .context-notice .cm-list-input,.klaro .cookie-notice .cm-list-input{position:absolute;top:0;left:0;opacity:0;width:50px;height:30px}.klaro .cookie-modal .cm-list-title,.klaro .context-notice .cm-list-title,.klaro .cookie-notice .cm-list-title{font-size:0.9em;font-weight:600}.klaro .cookie-modal .cm-list-description,.klaro .context-notice .cm-list-description,.klaro .cookie-notice .cm-list-description{color:#7c7c7c;color:var(--dark3, #7c7c7c);font-size:0.9em;padding-top:4px}.klaro .cookie-modal .cm-list-label .cm-switch,.klaro .context-notice .cm-list-label .cm-switch,.klaro .cookie-notice .cm-list-label .cm-switch{position:absolute;left:0}.klaro .cookie-modal .cm-list-label .slider,.klaro .context-notice .cm-list-label .slider,.klaro .cookie-notice .cm-list-label .slider{background-color:#f2f2f2;background-color:var(--white2, #f2f2f2);position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;transition:0.4s;width:50px;display:inline-block}.klaro .cookie-modal .cm-list-label .slider::before,.klaro .context-notice .cm-list-label .slider::before,.klaro .cookie-notice .cm-list-label .slider::before{background-color:#e6e6e6;background-color:var(--white3, #e6e6e6);position:absolute;content:'';height:20px;width:20px;left:5px;bottom:5px;transition:0.4s}.klaro .cookie-modal .cm-list-label .slider.round,.klaro .context-notice .cm-list-label .slider.round,.klaro .cookie-notice .cm-list-label .slider.round{border-radius:30px}.klaro .cookie-modal .cm-list-label .slider.round::before,.klaro .context-notice .cm-list-label .slider.round::before,.klaro .cookie-notice .cm-list-label .slider.round::before{border-radius:50%}.klaro .cookie-modal .cm-list-label input:focus+.slider,.klaro .context-notice .cm-list-label input:focus+.slider,.klaro .cookie-notice .cm-list-label input:focus+.slider{box-shadow-color:#48dfb2;box-shadow-color:var(--green3, #48dfb2);box-shadow:0 0 1px var(color, green3)}.klaro .cookie-modal .cm-list-label input:checked+.slider::before,.klaro .context-notice .cm-list-label input:checked+.slider::before,.klaro .cookie-notice .cm-list-label input:checked+.slider::before{-ms-transform:translateX(20px);transform:translateX(20px)}.klaro .cookie-modal .cm-list-input:focus+.cm-list-label .slider,.klaro .context-notice .cm-list-input:focus+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input:focus+.cm-list-label .slider{box-shadow:0 4px 6px 0 rgba(125,125,125,0.2),5px 5px 10px 0 rgba(125,125,125,0.19)}.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input:checked+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input:checked+.cm-list-label .slider::before{-ms-transform:translateX(20px);transform:translateX(20px)}.klaro .cookie-modal .slider,.klaro .context-notice .slider,.klaro .cookie-notice .slider{box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}.klaro .cookie-modal a,.klaro .context-notice a,.klaro .cookie-notice a{color:#1a936f;color:var(--green1, #1a936f);text-decoration:none}.klaro .cookie-modal p,.klaro .cookie-modal strong,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .context-notice p,.klaro .context-notice strong,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice ul,.klaro .context-notice li,.klaro .cookie-notice p,.klaro .cookie-notice strong,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li{color:#fafafa;color:var(--light1, #fafafa)}.klaro .cookie-modal p,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .context-notice p,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice ul,.klaro .context-notice li,.klaro .cookie-notice p,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li{display:block;text-align:left;margin:0;padding:0;margin-top:0.7em}.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal h3,.klaro .cookie-modal h4,.klaro .cookie-modal h5,.klaro .cookie-modal h6,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice h3,.klaro .context-notice h4,.klaro .context-notice h5,.klaro .context-notice h6,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice h3,.klaro .cookie-notice h4,.klaro .cookie-notice h5,.klaro .cookie-notice h6{font-family:inherit;font-family:var(--title-font-family, inherit)}.klaro .cookie-modal .cm-link,.klaro .context-notice .cm-link,.klaro .cookie-notice .cm-link{margin-right:0.5em;vertical-align:middle}.klaro .cookie-modal .cm-btn,.klaro .context-notice .cm-btn,.klaro .cookie-notice .cm-btn{color:#fff;color:var(--button-text-color, #fff);background-color:#5c5c5c;background-color:var(--dark2, #5c5c5c);border-radius:4px;border-radius:var(--border-radius, 4px);padding:6px 10px;margin-right:.5em;border-style:none;padding:0.4em;font-size:1em;cursor:pointer}.klaro .cookie-modal .cm-btn:disabled,.klaro .context-notice .cm-btn:disabled,.klaro .cookie-notice .cm-btn:disabled{opacity:0.5}.klaro .cookie-modal .cm-btn.cm-btn-close,.klaro .context-notice .cm-btn.cm-btn-close,.klaro .cookie-notice .cm-btn.cm-btn-close{background-color:#c8c8c8;background-color:var(--light2, #c8c8c8)}.klaro .cookie-modal .cm-btn.cm-btn-success,.klaro .context-notice .cm-btn.cm-btn-success,.klaro .cookie-notice .cm-btn.cm-btn-success{background-color:#1a936f;background-color:var(--green1, #1a936f)}.klaro .cookie-modal .cm-btn.cm-btn-success-var,.klaro .context-notice .cm-btn.cm-btn-success-var,.klaro .cookie-notice .cm-btn.cm-btn-success-var{background-color:#24cc9a;background-color:var(--green2, #24cc9a)}.klaro .cookie-modal .cm-btn.cm-btn-info,.klaro .context-notice .cm-btn.cm-btn-info,.klaro .cookie-notice .cm-btn.cm-btn-info{background-color:#2581c4;background-color:var(--blue1, #2581c4)}.klaro .context-notice{border-radius:4px;border-radius:var(--border-radius, 4px);border-style:solid;border-style:var(--border-style, solid);border-width:1px;border-width:var(--border-width, 1px);border-color:#c8c8c8;border-color:var(--light2, #c8c8c8);background-color:#fafafa;background-color:var(--light1, #fafafa);display:flex;flex-direction:column;flex-wrap:wrap;align-items:center;justify-content:center;padding:12px;height:100%}.klaro .context-notice.cm-dark{background-color:#333;background-color:var(--dark1, #333);border-color:#5c5c5c;border-color:var(--dark2, #5c5c5c)}.klaro .context-notice.cm-dark p{color:#fafafa;color:var(--light1, #fafafa)}.klaro .context-notice.cm-dark p a{color:#459cdc;color:var(--blue2, #459cdc)}.klaro .context-notice p{color:#333;color:var(--dark1, #333);flex-grow:0;text-align:center;padding-top:0;margin-top:0}.klaro .context-notice p a{color:#24cc9a;color:var(--green2, #24cc9a)}.klaro .context-notice p.cm-buttons{margin-top:12px}.klaro .cookie-modal{width:100%;height:100%;position:fixed;overflow:hidden;left:0;top:0;z-index:1000}.klaro .cookie-modal.cm-embedded{position:relative;height:inherit;width:inherit;left:inherit;right:inherit;z-index:0}.klaro .cookie-modal.cm-embedded .cm-modal.cm-klaro{position:relative;-ms-transform:none;transform:none}.klaro .cookie-modal .cm-bg{background:rgba(0,0,0,0.5);height:100%;width:100%;position:fixed;top:0;left:0}.klaro .cookie-modal .cm-modal.cm-klaro{background-color:#333;background-color:var(--dark1, #333);color:#fafafa;color:var(--light1, #fafafa);z-index:1001;box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);width:100%;max-height:98%;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%);position:fixed;overflow:auto}@media (min-width: 660px){.klaro .cookie-modal .cm-modal.cm-klaro{border-radius:4px;border-radius:var(--border-radius, 4px);position:relative;margin:0 auto;max-width:640px;height:auto;width:auto}}.klaro .cookie-modal .cm-modal .hide{border-style:none;background:none;cursor:pointer;position:absolute;top:20px;right:20px;z-index:1}.klaro .cookie-modal .cm-modal .hide svg{stroke:#fafafa;stroke:var(--light1, #fafafa)}.klaro .cookie-modal .cm-modal .cm-footer{border-top-color:#5c5c5c;border-top-color:var(--dark2, #5c5c5c);border-top-width:1px;border-top-width:var(--border-width, 1px);border-top-style:solid;border-top-style:var(--border-style, solid);padding:1em}.klaro .cookie-modal .cm-modal .cm-footer-buttons{display:flex;flex-flow:row;justify-content:space-between}.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by{font-size:0.8em;padding-top:4px;text-align:right;padding-right:8px}.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by a{color:#5c5c5c;color:var(--dark2, #5c5c5c)}.klaro .cookie-modal .cm-modal .cm-header{border-bottom-width:1px;border-bottom-width:var(--border-width, 1px);border-bottom-style:solid;border-bottom-style:var(--border-style, solid);border-bottom-color:#5c5c5c;border-bottom-color:var(--dark2, #5c5c5c);padding:1em;padding-right:24px}.klaro .cookie-modal .cm-modal .cm-header h1{margin:0;font-size:2em;display:block}.klaro .cookie-modal .cm-modal .cm-header h1.title{padding-right:20px}.klaro .cookie-modal .cm-modal .cm-body{padding:1em}.klaro .cookie-modal .cm-modal .cm-body ul{display:block}.klaro .cookie-modal .cm-modal .cm-body span{display:inline-block;width:auto}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes{padding:0;margin:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-caret,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-caret{color:#a0a0a0;color:var(--light3, #a0a0a0)}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-content,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content{margin-left:-40px;display:none}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-content.expanded,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content.expanded{margin-top:10px;display:block}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose{position:relative;line-height:20px;vertical-align:middle;padding-left:60px;min-height:40px}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose:first-child{margin-top:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p{margin-top:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p.purposes{color:#a0a0a0;color:var(--light3, #a0a0a0);font-size:0.8em}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose.cm-toggle-all{border-top-width:1px;border-top-width:var(--border-width, 1px);border-top-style:solid;border-top-style:var(--border-style, solid);border-top-color:#5c5c5c;border-top-color:var(--dark2, #5c5c5c);padding-top:1em}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-list-title{font-weight:600}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-required{color:#5c5c5c;color:var(--dark2, #5c5c5c);padding-left:0.2em;font-size:0.8em}.klaro .cookie-notice:not(.cookie-modal-notice){background-color:#333;background-color:var(--dark1, #333);z-index:999;position:fixed;width:100%;bottom:0;right:0}@media (min-width: 1024px){.klaro .cookie-notice:not(.cookie-modal-notice){border-radius:4px;border-radius:var(--border-radius, 4px);position:fixed;position:var(--notice-position, fixed);right:20px;right:var(--notice-right, 20px);left:auto;left:var(--notice-left, auto);bottom:20px;bottom:var(--notice-bottom, 20px);top:auto;top:var(--notice-top, auto);max-width:400px;max-width:var(--notice-max-width, 400px);box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}}@media (max-width: 1023px){.klaro .cookie-notice:not(.cookie-modal-notice){border-style:none;border-radius:0}}.klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded{position:relative;height:inherit;width:inherit;left:inherit;right:inherit;bottom:inherit;z-index:0}.klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded .cn-body{padding-top:0.5em}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body{margin-bottom:0;margin-right:0;bottom:0;padding:1em;padding-top:0}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p{margin-bottom:0.5em}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p.cn-changes{text-decoration:underline}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-learn-more{display:inline-block;flex-grow:1}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons{display:inline-block;margin-top:-0.5em}@media (max-width: 384px){.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons{width:100%}}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn{margin-top:0.5em}@media (max-width: 384px){.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn{width:calc(50% - .5em)}}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok{margin-top:-0.5em;display:flex;flex-flow:row;flex-wrap:wrap;justify-content:right;align-items:baseline}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok a,.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok div{margin-top:0.5em}.klaro .cookie-modal-notice{background-color:#333;background-color:var(--dark1, #333);color:#fafafa;color:var(--light1, #fafafa);z-index:1001;box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);width:100%;max-height:98%;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%);position:fixed;overflow:auto;padding:1em;padding-top:0.2em}@media (min-width: 400px){.klaro .cookie-modal-notice{border-radius:4px;border-radius:var(--border-radius, 4px);position:relative;margin:0 auto;max-width:400px;height:auto;width:auto}}.klaro .cookie-modal-notice .cn-ok{display:flex;flex-flow:row;justify-content:space-between;align-items:center;margin-top:1em}.klaro .cookie-notice-hidden{display:none !important}
+</style></head>
+<body id="phpbb" class="notouch section-viewtopic ltr hasjs">
+
+<div id="header-subsilver">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+				<a id="logo" class="logo" href="./index.php?sid=d4bed9b26276765e5cb13437508c3c0a" title="Board index"><span class="site_logo"></span></a>
+				<h1>Debian User Forums</h1>
+				<p></p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									<div id="search-box" class="search-box search-header" role="search">
+				<form action="./search.php?sid=d4bed9b26276765e5cb13437508c3c0a" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…">
+					<button class="button button-search" type="submit" title="Search">
+						<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+					</button>
+					<a href="./search.php?sid=d4bed9b26276765e5cb13437508c3c0a" class="button button-search-end" title="Advanced search">
+						<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+					</a>
+					<input type="hidden" name="sid" value="d4bed9b26276765e5cb13437508c3c0a">
+
+				</fieldset>
+				</form>
+			</div>
+						
+			</div>
+					</div>
+</div>
+
+<noscript>
+<div id="wrap" class="wrap nojava rules">
+	<div class="inner">
+		This forum uses a cookie content manager based on JavaScript. Please enable this in your browser.
+	</div>
+</div>
+</noscript>
+
+<div id="wrap" class="wrap">
+	<div id="page-header">
+				<div class="navbar-top" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger dropdown-toggle">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+											<li class="separator"></li>
+																									<li>
+								<a href="./search.php?search_id=unanswered&amp;sid=d4bed9b26276765e5cb13437508c3c0a" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+								</a>
+							</li>
+							<li>
+								<a href="./search.php?search_id=active_topics&amp;sid=d4bed9b26276765e5cb13437508c3c0a" role="menuitem">
+									<i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="./search.php?sid=d4bed9b26276765e5cb13437508c3c0a" role="menuitem">
+									<i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+								</a>
+							</li>
+					
+										<li class="separator"></li>
+
+									</ul>
+			</div>
+		</li>
+
+				<li data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=d4bed9b26276765e5cb13437508c3c0a" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+		<li data-last-responsive="true"><a href="/app.php/pastebin/?sid=d4bed9b26276765e5cb13437508c3c0a" title="Pastebin"><i class="icon fa-clipboard fa-fw" aria-hidden="true"></i><span>Pastebin</span></a></li>
+				
+			<li class="rightside" data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;redirect=viewtopic.php%3Ft%3D159270&amp;sid=d4bed9b26276765e5cb13437508c3c0a" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register&amp;sid=d4bed9b26276765e5cb13437508c3c0a" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	</div>
+</div>
+
+<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+								<li class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList" style="max-width: 2438px;">
+										<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a href="./index.php?sid=d4bed9b26276765e5cb13437508c3c0a" itemtype="https://schema.org/Thing" itemscope="" itemprop="item" accesskey="h" data-navbar-reference="index" title="Board index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1"></span>
+
+											<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="22"><a href="" itemtype="https://schema.org/Thing" itemscope="" itemprop="item" title=""><span itemprop="name"></span></a><meta itemprop="position" content="2"></span>
+															<span class="crumb" itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope="" data-forum-id="8"><a href="" itemtype="https://schema.org/Thing" itemscope="" itemprop="item" title=""><span itemprop="name"></span></a><meta itemprop="position" content="3"></span>
+												</li>
+		<li class="rightside responsive-search">
+	<a href="./search.php?sid=d4bed9b26276765e5cb13437508c3c0a" title="View the advanced search options" role="menuitem">
+	<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+	</a>
+</li>
+
+					<li class="rightside responsive-search">
+				<a href="./search.php?sid=d4bed9b26276765e5cb13437508c3c0a" title="View the advanced search options" role="menuitem">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</a>
+			</li>
+			</ul>
+
+	</div>
+</div>
+
+<div class="navbar-top-link">
+	<div class="inner">
+		<ul>
+			<li class="navbar-top-link-left"><a href="./search.php?search_id=unanswered&amp;sid=d4bed9b26276765e5cb13437508c3c0a">Unanswered topics</a></li>
+			<li class="navbar-top-link-left"><a href="./search.php?search_id=active_topics&amp;sid=d4bed9b26276765e5cb13437508c3c0a">Active topics</a></li>
+
+											</ul>
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		<div class="note-box green">
+	<strong>Scheduled Maintenance:</strong> Scheduled Forum update, upgrade, maintenance planned: 1800 UTC - May 28. <a href="https://forums.debian.net/viewtopic.php?t=159297" class="postlink">viewtopic.php?t=159297</a>
+</div>
+		<div id="dl_help_popup" class="noshow">
+			<div class="dl_help_close"></div>
+			<div id="dl_help_content">
+				<p class="dl-text-bold" id="dl_help_title">&nbsp;</p>
+				<p id="dl_help_option" class="dl-text-underline">&nbsp;</p>
+				<p id="dl_help_string">&nbsp;</p>
+			</div>
+		</div>
+
+<h2 class="topic-title"><a href="./viewtopic.php?t=159270&amp;sid=d4bed9b26276765e5cb13437508c3c0a">kernel compile eror chagelog</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+<div style="display: none !important;">Programming languages, Coding, Executables, Package Creation, and Scripting.<br></div>
+
+
+<div class="action-bar bar-top">
+	
+			<a href="./posting.php?mode=reply&amp;t=159270&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+	
+			<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?t=159270&amp;sid=d4bed9b26276765e5cb13437508c3c0a&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+	
+			<div class="search-box" role="search">
+			<form method="get" id="topic-search" action="./search.php?sid=d4bed9b26276765e5cb13437508c3c0a">
+			<fieldset>
+				<input class="inputbox search tiny" type="search" name="keywords" id="search_keywords" size="20" placeholder="Search this topic…">
+				<button class="button button-search" type="submit" title="Search">
+					<i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+				</button>
+				<a href="./search.php?sid=d4bed9b26276765e5cb13437508c3c0a" class="button button-search-end" title="Advanced search">
+					<i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+				</a>
+				<input type="hidden" name="t" value="159270">
+<input type="hidden" name="sf" value="msgonly">
+<input type="hidden" name="sid" value="d4bed9b26276765e5cb13437508c3c0a">
+
+			</fieldset>
+			</form>
+		</div>
+	
+			<div class="pagination">
+			2 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+					</div>
+		</div>
+
+
+
+
+<div id="subsilver-nav-topic">
+	<div class="inner"><div class="post has-profile">
+		<div class="leftsided postbody subsilver-topic-title">Message</div>
+		<div class="leftsided postprofile subsilver-topic-author">Author</div>
+	</div></div>
+</div>
+
+			<div id="p799769" class="post has-profile bg2">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile799769">
+			<dt class="no-profile-rank no-avatar">
+				<div class="avatar-container">
+																			</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=238172&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="username">contactopublico</a>							</dt>
+
+									
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=238172&amp;sr=posts&amp;sid=d4bed9b26276765e5cb13437508c3c0a">3</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2024-05-16 17:57</dd>		
+		
+						    <dd class="profile-posts" data-user-give-id="238172"></dd>
+    <dd class="profile-posts" data-user-receive-id="238172"></dd>
+
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content799769">
+
+						<h3 class="first"><a href="./viewtopic.php?p=799769&amp;sid=d4bed9b26276765e5cb13437508c3c0a#p799769">kernel compile eror chagelog</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=799769&amp;sid=d4bed9b26276765e5cb13437508c3c0a" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+															<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author"><span class="posti"><a href="./viewtopic.php?p=799769&amp;sid=d4bed9b26276765e5cb13437508c3c0a#p799769" onclick="prompt('Message #1',this.href); return false;">#1</a></span> 
+									<a class="unread" href="./viewtopic.php?p=799769&amp;sid=d4bed9b26276765e5cb13437508c3c0a#p799769" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=238172&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="username">contactopublico</a></strong> » </span><time datetime="2024-05-20T14:17:47+00:00">2024-05-20 14:17</time>
+			</p>
+			
+			
+			
+			<div class="content">After numerous previous kernel compilation without incident ran into this issue recently at command line:<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>sudo make bindeb-pkg -j2
+  SYNC    include/config/auto.conf.cmd
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/confdata.o
+  HOSTCC  scripts/kconfig/expr.o
+  LEX     scripts/kconfig/lexer.lex.c
+  YACC    scripts/kconfig/parser.tab.[ch]
+  HOSTCC  scripts/kconfig/menu.o
+  HOSTCC  scripts/kconfig/preprocess.o
+  HOSTCC  scripts/kconfig/symbol.o
+  HOSTCC  scripts/kconfig/util.o
+  HOSTCC  scripts/kconfig/lexer.lex.o
+  HOSTCC  scripts/kconfig/parser.tab.o
+  HOSTLD  scripts/kconfig/conf
+  GEN     debian
+dpkg-buildpackage --build=binary --no-pre-clean --unsigned-changes -R'make -f debian/rules' -j1 -a$(cat debian/arch)
+dpkg-buildpackage: warning:     debian/changelog(l2): found end of file where expected first heading
+dpkg-buildpackage: error: fatal error occurred while parsing debian/changelog
+make[2]: *** [scripts/Makefile.package:121: bindeb-pkg] Error 255
+make[1]: *** [/media/Ext2/kernel/linux-6.9.1/Makefile:1541: bindeb-pkg] Error 2
+make: *** [Makefile:240: __sub-make] Error 2</code></pre></div>
+
+changelog file::<br>
+
+<div class="codebox"><p>Code: <a href="#" onclick="selectCode(this); return false;">Select all</a></p><pre><code>linux-upstream (6.9.1-5)  urgency=low
+
+  * Custom built Linux kernel.
+
+ -- root &lt;root@desconosido&gt;  Sun, 19 May 2024 21:43:27 -0300</code></pre></div>
+
+Has anyone experienced this issue recently and if so what does it mean?</div>
+
+			
+			
+									
+						<div id="list_thanks799769">
+</div>
+<div id="div_post_reput799769">
+</div>
+			
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+				<div id="p799806" class="post has-profile bg1">
+		<div class="inner">
+
+		<dl class="postprofile" id="profile799806">
+			<dt class="has-profile-rank has-avatar">
+				<div class="avatar-container">
+																<a href="./memberlist.php?mode=viewprofile&amp;u=211385&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="avatar"><img class="avatar" src="./download/file.php?avatar=211385_1555490854.gif" width="80" height="80" alt="User avatar"></a>														</div>
+								<a href="./memberlist.php?mode=viewprofile&amp;u=211385&amp;sid=d4bed9b26276765e5cb13437508c3c0a" style="color: #0080BF;" class="username-coloured">wizard10000</a>							</dt>
+
+						<dd class="profile-rank">Global Moderator<br><img src="./images/ranks/silvercrown.png" alt="Global Moderator" title="Global Moderator"></dd>			
+		<dd class="profile-posts"><strong>Posts:</strong> <a href="./search.php?author_id=211385&amp;sr=posts&amp;sid=d4bed9b26276765e5cb13437508c3c0a">701</a></dd>		<dd class="profile-joined"><strong>Joined:</strong> 2019-04-16 23:15</dd>		
+		
+											<dd class="profile-custom-field profile-phpbb_location"><strong>Location:</strong> southeastern us</dd>
+							    <dd class="profile-posts" data-user-give-id="211385"><strong>Has&nbsp;thanked:</strong> <a href="/app.php/thankslist/givens/211385/true?tslash=&amp;sid=d4bed9b26276765e5cb13437508c3c0a">91 times</a></dd>
+    <dd class="profile-posts" data-user-receive-id="211385"><strong>Been&nbsp;thanked:</strong> <a href="/app.php/thankslist/givens/211385/false?tslash=&amp;sid=d4bed9b26276765e5cb13437508c3c0a">112 times</a></dd>
+
+						
+		</dl>
+
+		<div class="postbody">
+						<div id="post_content799806">
+
+						<h3><a href="./viewtopic.php?p=799806&amp;sid=d4bed9b26276765e5cb13437508c3c0a#p799806">Re: kernel compile eror chagelog</a></h3>
+
+													<ul class="post-buttons">
+																																									<li>
+							<a href="./posting.php?mode=quote&amp;p=799806&amp;sid=d4bed9b26276765e5cb13437508c3c0a" title="Reply with quote" class="button button-icon-only">
+								<i class="icon fa-quote-left fa-fw" aria-hidden="true"></i><span class="sr-only">Quote</span>
+							</a>
+						</li>
+															<li class="responsive-menu hidden dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li></ul>
+							
+						<p class="author"><span class="posti"><a href="./viewtopic.php?p=799806&amp;sid=d4bed9b26276765e5cb13437508c3c0a#p799806" onclick="prompt('Message #2',this.href); return false;">#2</a></span> 
+									<a class="unread" href="./viewtopic.php?p=799806&amp;sid=d4bed9b26276765e5cb13437508c3c0a#p799806" title="Post">
+						<i class="icon fa-file fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">Post</span>
+					</a>
+								<span class="responsive-hide">by <strong><a href="./memberlist.php?mode=viewprofile&amp;u=211385&amp;sid=d4bed9b26276765e5cb13437508c3c0a" style="color: #0080BF;" class="username-coloured">wizard10000</a></strong> » </span><time datetime="2024-05-21T11:04:39+00:00">2024-05-21 11:04</time>
+			</p>
+			
+			
+			
+			<div class="content">It looks like your changelog doesn't quite line up with Debian's requirements (distribution is missing).  Check it out - <a href="https://www.debian.org/doc/debian-policy/ch-source.html#debian-changelog-debian-changelog" class="postlink">https://www.debian.org/doc/debian-polic ... -changelog</a><br>
+<br>
+Good luck!</div>
+
+			
+			
+									
+						<div id="list_thanks799806">
+</div>
+<div id="div_post_reput799806">
+</div>
+			<div id="sig799806" class="signature"><em class="text-italics"><span style="font-size:100%;line-height:116%"><span style="color:#800000">we see things not as they are, but as we are.</span><br>
+-- anais nin</span></em></div>
+						</div>
+
+		</div>
+
+				<div class="back2top">
+						<a href="#top" class="top" title="Top">
+				<i class="icon fa-chevron-circle-up fa-fw icon-gray" aria-hidden="true"></i>
+				<span class="sr-only">Top</span>
+			</a>
+					</div>
+		
+		</div>
+	</div>
+
+	<hr class="divider">
+	
+
+	<div class="action-bar bar-bottom">
+	
+			<a href="./posting.php?mode=reply&amp;t=159270&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="button" title="Post a reply">
+							<span>Post Reply</span> <i class="icon fa-reply fa-fw" aria-hidden="true"></i>
+					</a>
+		
+		<div class="dropdown-container dropdown-button-control topic-tools">
+		<span title="Topic tools" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+			<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+			<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+		</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																												<li>
+					<a href="./viewtopic.php?t=159270&amp;sid=d4bed9b26276765e5cb13437508c3c0a&amp;view=print" title="Print view" accesskey="p">
+						<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>Print view</span>
+					</a>
+				</li>
+											</ul>
+		</div>
+	</div>
+
+			<form method="post" action="./viewtopic.php?t=159270&amp;sid=d4bed9b26276765e5cb13437508c3c0a">
+		<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown hidden">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select></label>
+								<hr class="dashed">
+				<input type="submit" class="button2" name="sort" value="Go">
+						</fieldset>
+		</div>
+	</div>
+</div>
+		</form>
+	
+	
+	
+			<div class="pagination">
+			2 posts
+							• Page <strong>1</strong> of <strong>1</strong>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./viewforum.php?f=8&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to “Programming”</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=36&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-cat-link"> <span> Debian Development</span></a></li>
+																<li><a href="./viewforum.php?f=19&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Debian Development Discussion</span></a></li>
+																<li><a href="./viewforum.php?f=55&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Debian News</span></a></li>
+																<li><a href="./viewforum.php?f=23&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-cat-link"> <span> Documentation</span></a></li>
+																<li><a href="./viewforum.php?f=16&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Docs, HowTos, Tips &amp; Tricks</span></a></li>
+																<li><a href="./viewforum.php?f=22&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-cat-link"> <span> Help and Support</span></a></li>
+																<li><a href="./viewforum.php?f=17&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Installation</span></a></li>
+																<li><a href="./viewforum.php?f=30&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Beginners Questions</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; General Questions</span></a></li>
+																<li><a href="./viewforum.php?f=6&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Graphical Environments &amp; Desktops</span></a></li>
+																<li><a href="./viewforum.php?f=5&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; System and Network configuration</span></a></li>
+																<li><a href="./viewforum.php?f=7&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Hardware</span></a></li>
+																<li><a href="./viewforum.php?f=8&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Programming</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-cat-link"> <span> Testing &amp;  Unstable</span></a></li>
+																<li><a href="./viewforum.php?f=40&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Testing And Unstable</span></a></li>
+																<li><a href="./viewforum.php?f=49&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-cat-link"> <span> Debian User Projects</span></a></li>
+																<li><a href="./viewforum.php?f=51&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Debian User Projects - Software</span></a></li>
+																<li><a href="./viewforum.php?f=52&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Debian User Projects - Media</span></a></li>
+																<li><a href="./viewforum.php?f=24&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-cat-link"> <span> Community</span></a></li>
+																<li><a href="./viewforum.php?f=12&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Forum information, requests, and feedback.</span></a></li>
+																<li><a href="./viewforum.php?f=20&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; General Debian</span></a></li>
+																<li><a href="./viewforum.php?f=3&amp;sid=d4bed9b26276765e5cb13437508c3c0a" class="jumpbox-sub-link"><span class="spacer"></span> <span>↳ &nbsp; Off-Topic</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="./index.php?sid=d4bed9b26276765e5cb13437508c3c0a" data-navbar-reference="index" title="Board index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="responsive-menu hidden rightside dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="rightside">All times are <span title="UTC">UTC</span></li>
+			<li class="rightside">
+		<a href="#" data-ajax="true" data-refresh="true" role="menuitem" onclick="return klaro.show();">
+		<i class="opt-in-cookie-icon cok_nav"></i><span>Cookie-Settings</span>
+		</a>
+	</li>
+
+
+
+	
+
+			
+					
+					<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=d4bed9b26276765e5cb13437508c3c0a" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+											<li class="rightside" data-last-responsive="true">
+	<script>
+		var prefix='mailto';
+		var name='admin';
+		var url='forums.debian.net';
+		var subject = 'Contact\u0020form';
+		var icon = '<i class="icon fa-envelope fa-fw" aria-hidden="true"></i>'
+			document.write( '<a href="' + prefix + ':' + name + '@' + url +
+			'?subject=' +subject+
+			'"TITLE="Contact\u0020the\u0020admins" role="menuitem">' + icon + 
+			'Contact\u0020us' + '</a>');
+	</script><a href="mailto:admin@forums.debian.net?subject=Contact form" title="Contact the admins" role="menuitem"><i class="icon fa-envelope fa-fw" aria-hidden="true"></i>Contact us</a>
+</li>
+			</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Style developer by <a href="https://zumaclub.ru/">Zuma Portal</a>, 
+		<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited</span>
+		</p>
+						<p class="footer-row" role="menu">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=d4bed9b26276765e5cb13437508c3c0a" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=d4bed9b26276765e5cb13437508c3c0a" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img class="sr-only" aria-hidden="true" src="/app.php/cron/cron.task.feedpostbot_cron?sid=d4bed9b26276765e5cb13437508c3c0a" width="1" height="1" alt="">
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('\x3Cscript src="./assets/javascript/jquery.min.js?assets_version=241">\x3C/script>');</script><script src="./assets/javascript/core.js?assets_version=241"></script>
+	<script>
+		(function($){
+			var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
+				$span = $('<span class="fa" style="display:none"></span>').appendTo('body');
+			if ($span.css('fontFamily') !== 'FontAwesome' ) {
+				$fa_cdn.after('<link href="./assets/css/font-awesome.min.css" rel="stylesheet">');
+				$fa_cdn.remove();
+			}
+			$span.remove();
+		})(jQuery);
+	</script>
+
+
+<script data-name="googletranslateext">
+	function showAllgoogleTranslateElementInit() {
+		if( $( '#translate' ).length > 0 ) {
+			$( '#translate' ).each( function() {
+				_wrapper = $( this );
+				_wrapper.children("#google_translate_element").show().html();
+			});
+		}
+	}
+	function hideAllgoogleTranslateElementInit() {
+		if( $( '#translate' ).length > 0 ) {
+			$( '#translate' ).each( function() {
+				_wrapper = $( this );
+				_wrapper.children("#google_translate_element").hide().html();
+			});
+		}
+	}
+</script>
+<script>
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./ext/chris1278/cookie/styles/all/template/thirdparty/config.js?assets_version=241"></script>
+<script src="./ext/chris1278/cookie/styles/all/template/thirdparty/klaro.js?assets_version=241"></script>
+<script src="./ext/oxpus/dlext/styles/all/template/js/dl_footer.js?assets_version=241"></script>
+<script src="./ext/oxpus/dlext/styles/all/template/js/dl_help.js?assets_version=241"></script>
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=241"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=241"></script>
+<script src="./styles/AllanStyle-SUBSILVER/template/jquery-ui.js?assets_version=241"></script>
+<script src="./styles/AllanStyle-SUBSILVER/template/collapse.js?assets_version=241"></script>
+<script src="./ext/vse/abbc3/styles/all/template/js/abbc3.min.js?assets_version=241"></script>
+
+
+
+
+
+<div id="klaro"><div lang="en" class="klaro"><div class="cookie-notice   "><div class="cn-body"><p><span><span>A few settings are required to be able to use certain functions. This controls whether a service is allowed to set cookies or not.<br><br>Cookies are set for the following services:<br><br></span><strong>Technically necessary cookies, External Media &amp; Compatible extensions</strong><span>. <br><br>The settings can be changed later at any time.<br><br></span></span></p><div class="cn-ok"><a class="cm-link cn-learn-more" href="#">To the Cookie-Settings</a><div class="cn-buttons"><button class="cm-btn cm-btn-danger cn-decline" type="button">Decline</button><button class="cm-btn cm-btn-success" type="button">Accept</button></div></div></div></div></div></div></body>

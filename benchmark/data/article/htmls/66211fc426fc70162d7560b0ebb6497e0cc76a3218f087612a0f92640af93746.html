@@ -1,0 +1,1184 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="description" content="本文会以多个实际的线上例子，分享自己对于Docker和Podman的一点使用经验及踩过的坑，希望对读者有一点帮助">
+    <meta property="og:description" content="本文会以多个实际的线上例子，分享自己对于Docker和Podman的一点使用经验及踩过的坑，希望对读者有一点帮助">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>对于Docker和Podman的一点使用经验 - 好看的hk - 博客园</title>
+    <link rel="canonical" href="https://www.cnblogs.com/good-looking-hk/p/18182241">
+    <link rel="shortcut icon" id="favicon" href="//assets.cnblogs.com/favicon.svg?v=2" type="image/svg+xml">
+    
+    <style>#home :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs), :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs) {background: rgb(245, 245, 245);
+        padding: 12px;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 3px;
+        border-color: transparent;
+        color: rgb(68, 68, 68);
+        font-family: "Courier New", sans-serif;
+        font-size: 12px</style><link rel="stylesheet" href="/css/blog-common.min.css?v=JnYHs5HAUCOVmwbxBNuH-ED7ggVDfqtff-pdhyndpr8">
+    
+
+    <link id="MainCss" rel="stylesheet" href="/skins/moonlightink/bundle-moonlightink.min.css?v=pBfr7Q5VAITgZNhxuUzRWbXzH9FRyLGDcUQRpst6dzs">
+        <link id="highlighter-theme-cnblogs" type="text/css" rel="stylesheet" href="/css/hljs/cnblogs.css?v=5J1NDtbnnIr2Rc2SdhEMlMxD4l9Eydj88B31E7_NhS4">
+    
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/moonlightink/bundle-moonlightink-mobile.min.css?v=8ceTIVHcfDZ8c01tbaA7iejaD6svCXJvIs0XemQ2zcg">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/good-looking-hk/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/good-looking-hk/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/good-looking-hk/wlwmanifest.xml">
+    <script>
+        var currentBlogId = 389700;
+        var currentBlogApp = 'good-looking-hk';
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'MoonlightInk';
+        var visitorUserId = '';
+        var hasCustomScript = false;
+        window.cb_enable_mathjax = false;
+        window.mathEngine = 0;
+        window.codeHighlightEngine = 1;
+        window.enableCodeLineNumber = false;
+        window.codeHighlightTheme = 'cnblogs';
+        window.darkModeCodeHighlightTheme = 'vs2015';
+        window.isDarkCodeHighlightTheme = false;
+        window.isDarkModeCodeHighlightThemeDark = true;
+        window.isDisableCodeHighlighter = false;
+        window.enableCodeThemeTypeFollowSystem = false;
+        window.enableMacStyleCodeBlock = false;
+    </script>
+        <script>
+            window.currentPostId = 18182241;
+            window.currentPostDateAdded = '2024-05-09 14:45';
+        </script>
+    <script src="https://assets.cnblogs.com/scripts/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn-www.cnblogs.com/js/blog-common.min.js?v=e7iDdKE0ie8Fi0lKgiYt7eXqsQNrVeJmcEHX6zqQWKc"></script><style>.medium-zoom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms;
+  will-change: opacity;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  cursor: pointer;
+  cursor: zoom-out;
+  opacity: 1;
+}
+
+.medium-zoom-image {
+  cursor: pointer;
+  cursor: zoom-in;
+  /*
+    The `transition` is marked as "!important" for the animation to happen
+    even though it's overriden by another inline `transition` style attribute.
+
+    This is problematic with frameworks that generate inline styles on their
+    images (e.g. Gatsby).
+
+    See https://github.com/francoischalifour/medium-zoom/issues/110
+   */
+  transition: transform 300ms cubic-bezier(0.2, 0, 0.2, 1) !important;
+}
+
+.medium-zoom-image--hidden {
+  visibility: hidden;
+}
+
+.medium-zoom-image--opened {
+  position: relative;
+  cursor: pointer;
+  cursor: zoom-out;
+  will-change: transform;
+}
+</style><script id="hljs-script" src="https://assets.cnblogs.com/highlight/11.4.0/highlight.min.js?v=2.4.198" type="text/javascript" async=""></script>
+    
+<meta property="og:image" content="https://img2024.cnblogs.com/blog/1141365/202405/1141365-20240509144237752-39518811.jpg"></head>
+<body class="skin-moonlightink has-navbar hljs-engine">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding">
+                    <a href="https://www.cnblogs.com/" title="开发者的网上家园" role="banner">
+                        <img src="//assets.cnblogs.com/logo.svg" alt="博客园Logo">
+                    </a>
+                </li>
+                <li><a href="https://cnblogs.vip/">会员</a></li>
+                <li><a href="https://cnblogs.vip/store">周边</a></li>
+                <li>
+                    <a href="https://news.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-news')">新闻</a>
+                </li>
+                <li>
+                    <a href="https://q.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-q')">博问</a>
+                </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/cmt/p/18172236" target="_blank">融资</a>
+                    </li>
+                <li><a href="https://market.cnblogs.com" target="_blank">云市场</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search dropdown" action="https://zzk.cnblogs.com/s" method="get" role="search">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="search" tabindex="3" autocomplete="off">
+                        <button id="zzk_search_button" onclick="window.navbarSearchManager.triggerActiveOption()">
+                            <img id="search_icon" class="focus-hidden" src="//assets.cnblogs.com/icons/search.svg" alt="搜索">
+                            <img class="hidden focus-visible" src="//assets.cnblogs.com/icons/enter.svg" alt="搜索">
+                        </button>
+                        <ul id="navbar_search_options" class="dropdown-menu quick-search-menu">
+                            <li tabindex="0" class="active" onclick="zzkSearch(event, document.getElementById('zzk_search_input').value)">
+                                <div class="keyword-wrapper">
+                                    <img src="//assets.cnblogs.com/icons/search.svg" alt="搜索">
+                                    <div class="keyword"></div>
+                                </div>
+                                <span class="search-area">所有博客</span>
+                            </li>
+                                    <li tabindex="1" onclick="zzkBlogSearch(event, 'good-looking-hk', document.getElementById('zzk_search_input').value)">
+                                        <div class="keyword-wrapper">
+                                            <img src="//assets.cnblogs.com/icons/search.svg" alt="搜索">
+                                            <div class="keyword"></div>
+                                        </div>
+                                        <span class="search-area">当前博客</span>
+                                    </li>
+                        </ul>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔" style="display: none;">
+                        <img id="new_post_icon" class="navbar-icon" src="//assets.cnblogs.com/icons/newpost.svg" alt="写随笔">
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                        <img id="myblog_icon" class="navbar-icon" src="//assets.cnblogs.com/icons/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                        <img id="msg_icon" class="navbar-icon" src="//assets.cnblogs.com/icons/message.svg" alt="短消息">
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <a id="navbar_lite_mode_indicator" data-current-page="blog" style="display: none" href="javascript:void(0)" alt="简洁模式" title="简洁模式启用，您在访问他人博客时会使用简洁款皮肤展示">
+                        <img class="navbar-icon" src="//assets.cnblogs.com/icons/lite-mode-on.svg" alt="简洁模式">
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="//assets.cnblogs.com/icons/avatar-default.svg" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" style="display: none;"><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup" style="display: inline;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()" style="display: inline;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/good-looking-hk/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/good-looking-hk">好看的hk</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/good-looking-hk/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%A5%BD%E7%9C%8B%E7%9A%84hk">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/good-looking-hk/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<span id="stats_post_count">随笔 - 1&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 2&nbsp; </span>
+<span id="stats-total-view-count">阅读 - 
+<span title="总阅读数: 430">
+430</span></span>
+
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                <a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/good-looking-hk/p/18182241" title="发布于 2024-05-09 14:45">
+    <span role="heading" aria-level="2">对于Docker和Podman的一点使用经验</span>
+    
+
+</a><button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                    <div id="cnblogs_post_description" style="display: none">
+        
+        本文会以多个实际的线上例子，分享自己对于Docker和Podman的一点使用经验及踩过的坑，希望对读者有一点帮助
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+<p>前言：本文会以多个实际的线上例子，分享自己对于Docker和Podman的一点使用经验及踩过的坑，希望对读者有一点帮助。</p>
+<p>本文bash脚本初步加工后可直接使用（兼容mac和linux系统），对于关键点会有注重说明，但是对于一些细节需要读者自行去查阅相关文档，这里不会具体展开。</p>
+<h2 id="一部署apollo">一、部署Apollo<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<h3 id="1docker脚本">1、docker脚本<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs">version=2.0.1
+dbhost_port=host.docker.internal:3306
+dbuser=root
+dbpwd=xxxx
+
+docker stop apollo-configservice &amp;&amp; docker <span class="hljs-built_in">rm</span> apollo-configservice
+docker stop apollo-adminservice &amp;&amp; docker <span class="hljs-built_in">rm</span> apollo-adminservice
+docker stop apollo-portal &amp;&amp; docker <span class="hljs-built_in">rm</span> apollo-portal
+
+docker run -p 28080:8080 \
+  --init \
+  --add-host=host.docker.internal:host-gateway \
+  -v /etc/localtime:/etc/localtime:ro \
+  -e SPRING_DATASOURCE_URL=<span class="hljs-string">"jdbc:mysql://<span class="hljs-variable">$dbhost_port</span>/ApolloConfigDB?characterEncoding=utf8"</span> \
+  -e SPRING_DATASOURCE_USERNAME=<span class="hljs-variable">$dbuser</span> \
+  -e SPRING_DATASOURCE_PASSWORD=<span class="hljs-variable">$dbpwd</span> \
+  -e ENV=dev \
+  -e JAVA_OPTS=<span class="hljs-string">'-Xmx128m -Xms128m'</span> \
+  -d -v /tmp/logs:/opt/logs --name apollo-configservice apolloconfig/apollo-configservice:<span class="hljs-variable">$version</span>
+<span class="hljs-built_in">sleep</span> 30s
+
+docker run -p 28090:8090 \
+  --init \
+  --add-host=host.docker.internal:host-gateway \
+  --<span class="hljs-built_in">link</span> apollo-configservice:apollo-configservice \
+  -v /etc/localtime:/etc/localtime:ro \
+  -e SPRING_DATASOURCE_URL=<span class="hljs-string">"jdbc:mysql://<span class="hljs-variable">$dbhost_port</span>/ApolloConfigDB?characterEncoding=utf8"</span> \
+  -e SPRING_DATASOURCE_USERNAME=<span class="hljs-variable">$dbuser</span> \
+  -e SPRING_DATASOURCE_PASSWORD=<span class="hljs-variable">$dbpwd</span> \
+  -e ENV=dev \
+  -e JAVA_OPTS=<span class="hljs-string">'-Xmx128m -Xms128m'</span> \
+  -d -v /tmp/logs:/opt/logs --name apollo-adminservice apolloconfig/apollo-adminservice:<span class="hljs-variable">$version</span>
+<span class="hljs-built_in">sleep</span> 30s
+
+docker run -p 28070:8070 \
+  --init \
+  --<span class="hljs-built_in">link</span> apollo-configservice:apollo-configservice \
+  --add-host=host.docker.internal:host-gateway \
+  -v /etc/localtime:/etc/localtime:ro \
+  -e SPRING_DATASOURCE_URL=<span class="hljs-string">"jdbc:mysql://<span class="hljs-variable">$dbhost_port</span>/ApolloPortalDB?characterEncoding=utf8"</span> \
+  -e SPRING_DATASOURCE_USERNAME=<span class="hljs-variable">$dbuser</span> \
+  -e SPRING_DATASOURCE_PASSWORD=<span class="hljs-variable">$dbpwd</span> \
+  -e APOLLO_PORTAL_ENVS=dev,prd \
+  -e DEV_META=http://host.docker.internal:28080 \
+  -e PRD_META=http://host.docker.internal:28080 \
+  -e ENV=dev \
+  -e JAVA_OPTS=<span class="hljs-string">'-Xmx128m -Xms128m'</span> \
+  -d -v /tmp/logs:/opt/logs --name apollo-portal apolloconfig/apollo-portal:<span class="hljs-variable">$version</span>
+  
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"apollo启动完成"</span>
+</code></pre>
+<h3 id="2podman脚本">2、podman脚本<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs">podman stop apollo-configservice &amp;&amp; podman <span class="hljs-built_in">rm</span> apollo-configservice
+podman run -p 28080:8080 \
+  -d --<span class="hljs-built_in">rm</span> \
+  -v /etc/localtime:/etc/localtime:ro \
+  -e SPRING_DATASOURCE_URL=<span class="hljs-string">"jdbc:mysql://host.containers.internal:3306/ApolloConfigDB?characterEncoding=utf8"</span> \
+  -e SPRING_DATASOURCE_USERNAME=root \
+  -e SPRING_DATASOURCE_PASSWORD=xxxx \
+  -e ENV=dev \
+  -e JAVA_OPTS=<span class="hljs-string">'-Xmx128m -Xms128m'</span> \
+   --name apollo-configservice apolloconfig/apollo-configservice:2.0.1
+<span class="hljs-built_in">sleep</span> 30s
+
+podman stop apollo-adminservice &amp;&amp; podman <span class="hljs-built_in">rm</span> apollo-adminservice
+podman run -p 28090:8090 \
+  -d --<span class="hljs-built_in">rm</span> \
+  -v /etc/localtime:/etc/localtime:ro \
+  -e SPRING_DATASOURCE_URL=<span class="hljs-string">"jdbc:mysql://host.containers.internal:3306/ApolloConfigDB?characterEncoding=utf8"</span> \
+  -e SPRING_DATASOURCE_USERNAME=root \
+  -e SPRING_DATASOURCE_PASSWORD=xxxx \
+  -e ENV=dev \
+  -e JAVA_OPTS=<span class="hljs-string">'-Xmx128m -Xms128m'</span> \
+  --name apollo-adminservice apolloconfig/apollo-adminservice:2.0.1
+<span class="hljs-built_in">sleep</span> 30s
+
+podman stop apollo-portal &amp;&amp; podman <span class="hljs-built_in">rm</span> apollo-portal
+podman run -p 28070:8070 \
+  -d --<span class="hljs-built_in">rm</span>\
+  -v /etc/localtime:/etc/localtime:ro \
+  -e SPRING_DATASOURCE_URL=<span class="hljs-string">"jdbc:mysql://host.containers.internal:3306/ApolloPortalDB?characterEncoding=utf8"</span> \
+  -e SPRING_DATASOURCE_USERNAME=root \
+  -e SPRING_DATASOURCE_PASSWORD=xxxx \
+  -e APOLLO_PORTAL_ENVS=dev,prd \
+  -e DEV_META=http://host.containers.internal:28080 \
+  -e PRD_META=http://host.containers.internal:28080 \
+  -e ENV=dev \
+  -e JAVA_OPTS=<span class="hljs-string">'-Xmx128m -Xms128m'</span> \
+  --name apollo-portal apolloconfig/apollo-portal:2.0.1
+<span class="hljs-built_in">sleep</span> 30s
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"apollo启动完成"</span>
+</code></pre>
+<h3 id="3注意事项">3、注意事项<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<ol>
+<li>
+<p>docker里面容器可以通过 <strong>host.docker.internal</strong> 来访问宿主机，而podman容器里面是通过 <strong>host.containers.internal</strong> 来访问宿主机，注意区分。</p>
+</li>
+<li>
+<p>docker里面可以通过 <strong>--link</strong> 参数来连接两个容器的网络，使得容器之间可以互相通过 <strong>--name</strong> 指定的容器名 + 端口来访问。但podman不行，即使显式指定 <strong>--hostname</strong> 也不行。podman两个容器之间只能通过 <strong>ip</strong> 地址来访问，可以用 <strong>--ip</strong> 参数显式指定ip。ip的网段是10.88.0.0/16，个数为2^16 - 2 = 65536 -2 = 65534个 。</p>
+</li>
+<li>
+<p>对于第2条，在mac高版本上是不适用的（即容器之间可以通过hostname来访问），虽然翻遍了官方文档，也没找到支持的论据，只能怀疑是高版本的feature（linux podman版本4.4.1，mac podman版本4.8.3）。</p>
+</li>
+<li>
+<p>不要使用docker-compose，自己写bash脚本更为灵活自主可控。</p>
+</li>
+<li>
+<p>podman和docke命令可以互相替换，一般来说podman已经内置了命令转换功能，如果没有的话，可以通过下面代码来实现在脚本中的命令互换（脚本跟命令行的实现方式不一样）</p>
+</li>
+</ol>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs"><span class="hljs-meta">#!/bin/bash</span>
+<span class="hljs-comment"># 参考链接：https://blog.51cto.com/u_15162069/2780080?articleABtest=1</span>
+<span class="hljs-comment"># 已前置设置 alias docker=podman</span>
+<span class="hljs-built_in">shopt</span> -s expand_aliases
+<span class="hljs-built_in">source</span> ~/.bash_profile
+<span class="hljs-built_in">alias</span>
+<span class="hljs-comment"># 使用which命令判断命令是否存在</span>
+<span class="hljs-keyword">if</span> <span class="hljs-built_in">which</span> docker &gt;/dev/null 2&gt;&amp;1; <span class="hljs-keyword">then</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"use docker"</span>
+<span class="hljs-keyword">else</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"use podman replace docker"</span>
+docker -v
+<span class="hljs-keyword">fi</span>
+<span class="hljs-comment"># put your docker or podman command in here</span>
+</code></pre>
+<h2 id="二部署kafka">二、部署kafka<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<h3 id="1docker脚本-1">1、docker脚本<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs">docker stop zookeeper &amp;&amp; docker <span class="hljs-built_in">rm</span> zookeeper
+<span class="hljs-comment"># https://hub.docker.com/r/bitnami/zookeeper</span>
+docker run -d --name zookeeper \
+ -p 2181:2181 \
+ --network=common_container_network \
+ -v /home/data/docker/bitnami/zookeeper:/bitnami \
+ -e TZ=CST-8 \
+ -e ALLOW_ANONYMOUS_LOGIN=YES \
+ bitnami/zookeeper:3.9
+<span class="hljs-built_in">sleep</span> 5s
+
+docker stop kafka &amp;&amp; docker <span class="hljs-built_in">rm</span> kafka
+docker run -d --name kafka \
+ -p 19092:19092 \
+ --network=common_container_network \
+ -v /home/data/docker/bitnami/kafka:/bitnami \
+ -e KAFKA_HEAP_OPTS=<span class="hljs-string">'-Xmx512m -Xms512m'</span> \
+ -e KAFKA_CFG_NODE_ID=0 \
+ -e TZ=CST-8 \
+ -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181 \
+ -e KAFKA_CFG_LISTENERS=INTERNAL://:9092,EXTERNAL://:127.0.0.1:19092 \
+ -e KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT \
+ -e KAFKA_CFG_ADVERTISED_LISTENERS=INTERNAL://:9092,EXTERNAL://127.0.0.1:19092 \
+ -e KAFKA_CFG_LISTENERS=INTERNAL://:9092,EXTERNAL://:19092 \
+ -e KAFKA_CFG_INTER_BROKER_LISTENER_NAME=INTERNAL \
+ bitnami/kafka:3.4
+
+<span class="hljs-built_in">sleep</span> 20s
+
+docker stop kafka-exporter &amp;&amp; docker <span class="hljs-built_in">rm</span> kafka-exporter
+docker run -d --name kafka-exporter \
+ --restart=no \
+ --network=common_container_network \
+ -u root \
+ -p 19308:19308 \
+ danielqsj/kafka-exporter:v1.7.0 \
+ --web.listen-address=:19308 \
+ --kafka.server=kafka:9092 \
+ --kafka.version=3.4.1
+</code></pre>
+<h3 id="2podman脚本-1">2、podman脚本<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs">docker stop zookeeper &amp;&amp; docker <span class="hljs-built_in">rm</span> zookeeper
+podman run -d --name=zookeeper --ip=10.88.222.1\
+  -p 2181:2181 \
+  -v /home/data/docker/bitnami:/bitnami \
+  -e TZ=CST-8 \
+  -e ALLOW_ANONYMOUS_LOGIN=YES \
+  bitnami/zookeeper:3.9
+<span class="hljs-built_in">sleep</span> 5s
+
+docker stop kafka &amp;&amp; docker <span class="hljs-built_in">rm</span> kafka
+docker run -d --name=kafka --ip=10.88.222.2 \
+  -p 19092:19092 \
+  -v /home/data/docker/bitnami:/bitnami \
+  -e KAFKA_HEAP_OPTS=<span class="hljs-string">'-Xmx512m -Xms512m'</span> \
+  -e KAFKA_CFG_NODE_ID=0 \
+  -e TZ=CST-8 \
+  -e KAFKA_CFG_ZOOKEEPER_CONNECT=10.88.222.1:2181 \
+  -e KAFKA_CFG_LISTENERS=INTERNAL://:9092,EXTERNAL://:172.18.159.144:19092 \
+  -e KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT \
+  -e KAFKA_CFG_ADVERTISED_LISTENERS=INTERNAL://:9092,EXTERNAL://47.119.23.205:19092 \
+  -e KAFKA_CFG_LISTENERS=INTERNAL://:9092,EXTERNAL://:19092 \
+  -e KAFKA_CFG_INTER_BROKER_LISTENER_NAME=INTERNAL \
+  bitnami/kafka:3.4
+<span class="hljs-built_in">sleep</span> 10s
+
+docker stop kafka-exporter &amp;&amp; docker <span class="hljs-built_in">rm</span> kafka-exporter
+docker run -d --name kafka-exporter \
+  --restart=no \
+  -u root \
+  -p 19308:19308 \
+  danielqsj/kafka-exporter:v1.7.0 \
+  --web.listen-address=:19308 \
+  --kafka.server=10.88.222.2:9092 \
+  --kafka.version=3.4.1
+</code></pre>
+<h3 id="3注意事项-1">3、注意事项<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<ol>
+<li>注意bitnami的镜像都是rootless，但在笔者mac下，无论怎样做（已尽最大努力尝试，建议直接放弃），都不能实现文件的正确挂载。linux可以正常挂载。</li>
+<li>docker只有容器的概念，而podman里面有 <strong>容器</strong> 和 <strong>Pod</strong> 的概念。多个容器可以在同一个pod，由pod统一管理端口映射，且pod里面容器共享网络，此时容器直接可以直接通过localhost + 端口来互相访问。</li>
+<li>注意对于kafka的一些设置，<strong>KAFKA_CFG_ADVERTISED_LISTENERS</strong> 用于设置暴露在外网的连接地址，<strong>KAFKA_CFG_LISTENERS</strong> 用于设置暴露在内网的连接地址，这两个地址都会注册到zk上。</li>
+<li>kafka其实也可以不依赖zk，高版本已经内置KRaft（v2.8+），成熟度不详。</li>
+<li><strong>--param</strong> 参数如果放在镜像名称之前，代表docker的参数设置，之后，则是对于镜像的参数设置。</li>
+</ol>
+<h2 id="三部署prometheus">三、部署Prometheus<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<h3 id="1docker脚本-2">1、docker脚本<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs">docker stop prometheus &amp;&amp; docker <span class="hljs-built_in">rm</span> prometheus
+<span class="hljs-comment"># prometheus</span>
+docker run -d \
+  --restart=no \
+  -u root \
+  --name prometheus \
+ --network=common_container_network \
+  --add-host=host.docker.internal:host-gateway \
+  -p 19090:19090 \
+  -v /home/data/docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
+  -v /home/data/docker/prometheus/data:/prometheus \
+  -v /etc/localtime:/etc/localtime:ro \
+  prom/prometheus:v2.37.0 \
+  --storage.tsdb.retention.time=30d \
+  --storage.tsdb.path=/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --web.enable-lifecycle \
+  --web.listen-address=:19090
+
+docker stop alertmanager &amp;&amp; docker <span class="hljs-built_in">rm</span> alertmanager
+<span class="hljs-comment"># alertmanager</span>
+docker run -d \
+  --restart=no \
+  -u root \
+  --name alertmanager \
+ --network=common_container_network \
+  --add-host=host.docker.internal:host-gateway \
+  -p 19093:19093 \
+  -v /home/data/docker/prometheus/alertmanager:/etc/prometheus/alertmanager \
+  -v /etc/localtime:/etc/localtime:ro \
+  prom/alertmanager:v0.25.0 \
+  --config.file=/etc/prometheus/alertmanager/alertmanager.yml \
+  --storage.path=<span class="hljs-string">"/etc/prometheus/alertmanager"</span> \
+  --data.retention=120h \
+  --web.listen-address=:19093
+
+docker stop node-exporter &amp;&amp; docker <span class="hljs-built_in">rm</span> node-exporter
+<span class="hljs-comment"># node-exporter</span>
+docker run -d --name=node-exporter \
+  --restart=no \
+  -u root \
+ --network=common_container_network \
+  --add-host=host.docker.internal:host-gateway \
+  -p 19100:19100 \
+  -v <span class="hljs-string">"/proc:/host/proc"</span> \
+  -v <span class="hljs-string">"/sys:/host/sys"</span> \
+  -v <span class="hljs-string">"/:/rootfs"</span> \
+  prom/node-exporter:v1.6.0 \
+  --path.rootfs=/host \
+  --web.listen-address=:19100 \
+  --path.procfs /host/proc --path.sysfs /host/sys \
+  --collector.filesystem.ignored-mount-points <span class="hljs-string">"^/(sys|proc|dev|host|etc)($|/)"</span>
+</code></pre>
+<h3 id="2podman脚本-2">2、podman脚本<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs">docker stop prometheus &amp;&amp; docker <span class="hljs-built_in">rm</span> prometheus
+docker run -d --<span class="hljs-built_in">rm</span> \
+  --restart=no \
+  -u root \
+  --name prometheus \
+  -p 19090:19090 \
+  -v /home/data/docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
+  -v /home/data/docker/prometheus/data:/prometheus \
+  -v /etc/localtime:/etc/localtime:ro \
+  prom/prometheus:v2.37.0 \
+  --storage.tsdb.retention.time=30d \
+  --storage.tsdb.path=/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --web.enable-lifecycle \
+  --web.listen-address=:19090
+
+docker stop alertmanager &amp;&amp; docker <span class="hljs-built_in">rm</span> alertmanager
+docker run -d --<span class="hljs-built_in">rm</span> \
+  --restart=no \
+  -u root \
+  --name alertmanager \
+  -p 19093:19093 \
+  -v /home/data/docker/prometheus/alertmanager:/etc/prometheus/alertmanager \
+  -v /etc/localtime:/etc/localtime:ro \
+  prom/alertmanager:v0.25.0 \
+  --config.file=/etc/prometheus/alertmanager/alertmanager.yml \
+  --storage.path=<span class="hljs-string">"/etc/prometheus/alertmanager"</span> \
+  --data.retention=120h \
+  --web.listen-address=:19093
+
+docker stop node-exporter &amp;&amp; docker <span class="hljs-built_in">rm</span> node-exporter
+docker run -d --name=node-exporter \
+  --restart=no \
+  -u root \
+  -p 19100:19100 \
+  -v <span class="hljs-string">"/proc:/host/proc"</span> \
+  -v <span class="hljs-string">"/sys:/host/sys"</span> \
+  -v <span class="hljs-string">"/:/rootfs"</span> \
+  prom/node-exporter:v1.6.0 \
+  --path.rootfs=/host \
+  --web.listen-address=:19100 \
+  --path.procfs /host/proc --path.sysfs /host/sys \
+  --collector.filesystem.ignored-mount-points <span class="hljs-string">"^/(sys|proc|dev|host|etc)($|/)"</span>
+</code></pre>
+<h3 id="3部署grafana">3、部署grafana<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs"><span class="hljs-comment"># docker和grafana可以混用</span>
+<span class="hljs-comment"># 可以对配置文件进行充分定制</span>
+docker stop grafana &amp;&amp; docker <span class="hljs-built_in">rm</span> grafana
+docker run -d --restart=no \
+  -u root \
+  --name=grafana \
+  -v /home/data/docker/grafana/grafana.ini:/etc/grafana/grafana.ini \
+  -p 13000:13000 \
+  -v /etc/localtime:/etc/localtime:ro \
+  grafana/grafana-enterprise:10.2.3 \
+  --config=/etc/grafana/grafana.ini
+</code></pre>
+<p>有一说一，grafana是真的香，功能是真的多。后面就直接使用grafana内置功能来做监控报表的数据展示了，不单独写UI界面了，敬请期待~</p>
+<h2 id="四相关命令汇总">四、相关命令汇总<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p>以下是一些可能会经常用到的命令，这里也简单列一下：</p>
+<pre class="highlighter-hljs" highlighted="true"><code class="language-bash highlighter-hljs hljs"><span class="hljs-comment"># 间接实现多行注释</span>
+<span class="hljs-keyword">if</span> <span class="hljs-literal">false</span>; <span class="hljs-keyword">then</span>
+  <span class="hljs-comment"># 快速运行</span>
+  docker run -d -p 19093:19093 --name alertmanager prom/alertmanager:v0.25.0
+  <span class="hljs-comment"># 查看镜像详细信息</span>
+  docker inspect grafana
+  <span class="hljs-comment"># 进入镜像命令行</span>
+  docker <span class="hljs-built_in">exec</span> -it grafana sh
+  <span class="hljs-comment"># 查看日志</span>
+  docker logs grafana
+  <span class="hljs-comment"># 查看容器详细信息</span>
+  docker stats grafana
+  <span class="hljs-comment"># 复制目录到远程服务器</span>
+  scp -r /Users/huangkui/work/online/docker/apollo root@110.42.230.56:/home/data/docker
+  <span class="hljs-comment"># 复制远程服务器文件到本地</span>
+  scp -r root@110.42.230.56:/usr/lib/bin/jmap /Users/huangkui/work/xiaokui/docker/apollo/prd
+  <span class="hljs-comment"># 从容器内部复制文件出来</span>
+  docker <span class="hljs-built_in">cp</span> 04b4dd7569cf:/apollo/scripts/startup.sh /Users/huangkui/work/docker/apollo
+  <span class="hljs-comment"># 复制文件到容器内部去</span>
+  docker <span class="hljs-built_in">cp</span> /Users/huangkui/work/xiaokui/docker/apollo/jmap  apollo:/usr/lib/jvm/jre/bin
+  <span class="hljs-comment"># 重启服务 Prometheus</span>
+  curl -XPOST http://localhost:19090/-/reload
+  <span class="hljs-comment"># 重启服务 AlertManager</span>
+  curl -XPOST http://localhost:19093/-/reload
+  <span class="hljs-comment"># 输入指定字符到文件</span>
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">"hello world"</span> &gt;&gt; test.txt
+  <span class="hljs-comment"># 修改文件夹所有者</span>
+  sudo <span class="hljs-built_in">chown</span> -R 1001:1001 /Users/huangkui/home/data/docker/bitnami
+  <span class="hljs-comment"># 修改文件权限</span>
+  sudo <span class="hljs-built_in">chmod</span> -R 777 /Users/huangkui/home/data/docker/bitnami
+  <span class="hljs-comment"># 停止然后移除容器，不建议使用--rm参数，当容器启动异常时会丢失日志信息</span>
+  docker stop grafana &amp;&amp; docker <span class="hljs-built_in">rm</span> grafana
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<h2 id="五一键部署脚本">五、一键部署脚本<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p>暂未发现其必要性，待补充。</p>
+<p>欢迎关注微信公众号：<strong>好看的HK</strong>，第一时间掌握Java最新黑科技，轻轻松松进大厂！<br>
+<img src="https://img2024.cnblogs.com/blog/1141365/202405/1141365-20240509144237752-39518811.jpg" alt="image" loading="lazy"></p>
+
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block" role="contentinfo">
+
+
+
+<div id="EntryTag">
+    标签: 
+            <a href="https://www.cnblogs.com/good-looking-hk/tag/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/">容器技术</a>
+</div>
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(18182241,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('d66348af-bf1a-e711-9fc1-ac853d9f53cc');" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_wechat" href="javascript:void(0);" onclick="shareManager.wechatShare()">微信分享</a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/good-looking-hk/" target="_blank"><img src="https://pic.cnblogs.com/face/1141365/20240509144507.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/good-looking-hk/">好看的hk</a>
+            <br>
+            <a href="https://home.cnblogs.com/u/good-looking-hk/followers/">粉丝 - <span class="follower-count">1</span></a>
+            <a href="https://home.cnblogs.com/u/good-looking-hk/followees/">关注 - <span class="following-count">0</span></a><br>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow" class="follow-tip">
+                <a href="javascript:void(0);" onclick="follow('d66348af-bf1a-e711-9fc1-ac853d9f53cc');return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(18182241,'Digg')">
+        <span class="diggnum" id="digg_count">3</span>
+    </div>
+    <div class="buryit" onclick="votePost(18182241,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+        <div id="vip_tip"><a class="tip" href="https://cnblogs.vip/" target="_blank">升级成为会员</a></div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script>
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date" data-last-update-days="14.848429705329862" data-date-created="BlogServer.Application.Dto.BlogPost.BlogPostDto" data-date-updated="2024-05-09 14:45" aria-expanded="false">2024-05-09 14:45</span>&nbsp;
+<a href="https://www.cnblogs.com/good-looking-hk">好看的hk</a>&nbsp;
+阅读(<span id="post_view_count">430</span>)&nbsp;
+评论(<span id="post_comment_count">2</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=18182241" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(18182241);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: '', targetType: 'blogPost', targetId: '18182241', targetLink: 'https://www.cnblogs.com/good-looking-hk/p/18182241', title: '对于Docker和Podman的一点使用经验' })">举报</a>
+</div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script>
+    var cb_entryId = 18182241, cb_entryCreatedDate = '2024-05-09 14:45', cb_postType = 1, cb_postTitle = '对于Docker和Podman的一点使用经验';
+    var allowComments = true, cb_blogId = 389700, cb_blogApp = 'good-looking-hk', cb_blogUserGuid = 'd66348af-bf1a-e711-9fc1-ac853d9f53cc';
+    mermaidRender.render()
+    markdown_highlight()
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");    
+</script>
+<a id="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav">
+            <a class="comment-nav-left forpc" href="https://cnblogs.vip/" target="_blank">会员力量，点亮园子希望</a>
+        <div class="comment-nav-right">
+            <span id="span_refresh_tips"></span><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a>
+        </div>
+    </div>
+    <div id="comment_form_container"><div class="login_tips">
+    登录后才能查看或发表评论，立即 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return account.login('!comments');">登录</a> 或者
+    <a href="https://www.cnblogs.com/">逛逛</a> 博客园首页
+</div>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+        <div id="cnblogs_ch"><a href="https://www.finclip.com/?channel=cnblog2024" target="_blank" onclick="gtag('event', 'click', {'event_category': 'ad', 'event_label': 'T2-凡泰极客'})">【推荐】凡泰极客：跨越技术“鸿”沟，小程序一键生成鸿蒙App</a><br><a href="https://www.cnblogs.com/sanshi/p/18186007" target="_blank" onclick="gtag('event', 'click', {'event_category': 'ad', 'event_label': 'T2-三生石上'})">【推荐】三生石上：ASP.NET Core中运行WebForms业务代码</a><br><a href="https://cnblogs.vip/buy" target="_blank" onclick="gtag('event', 'click', {'event_category': 'ad', 'event_label': 'T2-博客园-会员'})">【推荐】会员力量，点亮园子希望，期待您升级成为园子会员</a><br><a href="https://market.cnblogs.com/" target="_blank" onclick="gtag('event', 'click', {'event_category': 'ad', 'event_label': 'T2-云市场商店'})">【推荐】阿里云云市场联合博客园推出开发者商店，欢迎关注</a><br></div>
+    <div id="opt_under_post"></div>
+        <div id="cnblogs_c1" class="under-post-card">
+            <a href="https://www.finclip.com?channel=cnblog2024" rel="nofollow" target="_blank" onclick="countCreativeClicks('C1-凡泰极客')">
+                <img src="https://img2024.cnblogs.com/blog/35695/202405/35695-20240517155930267-114888508.jpg" onload="countCreativeImpressions('C1-凡泰极客')" alt="">
+                <span id="c1_impression" style="display:none"></span>
+            </a>
+        </div>
+    <div id="under_post_card1"><div class="under-post-card">
+<b>编辑推荐：</b>
+<br>
+
+· <a href="https://www.cnblogs.com/tibos/p/18208102" target="_blank">微服务下认证授权框架的探讨</a>
+    <br>
+· <a href="https://www.cnblogs.com/wzh2010/p/18031245" target="_blank">架构与思维：4大主流分布式算法介绍</a>
+    <br>
+· <a href="https://www.cnblogs.com/thisiswhy/p/18202897" target="_blank">13年过去了，Spring 官方竟然真的支持 Bean 的异步初始化了！</a>
+    <br>
+· <a href="https://www.cnblogs.com/alchemystar/p/18200156" target="_blank">日常 Bug 排查 - 偶发性读数据不一致</a>
+    <br>
+· <a href="https://www.cnblogs.com/machangwei-8/p/18198973" target="_blank">一次 nginx 文件打开数的问题排查处理</a>
+    <br>
+</div></div>
+    <div id="under_post_card2"><div class="itnews under-post-card">
+    <b>阅读排行：</b>
+    <br>
+ ·          <a href="https://www.cnblogs.com/laikwan/p/18206787" target="_blank">.NET下免费开源的PDF类库（PDFSharp）</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/1312mn/p/18205776" target="_blank">微软正式发布：.NET Aspire 云原生开发框架</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/sunkaixuan/p/18206516" target="_blank">Dapper迁移SqlSugar问题汇总</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/anding/p/18176136" target="_blank">C#.Net筑基-类型系统②常见类型</a>
+        <br>
+ ·          <a href="https://www.cnblogs.com/weskynet/p/18206594" target="_blank">上位机开发福利！快速掌握.NET中的Modbus通信</a>
+        <br>
+</div></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+        var commentManager = new blogCommentManager();
+        commentManager.renderComments(0);
+        fixPostBody();
+        window.footnoteTipManager.generateFootnoteTips();
+
+            window.tocManager.displayDisableTocTips = false;
+            window.tocManager.generateToc();
+            
+                setTimeout(function() { countViews(cb_blogId, cb_entryId); }, 50);
+            
+            deliverT2();
+            deliverC1C2();
+            loadNewsAndKb();
+            
+                LoadPostCategoriesTags(cb_blogId, cb_entryId);
+            
+            LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+            GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+            loadOptUnderPost();
+            GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+    <h3 class="catListTitle">公告</h3>
+<div id="blog-news">    
+    <div id="sidebar_news_content">
+<div id="profile_block">
+    昵称：
+    <a href="https://home.cnblogs.com/u/good-looking-hk/">
+        好看的hk
+    </a>
+    <br>
+    园龄：
+    <a href="https://home.cnblogs.com/u/good-looking-hk/" title="入园时间：2017-04-06">
+        7年1个月
+    </a>
+    <br>
+    粉丝：
+    <a class="follower-count" href="https://home.cnblogs.com/u/good-looking-hk/followers/">
+        1
+    </a>
+    <br>
+    关注：
+    <a class="folowing-count" href="https://home.cnblogs.com/u/good-looking-hk/followees/">
+        0
+    </a>
+    <div id="p_b_follow" class="follow-tip">
+<a href="javascript:void(0)" onclick="follow('d66348af-bf1a-e711-9fc1-ac853d9f53cc')">+加关注</a></div>
+    <script>getFollowStatus('d66348af-bf1a-e711-9fc1-ac853d9f53cc');</script>
+</div>
+</div>
+</div>
+<script>loadBlogNews();</script>
+
+ 
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2024/04/24'); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2024年5月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2024/06/24'); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+        <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+        <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+        <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+        <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+        <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+        <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+    </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            2
+                        </td>
+                        <td class="" align="center">
+                            3
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        4
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            5
+                        </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="" align="center">
+                                <a href="https://www.cnblogs.com/good-looking-hk/p/archive/2024/05/09"><u>9</u></a>
+                            </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            11
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            12
+                        </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            18
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            19
+                        </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="CalTodayDay" align="center">
+                                24
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            25
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            26
+                        </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                            <td class="" align="center">
+                                30
+                            </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            1
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            2
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            8
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div class="mySearch my-search">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block"><div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+    <li><a href="https://www.cnblogs.com/good-looking-hk/p/" title="我的博客的随笔列表">我的随笔</a></li>
+<li><a href="https://www.cnblogs.com/good-looking-hk/MyComments.html" title="我的发表过的评论列表">我的评论</a></li>
+<li><a href="https://www.cnblogs.com/good-looking-hk/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li>
+<li><a href="https://www.cnblogs.com/good-looking-hk/comments" title="我的博客的评论列表">最新评论</a></li>
+<li><a href="https://www.cnblogs.com/good-looking-hk/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"><div class="catListTag">
+    <h3 class="catListTitle"><a href="https://www.cnblogs.com/good-looking-hk/tag/" class="sidebar-card-title-a">我的标签</a></h3>
+<ul>
+        <li>
+            <a href="https://www.cnblogs.com/good-looking-hk/tag/%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF/">容器技术<span class="tag-count">(1)</span></a>
+        </li>
+    
+
+</ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+    <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+        <h3 class="catListTitle">
+            
+随笔档案
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/good-looking-hk/p/archive/2024/05" style="--cnb-category-item-link-indent-size: calc(0 * 1em)" class="category-item-link" rel="" target="">2024年5月(1)</a>
+ 
+                </li>                
+            
+        </ul>
+
+
+    </div>    
+</div>
+
+<!-- 最新评论 -->
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block"><div class="catListView">
+    <h3 class="catListTitle">
+        <a href="https://www.cnblogs.com/good-looking-hk/most-viewed" class="sidebar-card-title-a">
+    阅读排行榜
+</a>
+
+    </h3>
+    <div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/good-looking-hk/p/18182241">
+                            1. 对于Docker和Podman的一点使用经验(430)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div></div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"><div class="catListFeedback">
+    <h3 class="catListTitle">
+        <a href="https://www.cnblogs.com/good-looking-hk/most-commented" class="sidebar-card-title-a">评论排行榜</a>
+
+    </h3>
+    <div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/good-looking-hk/p/18182241">
+                            1. 对于Docker和Podman的一点使用经验(2)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div></div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">
+            <a href="https://www.cnblogs.com/good-looking-hk/most-liked" class="sidebar-card-title-a">推荐排行榜</a>
+
+        </h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/good-looking-hk/p/18182241">
+                                1. 对于Docker和Podman的一点使用经验(3)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div></div><div id="sidebar_recentcomments" class="sidebar-block"><div class="catListComment">
+<h3 class="catListTitle"><a href="https://www.cnblogs.com/good-looking-hk/comments" class="sidebar-card-title-a">最新评论</a></h3>
+    <div class="RecentCommentBlock">
+        <ul>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/good-looking-hk/p/18182241">1. Re:对于Docker和Podman的一点使用经验</a></li>
+                <li class="recent_comment_body">@PasteSpider 说得很对，后面有机会我去研究下...</li>
+                <li class="recent_comment_author">--好看的hk</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/good-looking-hk/p/18182241">2. Re:对于Docker和Podman的一点使用经验</a></li>
+                <li class="recent_comment_body">写脚本，一次性的还好，要是升级啥的，没法做到平滑 还有版本回撤等问题！ 最好还是用一个工具来管理的！ PasteSpider图形操作就可以部署，升级的时候基于nginx还可以做平滑升级等！...</li>
+                <li class="recent_comment_author">--PasteSpider</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+</div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2024 好看的hk
+<br><span id="poweredby">Powered by .NET 8.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8ONv0caE5GtEh3YJ5j088knguXJc2wIsVyQoFNKZ1F2DNCZmYeQRttRKV3Lr47LKWeQ8lUKNz2T8Sx3JTgqlPE0EzcKpHiwWNsTaBxokf9nA6imnZml97tamRLhQYiCID7wJSc1Xat1Qrx7G3-30AIA">
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M95P3TTWJZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M95P3TTWJZ');
+</script>
+<script defer="" src="https://hm.baidu.com/hm.js?866c9be12d4a814454792b1fd0fed295"></script>
+
+
+<div style="z-index: 998; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; flex-direction: column; align-items: center; justify-content: center">
+<div style="background: #fff;padding: 30px; margin: 30px; border-radius: 16px;">
+  <div style="width: 200px; height: 200px; background: rgba(255, 255, 255, 0.8); position: absolute; top: -100px; right: -100px; border-radius: 100px"></div>
+  <div style="text-align: center; font-size: 18px; margin-bottom: 10px;">点击右上角即可分享</div>
+  <img src="https://img2023.cnblogs.com/blog/35695/202309/35695-20230906145857937-1471873834.gif" alt="微信分享提示">
+</div>   
+    </div></body>

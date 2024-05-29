@@ -1,0 +1,2636 @@
+<head>
+		<meta charset="utf-8">
+        
+            
+
+<!-- IPS Data Layer Start -->
+<script async="" src="https://c.hrzn-nxt.com/js/v2.12.0/connect.min.js"></script><script type="text/javascript" async="" src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=C2ENC2QQV140ORDIO960&amp;lib=ttq"></script><script async="" src="https://utt.impactcdn.com/A1325362-caba-4d3f-a83b-1ca7492ec0a51.js"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script async="" src="https://s.pinimg.com/ct/core.js"></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://c.amazon-adsystem.com/aat/amzn.js"></script><script type="text/javascript" async="" src="https://p.teads.tv/teads-fellow.js"></script><script type="text/javascript" async="" src="https://www.redditstatic.com/ads/pixel.js"></script><script type="text/javascript" async="" src="https://a.quora.com/qevents.js"></script><script type="text/javascript" async="" src="https://bat.bing.com/bat.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=DC-8103537&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://static.ads-twitter.com/uwt.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=AW-1012071506&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-1L8CXRNJCG&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-E5RVG86DKP&amp;cx=c&amp;_slc=1"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-E5RVG86DKP&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-BCCP"></script><script>
+    /* IPS Configuration */
+    const IpsDataLayerConfig = {"_events":{"account_login":{"enabled":true,"formatted_name":"account_login"},"account_logout":{"enabled":true,"formatted_name":"account_logout"},"account_register":{"enabled":true,"formatted_name":"account_register"},"content_comment":{"enabled":true,"formatted_name":"content_comment"},"content_create":{"enabled":true,"formatted_name":"content_create"},"file_download":{"enabled":true,"formatted_name":"content_download"},"content_quote":{"enabled":true,"formatted_name":"content_quote"},"content_react":{"enabled":true,"formatted_name":"content_react"},"content_view":{"enabled":true,"formatted_name":"content_view"},"filter_add":{"enabled":true,"formatted_name":"filter_add"},"filter_remove":{"enabled":true,"formatted_name":"filter_remove"},"search":{"enabled":true,"formatted_name":"search"},"social_update":{"enabled":true,"formatted_name":"social_update"},"social_view":{"enabled":true,"formatted_name":"social_view"},"sort":{"enabled":true,"formatted_name":"sort"}},"_properties":{"content_container_url":{"event_keys":["content_*","filter_*","sort","file_download"],"pii":false,"formatted_name":"content_container_url","enabled":true,"type":"string","page_level":true},"content_id":{"event_keys":["content_*","file_download"],"pii":false,"formatted_name":"content_id","enabled":true,"type":"number","page_level":true},"author_name":{"event_keys":["content_*","social_reply","file_download"],"pii":true,"formatted_name":"author_name","enabled":true,"type":"string","page_level":true},"content_title":{"event_keys":["content_*","file_download"],"pii":true,"formatted_name":"content_title","enabled":true,"type":"string","page_level":true},"content_url":{"event_keys":["content_*","file_download"],"pii":false,"formatted_name":"content_url","enabled":true,"type":"string","page_level":true},"author_id":{"event_keys":["content_*","social_reply","file_download"],"pii":true,"formatted_name":"author_id","enabled":true,"type":"number | string","replace_with_sso":true,"page_level":true},"comment_type":{"event_keys":["content_comment","content_react","content_quote"],"pii":false,"formatted_name":"comment_type","enabled":true,"type":"string","page_level":false},"comment_url":{"event_keys":["content_comment","content_react","content_quote"],"pii":false,"formatted_name":"comment_url","enabled":true,"type":"string","page_level":false},"community_area":{"event_keys":["filter_*","sort"],"pii":false,"formatted_name":"community_area","enabled":true,"type":"string","page_level":true},"content_age":{"event_keys":["content_*","file_download"],"pii":false,"formatted_name":"content_age","enabled":true,"type":"number","page_level":true},"content_area":{"event_keys":["content_*","filter_*","sort","file_download"],"pii":false,"formatted_name":"content_area","enabled":true,"type":"string","page_level":true},"content_container_id":{"event_keys":["content_*","filter_*","sort","file_download"],"pii":false,"formatted_name":"content_container_id","enabled":true,"type":"number","page_level":true},"content_container_name":{"event_keys":["content_*","filter_*","sort","file_download"],"pii":false,"formatted_name":"content_container_name","enabled":true,"type":"string","page_level":true},"content_container_path":{"event_keys":["content_*"],"pii":false,"formatted_name":"content_container_path","enabled":true,"type":"array","page_level":true,"default":[]},"content_container_type":{"event_keys":["content_*","filter_*","sort","file_download"],"pii":false,"formatted_name":"content_container_type","enabled":true,"type":"string","page_level":true},"content_type":{"event_keys":["content_*","filter_*","sort","file_download"],"pii":false,"formatted_name":"content_type","enabled":true,"type":"string","page_level":true},"file_name":{"event_keys":["file_download"],"pii":false,"formatted_name":"file_name","enabled":true,"type":"string","page_level":false},"ips_time":{"event_keys":["*"],"pii":false,"formatted_name":"ips_time","enabled":true,"type":"number","page_level":true},"page_number":{"event_keys":["content_view","query","filter","sort"],"pii":false,"formatted_name":"page_number","enabled":true,"type":"number","page_level":true},"comment_id":{"event_keys":["content_comment","content_react","content_quote"],"pii":false,"formatted_name":"comment_id","enabled":true,"type":"number","page_level":false},"logged_in":{"event_keys":[],"pii":false,"formatted_name":"logged_in","enabled":true,"type":"number","page_level":true},"logged_in_time":{"event_keys":[],"pii":false,"formatted_name":"logged_in_time","enabled":true,"type":"number","page_level":true},"member_group":{"event_keys":[],"pii":false,"formatted_name":"member_group","enabled":true,"type":"string","page_level":true},"member_group_id":{"event_keys":[],"pii":false,"formatted_name":"member_group_id","enabled":true,"type":"number","page_level":true},"member_id":{"event_keys":[],"pii":true,"formatted_name":"member_id","enabled":true,"type":"number | string","page_level":true,"replace_with_sso":true},"member_name":{"event_keys":[],"pii":true,"formatted_name":"member_name","enabled":true,"type":"string","page_level":true},"profile_group":{"event_keys":["social_*"],"pii":false,"formatted_name":"profile_group","enabled":true,"type":"string","page_level":true},"profile_group_id":{"event_keys":["social_*"],"pii":false,"formatted_name":"profile_group_id","enabled":true,"type":"number","page_level":true},"profile_id":{"event_keys":["social_*"],"pii":true,"formatted_name":"profile_id","enabled":true,"type":"number | string","page_level":true,"replace_with_sso":true},"profile_name":{"event_keys":["social_*"],"pii":true,"formatted_name":"profile_name","enabled":true,"type":"string","page_level":true},"reaction_type":{"event_keys":["content_react"],"pii":false,"formatted_name":"reaction_type","enabled":true,"type":"string","page_level":false},"sort_by":{"event_keys":["*sort"],"pii":false,"formatted_name":"sort_by","enabled":true,"type":"string","page_level":true},"sort_direction":{"event_keys":["*sort"],"pii":false,"formatted_name":"sort_direction","enabled":true,"type":"string","page_level":true},"view_location":{"event_keys":["*_view"],"pii":false,"formatted_name":"view_location","enabled":true,"type":"string","page_level":true,"default":"page"},"query":{"event_keys":["search"],"pii":false,"formatted_name":"query","enabled":true,"type":"string","page_level":false},"filter_title":{"event_keys":["filter_*"],"pii":false,"formatted_name":"filter_title","enabled":true,"type":"string","page_level":false},"ips_key":{"event_keys":["*"],"pii":false,"formatted_name":"ips_key","enabled":false,"type":"string","page_level":true}},"_pii":false,"_pii_groups":[["author_id","author_name"],["member_id","member_name"],["profile_id","profile_name"]]};
+
+    /* IPS Context */
+    const IpsDataLayerContext = {"content_container_url":"https:\/\/forum.squarespace.com\/forum\/40-commerce\/","content_id":298933,"author_name":null,"content_title":null,"content_url":"https:\/\/forum.squarespace.com\/topic\/298933-how-to-hide-specific-product-variant-options-from-product-detail-page\/","author_id":null,"community_area":"Forums","content_age":6,"content_area":"Forums","content_container_id":40,"content_container_name":"Commerce","content_container_path":[{"type":"forums","id":34,"name":"Forum"},{"type":"forums","id":40,"name":"Commerce"}],"content_container_type":"forums","content_type":"topic","ips_time":null,"page_number":null,"logged_in":0,"logged_in_time":null,"member_group":"Guest","member_group_id":2,"member_id":null,"member_name":null,"profile_group":null,"profile_group_id":null,"profile_id":null,"profile_name":null,"sort_by":null,"sort_direction":null,"view_location":"page"};
+
+    /* IPS Events */
+    const IpsDataLayerEvents = [{"_key":"content_view","_properties":{"content_container_url":"https:\/\/forum.squarespace.com\/forum\/40-commerce\/","content_id":298933,"content_url":"https:\/\/forum.squarespace.com\/topic\/298933-how-to-hide-specific-product-variant-options-from-product-detail-page\/","content_age":6,"content_area":"Forums","content_container_id":40,"content_container_name":"Commerce","content_container_path":[{"type":"forums","id":34,"name":"Forum"},{"type":"forums","id":40,"name":"Commerce"}],"content_container_type":"forums","content_type":"topic","ips_time":1716776739}}];
+</script>
+
+
+<!-- Handlers -->
+
+<!-- Initializers -->
+<script> let initcodegtm = context => { if ( !(context instanceof Object) ) { return; } /* Set the key and time */ let ips_time = IpsDataLayerConfig._properties.ips_time.enabled ? IpsDataLayerConfig._properties.ips_time.formatted_name : false; let ips_key = IpsDataLayerConfig._properties.ips_key.enabled ? IpsDataLayerConfig._properties.ips_key.formatted_name : false; if ( ips_time ) { context[ips_time] = Math.floor( Date.now() / 1000 ); } if ( ips_key ) { let s = i => { return Math.floor((1 + Math.random()) * Math.pow(16, i)) .toString(16) .substring(1); }; let mt = Date.now(); let sec = Math.floor(mt / 1000); let secString = sec.toString(16); secString = secString.substring( secString.length - 8 ); let ms = ( mt - ( sec * 1000 ) ) * 1000; /* milliseconds*/ let msString = (ms + 0x100000).toString(16).substring(1); let randomId = secString + msString + s(1) + '.' + s(4) + s(4); context[ips_key] = randomId; } for ( let i in context ) { if ( context[i] === null ) { context[i] = undefined; } } try { if (context instanceof Object) { window.dataLayer = window.dataLayer || []; window.dataLayer.push(context); return; } Debug.log( 'Invalid Data Layer Context: The IPS GTM Data Layer Initializer failed because the context wasn\'t an Object' ); } catch (e) { Debug.error('Bad Data Layer Initializer: Event initializer failed!'); } }; initcodegtm(IpsDataLayerContext || {}); </script>
+<!-- END Initializers -->
+
+<!-- Head Snippets -->
+
+<!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+
+        {'gtm.start': new Date().getTime(),event:'gtm.js'}
+        );var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-BCCP');</script>
+        <!-- End Google Tag Manager -->
+
+<!-- END Head Snippets -->
+
+<!-- Event Callbacks -->
+<script>
+const IpsDataLayerEventHandlers = [
+    ( () => _event => { try { if ( (_event._properties instanceof Object) && (typeof _event._key === 'string')) { window.dataLayer = window.dataLayer || []; let properties = {}; for ( let pKey in _event._properties ) { properties[_event._key + '.' + pKey] = _event._properties[pKey]; } window.dataLayer.push( { ...properties, 'event': _event._key } ); return; } Debug.log( 'Invalid Data Layer Event: An event wasn\'t processed by the IPS GTM Data Layer Handler. The event\'s _key has to be a string, and its _properties has to be an Object.' ); } catch (e) { Debug.error( e ); } } )
+];
+</script>
+<!-- END Event Callbacks -->
+
+<!-- Properties Callbacks -->
+<script>
+const IpsDataLayerPropertiesHandlers = [
+    ( () => _properties => { try { if ( _properties instanceof Object ) { delete _properties.event; /* this cannot be set since this handler is NOT for adding GTM events*/ window.dataLayer = window.dataLayer || []; window.dataLayer.push( _properties ); } } catch (e) { Debug.error( e ); } } )
+];
+</script>
+<!-- END Properties Callbacks -->
+
+<!-- END Handlers -->
+
+<!-- IPS Data Layer End -->
+        
+		<title>How to hide specific product variant options from product detail page? - Commerce - Squarespace Forum</title>
+		
+		
+		
+        
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-91901-26"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+	
+	    
+	
+		
+            gtag('config', 'UA-91901-26', {'content_group1': 'Support'});
+        
+	
+
+</script>
+		
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+	<meta name="twitter:card" content="summary_large_image">
+
+
+
+	
+		
+			
+				<meta property="og:title" content="How to hide specific product variant options from product detail page?">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:type" content="website">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:url" content="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/">
+			
+		
+	
+
+	
+		
+			
+				<meta name="description" content="Hi There, I'm looking to hide a couple of product variants from the product detail page, while retaining the variant itself so I can use it for filtering. In this case, I want to keep the size and colour variants, but hide 'heel type' and 'material'. I don't want to delete them as they are still ...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:description" content="Hi There, I'm looking to hide a couple of product variants from the product detail page, while retaining the variant itself so I can use it for filtering. In this case, I want to keep the size and colour variants, but hide 'heel type' and 'material'. I don't want to delete them as they are still ...">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:updated_time" content="2024-05-20T16:12:56Z">
+			
+		
+	
+
+	
+		
+			
+				<meta name="keywords" content="product detail page, variants">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:image" content="https://content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:site_name" content="Squarespace Forum">
+			
+		
+	
+
+	
+		
+			
+				<meta property="og:locale" content="en_US">
+			
+		
+	
+
+	
+		
+			
+				<meta name="google-site-verification" content="e5NqRPnbzBVoZ2pq41QNDUIX5VFIvXRAR8_jXbgWbN0">
+			
+		
+	
+
+
+	
+		<link rel="canonical" href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/">
+	
+
+<link rel="alternate" type="application/rss+xml" title="Test Calendar RSS feed" href="https://forum.squarespace.com/rss/1-test-calendar-rss-feed.xml/">
+
+
+
+<link rel="manifest" href="https://forum.squarespace.com/manifest.webmanifest/">
+<meta name="msapplication-config" content="https://forum.squarespace.com/browserconfig.xml/">
+<meta name="msapplication-starturl" content="/">
+<meta name="application-name" content="Squarespace Forum">
+<meta name="apple-mobile-web-app-title" content="Squarespace Forum">
+
+	<meta name="theme-color" content="#0e0e0e">
+
+
+
+
+
+
+
+
+
+
+<link rel="preload" href="//forum.squarespace.com/applications/core/interface/font/fontawesome-webfont.woff2?v=4.7.0" as="font" crossorigin="anonymous">
+		
+
+
+
+
+	<link rel="stylesheet" href="//content.invisioncic.com/p289038/css_built_13/341e4a57816af3ba440d891ca87450ff_framework.css.gz?v=d815db93211716568556" media="all">
+
+	<link rel="stylesheet" href="//content.invisioncic.com/p289038/css_built_13/05e81b71abe4f22d6eb8d1a929494829_responsive.css.gz?v=d815db93211716568556" media="all">
+
+	<link rel="stylesheet" href="//content.invisioncic.com/p289038/css_built_13/90eb5adf50a8c640f633d47fd7eb1778_core.css.gz?v=d815db93211716568556" media="all">
+
+	<link rel="stylesheet" href="//content.invisioncic.com/p289038/css_built_13/5a0da001ccc2200dc5625c3f3934497d_core_responsive.css.gz?v=d815db93211716568556" media="all">
+
+	<link rel="stylesheet" href="//content.invisioncic.com/p289038/css_built_13/62e269ced0fdab7e30e026f1d30ae516_forums.css.gz?v=d815db93211716568556" media="all">
+
+	<link rel="stylesheet" href="//content.invisioncic.com/p289038/css_built_13/76e62c573090645fb99a15a363d8620e_forums_responsive.css.gz?v=d815db93211716568556" media="all">
+
+	<link rel="stylesheet" href="//content.invisioncic.com/p289038/css_built_13/ebdea0c6a7dab6d37900b9190d3ac77b_topics.css.gz?v=d815db93211716568556" media="all">
+
+
+
+
+
+<link rel="stylesheet" href="//content.invisioncic.com/p289038/css_built_13/258adbb6e4f3e83cd3b355f84e3fa002_custom.css.gz?v=d815db93211716568556" media="all">
+
+
+
+
+		
+		
+
+	
+	<link rel="shortcut icon" href="//content.invisioncic.com/p289038/monthly_2019_10/sqsp-favicon.ico" type="image/x-icon">
+
+      	<link rel="stylesheet" href="https://assets.squarespace.com/universal/fonts/squarespace-clarkson-v2.css">
+      	<script async="async" src="//consent.trustarc.com/notice?domain=squarespace.com&amp;c=teconsent&amp;js=nj&amp;noticeType=bb&amp;text=true&amp;pn=2&amp;gtm=1&amp;pcookie" crossorigin="" id="truste_0.16428403377792455"></script>
+	</head>
+	<body class="ipsApp ipsApp_front ipsJS_has ipsClearfix ipsApp_noTouch ipsLayout_sidebarUsed" data-controller="core.front.core.app,core.front.core.dataLayer,cloud.front.realtime.viewingService" data-message="" data-pageapp="forums" data-pagelocation="front" data-pagemodule="forums" data-pagecontroller="topic" data-pageid="298933">
+		
+        
+
+        
+            
+
+<!-- IPS Data Body Start -->
+
+<!-- Handlers -->
+
+ <noscript></noscript>
+
+<!-- END Handlers -->
+
+<!-- IPS Data Layer Body End -->
+        
+
+		<a href="#ipsLayout_mainArea" class="ipsHide" title="Go to main content on this page" accesskey="m">Jump to content</a>
+		<div id="ipsLayout_header" class="ipsClearfix">
+			
+
+
+
+
+
+			<header>
+                
+<div class="elLogo">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+	<a href="https://forum.squarespace.com/" class="elLogo__imageWrapper" accesskey="1">
+        
+
+        
+            <img class="elLogo__image" src="//content.invisioncic.com/p289038/set_resources_13/d0e70b4cbb9ab8afb1bc1065a3f8487a_white-logo-with-slash-new.svg" alt="Squarespace Forum">
+        
+      </a>
+      
+  
+	
+  
+</div>
+
+				
+					<div class="ipsResponsive_showDesktop">
+						
+
+	<nav class="ipsNavBar_noSubBars">
+		<div class="ipsNavBar_primary ipsNavBar_noSubBars ipsClearfix">
+			<ul data-role="primaryNavBar" class="squareSpace_links">
+				
+
+
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_62" data-role="navBarItem" data-navapp="core" data-navext="CustomItem">
+			
+			
+				<a href="https://forum.squarespace.com" data-navitem-id="62">
+					Squarespace Forum<span class="ipsNavBar_active__identifier"></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_63" data-role="navBarItem" data-navapp="core" data-navext="Menu">
+			
+			
+				<a href="#" id="elNavigation_63" data-ipsmenu="" data-ipsmenu-appendto="#elNavSecondary_63" data-ipsmenu-activeclass="ipsNavActive_menu" data-navitem-id="63">
+					Circle Benefits <i class="fa fa-caret-down"></i><span class="ipsNavBar_active__identifier"></span>
+				</a>
+				<ul id="elNavigation_63_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://support.squarespace.com/hc/en-us/articles/17127487603341-Squarespace-Circle-discount-and-benefits-overview">
+					Circle Benefits
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://forum.squarespace.com">
+					Partner Discounts
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_61" data-role="navBarItem" data-navapp="calendar" data-navext="Calendar">
+			
+			
+				<a href="https://forum.squarespace.com/events/" data-navitem-id="61">
+					Events<span class="ipsNavBar_active__identifier"></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_43" data-role="navBarItem" data-navapp="core" data-navext="CustomItem">
+			
+			
+				<a href="https://support.squarespace.com/hc/en-us/categories/200352188-Knowledge-Base" target="_blank" rel="noopener" data-navitem-id="43">
+					Help Guides<span class="ipsNavBar_active__identifier"></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_44" data-role="navBarItem" data-navapp="core" data-navext="Guidelines">
+			
+			
+				<a href="https://forum.squarespace.com/guidelines/" data-navitem-id="44">
+					Guidelines<span class="ipsNavBar_active__identifier"></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_39" data-role="navBarItem" data-navapp="core" data-navext="CustomItem">
+			
+			
+				<a href="http://pros.squarespace.com/" data-navitem-id="39">
+					Blog<span class="ipsNavBar_active__identifier"></span>
+				</a>
+			
+			
+		</li>
+	
+	
+
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_45" data-role="navBarItem" data-navapp="core" data-navext="Menu">
+			
+			
+				<a href="#" id="elNavigation_45" data-ipsmenu="" data-ipsmenu-appendto="#elNavSecondary_45" data-ipsmenu-activeclass="ipsNavActive_menu" data-navitem-id="45">
+					Events <i class="fa fa-caret-down"></i><span class="ipsNavBar_active__identifier"></span>
+				</a>
+				<ul id="elNavigation_45_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://forum.squarespace.com/events/4-events-calendar/">
+					Upcoming Calendar
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://forum.squarespace.com/circle_live_episodes/">
+					Circle Live Episodes
+				</a>
+			</li>
+		
+	
+
+	
+
+	
+		
+			
+			<li id="elNavigation_2ed18b0b3663fe80766c7e7cc61774cb" class="ipsMenu_item ipsMenu_subItems">
+				<a href="#">
+					Circle Day
+				</a>
+				<ul id="elNavigation_2ed18b0b3663fe80766c7e7cc61774cb_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://forum.squarespace.com/learning-paths/circleday-2023/">
+					Circle Day 2023
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://forum.squarespace.com/learning-paths/circleday/">
+					Circle Day 2022
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+		</li>
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_46" data-role="navBarItem" data-navapp="core" data-navext="Menu">
+			
+			
+				<a href="#" id="elNavigation_46" data-ipsmenu="" data-ipsmenu-appendto="#elNavSecondary_46" data-ipsmenu-activeclass="ipsNavActive_menu" data-navitem-id="46">
+					Resources <i class="fa fa-caret-down"></i><span class="ipsNavBar_active__identifier"></span>
+				</a>
+				<ul id="elNavigation_46_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://support.squarespace.com/hc/en-us/sections/17125131469325-Squarespace-Circle" target="_blank" rel="noopener">
+					Help Guides
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://support.squarespace.com/hc/en-us/articles/17127487603341-Squarespace-Circle-discount-and-benefits-overview" target="_blank" rel="noopener">
+					Benefits
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://support.squarespace.com/hc/en-us/articles/4418794433421-Squarespace-Circle-referral-payments" target="_blank" rel="noopener">
+					Referral Payments
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+		</li>
+	
+	
+
+	
+	
+
+	
+	
+
+	
+		
+		
+		<li id="elNavSecondary_66" data-role="navBarItem" data-navapp="core" data-navext="Menu">
+			
+			
+				<a href="#" id="elNavigation_66" data-ipsmenu="" data-ipsmenu-appendto="#elNavSecondary_66" data-ipsmenu-activeclass="ipsNavActive_menu" data-navitem-id="66">
+					Product Updates <i class="fa fa-caret-down"></i><span class="ipsNavBar_active__identifier"></span>
+				</a>
+				<ul id="elNavigation_66_menu" class="ipsMenu ipsMenu_auto ipsHide">
+					
+
+	
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://forum.squarespace.com/ideas/">
+					Feature Requests
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li class="ipsMenu_item">
+				<a href="https://forum.squarespace.com">
+					Release Notes
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			
+			
+		</li>
+	
+	
+
+			</ul>
+		</div>
+	</nav>
+
+					</div>
+				
+                
+
+	<ul id="elUserNav" class="ipsList_inline cSignedOut ipsResponsive_showDesktop">
+		<!--<li id='elSignInLink'>
+			<a href='https://forum.squarespace.com/login/' data-ipsMenu-closeOnClick="false" data-ipsMenu id='elUserSignIn'>
+				Existing user? Sign In &nbsp;<i class='fa fa-caret-down'></i>
+			</a>
+			
+<div id='elUserSignIn_menu' class='ipsMenu ipsMenu_auto ipsHide'>
+	<form accept-charset='utf-8' method='post' action='https://forum.squarespace.com/login/'>
+		<input type="hidden" name="csrfKey" value="263e75048b852232391ea56cad9525be">
+		<input type="hidden" name="ref" value="aHR0cHM6Ly9mb3J1bS5zcXVhcmVzcGFjZS5jb20vdG9waWMvMjk4OTMzLWhvdy10by1oaWRlLXNwZWNpZmljLXByb2R1Y3QtdmFyaWFudC1vcHRpb25zLWZyb20tcHJvZHVjdC1kZXRhaWwtcGFnZS8=">
+		<div data-role="loginForm">
+			
+			
+			
+				
+<div class="ipsPad ipsForm ipsForm_vertical">
+	<h4 class="ipsType_sectionHead">Sign In</h4>
+	<br><br>
+	<ul class='ipsList_reset'>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			
+			
+				<input type="text" placeholder="Display Name or Email Address" name="auth" autocomplete="email">
+			
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_noLabel ipsFieldRow_fullWidth">
+			<input type="password" placeholder="Password" name="password" autocomplete="current-password">
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_checkbox ipsClearfix">
+			<span class="ipsCustomInput">
+				<input type="checkbox" name="remember_me" id="remember_me_checkbox" value="1" checked aria-checked="true">
+				<span></span>
+			</span>
+			<div class="ipsFieldRow_content">
+				<label class="ipsFieldRow_label" for="remember_me_checkbox">Remember me</label>
+				<span class="ipsFieldRow_desc">Not recommended on shared computers</span>
+			</div>
+		</li>
+		<li class="ipsFieldRow ipsFieldRow_fullWidth">
+			<button type="submit" name="_processLogin" value="usernamepassword" class="ipsButton ipsButton_primary ipsButton_small" id="elSignIn_submit">Sign In</button>
+			
+		</li>
+	</ul>
+</div>
+			
+		</div>
+	</form>
+</div>
+		</li>-->
+		
+			<li>
+				<a href="https://forum.squarespace.com/login/" id="elRegisterButton" class="ipsButton ipsButton_normal ipsButton_veryLight">Log in</a>
+			</li>
+		
+	</ul>
+
+                
+<ul class="ipsMobileHamburger ipsList_reset ipsResponsive_hideDesktop">
+	<li data-ipsdrawer="" data-ipsdrawer-drawerelem="#elMobileDrawer">
+		<a href="#">
+			
+			
+				
+			
+			
+			
+			<i class="fa fa-navicon"></i>
+		</a>
+	</li>
+</ul>
+			</header>
+			
+		</div>
+      	
+      		<div class="sqspNav">
+              	<div class="ipsLayout_container ipsFlex ipsFlex-ai:center ipsFlex-jc:between" style="flex-wrap: wrap-reverse; gap: 10px;">
+					
+<nav class="ipsBreadcrumb ipsBreadcrumb_top ipsFaded_withHover ipsPos_left">
+	
+
+	
+	
+  	
+      <ul data-role="breadcrumbList">
+          <li>
+              <a title="Home" href="https://forum.squarespace.com/">
+                  <span><i class="fa fa-home"></i> Home <i class="fa fa-angle-right"></i></span>
+              </a>
+          </li>
+          
+          
+              <li>
+                  
+                      <a href="https://forum.squarespace.com/forum/34-forum/">
+                          <span>Forum <i class="fa fa-angle-right"></i></span>
+                      </a>
+                  
+              </li>
+          
+              <li>
+                  
+                      <a href="https://forum.squarespace.com/forum/40-commerce/">
+                          <span>Commerce <i class="fa fa-angle-right"></i></span>
+                      </a>
+                  
+              </li>
+          
+              <li>
+                  
+                      How to hide specific product variant options from product detail page?
+                  
+              </li>
+          
+      </ul>
+  
+</nav>
+                  	
+<ul id="elMobileNav" class="ipsResponsive_hideDesktop" data-controller="core.front.core.mobileNav">
+	
+		
+			
+			
+				
+				
+			
+				
+					<li id="elMobileBreadcrumb">
+						<a href="https://forum.squarespace.com/forum/40-commerce/">
+							<span>Commerce</span>
+						</a>
+					</li>
+				
+				
+			
+				
+				
+			
+		
+	
+	
+	
+	<li>
+		<a data-action="defaultStream" href="https://forum.squarespace.com/discover/"><i class="fa fa-newspaper-o" aria-hidden="true"></i></a>
+	</li>
+
+	
+
+	
+		<li class="ipsJS_show">
+			<a href="https://forum.squarespace.com/search/"><i class="fa fa-search"></i></a>
+		</li>
+	
+</ul>
+					
+
+	<div id="elSearchWrapper">
+		<div id="elSearch" data-controller="core.front.core.quickSearch">
+			<form accept-charset="utf-8" action="//forum.squarespace.com/search/?do=quicksearch" method="post">
+                <input type="search" id="elSearchField" placeholder="Search the community" name="q" autocomplete="off" aria-label="Search">
+                <details class="cSearchFilter">
+                    <summary class="cSearchFilter__text">This Topic</summary>
+                    <ul class="cSearchFilter__menu">
+                        
+                        <li><label><input type="radio" name="type" value="all"><span class="cSearchFilter__menuText">Everywhere</span></label></li>
+                        
+                            
+                                <li><label><input type="radio" name="type" value="contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;nodes&quot;:40}" checked=""><span class="cSearchFilter__menuText">This Forum</span></label></li>
+                            
+                                <li><label><input type="radio" name="type" value="contextual_{&quot;type&quot;:&quot;forums_topic&quot;,&quot;item&quot;:298933}" checked=""><span class="cSearchFilter__menuText">This Topic</span></label></li>
+                            
+                        
+                        
+                            <li><label><input type="radio" name="type" value="forums_topic"><span class="cSearchFilter__menuText">Topics</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="gallery_image"><span class="cSearchFilter__menuText">Images</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="gallery_album_item"><span class="cSearchFilter__menuText">Albums</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="blog_entry"><span class="cSearchFilter__menuText">Blog Entries</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="calendar_event"><span class="cSearchFilter__menuText">Events</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="cms_pages_pageitem"><span class="cSearchFilter__menuText">Pages</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="nexus_package_item"><span class="cSearchFilter__menuText">Products</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="downloads_file"><span class="cSearchFilter__menuText">Files</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="core_statuses_status"><span class="cSearchFilter__menuText">Status Updates</span></label></li>
+                        
+                            <li><label><input type="radio" name="type" value="core_members"><span class="cSearchFilter__menuText">Members</span></label></li>
+                        
+                    </ul>
+                </details>
+				<button class="cSearchSubmit" type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+
+              	</div>
+			</div>
+      	
+		<main id="ipsLayout_body" class="ipsLayout_container">
+          	
+			<div id="ipsLayout_contentArea">
+				<div id="ipsLayout_contentWrapper">
+					
+					<div id="ipsLayout_mainArea">
+       					
+
+	
+
+
+
+
+						
+						
+						
+						
+
+
+<div class="ipsPageHeader ipsResponsive_pull ipsBox ipsPadding sm:ipsPadding:half ipsMargin_bottom">
+	
+		<div data-controller="cloud.front.realtime.whosViewing" data-location="1d8babf40e9e14c15fd8263c419f1899" data-visibleclass="ipsMargin_bottom:half" id="ips_uid_9186_2"></div>
+		
+	
+	<div class="ipsFlex ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:4">
+		<div class="ipsFlex-flex:11">
+			<h1 class="ipsType_pageTitle ipsContained_container">
+				
+
+				
+				
+					<span class="ipsType_break ipsContained">
+						<span>How to hide specific product variant options from product detail page?</span>
+					</span>
+				
+			</h1>
+
+			
+			<div class="ipsFlex ipsFlex-fw:wrap ipsGap:3">
+				<div>
+					<p class="ipsType_reset ipsType_blendLinks">
+						<span class="ipsType_light">
+							
+								By 
+
+
+<a href="https://forum.squarespace.com/profile/107494-cooperv/" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="https://forum.squarespace.com/profile/107494-cooperv/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.squarespace.com%252Ftopic%252F298933-how-to-hide-specific-product-variant-options-from-product-detail-page%252F" title="Go to CooperV's profile" class="ipsType_break">CooperV</a>, 
+								<span><time datetime="2024-05-20T15:14:02Z" title="05/20/2024 11:14  PM" data-short="May 20">May 20</time> in <a href="https://forum.squarespace.com/forum/40-commerce/">Commerce</a></span>
+							
+						</span>
+					</p>
+				</div>
+				
+					<div>
+						
+
+
+	
+		<ul class="ipsTags ipsList_inline ">
+			
+				
+					
+
+<li>
+	
+	<a href="https://forum.squarespace.com/tags/product%20detail%20page/" class="ipsTag" title="Find other content tagged with 'product detail page'" rel="tag" data-tag-label="product detail page"><span>product detail page</span></a>
+	
+</li>
+				
+					
+
+<li>
+	
+	<a href="https://forum.squarespace.com/tags/variants/" class="ipsTag" title="Find other content tagged with 'variants'" rel="tag" data-tag-label="variants"><span>variants</span></a>
+	
+</li>
+				
+			
+			
+		</ul>
+		
+	
+
+					</div>
+				
+				<div>
+					
+					
+				</div>
+			</div>
+
+			
+			
+		</div>
+		
+		
+			<div class="ipsFlex-flex:00 ipsResponsive_hidePhone">
+				<div class="ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap:3 ipsGap_row:0">
+					
+						
+
+
+					
+					
+
+
+
+					
+
+
+
+<div data-followapp="forums" data-followarea="topic" data-followid="298933" data-controller="core.front.core.followButton">
+	
+
+	<a href="https://forum.squarespace.com/login/?ref=aHR0cHM6Ly9mb3J1bS5zcXVhcmVzcGFjZS5jb20vdG9waWMvMjk4OTMzLWhvdy10by1oaWRlLXNwZWNpZmljLXByb2R1Y3QtdmFyaWFudC1vcHRpb25zLWZyb20tcHJvZHVjdC1kZXRhaWwtcGFnZS8=" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall " data-role="followButton" data-ipstooltip="" title="Sign in to follow this">
+		<span>Followers</span>
+		<span class="ipsCommentCount">2</span>
+	</a>
+
+</div>
+				</div>
+			</div>
+		
+	</div>
+
+	
+	
+</div>
+
+
+
+
+
+
+
+<div class="ipsClearfix ">
+	
+	<ul class="ipsToolList ipsToolList_horizontal ipsClearfix ipsSpacer_both ipsResponsive_hidePhone">
+		
+		
+		
+	</ul>
+</div>
+
+<div id="comments" data-controller="core.front.core.commentFeed,forums.front.topic.view, core.front.core.ignoredComments" data-autopoll="" data-baseurl="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/" data-lastpage="" data-feedid="topic-298933" class="cTopic ipsClear ipsSpacer_top">
+	
+			
+	
+
+	
+
+<div data-controller="core.front.core.recommendedComments" data-url="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?recommended=comments" class="ipsRecommendedComments ipsHide">
+	<div data-role="recommendedComments">
+		<h2 class="ipsType_sectionHead ipsType_large ipsType_bold ipsMargin_bottom">Recommended Posts</h2>
+		
+	</div>
+</div>
+	
+	<div id="elPostFeed" data-role="commentFeed" data-controller="core.front.core.moderation">
+		<form action="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?csrfKey=263e75048b852232391ea56cad9525be&amp;do=multimodComment" method="post" data-ipspageaction="" data-role="moderationTools">
+			
+			
+				
+
+					
+
+					
+					
+
+
+
+<a id="comment-754803"></a>
+<article id="elComment_754803" class="cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    ">
+	
+
+	
+
+	<div class="cAuthorPane_mobile ipsResponsive_showPhone">
+		<div class="cAuthorPane_photo">
+			<div class="cAuthorPane_photoWrap">
+				
+
+
+	<a href="https://forum.squarespace.com/profile/107494-cooperv/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/107494-cooperv/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to CooperV's profile">
+		<img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23c462a7%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EC%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="CooperV">
+		
+	</a>
+
+				
+				
+					<a href="https://forum.squarespace.com/profile/107494-cooperv/badges/">
+						
+<img src="//content.invisioncic.com/p289038/monthly_2022_04/level1.svg.e2a558897e4ff9810a3a63a587df16bf.svg" loading="lazy" alt="Level 1" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipstooltip="" title="Rank: Level 1 (1/20)">
+					</a>
+				
+			</div>
+		</div>
+		<div class="cAuthorPane_content">
+			<h3 class="ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center">
+				
+
+
+<a href="https://forum.squarespace.com/profile/107494-cooperv/" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="https://forum.squarespace.com/profile/107494-cooperv/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.squarespace.com%252Ftopic%252F298933-how-to-hide-specific-product-variant-options-from-product-detail-page%252F" title="Go to CooperV's profile" class="ipsType_break">CooperV</a>
+			</h3>
+			<div class="ipsType_light ipsType_reset">
+				<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754803" class="ipsType_blendLinks">Posted <time datetime="2024-05-20T15:14:02Z" title="05/20/2024 11:14  PM" data-short="May 20">May 20</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class="ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone">
+		<h3 class="ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break"><strong>
+
+
+<a href="https://forum.squarespace.com/profile/107494-cooperv/" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="https://forum.squarespace.com/profile/107494-cooperv/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.squarespace.com%252Ftopic%252F298933-how-to-hide-specific-product-variant-options-from-product-detail-page%252F" title="Go to CooperV's profile" class="ipsType_break">CooperV</a></strong>
+			
+		</h3>
+		<ul class="cAuthorPane_info ipsList_reset">          
+			
+			
+			
+			
+
+
+
+            <li data-role="photo" class="cAuthorPane_photo">
+				<div class="cAuthorPane_photoWrap">
+					
+
+
+	<a href="https://forum.squarespace.com/profile/107494-cooperv/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/107494-cooperv/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to CooperV's profile">
+		<img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23c462a7%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EC%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="CooperV">
+		
+	</a>
+
+					<!-- Moderator / joined recently intentionally removed -->
+					
+						
+<img src="//content.invisioncic.com/p289038/monthly_2022_04/level1.svg.e2a558897e4ff9810a3a63a587df16bf.svg" loading="lazy" alt="Level 1" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipstooltip="" title="Rank: Level 1 (1/20)">
+					
+				</div>
+			</li>
+			
+				<li data-role="group">Member</li>
+				
+			
+			
+				<li data-role="stats" class="ipsMargin_top">
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="https://forum.squarespace.com/profile/107494-cooperv/content/" title="3 posts" data-ipstooltip="" class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 3
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+			
+		</ul>
+	</aside>
+	<div class="ipsColumn ipsColumn_fluid ipsMargin:none">
+		
+
+<div id="comment-754803_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="754803" data-quotedata="{&quot;userid&quot;:107494,&quot;username&quot;:&quot;CooperV&quot;,&quot;timestamp&quot;:1716218042,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:298933,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:754803}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_754803_menu" class="ipsComment_ellipsis" id="elControls_754803" title="More options..." data-ipsmenu="" data-ipsmenu-appendto="#comment-754803_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_754803_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/" title="Share this post" data-ipsdialog="" data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_754803_menu" data-ipsdialog-title="Share this post" id="elSharePost_754803" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754803" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime="2024-05-20T15:14:02Z" title="05/20/2024 11:14  PM" data-short="May 20">May 20</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages" id="ips_uid_9186_3">
+			<p>
+	Hi There,
+</p>
+
+<p>
+	I'm looking to hide a couple of product variants from the product detail page, while retaining the variant itself so I can use it for filtering. In this case, I want to keep the size and colour variants, but hide 'heel type' and 'material'. I don't want to delete them as they are still needed for filtering, just hide them from view. How do I find the ID for these?
+</p>
+
+<p>
+	&nbsp;
+</p>
+
+<p>
+	&nbsp;
+</p>
+
+<p>
+	<a href="//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png" title="Enlarge image" data-fileid="175454" data-wrappedlink="" data-ipslightbox="" data-ipslightbox-group="undefined"><img class="ipsImage ipsImage_thumbnailed" data-fileid="175454" data-ratio="117.76" width="597" alt="image.png.c37f87d647100b5ce61adabcf9344813.png" data-src="//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png" src="//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png" style="height: auto;" data-loaded="true"></a>
+</p>
+
+
+			
+		</div>
+
+		
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class="ipsPadding ipsHide cPostShareMenu" id="elShareComment_754803_menu">
+	<h5 class="ipsType_normal ipsType_reset">Link to comment</h5>
+	
+		
+	
+	
+	<input type="text" value="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/" class="ipsField_fullWidth">
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+						
+
+
+
+
+
+
+
+<div class="ipsBox cTopicOverview cTopicOverview--inline ipsFlex ipsFlex-fd:row md:ipsFlex-fd:row sm:ipsFlex-fd:column ipsMargin_bottom sm:ipsMargin_bottom:half sm:ipsMargin_top:half ipsResponsive_pull ipsResponsive_hideDesktop ipsResponsive_block " data-controller="forums.front.topic.activity">
+
+	<div class="cTopicOverview__header ipsAreaBackground_light ipsFlex sm:ipsFlex-fw:wrap sm:ipsFlex-jc:center">
+		<ul class="cTopicOverview__stats ipsPadding ipsMargin:none sm:ipsPadding_horizontal:half ipsFlex ipsFlex-flex:10 ipsFlex-jc:around ipsFlex-ai:center">
+			<li class="cTopicOverview__statItem ipsType_center">
+				<span class="cTopicOverview__statTitle ipsType_light ipsTruncate ipsTruncate_line">Replies</span>
+				<span class="cTopicOverview__statValue">1</span>
+			</li>
+          	<li class="cTopicOverview__statItem ipsType_center">
+				<span class="cTopicOverview__statTitle ipsType_light ipsTruncate ipsTruncate_line">Views</span>
+				<span class="cTopicOverview__statValue">116</span>
+			</li>
+			<li class="cTopicOverview__statItem ipsType_center">
+				<span class="cTopicOverview__statTitle ipsType_light ipsTruncate ipsTruncate_line">Created</span>
+				<span class="cTopicOverview__statValue"><time datetime="2024-05-20T15:14:02Z" title="05/20/2024 11:14  PM" data-short="May 20">May 20</time></span>
+			</li>
+			<li class="cTopicOverview__statItem ipsType_center">
+				<span class="cTopicOverview__statTitle ipsType_light ipsTruncate ipsTruncate_line">Last Reply </span>
+				<span class="cTopicOverview__statValue"><time datetime="2024-05-20T16:12:56Z" title="05/21/2024 12:12  AM" data-short="May 21">May 21</time></span>
+			</li>
+		</ul>
+		<a href="#" data-action="toggleOverview" class="cTopicOverview__toggle cTopicOverview__toggle--inline ipsType_large ipsType_light ipsPad ipsFlex ipsFlex-ai:center ipsFlex-jc:center"><i class="fa fa-chevron-down"></i></a>
+	</div>
+	
+		<div class="cTopicOverview__preview ipsFlex-flex:10" data-role="preview">
+			<div class="cTopicOverview__previewInner ipsPadding_vertical ipsPadding_horizontal ipsResponsive_hidePhone ipsFlex ipsFlex-fd:row">
+				
+					<div class="cTopicOverview__section--users ipsFlex-flex:00">
+						<h4 class="ipsType_reset cTopicOverview__sectionTitle ipsType_dark ipsType_uppercase ipsType_noBreak">Top Posters In This Topic</h4>
+						<ul class="cTopicOverview__dataList ipsMargin:none ipsPadding:none ipsList_style:none ipsFlex ipsFlex-jc:between ipsFlex-ai:center">
+							
+								<li class="cTopicOverview__dataItem ipsMargin_right ipsFlex ipsFlex-jc:start ipsFlex-ai:center">
+									
+
+
+	<a href="https://forum.squarespace.com/profile/35-colinirwin/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/35-colinirwin/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to colin.irwin's profile">
+		<img src="//content.invisioncic.com/p289038/monthly_2019_10/gravatar.thumb.png.4538bc568249d4be09e418dd0d5599b6.png" alt="colin.irwin">
+		
+	</a>
+
+									<p class="ipsMargin:none ipsPadding_left:half ipsPadding_right ipsType_right">1</p>
+								</li>
+							
+								<li class="cTopicOverview__dataItem ipsMargin_right ipsFlex ipsFlex-jc:start ipsFlex-ai:center">
+									
+
+
+	<a href="https://forum.squarespace.com/profile/107494-cooperv/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/107494-cooperv/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to CooperV's profile">
+		<img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23c462a7%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EC%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="CooperV">
+		
+	</a>
+
+									<p class="ipsMargin:none ipsPadding_left:half ipsPadding_right ipsType_right">1</p>
+								</li>
+							
+						</ul>
+					</div>
+				
+				
+					<div class="cTopicOverview__section--popularDays ipsFlex-flex:00 ipsPadding_left ipsPadding_left:double">
+						<h4 class="ipsType_reset cTopicOverview__sectionTitle ipsType_dark ipsType_uppercase ipsType_noBreak">Popular Days</h4>
+						<ul class="cTopicOverview__dataList ipsMargin:none ipsPadding:none ipsList_style:none ipsFlex ipsFlex-jc:between ipsFlex-ai:center">
+							
+								<li class="ipsFlex-flex:10">
+									<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754803" rel="nofollow" class="cTopicOverview__dataItem ipsMargin_right ipsType_blendLinks ipsFlex ipsFlex-jc:between ipsFlex-ai:center">
+										<p class="ipsMargin:none">May 20</p>
+										<p class="ipsMargin:none ipsMargin_horizontal ipsType_light">2</p>
+									</a>
+								</li>
+							
+						</ul>
+					</div>
+				
+			</div>
+		</div>
+	
+	<div class="cTopicOverview__body ipsPadding ipsHide ipsFlex ipsFlex-flex:11 ipsFlex-fd:column" data-role="overview">
+		
+			<div class="cTopicOverview__section--users ipsMargin_bottom">
+				<h4 class="ipsType_reset cTopicOverview__sectionTitle ipsType_withHr ipsType_dark ipsType_uppercase ipsMargin_bottom">Top Posters In This Topic</h4>
+				<ul class="cTopicOverview__dataList ipsList_reset ipsFlex ipsFlex-jc:start ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:8 ipsGap_row:5">
+					
+						<li class="cTopicOverview__dataItem cTopicOverview__dataItem--split ipsFlex ipsFlex-jc:start ipsFlex-ai:center ipsFlex-flex:11">
+							
+
+
+	<a href="https://forum.squarespace.com/profile/35-colinirwin/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/35-colinirwin/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to colin.irwin's profile">
+		<img src="//content.invisioncic.com/p289038/monthly_2019_10/gravatar.thumb.png.4538bc568249d4be09e418dd0d5599b6.png" alt="colin.irwin">
+		
+	</a>
+
+							<p class="ipsMargin:none ipsMargin_left:half cTopicOverview__dataItemInner ipsType_left">
+								<strong class="ipsTruncate ipsTruncate_line"><a href="https://forum.squarespace.com/profile/35-colinirwin/" class="ipsType_blendLinks">colin.irwin</a></strong>
+								<span class="ipsType_light">1 post</span>
+							</p>
+						</li>
+					
+						<li class="cTopicOverview__dataItem cTopicOverview__dataItem--split ipsFlex ipsFlex-jc:start ipsFlex-ai:center ipsFlex-flex:11">
+							
+
+
+	<a href="https://forum.squarespace.com/profile/107494-cooperv/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/107494-cooperv/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to CooperV's profile">
+		<img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23c462a7%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EC%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="CooperV">
+		
+	</a>
+
+							<p class="ipsMargin:none ipsMargin_left:half cTopicOverview__dataItemInner ipsType_left">
+								<strong class="ipsTruncate ipsTruncate_line"><a href="https://forum.squarespace.com/profile/107494-cooperv/" class="ipsType_blendLinks">CooperV</a></strong>
+								<span class="ipsType_light">1 post</span>
+							</p>
+						</li>
+					
+				</ul>
+			</div>
+		
+		
+			<div class="cTopicOverview__section--popularDays ipsMargin_bottom">
+				<h4 class="ipsType_reset cTopicOverview__sectionTitle ipsType_withHr ipsType_dark ipsType_uppercase ipsMargin_top:half ipsMargin_bottom">Popular Days</h4>
+				<ul class="cTopicOverview__dataList ipsList_reset ipsFlex ipsFlex-jc:start ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:8 ipsGap_row:5">
+					
+						<li class="ipsFlex-flex:10">
+							<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754803" rel="nofollow" class="cTopicOverview__dataItem ipsType_blendLinks">
+								<p class="ipsMargin:none ipsType_bold">May 20 2024</p>
+								<p class="ipsMargin:none ipsType_light">2 posts</p>
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+		
+		
+		
+			<div class="cTopicOverview__section--images">
+				<h4 class="ipsType_reset cTopicOverview__sectionTitle ipsType_withHr ipsType_dark ipsType_uppercase ipsMargin_top:half">Posted Images</h4>
+				<div class="ipsMargin_top:half" data-controller="core.front.core.lightboxedImages">
+					<ul class="cTopicOverview__imageGrid ipsMargin:none ipsPadding:none ipsList_style:none ipsFlex ipsFlex-fw:wrap">
+						
+							
+							<li class="cTopicOverview__image">
+								<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754803" rel="nofollow" class="ipsThumb ipsThumb_bg" data-background-src="//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png">
+									<img src="//forum.squarespace.com/applications/core/interface/js/spacer.png" data-src="//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png" class="ipsImage ipsImage_thumbnailed">
+								</a>
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+	</div>
+	
+		<a href="#" data-action="toggleOverview" class="cTopicOverview__toggle cTopicOverview__toggle--afterStats ipsType_large ipsType_light ipsPad ipsFlex ipsFlex-ai:center ipsFlex-jc:center"><i class="fa fa-chevron-down"></i></a>
+	
+
+</div>
+
+
+
+					
+				
+
+					
+
+					
+					
+
+
+
+<a id="comment-754829"></a>
+<article id="elComment_754829" class="cPost ipsBox ipsResponsive_pull  ipsComment  ipsComment_parent ipsClearfix ipsClear ipsColumns ipsColumns_noSpacing ipsColumns_collapsePhone    ">
+	
+
+	
+
+	<div class="cAuthorPane_mobile ipsResponsive_showPhone">
+		<div class="cAuthorPane_photo">
+			<div class="cAuthorPane_photoWrap">
+				
+
+
+	<a href="https://forum.squarespace.com/profile/35-colinirwin/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/35-colinirwin/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to colin.irwin's profile">
+		<img src="//content.invisioncic.com/p289038/monthly_2019_10/gravatar.thumb.png.4538bc568249d4be09e418dd0d5599b6.png" alt="colin.irwin">
+		
+	</a>
+
+				
+				
+					<a href="https://forum.squarespace.com/profile/35-colinirwin/badges/">
+						
+<img src="//content.invisioncic.com/p289038/monthly_2022_04/level12.svg.34bd51dd9e8ec3398d0b5c8054d6a686.svg" loading="lazy" alt="Level 12" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipstooltip="" title="Rank: Level 12 (12/20)">
+					</a>
+				
+			</div>
+		</div>
+		<div class="cAuthorPane_content">
+			<h3 class="ipsType_sectionHead cAuthorPane_author ipsType_break ipsType_blendLinks ipsFlex ipsFlex-ai:center">
+				
+
+
+<a href="https://forum.squarespace.com/profile/35-colinirwin/" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="https://forum.squarespace.com/profile/35-colinirwin/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.squarespace.com%252Ftopic%252F298933-how-to-hide-specific-product-variant-options-from-product-detail-page%252F" title="Go to colin.irwin's profile" class="ipsType_break">colin.irwin</a>
+			</h3>
+			<div class="ipsType_light ipsType_reset">
+				<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754829" class="ipsType_blendLinks">Posted <time datetime="2024-05-20T16:12:56Z" title="05/21/2024 12:12  AM" data-short="May 21">May 21</time></a>
+				
+			</div>
+		</div>
+	</div>
+	<aside class="ipsComment_author cAuthorPane ipsColumn ipsColumn_medium ipsResponsive_hidePhone">
+		<h3 class="ipsType_sectionHead cAuthorPane_author ipsType_blendLinks ipsType_break"><strong>
+
+
+<a href="https://forum.squarespace.com/profile/35-colinirwin/" rel="nofollow" data-ipshover="" data-ipshover-width="370" data-ipshover-target="https://forum.squarespace.com/profile/35-colinirwin/?do=hovercard&amp;referrer=https%253A%252F%252Fforum.squarespace.com%252Ftopic%252F298933-how-to-hide-specific-product-variant-options-from-product-detail-page%252F" title="Go to colin.irwin's profile" class="ipsType_break">colin.irwin</a></strong>
+			
+		</h3>
+		<ul class="cAuthorPane_info ipsList_reset">          
+			
+			
+			
+			
+					<!-- Circle Leader -->
+          			
+					<li><img src="//content.invisioncic.com/p289038/monthly_2024_04/CLBadgeColor.png.3342ecdbd58d7a4ba7578875707b5e2b.png.824a53ddc693e893d7ff6c80699a06d4.png" alt="" class="cAuthorGroupIcon ipsSpacer_top"></li>
+			
+
+
+
+            <li data-role="photo" class="cAuthorPane_photo">
+				<div class="cAuthorPane_photoWrap">
+					
+
+
+	<a href="https://forum.squarespace.com/profile/35-colinirwin/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/35-colinirwin/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_large" title="Go to colin.irwin's profile">
+		<img src="//content.invisioncic.com/p289038/monthly_2019_10/gravatar.thumb.png.4538bc568249d4be09e418dd0d5599b6.png" alt="colin.irwin">
+		
+	</a>
+
+					<!-- Moderator / joined recently intentionally removed -->
+					
+						
+<img src="//content.invisioncic.com/p289038/monthly_2022_04/level12.svg.34bd51dd9e8ec3398d0b5c8054d6a686.svg" loading="lazy" alt="Level 12" class="cAuthorPane_badge cAuthorPane_badge--rank ipsOutline ipsOutline:2px" data-ipstooltip="" title="Rank: Level 12 (12/20)">
+					
+				</div>
+			</li>
+			
+				<li data-role="group">Circle Community Leaders</li>
+				
+			
+			
+				<li data-role="stats" class="ipsMargin_top">
+					<ul class="ipsList_reset ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:center ipsGap_row:2 cAuthorPane_stats">
+						<li>
+							<a href="https://forum.squarespace.com/profile/35-colinirwin/content/" title="3,657 posts" data-ipstooltip="" class="ipsType_blendLinks">
+								<i class="fa fa-comment"></i> 3.7k
+							</a>
+						</li>
+						
+							<li>
+								<a href="https://forum.squarespace.com/profile/35-colinirwin/solutions/" title="567 solutions" data-ipstooltip="" class="ipsType_blendLinks">
+									<i class="fa fa-check-circle"></i> 567
+								</a>
+							</li>
+						
+					</ul>
+				</li>
+			
+		</ul>
+	</aside>
+	<div class="ipsColumn ipsColumn_fluid ipsMargin:none">
+		
+
+<div id="comment-754829_wrap" data-controller="core.front.core.comment" data-commentapp="forums" data-commenttype="forums" data-commentid="754829" data-quotedata="{&quot;userid&quot;:35,&quot;username&quot;:&quot;colin.irwin&quot;,&quot;timestamp&quot;:1716221576,&quot;contentapp&quot;:&quot;forums&quot;,&quot;contenttype&quot;:&quot;forums&quot;,&quot;contentid&quot;:298933,&quot;contentclass&quot;:&quot;forums_Topic&quot;,&quot;contentcommentid&quot;:754829}" class="ipsComment_content ipsType_medium">
+
+	<div class="ipsComment_meta ipsType_light ipsFlex ipsFlex-ai:center ipsFlex-jc:between ipsFlex-fd:row-reverse">
+		<div class="ipsType_light ipsType_reset ipsType_blendLinks ipsComment_toolWrap">
+			<div class="ipsResponsive_hidePhone ipsComment_badges">
+				<ul class="ipsList_reset ipsFlex ipsFlex-jc:end ipsFlex-fw:wrap ipsGap:2 ipsGap_row:1">
+					
+					
+					
+					
+					
+				</ul>
+			</div>
+			<ul class="ipsList_reset ipsComment_tools">
+				<li>
+					<a href="#elControls_754829_menu" class="ipsComment_ellipsis" id="elControls_754829" title="More options..." data-ipsmenu="" data-ipsmenu-appendto="#comment-754829_wrap"><i class="fa fa-ellipsis-h"></i></a>
+					<ul id="elControls_754829_menu" class="ipsMenu ipsMenu_narrow ipsHide">
+						
+						
+							<li class="ipsMenu_item"><a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754829" rel="nofollow" title="Share this post" data-ipsdialog="" data-ipsdialog-size="narrow" data-ipsdialog-content="#elShareComment_754829_menu" data-ipsdialog-title="Share this post" id="elSharePost_754829" data-role="shareComment">Share</a></li>
+						
+                        
+						
+						
+						
+							
+								
+							
+							
+							
+							
+							
+							
+						
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div class="ipsType_reset ipsResponsive_hidePhone">
+			<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754829" rel="nofollow" class="ipsType_blendLinks">Posted <time datetime="2024-05-20T16:12:56Z" title="05/21/2024 12:12  AM" data-short="May 21">May 21</time></a>
+			
+			<span class="ipsResponsive_hidePhone">
+				
+				
+			</span>
+		</div>
+	</div>
+
+	
+
+    
+
+	<div class="cPost_contentWrap">
+		
+		<div data-role="commentContent" class="ipsType_normal ipsType_richText ipsPadding_bottom ipsContained" data-controller="core.front.core.lightboxedImages">
+			<p>
+	You can't hide them because the user has to select each of them in order to make a purchase.&nbsp;
+</p>
+
+
+			
+		</div>
+
+		
+
+		
+			
+
+	<div data-role="memberSignature" class=" ipsBorder_top ipsPadding_vertical">
+		
+
+		<div class="ipsType_light ipsType_richText" data-ipslazyload="">
+			<p>
+	<span style="font-size:14px;"><span style="color:#2c3e50;">I'm </span></span><span style="font-size:16px;"><span style="color:#2c3e50;">Colin Irwin</span></span><span style="font-size:14px;"><span style="color:#2c3e50;"><strong> </strong>aka </span><a href="https://www.silvabokis.com" rel="external nofollow noopener" target="_blank"><span style="color:#8e44ad;">silvabokis</span></a><span style="color:#2c3e50;"><strong>.</strong>&nbsp; I've been a Squarespace designer &amp; developer since 2013.&nbsp;<br>
+	I remember when it was all wild prairies round these here parts.&nbsp;<span class="ipsEmoji">🐃</span><span class="ipsEmoji">🤠</span><br>
+	Advice I give on here is free, though I may sometimes post an affiliate link or promote something I've written.<br>
+	That reminds me.. ..you might want to check out my</span></span><span style="font-size:16px;"><span style="color:#2c3e50;"> </span><a href="https://www.silvabokis.com/squarespace-tips/how-to-find-out-which-squarespace-template-a-site-is-using" rel="external nofollow noopener" target="_blank"><span style="color:#8e44ad;">Squarespace template finder</span></a></span><span style="font-size:14px;"><span style="color:#2c3e50;">&nbsp;or have a look at my other</span></span><span style="font-size:16px;"><span style="color:#2c3e50;">&nbsp;</span><a href="https://www.silvabokis.com/squarespace-tips" rel="external nofollow noopener" target="_blank"><span style="color:#8e44ad;">Squarespace tip</span></a><span style="color:#8e44ad;">s</span></span><br>
+	<span style="font-size:14px;"><span style="color:#2c3e50;">Speaking of tips,</span><strong><span style="color:#2c3e50;"> </span></strong></span><span style="font-size:16px;"><strong><a href="https://portal.tipjar.tips/t3s/silvabokis" rel="external nofollow noopener" target="_blank"><span style="color:#2c3e50;"><span class="ipsEmoji">💲</span></span></a></strong><a href="https://portal.tipjar.tips/t3s/silvabokis" rel="external nofollow noopener" target="_blank"><span style="color:#8e44ad;">I've got a tip jar</span></a></span><span style="font-size:14px;"><span style="color:#2c3e50;"><b>&nbsp;</b>that you're welcome to throw a few quid into if you think I've helped you.&nbsp;<br>
+	If you're looking for a Squarespace developer<strong>&nbsp;</strong></span></span><span style="font-size:16px;"><a href="https://www.silvabokis.com/book-free-consult" rel="external nofollow noopener" target="_blank"><span style="color:#8e44ad;">Book a chat</span></a></span><span style="font-size:14px;"><span style="color:#2c3e50;"> or&nbsp;</span></span><span style="font-size:16px;"><a href="https://www.silvabokis.com/contact" rel="external nofollow noopener" target="_blank"><span style="color:#8e44ad;">Drop me a line</span></a></span><span style="font-size:14px;"><span style="color:#2c3e50;">&nbsp;- first meeting is always free&nbsp;&nbsp;</span></span>
+</p>
+
+<p>
+	&nbsp;
+</p>
+
+		</div>
+	</div>
+
+		
+	</div>
+
+	
+
+	
+
+
+
+<div class="ipsPadding ipsHide cPostShareMenu" id="elShareComment_754829_menu">
+	<h5 class="ipsType_normal ipsType_reset">Link to comment</h5>
+	
+		
+	
+	
+	<input type="text" value="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754829" class="ipsField_fullWidth">
+
+	
+</div>
+</div>
+
+	</div>
+</article>
+					
+					
+					
+				
+			
+			
+<input type="hidden" name="csrfKey" value="263e75048b852232391ea56cad9525be">
+
+
+		</form>
+	</div>
+
+	
+	
+	
+	
+	
+		<a id="replyForm"></a>
+	<div data-role="replyArea" class="cTopicPostArea ipsBox ipsResponsive_pull ipsPadding cTopicPostArea_noSize ipsSpacer_top" data-controller="cloud.front.realtime.forumsReplyArea,cloud.front.realtime.whosTyping">
+			
+				
+				
+
+<div data-controller="core.global.core.login">
+	<input type="hidden" name="csrfKey" value="263e75048b852232391ea56cad9525be">
+	
+		<div class="ipsType_center cGuestTeaser">
+			
+				<h2 class="ipsType_pageTitle">Create an account or sign in to comment</h2>
+				<p class="ipsType_light ipsType_normal ipsType_reset ipsSpacer_top ipsSpacer_half">You need to be a member in order to leave a comment</p>
+			
+	
+			<div class="ipsType_center ipsSpacer_top ipsSpacer_double">
+				<a href="https://forum.squarespace.com/login/" class="ipsButton ipsButton_medium ipsButton_important">Sign Up / Login</a>
+			</div>
+		</div>
+	
+</div>
+
+			
+		</div>
+	
+
+	
+		<div class="ipsBox ipsPadding ipsResponsive_pull ipsResponsive_showPhone ipsMargin_top">
+			
+				<div class="ipsResponsive_noFloat ipsResponsive_block ipsMargin_bottom:half">
+					
+
+
+				</div>
+			
+			<div class="ipsResponsive_noFloat ipsResponsive_block">
+				
+
+
+
+<div data-followapp="forums" data-followarea="topic" data-followid="298933" data-controller="core.front.core.followButton">
+	
+
+	<a href="https://forum.squarespace.com/login/?ref=aHR0cHM6Ly9mb3J1bS5zcXVhcmVzcGFjZS5jb20vdG9waWMvMjk4OTMzLWhvdy10by1oaWRlLXNwZWNpZmljLXByb2R1Y3QtdmFyaWFudC1vcHRpb25zLWZyb20tcHJvZHVjdC1kZXRhaWwtcGFnZS8=" class="ipsFollow ipsPos_middle ipsButton ipsButton_light ipsButton_verySmall " data-role="followButton" data-ipstooltip="" title="Sign in to follow this">
+		<span>Followers</span>
+		<span class="ipsCommentCount">2</span>
+	</a>
+
+</div>
+			</div>
+			
+		</div>
+	
+</div>
+
+
+
+<div class="ipsPager ipsSpacer_top">
+	<div class="ipsPager_prev">
+		
+			<a href="https://forum.squarespace.com/forum/40-commerce/" title="Go to Commerce" rel="parent">
+				<span class="ipsPager_type">Go to topic listing</span>
+			</a>
+		
+	</div>
+	
+</div>
+
+
+						
+
+
+					</div>
+					
+
+
+	<div id="ipsLayout_sidebar" class="ipsLayout_sidebarright " data-controller="core.front.widgets.sidebar">
+		
+			
+<div class="squareSpace_featuredTopics">
+    <h3 class="ipsType_reset squareSpace_featuredTopics_title">News</h3>
+    <ul class="ipsList_reset squareSpace_featuredTopics_links ipsType_blendLinks">
+        
+            <li>
+              	
+                	<a href="https://forum.squarespace.com/topic/295219-whats-new-at-squarespace-%E2%80%94-april-2024/" target="_blank" rel="noopener">What's new at Squarespace - April 2024 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H12L19 11L12 4L9.25 4L15.25 10L3 10V12L15.25 12L9.25 18Z"></path></svg></a>
+                
+            </li>
+        
+            <li>
+              	
+                	<a href="https://forum.squarespace.com/topic/299335-ask-a-squarespace-product-manager-managing-clients-with-invoices-contracts-and-proposals/" target="_blank" rel="noopener">Ask a Squarespace Product Manager: Managing Clients with Invoices, Contracts, and Proposals <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H12L19 11L12 4L9.25 4L15.25 10L3 10V12L15.25 12L9.25 18Z"></path></svg></a>
+                
+            </li>
+        
+            <li>
+              	
+                	<a href="https://forum.squarespace.com/topic/295191-using-squarespace-extensions-faq/" target="_blank" rel="noopener">Using Squarespace Extensions FAQ <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.25 18H12L19 11L12 4L9.25 4L15.25 10L3 10V12L15.25 12L9.25 18Z"></path></svg></a>
+                
+            </li>
+        
+    </ul>
+</div>
+		
+		
+			<aside id="elContextualTools" class="ipsClearfix">
+				
+
+
+
+
+
+
+
+<div class="ipsBox ipsResponsive_hideTablet ipsResponsive_hidePhone cTopicOverview cTopicOverview--sidebar ipsFlex ipsFlex-fd:column md:ipsFlex-fd:row sm:ipsFlex-fd:column" data-controller="forums.front.topic.activity">
+
+	<div class="cTopicOverview__header ipsAreaBackground_light ipsFlex sm:ipsFlex-fw:wrap sm:ipsFlex-jc:center">
+		<ul class="cTopicOverview__stats ipsPadding ipsMargin:none sm:ipsPadding_horizontal:half ipsFlex ipsFlex-flex:10 ipsFlex-jc:around ipsFlex-ai:center">
+			<li class="cTopicOverview__statItem ipsType_center">
+				<span class="cTopicOverview__statTitle ipsType_light ipsTruncate ipsTruncate_line">Replies</span>
+				<span class="cTopicOverview__statValue">1</span>
+			</li>
+          	<li class="cTopicOverview__statItem ipsType_center">
+				<span class="cTopicOverview__statTitle ipsType_light ipsTruncate ipsTruncate_line">Views</span>
+				<span class="cTopicOverview__statValue">116</span>
+			</li>
+			<li class="cTopicOverview__statItem ipsType_center">
+				<span class="cTopicOverview__statTitle ipsType_light ipsTruncate ipsTruncate_line">Created</span>
+				<span class="cTopicOverview__statValue"><time datetime="2024-05-20T15:14:02Z" title="05/20/2024 11:14  PM" data-short="May 20">May 20</time></span>
+			</li>
+			<li class="cTopicOverview__statItem ipsType_center">
+				<span class="cTopicOverview__statTitle ipsType_light ipsTruncate ipsTruncate_line">Last Reply </span>
+				<span class="cTopicOverview__statValue"><time datetime="2024-05-20T16:12:56Z" title="05/21/2024 12:12  AM" data-short="May 21">May 21</time></span>
+			</li>
+		</ul>
+		<a href="#" data-action="toggleOverview" class="cTopicOverview__toggle cTopicOverview__toggle--inline ipsType_large ipsType_light ipsPad ipsFlex ipsFlex-ai:center ipsFlex-jc:center"><i class="fa fa-chevron-down"></i></a>
+	</div>
+	
+	<div class="cTopicOverview__body ipsPadding " data-role="overview">
+		
+			<div class="cTopicOverview__section--users ipsMargin_bottom">
+				<h4 class="ipsType_reset cTopicOverview__sectionTitle ipsType_withHr ipsType_dark ipsType_uppercase ipsMargin_bottom">Top Posters In This Topic</h4>
+				<ul class="cTopicOverview__dataList ipsList_reset ipsFlex ipsFlex-jc:between ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:8 ipsGap_row:5">
+					
+						<li class="cTopicOverview__dataItem cTopicOverview__dataItem--split ipsFlex ipsFlex-jc:start ipsFlex-ai:center ipsFlex-flex:11">
+							
+
+
+	<a href="https://forum.squarespace.com/profile/35-colinirwin/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/35-colinirwin/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to colin.irwin's profile">
+		<img src="//content.invisioncic.com/p289038/monthly_2019_10/gravatar.thumb.png.4538bc568249d4be09e418dd0d5599b6.png" alt="colin.irwin">
+		
+	</a>
+
+							<p class="ipsMargin:none ipsMargin_left:half cTopicOverview__dataItemInner ipsType_left">
+								<strong class="ipsTruncate ipsTruncate_line"><a href="https://forum.squarespace.com/profile/35-colinirwin/" class="ipsType_blendLinks">colin.irwin</a></strong>
+								<span class="ipsType_light">1 post</span>
+							</p>
+						</li>
+					
+						<li class="cTopicOverview__dataItem cTopicOverview__dataItem--split ipsFlex ipsFlex-jc:start ipsFlex-ai:center ipsFlex-flex:11">
+							
+
+
+	<a href="https://forum.squarespace.com/profile/107494-cooperv/" data-ipshover="" data-ipshover-target="https://forum.squarespace.com/profile/107494-cooperv/?do=hovercard" class="ipsUserPhoto ipsUserPhoto_tiny" title="Go to CooperV's profile">
+		<img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22background%3A%23c462a7%22%3E%3Cg%3E%3Ctext%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20x%3D%22512%22%20y%3D%22512%22%20fill%3D%22%23ffffff%22%20font-size%3D%22700%22%20font-family%3D%22-apple-system%2C%20BlinkMacSystemFont%2C%20Roboto%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%3EC%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="CooperV">
+		
+	</a>
+
+							<p class="ipsMargin:none ipsMargin_left:half cTopicOverview__dataItemInner ipsType_left">
+								<strong class="ipsTruncate ipsTruncate_line"><a href="https://forum.squarespace.com/profile/107494-cooperv/" class="ipsType_blendLinks">CooperV</a></strong>
+								<span class="ipsType_light">1 post</span>
+							</p>
+						</li>
+					
+				</ul>
+			</div>
+		
+		
+			<div class="cTopicOverview__section--popularDays ipsMargin_bottom">
+				<h4 class="ipsType_reset cTopicOverview__sectionTitle ipsType_withHr ipsType_dark ipsType_uppercase ipsMargin_top:half ipsMargin_bottom">Popular Days</h4>
+				<ul class="cTopicOverview__dataList ipsList_reset ipsFlex ipsFlex-jc:between ipsFlex-ai:center ipsFlex-fw:wrap ipsGap:8 ipsGap_row:5">
+					
+						<li class="ipsFlex-flex:10">
+							<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754803" rel="nofollow" class="cTopicOverview__dataItem ipsType_blendLinks">
+								<p class="ipsMargin:none ipsType_bold">May 20 2024</p>
+								<p class="ipsMargin:none ipsType_light">2 posts</p>
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+		
+		
+		
+			<div class="cTopicOverview__section--images">
+				<h4 class="ipsType_reset cTopicOverview__sectionTitle ipsType_withHr ipsType_dark ipsType_uppercase ipsMargin_top:half">Posted Images</h4>
+				<div class="ipsMargin_top:half" data-controller="core.front.core.lightboxedImages">
+					<ul class="cTopicOverview__imageGrid ipsMargin:none ipsPadding:none ipsList_style:none ipsFlex ipsFlex-fw:wrap">
+						
+							
+							<li class="cTopicOverview__image">
+								<a href="https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/?do=findComment&amp;comment=754803" rel="nofollow" class="ipsThumb ipsThumb_bg" data-background-src="//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png" style="background-image: url(&quot;//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png&quot;);">
+									<img src="//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png" data-src="//content.invisioncic.com/p289038/monthly_2024_05/image.png.c37f87d647100b5ce61adabcf9344813.png" class="ipsImage ipsImage_thumbnailed" data-loaded="true" style="height: auto;">
+								</a>
+							</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+	</div>
+	
+
+</div>
+
+
+
+			</aside>
+			<hr class="ipsHr ipsSpacer_both">
+		
+		
+		
+
+
+	</div>
+
+				</div>
+			</div>
+			
+		</main>
+		<footer id="ipsLayout_footer" class="ipsClearfix">
+			<div class="ipsLayout_container">
+				
+              	
+			</div>
+          	<div id="consent_blackbar"></div>
+		</footer>
+		
+
+<div id="elMobileDrawer" class="ipsDrawer ipsHide">
+	<div class="ipsDrawer_menu">
+		<a href="#" class="ipsDrawer_close" data-action="close"><span>×</span></a>
+		<div class="ipsDrawer_content ipsFlex ipsFlex-fd:column">
+<ul id="elUserNav_mobile" class="ipsList_inline signed_in ipsClearfix">
+	
+
+
+</ul>
+
+			
+				<div class="ipsPadding ipsBorder_bottom">
+					<ul class="ipsToolList ipsToolList_vertical">
+						<li>
+							<a href="https://forum.squarespace.com/login/?ref=aHR0cHM6Ly9mb3J1bS5zcXVhcmVzcGFjZS5jb20vdG9waWMvMjk4OTMzLWhvdy10by1oaWRlLXNwZWNpZmljLXByb2R1Y3QtdmFyaWFudC1vcHRpb25zLWZyb20tcHJvZHVjdC1kZXRhaWwtcGFnZS8=" id="elSigninButton_mobile" class="ipsButton ipsButton_light ipsButton_small ipsButton_fullWidth">Existing user? Sign In</a>
+						</li>
+						
+							<li>
+								
+									<a href="https://forum.squarespace.com/login" target="_blank" rel="noopener" class="ipsButton ipsButton_small ipsButton_fullWidth ipsButton_important">Sign Up</a>
+								
+							</li>
+						
+					</ul>
+				</div>
+			
+
+			
+
+			<ul class="ipsDrawer_list ipsFlex-flex:11">
+				
+
+				
+				
+				
+				
+					
+				
+					
+						
+						
+							<li data-mobile-nav-id="62"><a href="https://forum.squarespace.com">Squarespace Forum</a></li>
+						
+					
+				
+					
+						
+						
+							<li class="ipsDrawer_itemParent" data-mobile-nav-id="63">
+								<h4 class="ipsDrawer_title"><a href="#">Circle Benefits</a></h4>
+								<ul class="ipsDrawer_list">
+									<li data-action="back"><a href="#">Back</a></li>
+									
+									
+													
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href="https://support.squarespace.com/hc/en-us/articles/17127487603341-Squarespace-Circle-discount-and-benefits-overview">
+					Circle Benefits
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href="https://forum.squarespace.com">
+					Partner Discounts
+				</a>
+			</li>
+		
+	
+
+									
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li data-mobile-nav-id="61"><a href="https://forum.squarespace.com/events/">Events</a></li>
+						
+					
+				
+					
+				
+					
+						
+						
+							<li data-mobile-nav-id="43"><a href="https://support.squarespace.com/hc/en-us/categories/200352188-Knowledge-Base" target="_blank" rel="noopener">Help Guides</a></li>
+						
+					
+				
+					
+						
+						
+							<li data-mobile-nav-id="44"><a href="https://forum.squarespace.com/guidelines/">Guidelines</a></li>
+						
+					
+				
+					
+						
+						
+							<li data-mobile-nav-id="39"><a href="http://pros.squarespace.com/">Blog</a></li>
+						
+					
+				
+					
+				
+					
+						
+						
+							<li class="ipsDrawer_itemParent" data-mobile-nav-id="45">
+								<h4 class="ipsDrawer_title"><a href="#">Events</a></h4>
+								<ul class="ipsDrawer_list">
+									<li data-action="back"><a href="#">Back</a></li>
+									
+									
+													
+									
+									
+										
+
+
+	
+		
+			<li>
+				<a href="https://forum.squarespace.com/events/4-events-calendar/">
+					Upcoming Calendar
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href="https://forum.squarespace.com/circle_live_episodes/">
+					Circle Live Episodes
+				</a>
+			</li>
+		
+	
+
+	
+
+	
+		
+			
+			<li class="ipsDrawer_itemParent">
+				<h4 class="ipsDrawer_title"><a href="#">Circle Day</a></h4>
+				<ul class="ipsDrawer_list">
+					<li data-action="back"><a href="#">Back</a></li>
+					
+					
+
+
+	
+		
+			<li>
+				<a href="https://forum.squarespace.com/learning-paths/circleday-2023/">
+					Circle Day 2023
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href="https://forum.squarespace.com/learning-paths/circleday/">
+					Circle Day 2022
+				</a>
+			</li>
+		
+	
+
+				</ul>
+			</li>
+		
+	
+
+									
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+						
+						
+							<li class="ipsDrawer_itemParent" data-mobile-nav-id="46">
+								<h4 class="ipsDrawer_title"><a href="#">Resources</a></h4>
+								<ul class="ipsDrawer_list">
+									<li data-action="back"><a href="#">Back</a></li>
+									
+									
+													
+									
+									
+										
+
+
+	
+
+	
+		
+			<li>
+				<a href="https://support.squarespace.com/hc/en-us/sections/17125131469325-Squarespace-Circle" target="_blank" rel="noopener">
+					Help Guides
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href="https://support.squarespace.com/hc/en-us/articles/17127487603341-Squarespace-Circle-discount-and-benefits-overview" target="_blank" rel="noopener">
+					Benefits
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href="https://support.squarespace.com/hc/en-us/articles/4418794433421-Squarespace-Circle-referral-payments" target="_blank" rel="noopener">
+					Referral Payments
+				</a>
+			</li>
+		
+	
+
+									
+										
+								</ul>
+							</li>
+						
+					
+				
+					
+				
+					
+				
+					
+						
+						
+							<li class="ipsDrawer_itemParent" data-mobile-nav-id="66">
+								<h4 class="ipsDrawer_title"><a href="#">Product Updates</a></h4>
+								<ul class="ipsDrawer_list">
+									<li data-action="back"><a href="#">Back</a></li>
+									
+									
+													
+									
+									
+										
+
+
+	
+
+	
+		
+			<li>
+				<a href="https://forum.squarespace.com/ideas/">
+					Feature Requests
+				</a>
+			</li>
+		
+	
+
+	
+		
+			<li>
+				<a href="https://forum.squarespace.com">
+					Release Notes
+				</a>
+			</li>
+		
+	
+
+									
+										
+								</ul>
+							</li>
+						
+					
+				
+				
+			</ul>
+
+			
+		</div>
+	</div>
+</div>
+
+<div id="elMobileCreateMenuDrawer" class="ipsDrawer ipsHide">
+	<div class="ipsDrawer_menu">
+		<a href="#" class="ipsDrawer_close" data-action="close"><span>×</span></a>
+		<div class="ipsDrawer_content ipsSpacer_bottom ipsPad">
+			<ul class="ipsDrawer_list">
+				<li class="ipsDrawer_listTitle ipsType_reset">Create New...</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+
+		
+		
+
+	
+	<script type="text/javascript">
+		var ipsDebug = false;		
+	
+		var CKEDITOR_BASEPATH = '//forum.squarespace.com/applications/core/interface/ckeditor/ckeditor/';
+	
+		var ipsSettings = {
+			
+			
+			cookie_path: "/",
+			
+			cookie_prefix: "ips4_",
+			
+			
+			cookie_ssl: true,
+			
+            essential_cookies: ["forumpass_*","cm_reg","location","currency","guestTransactionKey","oauth_authorize","member_id","login_key","clearAutosave","lastSearch","device_key","IPSSessionFront","loggedIn","noCache","hasJS","cookie_consent","cookie_consent_optional"],
+			upload_imgURL: "",
+			message_imgURL: "",
+			notification_imgURL: "",
+			baseURL: "//forum.squarespace.com/",
+			jsURL: "//forum.squarespace.com/applications/core/interface/js/js.php",
+			csrfKey: "263e75048b852232391ea56cad9525be",
+			antiCache: "d815db93211716568556",
+			jsAntiCache: "d815db93211716762119",
+			disableNotificationSounds: true,
+			useCompiledFiles: true,
+			links_external: true,
+			memberID: 0,
+			lazyLoadEnabled: true,
+			blankImg: "//forum.squarespace.com/applications/core/interface/js/spacer.png",
+			googleAnalyticsEnabled: false,
+			matomoEnabled: false,
+			viewProfiles: true,
+			mapProvider: 'none',
+			mapApiKey: '',
+			pushPublicKey: "BJDX7004-1iPefY1Kd55H1XSBtxe3NoAF_UemGSjt1Q7hYR7_SE49_gUctgrS1Uo0NXdr63spntjkzxao3s6N-8",
+			relativeDates: true
+		};
+		
+		
+		
+		
+			ipsSettings['maxImageDimensions'] = {
+				width: 1000,
+				height: 750
+			};
+		
+		
+	</script>
+
+
+
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_global/root_library.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_global/root_js_lang_1.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_global/root_framework.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" id="">var __dispatched__={},__i__=self.postMessage&&setInterval(function(){if(self.PrivacyManagerAPI&&__i__){var b={PrivacyManagerAPI:{action:"getConsentDecision",timestamp:(new Date).getTime(),self:self.location.host}};self.top.postMessage(JSON.stringify(b),"*");__i__=clearInterval(__i__)}},50);
+self.addEventListener("message",function(b,a){try{if(b.data&&(a=JSON.parse(b.data))&&(a=a.PrivacyManagerAPI)&&a.capabilities&&"getConsentDecision"==a.action){var d=self.PrivacyManagerAPI.callApi("getGDPRConsentDecision",self.location.host).consentDecision;d&&d.forEach(function(c){__dispatched__[c]||(self.dataLayer&&self.dataLayer.push({event:"GDPR Pref Allows "+c}),__dispatched__[c]=1)})}}catch(c){}});</script><script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_core/global_global_core.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_global/root_front.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_core/front_front_core.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_forums/front_front_topic.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_cloud/front_front_realtime.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_cloud/front_app.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+<script type="text/javascript" src="//content.invisioncic.com/p289038/javascript_global/root_map.js.gz?v=d815db93211716762119" data-ips=""></script>
+
+
+
+	<script type="text/javascript">
+		
+			ips.setSetting( 'date_format', jQuery.parseJSON('"mm\/dd\/yy"') );
+		
+			ips.setSetting( 'date_first_day', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'ipb_url_filter_option', jQuery.parseJSON('"none"') );
+		
+			ips.setSetting( 'url_filter_any_action', jQuery.parseJSON('"allow"') );
+		
+			ips.setSetting( 'bypass_profanity', jQuery.parseJSON('0') );
+		
+			ips.setSetting( 'emoji_style', jQuery.parseJSON('"native"') );
+		
+			ips.setSetting( 'emoji_shortcodes', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_ascii', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'emoji_cache', jQuery.parseJSON('1681298360') );
+		
+			ips.setSetting( 'image_jpg_quality', jQuery.parseJSON('85') );
+		
+			ips.setSetting( 'cloud2', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'isAnonymous', jQuery.parseJSON('false') );
+		
+			ips.setSetting( 'socketEnabled', jQuery.parseJSON('true') );
+		
+			ips.setSetting( 'socketUrl', jQuery.parseJSON('"https:\/\/live.invisioncic.com"') );
+		
+			ips.setSetting( 'siteId', jQuery.parseJSON('"p289038"') );
+		
+			ips.setSetting( 'page_token', jQuery.parseJSON('"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTY3NzY3OTksInN1YiI6bnVsbCwibWdyb3VwcyI6WzJdLCJpc3MiOiJwMjg5MDM4IiwibG9jYXRpb24iOiIxZDhiYWJmNDBlOWUxNGMxNWZkODI2M2M0MTlmMTg5OSIsIm90aGVyTG9jYXRpb25zIjpbXSwidXNlcm5hbWUiOiJjZDZkNWU5MTBlYzg1NTQyYTIxYzg5NDZmMDQ5N2ZhNyIsInBob3RvIjoiXC9cL2NvbnRlbnQuaW52aXNpb25jaWMuY29tXC9wMjg5MDM4XC9zZXRfcmVzb3VyY2VzXzEzXC84NGMxZTQwZWEwZTc1OWUzZjE1MDVlYjE3ODhkZGYzY19kZWZhdWx0X3Bob3RvLnBuZyIsImFub24iOmZhbHNlLCJpcHNMb25nVmVyc2lvbiI6MTA3NzQ4fQ.5uJZWfAK6mnjJkADS7MV0FAhQld9UNyncCmsmE-aiqc"') );
+		
+			ips.setSetting( 'features', {"analytics_full":true} );
+		
+		
+        
+    </script>
+
+
+
+<script type="application/ld+json">
+{
+    "name": "How to hide specific product variant options from product detail page?",
+    "headline": "How to hide specific product variant options from product detail page?",
+    "text": "Hi There,\n \n\n\n\tI\u0027m looking to hide a couple of product variants from the product detail page, while retaining the variant itself so I can use it for filtering. In this case, I want to keep the size and colour variants, but hide \u0027heel type\u0027 and \u0027material\u0027. I don\u0027t want to delete them as they are still needed for filtering, just hide them from view. How do I find the ID for these?\n \n\n\n\t\u00a0\n \n\n\n\t\u00a0\n \n\n\n\t\n \n",
+    "dateCreated": "2024-05-20T23:14:02+0800",
+    "datePublished": "2024-05-20T23:14:02+0800",
+    "dateModified": "2024-05-21T00:12:56+0800",
+    "image": "https://forum.squarespace.com/applications/core/interface/email/default_photo.png",
+    "author": {
+        "@type": "Person",
+        "name": "CooperV",
+        "image": "https://forum.squarespace.com/applications/core/interface/email/default_photo.png",
+        "url": "https://forum.squarespace.com/profile/107494-cooperv/"
+    },
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/ViewAction",
+            "userInteractionCount": 116
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/CommentAction",
+            "userInteractionCount": 1
+        },
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/FollowAction",
+            "userInteractionCount": 2
+        }
+    ],
+    "@context": "http://schema.org",
+    "@type": "DiscussionForumPosting",
+    "@id": "https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/",
+    "isPartOf": {
+        "@id": "https://forum.squarespace.com/#website"
+    },
+    "publisher": {
+        "@id": "https://forum.squarespace.com/#organization",
+        "member": {
+            "@type": "Person",
+            "name": "CooperV",
+            "image": "https://forum.squarespace.com/applications/core/interface/email/default_photo.png",
+            "url": "https://forum.squarespace.com/profile/107494-cooperv/"
+        }
+    },
+    "url": "https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/",
+    "discussionUrl": "https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/"
+    },
+    "pageStart": 1,
+    "pageEnd": 1,
+    "comment": [
+        {
+            "@type": "Comment",
+            "@id": "https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/#comment-754829",
+            "url": "https://forum.squarespace.com/topic/298933-how-to-hide-specific-product-variant-options-from-product-detail-page/#comment-754829",
+            "author": {
+                "@type": "Person",
+                "name": "colin.irwin",
+                "image": "//content.invisioncic.com/p289038/monthly_2019_10/gravatar.thumb.png.4538bc568249d4be09e418dd0d5599b6.png",
+                "url": "https://forum.squarespace.com/profile/35-colinirwin/"
+            },
+            "dateCreated": "2024-05-21T00:12:56+0800",
+            "text": "You can\u0027t hide them because the user has to select each of them in order to make a purchase.\u00a0\n \n",
+            "upvoteCount": 0
+        }
+    ]
+}	
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "http://www.schema.org",
+    "publisher": "https://forum.squarespace.com/#organization",
+    "@type": "WebSite",
+    "@id": "https://forum.squarespace.com/#website",
+    "mainEntityOfPage": "https://forum.squarespace.com/",
+    "name": "Squarespace Forum",
+    "url": "https://forum.squarespace.com/",
+    "potentialAction": {
+        "type": "SearchAction",
+        "query-input": "required name=query",
+        "target": "https://forum.squarespace.com/search/?q={query}"
+    },
+    "inLanguage": [
+        {
+            "@type": "Language",
+            "name": "English (USA)",
+            "alternateName": "en-US"
+        }
+    ]
+}	
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "@id": "https://forum.squarespace.com/#organization",
+    "mainEntityOfPage": "https://forum.squarespace.com/",
+    "name": "Squarespace Forum",
+    "url": "https://forum.squarespace.com/",
+    "sameAs": [
+        "https://www.facebook.com/squarespace/",
+        "https://x.com/squarespace",
+        "https://www.instagram.com/squarespace/",
+        "https://www.youtube.com/squarespace",
+        "https://www.linkedin.com/company/squarespace/"
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8 Clarkson St",
+        "addressLocality": "New York",
+        "addressRegion": "New York",
+        "postalCode": "10014",
+        "addressCountry": "US"
+    }
+}	
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://forum.squarespace.com/forum/34-forum/",
+                "name": "Forum"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://forum.squarespace.com/forum/40-commerce/",
+                "name": "Commerce"
+            }
+        }
+    ]
+}	
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "ContactPage",
+    "url": "https://forum.squarespace.com/contact/"
+}	
+</script>
+
+
+
+<script type="text/javascript">
+    (() => {
+        let gqlKeys = [];
+        for (let [k, v] of Object.entries(gqlKeys)) {
+            ips.setGraphQlData(k, v);
+        }
+    })();
+</script>
+		
+		
+		<!--ipsQueryLog-->
+		<!--ipsCachingLog-->
+		
+		
+     
+      	
+
+
+
+
+
+<ul class="ipsMenu ipsMenu_narrow ipsHide" id="elSqspForumToggle">
+    <!-- <li class='ipsMenu_item'>
+      <a href='https://forum.squarespace.com/'>Squarespace Forum</a>
+    </li> -->
+  	
+    
+</ul>
+      	
+
+
+
+      	<div class="squareSpace_cardFooter">
+      		<div class="ipsLayout_container">
+      			<div class="_columns">
+	                
+                      <div>
+                          <div class="ipsFlex ipsFlex-fw:wrap ipsGap:4">
+                              <div style="flex:1 1 276px;">
+                                  <img src="//content.invisioncic.com/p289038/set_resources_13/da20b6f92c1c867e86b4182f29ae0e8f_footer-columns__thumbnail.png" alt="" width="276" style="max-width:100%">
+                              </div>
+                              <div style="flex:999 1 50%">
+                                  <h4 class="_title">Squarespace Webinars</h4>
+                                  <p class="_desc">Free online sessions where you’ll learn the basics and refine your Squarespace skills.</p>
+                                  <div class="_link"><a href="https://learning.squarespace.com/webinars">Upcoming Webinars →</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div style="flex: 1 1 480px">
+                          <h4 class="_title">Hire a Designer</h4>
+                          <p class="_desc">Stand out online with the help of an experienced designer or developer.</p>
+                          <div class="_link"><a href="https://www.squarespace.com/designer/home?utm_medium=sqsp_circle&amp;utm_source=sqsp_forum&amp;channel=sqsp_circle&amp;subchannel=sqsp_forum">Get Matched →</a></div>
+                      </div>
+                  	
+      			</div>
+      		</div>
+      	</div>
+      
+
+      
+		
+<div class="squareSpace_footer">
+  <div class="squareSpace_footerLogo">
+    <a href="https://www.squarespace.com/">
+      <!-- <svg class="squarespace-mark is-fill notranslate" xmlns="http://www.w3.org/2000/svg" width="30px" height="24px" viewBox="0 0 90 72"><title>Squarespace Logo</title><g data-name="Logo"><path d="M18.49 38.15L46.67 10A10.16 10.16 0 0 1 61 10l2.19 2.19 4.39-4.39-2.19-2.2a16.38 16.38 0 0 0-23.14 0L14.09 33.76z"></path><path d="M56.11 19.27l-4.39-4.39-28.19 28.19A10.15 10.15 0 0 1 9.18 28.71L33.5 4.39 29.11 0 4.79 24.32a16.36 16.36 0 1 0 23.13 23.14zM84.17 24.32a16.39 16.39 0 0 0-23.14 0L32.84 52.51l4.39 4.39 28.19-28.19a10.15 10.15 0 0 1 17.32 7.18 10 10 0 0 1-3 7.18L55.45 67.39l4.4 4.39 24.32-24.32a16.38 16.38 0 0 0 0-23.14z"></path><path d="M70.47 33.63L42.28 61.81a10.17 10.17 0 0 1-14.36 0l-2.19-2.2L21.34 64l2.19 2.2a16.39 16.39 0 0 0 23.14 0L74.86 38z"></path></g></svg> -->
+        <img src="//content.invisioncic.com/p289038/set_resources_13/6d538d11ecfced46f459ee300b5e80ec_sqsp_logo.svg" alt="Squarespace Forum" width="213" height="30">
+        <span>Forum</span>
+    </a>
+  </div>
+  <div class="squareSpace_footerLinksWrapper">
+    <div class="squareSpace_footerSection">
+      <h3 class="ipsType_minorHeading">Support <i class="fa fa-angle-down"></i></h3>
+      <ul class="ipsList_reset squareSpace_footerLinks">
+        <li><a href="https://support.squarespace.com/hc/requests/new">Contact Us</a></li>
+        <li><a href="https://status.squarespace.com/">Service Status</a></li>
+        
+        	<li><a href="https://www.twitter.com/squarespacehelp?lang=en">@SquareSpaceHelp</a></li>
+        
+        <li><a href="https://5help.squarespace.com/hc/">SquareSpace 5</a></li>
+      </ul>
+    </div>
+    <div class="squareSpace_footerSection">
+      <h3 class="ipsType_minorHeading">Community <i class="fa fa-angle-down"></i></h3>
+      <ul class="ipsList_reset squareSpace_footerLinks">
+        
+          <li><a href="http://sqsp.link/1KUB83">Hire A Designer</a></li>
+          <li><a href="https://learning.squarespace.com/">Webinars</a></li>
+          <li><a href="https://www.squarespace.com/blog">Blog</a></li>
+        
+      </ul>
+    </div>
+    
+      <div class="squareSpace_footerSection">
+        <h3 class="ipsType_minorHeading">Developers <i class="fa fa-angle-down"></i></h3>
+        <ul class="ipsList_reset squareSpace_footerLinks">
+          <li><a href="https://developers.squarespace.com/commerce-api">API Docs</a></li>
+          <li><a href="https://www.squarespace.com/circle">Circle</a></li>
+          <li><a href="https://developers.squarespace.com/">Developer Platform</a></li>
+        </ul>
+      </div>
+	
+    <div class="squareSpace_footerSection">
+      <h3 class="ipsType_minorHeading">Resources <i class="fa fa-angle-down"></i></h3>
+      <ul class="ipsList_reset squareSpace_footerLinks">
+        
+          <li><a href="https://www.squarespace.com/templates">Website Templates</a></li>
+          <li><a href="https://www.squarespace.com/website-design">Website Design</a></li>
+          <li><a href="https://www.squarespace.com/domain-name-search">Domain Name Search</a></li>
+          <li><a href="https://www.squarespace.com/ecommerce-website">Online Stores</a></li>
+          <li><a href="https://www.squarespace.com/website-marketing">Website Marketing</a></li>
+          <li><a href="https://www.squarespace.com/terms-of-service">Terms of Service</a></li>
+          <li><a href="https://www.squarespace.com/privacy">Privacy Policy</a></li>
+	      <li><div id="teconsent"></div></li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+		
+<script type="text/javascript">
+	$(document).ready( function () {
+		$('.squareSpace_footer .ipsType_minorHeading').click( function () {
+			$( this ).toggleClass('squareSpace_footer_open');
+		});
+	});
+
+	// Reposition fluid filter on topic listing
+	const fluidFilters = document.querySelector('[data-pagecontroller="forums"] #elContextualTools'),
+			sortFilters = document.querySelector('[data-pagecontroller="forums"] #topicListFilters'),
+			relocatedFluidFilter = document.querySelector('[data-pagecontroller="forums"] #relocatedFluidFilter_menu'),
+			relocatedSortMenu = document.getElementById('ss-topic-list-filters__sort'),
+			relocatedParent = document.querySelector('.ss-topic-list-filters');
+	
+	if(relocatedFluidFilter && sortFilters){
+		relocatedParent.removeAttribute('hidden');
+		if(fluidFilters){
+				document.getElementById('ss-topic-list-filters__fluid').removeAttribute('hidden');
+			relocatedFluidFilter.appendChild(fluidFilters);
+		}
+		relocatedSortMenu.appendChild(sortFilters);
+		sortFilters.insertAdjacentHTML('beforebegin', '<h4>Sort by</h4>');
+	}
+
+	// New Topic form and guidance message
+	const topicTitleInputPlaceholder = document.getElementById('elInput_topic_title');
+	if(topicTitleInputPlaceholder) { topicTitleInputPlaceholder.setAttribute('placeholder', 'Write a descriptive title for your post') }
+
+	// Guidance message on new topic form
+	const guidanceMessageEl = document.querySelector('[data-js=guidance-message]');
+	if(guidanceMessageEl) { guidanceMessageEl.querySelector('button').addEventListener('click', ev => guidanceMessageEl.hidden = true ) }
+</script>
+		
+        
+	
+
+<span style="visibility: hidden; position: absolute; top: -300px; width: 1px; height: 1px; overflow: hidden; left: -300px;"><span class="ipsLoading ipsLoading_noAnim" style="display: block;"></span></span>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("dataProcessingOptions",[]);fbq("init","1407587539516826");fbq("track","PageView",{em:google_tag_manager["rm"]["45009"](17)});</script>
+
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1407587539516826&amp;ev=PageView&amp;ud[em]=undefined&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="">!function(b){if(!window.pintrk){window.pintrk=function(){window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var a=window.pintrk;a.queue=[];a.version="3.0";a=document.createElement("script");a.async=!0;a.src=b;b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}}("https://s.pinimg.com/ct/core.js");pintrk("load","2620419864515",{em:google_tag_manager["rm"]["45009"](18)});pintrk("page");</script>
+
+<script type="text/javascript" id="">pintrk("track","pagevisit");</script>
+
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?tid=2620419864515&amp;pd[em]=undefined&amp;noscript=1">
+</noscript>
+
+<script type="text/javascript" id="">!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nzeit");twq("track","PageView");</script>
+<script type="text/javascript" id="">_linkedin_partner_id="28549";window._linkedin_data_partner_ids=window._linkedin_data_partner_ids||[];window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script><script type="text/javascript" id="">(function(){var b=document.getElementsByTagName("script")[0],a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://snap.licdn.com/li.lms-analytics/insight.min.js";b.parentNode.insertBefore(a,b)})();</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=28549&amp;fmt=gif">
+</noscript><script type="text/javascript" id="">(function(g,e,a,f,b,c,d){b.ire_o=a;b[a]=b[a]||function(){(b[a].a=b[a].a||[]).push(arguments)};c=f.createElement(e);d=f.getElementsByTagName(e)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})("https://utt.impactcdn.com/A1325362-caba-4d3f-a83b-1ca7492ec0a51.js","script","ire",document,window);</script>
+
+<script type="text/javascript" id="">ire("identify",{customerId:google_tag_manager["rm"]["45009"](19),customerEmail:""});</script><script type="text/javascript" id="">var _pix=document.getElementById("_pix_id_450f2ab0-dc40-108e-8c6d-769f9b0858eb");
+if(!_pix){var protocol="//",a=1E18*Math.random();_pix=document.createElement("iframe");_pix.style.display="none";_pix.setAttribute("src",protocol+"s.amazon-adsystem.com/iu3?d\x3dgeneric\x26ex-fargs\x3d%3Fid%3D450f2ab0-dc40-108e-8c6d-769f9b0858eb%26type%3D55%26m%3D7\x26ex-fch\x3d416613\x26ex-src\x3dhttps://www.squarespace.com/\x26ex-hargs\x3dv%3D1.0%3Bc%3D4893375430901%3Bp%3D450F2AB0-DC40-108E-8C6D-769F9B0858EB\x26cb\x3d"+a);_pix.setAttribute("id","_pix_id_450f2ab0-dc40-108e-8c6d-769f9b0858eb");document.body.appendChild(_pix)};</script><iframe src="//s.amazon-adsystem.com/iu3?d=generic&amp;ex-fargs=%3Fid%3D450f2ab0-dc40-108e-8c6d-769f9b0858eb%26type%3D55%26m%3D7&amp;ex-fch=416613&amp;ex-src=https://www.squarespace.com/&amp;ex-hargs=v%3D1.0%3Bc%3D4893375430901%3Bp%3D450F2AB0-DC40-108E-8C6D-769F9B0858EB&amp;cb=462153071906224100" id="_pix_id_450f2ab0-dc40-108e-8c6d-769f9b0858eb" style="display: none;"></iframe>
+
+<noscript> <img height="1" width="1" border="0" alt="" src="https://s.amazon-adsystem.com/iui3?d=forester-did&amp;ex-fargs=%3Fid%3D450f2ab0-dc40-108e-8c6d-769f9b0858eb%26type%3D55%26m%3D7&amp;ex-fch=416613&amp;ex-src=https://www.squarespace.com/&amp;ex-hargs=v%3D1.0%3Bc%3D4893375430901%3Bp%3D450F2AB0-DC40-108E-8C6D-769F9B0858EB"></noscript>
+<script type="text/javascript" id="">var _pix=document.getElementById("_pix_id_a5938756-f060-cbe6-1d66-e6508e6ebbeb");
+if(!_pix){var protocol="//",a=1E18*Math.random();_pix=document.createElement("iframe");_pix.style.display="none";_pix.setAttribute("src",protocol+"aax-eu.amazon-adsystem.com/s/iu3?d\x3dgeneric\x26ex-fargs\x3d%3Fid%3Da5938756-f060-cbe6-1d66-e6508e6ebbeb%26type%3D55%26m%3D3\x26ex-fch\x3d416613\x26ex-src\x3dhttps://www.squarespace.com/\x26ex-hargs\x3dv%3D1.0%3Bc%3D8717763980302%3Bp%3DA5938756-F060-CBE6-1D66-E6508E6EBBEB\x26cb\x3d"+a);_pix.setAttribute("id","_pix_id_a5938756-f060-cbe6-1d66-e6508e6ebbeb");
+document.body.appendChild(_pix)};</script><iframe src="//aax-eu.amazon-adsystem.com/s/iu3?d=generic&amp;ex-fargs=%3Fid%3Da5938756-f060-cbe6-1d66-e6508e6ebbeb%26type%3D55%26m%3D3&amp;ex-fch=416613&amp;ex-src=https://www.squarespace.com/&amp;ex-hargs=v%3D1.0%3Bc%3D8717763980302%3Bp%3DA5938756-F060-CBE6-1D66-E6508E6EBBEB&amp;cb=629485858398938900" id="_pix_id_a5938756-f060-cbe6-1d66-e6508e6ebbeb" style="display: none;"></iframe>
+
+<noscript> <img height="1" width="1" border="0" alt="" src="https://aax-eu.amazon-adsystem.com/s/iui3?d=forester-did&amp;ex-fargs=%3Fid%3Da5938756-f060-cbe6-1d66-e6508e6ebbeb%26type%3D55%26m%3D3&amp;ex-fch=416613&amp;ex-src=https://www.squarespace.com/&amp;ex-hargs=v%3D1.0%3Bc%3D8717763980302%3Bp%3DA5938756-F060-CBE6-1D66-E6508E6EBBEB"></noscript>
+
+<script type="text/javascript" id="">var _pix=document.getElementById("_pix_id_714d6040-6939-40c2-9536-cadcf86e31e1");
+if(!_pix){var protocol="//",a=1E18*Math.random();_pix=document.createElement("iframe");_pix.style.display="none";_pix.setAttribute("src",protocol+"s.amazon-adsystem.com/iu3?d\x3dgeneric\x26ex-fargs\x3d%3Fid%3D714d6040-6939-40c2-9536-cadcf86e31e1%26type%3D55%26m%3D1\x26ex-fch\x3d416613\x26ex-src\x3dhttps://squarespace.com\x26ex-hargs\x3dv%3D1.0%3Bc%3D5636844820101%3Bp%3D714D6040-6939-40C2-9536-CADCF86E31E1\x26cb\x3d"+a);_pix.setAttribute("id","_pix_id_714d6040-6939-40c2-9536-cadcf86e31e1");document.body.appendChild(_pix)};</script><iframe src="//s.amazon-adsystem.com/iu3?d=generic&amp;ex-fargs=%3Fid%3D714d6040-6939-40c2-9536-cadcf86e31e1%26type%3D55%26m%3D1&amp;ex-fch=416613&amp;ex-src=https://squarespace.com&amp;ex-hargs=v%3D1.0%3Bc%3D5636844820101%3Bp%3D714D6040-6939-40C2-9536-CADCF86E31E1&amp;cb=756487618555314700" id="_pix_id_714d6040-6939-40c2-9536-cadcf86e31e1" style="display: none;"></iframe>
+
+<noscript> <img height="1" width="1" border="0" alt="" src="https://s.amazon-adsystem.com/iui3?d=forester-did&amp;ex-fargs=%3Fid%3D714d6040-6939-40c2-9536-cadcf86e31e1%26type%3D55%26m%3D1&amp;ex-fch=416613&amp;ex-src=https://squarespace.com&amp;ex-hargs=v%3D1.0%3Bc%3D5636844820101%3Bp%3D714D6040-6939-40C2-9536-CADCF86E31E1"></noscript><script type="text/javascript" id="">var _pix=document.getElementById("_pix_id_7a953892-27c6-3cdb-8e86-56542e8d0abe");
+if(!_pix){var protocol="//",a=1E18*Math.random();_pix=document.createElement("iframe");_pix.style.display="none";_pix.setAttribute("src",protocol+"s.amazon-adsystem.com/iu3?d\x3dgeneric\x26ex-fargs\x3d%3Fid%3D7a953892-27c6-3cdb-8e86-56542e8d0abe%26type%3D55%26m%3D7\x26ex-fch\x3d416613\x26ex-src\x3dhttps://www.squarespace.com/\x26ex-hargs\x3dv%3D1.0%3Bc%3D8835508100801%3Bp%3D7A953892-27C6-3CDB-8E86-56542E8D0ABE\x26cb\x3d"+a);_pix.setAttribute("id","_pix_id_7a953892-27c6-3cdb-8e86-56542e8d0abe");document.body.appendChild(_pix)};</script><iframe src="//s.amazon-adsystem.com/iu3?d=generic&amp;ex-fargs=%3Fid%3D7a953892-27c6-3cdb-8e86-56542e8d0abe%26type%3D55%26m%3D7&amp;ex-fch=416613&amp;ex-src=https://www.squarespace.com/&amp;ex-hargs=v%3D1.0%3Bc%3D8835508100801%3Bp%3D7A953892-27C6-3CDB-8E86-56542E8D0ABE&amp;cb=104237851751723500" id="_pix_id_7a953892-27c6-3cdb-8e86-56542e8d0abe" style="display: none;"></iframe>
+
+<noscript> <img height="1" width="1" border="0" alt="" src="https://s.amazon-adsystem.com/iui3?d=forester-did&amp;ex-fargs=%3Fid%3D7a953892-27c6-3cdb-8e86-56542e8d0abe%26type%3D55%26m%3D7&amp;ex-fch=416613&amp;ex-src=https://www.squarespace.com/&amp;ex-hargs=v%3D1.0%3Bc%3D8835508100801%3Bp%3D7A953892-27C6-3CDB-8E86-56542E8D0ABE"></noscript>
+<script type="text/javascript" id="" src="https://www.googletagmanager.com/gtag/js?id=AW-451168143"></script>
+
+<script type="text/javascript" id="">!function(d,g,e){d.TiktokAnalyticsObject=e;var a=d[e]=d[e]||[];a.methods="page track identify instances debug on off once ready alias group enableCookie disableCookie".split(" ");a.setAndDefer=function(b,c){b[c]=function(){b.push([c].concat(Array.prototype.slice.call(arguments,0)))}};for(d=0;d<a.methods.length;d++)a.setAndDefer(a,a.methods[d]);a.instance=function(b){b=a._i[b]||[];for(var c=0;c<a.methods.length;c++)a.setAndDefer(b,a.methods[c]);return b};a.load=function(b,c){var f="https://analytics.tiktok.com/i18n/pixel/events.js";
+a._i=a._i||{};a._i[b]=[];a._i[b]._u=f;a._t=a._t||{};a._t[b]=+new Date;a._o=a._o||{};a._o[b]=c||{};c=document.createElement("script");c.type="text/javascript";c.async=!0;c.src=f+"?sdkid\x3d"+b+"\x26lib\x3d"+e;b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(c,b)};a.load("C2ENC2QQV140ORDIO960");a.page()}(window,document,"ttq");</script>
+<script type="text/javascript" id="">ttq.identify({sha256_email:google_tag_manager["rm"]["45009"](20)});ttq.instance("C2ENC2QQV140ORDIO960").track("Search");</script><script type="text/javascript" id="">!function(a,e,f,g,b,c,d){a[b]||(a.GlobalSnowplowNamespace=a.GlobalSnowplowNamespace||[],a.GlobalSnowplowNamespace.push(b),a[b]=function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].q=a[b].q||[],c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src="https://c.hrzn-nxt.com/js/v2.12.0/connect.min.js",d.parentNode.insertBefore(c,d))}(window,document,"script",0,"nf0");
+window.nf0("newTracker","nf0","l.hrzn-nxt.com",{appId:"squarespace-78c2d83e-6ce9-4697-a3ad-f4652d054c05",cookieDomain:null,cookieName:"_nxt_",stateStorageStrategy:"localStorage",forceSecureTracker:!0,discoverRootDomain:!0,eventMethod:"get",sessionCookieTimeout:1800});window.nf0("trackPageView");</script></body>

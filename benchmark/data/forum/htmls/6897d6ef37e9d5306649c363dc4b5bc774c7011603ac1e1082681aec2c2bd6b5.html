@@ -1,0 +1,932 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme" content="auto">
+    <meta name="locale" content="zh-CN">
+    <title>Ruby：极致的脚本语言 · Ruby China</title>
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta content="True" name="HandheldFriendly">
+    <link rel="alternate" type="application/rss+xml" title="Subscribe" href="https://ruby-china.org/topics/feed">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171717">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="stylesheet" href="/packs/css/front-6ee569db.css" data-turbolinks-track="reload">
+    
+    
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="/packs/js/runtime-3d27b01760eea90fb5c0.js"></script>
+<script src="/packs/js/476-846da2ef2ecc9e578cd2.js"></script>
+<script src="/packs/js/application-7fe67bfa6d61c89e46b6.js"></script>
+    
+    <meta name="action-cable-url" content="/cable">
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="o4iDf0sHOlFfwov0roEgnPLp4_nXuDMNV_XQR7FLB2hiK-2o7OqRKFmsrjY1RGCYgA4FNiiMCApz2VhBBmPaJg">
+    <meta name="apple-itunes-app" content="app-id=1072028763">
+<meta name="twitter:app:id:iphone" content="1072028763">
+<meta name="twitter:site" content="@ruby_china">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171717">
+<meta name="twitter:image" content="https://l.ruby-china.com/photo/2018/bd93b12d-98d0-47a4-9f7a-128b8a3271f7.png">
+<link rel="icon" href="//l.ruby-china.com/photo/2016/c309db0b49cab85a32f756541ea0e2b0.png">
+<link rel="mask-icon" href="//l.ruby-china.com/photo/2016/8c03593544987c35a95d5f2e83e86e61.svg!large">
+<link rel="apple-touch-icon" href="//l.ruby-china.com/photo/2018/bd93b12d-98d0-47a4-9f7a-128b8a3271f7.png!large">
+
+<style type="text/css">
+.header { box-shadow: none !important; }
+.header .navbar-brand b { color: #EB5424 !important; }
+.header .navbar-nav .nav-item a.nav-link:active,
+.turbolinks-progress-bar { color: #EB5424 !important; }
+abbr {  text-decoration: none; }
+</style>
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="Ruby：极致的脚本语言">
+    <meta name="generator" content="Homeland 3.9.0">
+      <meta property="twitter:description" content="&quot;Ruby 的许多特性强烈地偏向对脚本语言的良好支持。在我看来几乎从任何一个可以想象的方面来说 Ruby 都要比 Python 更加合适作为脚本语言的默认选择。比如 Ruby 支持任意地方法覆写，你甚至可以覆写在 Int 中定义的 +...">
+  <style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.immersive-translate-loading-spinner {
+  vertical-align: middle !important;
+  width: 10px !important;
+  height: 10px !important;
+  display: inline-block !important;
+  margin: 0 4px !important;
+  border: 2px rgba(221, 244, 255, 0.6) solid !important;
+  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+}
+
+@-webkit-keyframes immersive-translate-loading-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes immersive-translate-loading-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.immersive-translate-input-loading {
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+}
+
+@keyframes immersiveTranslateShadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+  }
+
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+  }
+
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+  }
+
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+  }
+
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+.immersive-translate-search-recomend {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  font-size: 16px;
+}
+
+.immersive-translate-search-enhancement-en-title {
+  color: #4d5156;
+}
+
+/* dark */
+@media (prefers-color-scheme: dark) {
+  .immersive-translate-search-recomend {
+    border: 1px solid #3c4043;
+  }
+
+  .immersive-translate-close-action svg {
+    fill: #bdc1c6;
+  }
+
+  .immersive-translate-search-enhancement-en-title {
+    color: #bdc1c6;
+  }
+}
+
+
+.immersive-translate-search-settings {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-search-recomend::before {
+  /* content: " "; */
+  /* width: 20px; */
+  /* height: 20px; */
+  /* top: 16px; */
+  /* position: absolute; */
+  /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
+}
+
+.immersive-translate-search-title {}
+
+.immersive-translate-search-title-wrapper {}
+
+.immersive-translate-search-time {
+  font-size: 12px;
+  margin: 4px 0 24px;
+  color: #70757a;
+}
+
+.immersive-translate-expand-items {
+  display: none;
+}
+
+.immersive-translate-search-more {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.immersive-translate-modal {
+  display: none;
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.immersive-translate-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 40px 24px 24px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 270px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative
+}
+
+.immersive-translate-modal .immersive-translate-modal-content-in-input {
+  max-width: 500px;
+}
+.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+  text-align: left;
+  max-height: unset;
+}
+
+.immersive-translate-modal-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.immersive-translate-modal-body {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  word-break: break-all;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .immersive-translate-modal-body {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}
+
+.immersive-translate-close {
+  color: #666666;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.immersive-translate-close:hover,
+.immersive-translate-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.immersive-translate-modal-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.immersive-translate-btn {
+  width: fit-content;
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  font-size: 16px;
+  margin: 0 8px;
+  padding: 9px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-translate-btn:hover {
+  background-color: #f082ac;
+}
+
+.immersive-translate-cancel-btn {
+  /* gray color */
+  background-color: rgb(89, 107, 120);
+}
+
+
+.immersive-translate-cancel-btn:hover {
+  background-color: hsl(205, 20%, 32%);
+}
+
+.immersive-translate-action-btn {
+  background-color: transparent;
+  color: #EA4C89;
+  border: 1px solid #EA4C89
+}
+
+.immersive-translate-btn svg {
+  margin-right: 5px;
+}
+
+.immersive-translate-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #007bff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-primary-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #ea4c89;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-modal input[type="radio"] {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.immersive-translate-modal label {
+  cursor: pointer;
+}
+
+.immersive-translate-close-action {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+}</style></head>
+  <img class="safum-vpn-status" id="ehjolcpljogfgggnkddgefpecllepcba-img" src="chrome-extension://ehjolcpljogfgggnkddgefpecllepcba/web_accessible_resources/status_on.png" alt="status"><body class="page-topics" data-controller-name="topics">
+    <div class="flex items-stretch header navbar navbar-expand-md">
+      <div class="container relative z-50 flex flex-wrap items-center px-3 mx-auto xl:px-0 md:flex-nowrap">
+        <div class="navbar-header" data-turbolinks-permanent="">
+          <a href="/" class="navbar-brand text-base"><b>Ruby</b> China</a>
+        </div>
+        <button id="navbar-toggler" class="navbar-toggler" type="button">
+          <span class="flex items-center justify-center"><i class="fa fa-bars"></i></span>
+        </button>
+        <div id="main-navbar" class="items-center flex-1 hidden md:flex grow basis-full md:basis-auto">
+                <div class="navbar-topic-title">
+        <a href="#" class="topic-title float-left" title="Ruby：极致的脚本语言" data-type="top">
+          <h1><span class="node">Ruby</span> <span class="title">Ruby：极致的脚本语言</span></h1>
+        </a>
+      </div>
+
+          <ul id="main-nav-menu" class="navbar-nav my-0 flex flex-md-row list-none flex-col md:flex-row">
+  <li class="nav-item"><a class="nav-link" href="/">社区</a></li><li class="nav-item"><a class="nav-link" href="/jobs">招聘</a></li><li class="nav-item"><a class="nav-link" href="/wiki">Wiki</a></li><li class="nav-item"><a class="nav-link" href="/sites">酷站</a></li>
+  <li class="nav-gems nav-item d-none"><a href="https://gems.ruby-china.com" class="nav-link" target="_blank" rel="noopener">Gems</a></li>
+
+</ul>
+
+        </div>
+        <div class="navbar-right">
+          <form class="form-search active" action="/search" method="GET">
+            <i class="fa btn-search fa-search"></i>
+            <input type="text" name="q" value="" placeholder="搜索">
+          </form>
+          <ul class="nav navbar-nav user-bar">
+      <li class="nav-item"><a class="nav-link" href="/account/sign_up">注册</a></li>
+    <li class="nav-item"><a class="nav-link" href="/account/sign_in">登录</a></li>
+</ul>
+
+        </div>
+     </div>
+  </div>
+  
+  <div id="main" class="container md:px-3">
+    
+    <div class="flex gap-4">
+  <div class="w-3/4 grow">
+    <div class="mb-4 topic-detail card">
+      <div class="card-header media clearfix">
+  <div class="media-body">
+    <h1 class="media-heading">
+      <a class="node" href="/topics/node1">Ruby</a>
+      <span class="title">
+        Ruby：极致的脚本语言
+      </span>
+      
+    </h1>
+    <div class="info">
+      <a data-author="true" class="user-name" data-name="Snowmanzzz" href="/zzz6519003">zzz6519003</a>
+      <span class="hidden-mobile">
+      </span>
+       ·
+      <abbr class="timeago" title="2024年04月22日">1 月前</abbr>
+      <span class="hidden-mobile">
+         ·
+        最后由 <a class="user-name" data-name="Catherine" href="/Catherine">Catherine</a> 回复于 <abbr class="timeago" title="2024年05月08日">19 天前</abbr>
+      </span>
+       ·
+      1350 次阅读
+    </div>
+  </div>
+  <div class="avatar media-right d-md-none">
+    <a title="zzz6519003 (Snowmanzzz)" href="/zzz6519003"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/6553.jpg!md"></a>
+  </div>
+</div>
+
+      <div class="card-body markdown markdown-toc"><div class="toc-container dropdown">
+  <button data-bs-toggle="dropdown" class="btn btn-secondary">
+    <i class="fa fa-list"></i> 目录
+  </button>
+  <div class="dropdown-menu dropdown-menu-end">
+  </div>
+</div>
+        
+        <p>"Ruby 的许多特性强烈地偏向对脚本语言的良好支持。在我看来几乎从任何一个可以想象的方面来说 Ruby 都要比 Python 更加合适作为脚本语言的默认选择。比如 Ruby 支持任意地方法覆写，你甚至可以覆写在 Int 中定义的 + 方法从而立刻把 REPL 给崩掉… 比如 Ruby 非常好地普及了守护（guard）的使用，从而使得大量的 idiom 有了 one-liner；比如这是一门动态类型语言，编译器只会阻止很少的事情；比如 Ruby 简洁的闭包语法（事实上 Rust 中的闭包语法正是沿袭自 Ruby）、do 语句以及对各种常用集合操作的良好支持，使得以闭包作为参数的标准库 API 基本可以替代循环；比如各种高度动态的语言特性和内省（introspect）机制。良好和高度动态的设计使得 Ruby 不仅适合编写各种 dirty but works 脚本，同样也适合工业的快速成型。</p>
+
+<p>"</p>
+        
+      </div>
+      <div class="clearfix card-footer">
+        <div class="opts">
+    <a data-count="2" data-state="deactive" data-type="Topic" data-id="43661" class="likeable deactive tooltipstered" href="#"><i class="icon fa fa-heart"></i> <span>2 个赞</span></a>
+    
+    
+  <div class="float-right">
+    <div class="dropdown">
+      <a href="#" data-bs-toggle="dropdown">
+        <i class="icon fa fa-ellipsis-v"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-end">
+</div>
+
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+    
+
+    
+      <div id="replies" class="mb-4 card" data-last-floor="10">
+        <div class="items card-body">
+            <div class="reply" data-id="380869" id="reply1">
+    <div id="reply-380869" data-floor="1">
+        <div class="avatar"><a title="gazeldx (求知者)" href="/gazeldx"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/68/9fbc9c.jpg!md"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="求知者" href="/gazeldx">gazeldx</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#1</span>
+              <a class="time" href="#reply-380869"><abbr class="timeago" title="2024年04月24日">1 月前</abbr></a>
+            </span>
+          </div>
+          
+          <div class="markdown">
+            <p>Hope you are still using Ruby during your daily work.
+I am using Ruby only when doing Leetcode questions, or when I have the power to decide which language to use.
+Taking Ruby back is the responsibility of us all.</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380869" data-login="gazeldx" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="68" data-prefetch="false" href="/topics/43661/replies/380869/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a data-count="1" data-state="deactive" data-type="Reply" data-id="380869" class="likeable deactive tooltipstered" href="#"><i class="icon fa fa-heart"></i> <span>1 个赞</span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380871" id="reply2">
+    <div id="reply-380871" data-floor="2">
+        <div class="avatar"><a title="msl12 (唻)" href="/msl12"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/25144/29224d.png!md"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="唻" href="/msl12">msl12</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#2</span>
+              <a class="time" href="#reply-380871"><abbr class="timeago" title="2024年04月24日">1 月前</abbr></a>
+            </span>
+          </div>
+          
+          <div class="markdown">
+            <p>引用自哪</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380871" data-login="msl12" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="25144" data-prefetch="false" href="/topics/43661/replies/380871/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380871" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380876" id="reply3">
+    <div id="reply-380876" data-floor="3">
+        <div class="avatar"><a title="gazeldx (求知者)" href="/gazeldx"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/68/9fbc9c.jpg!md"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="求知者" href="/gazeldx">gazeldx</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#3</span>
+              <a class="time" href="#reply-380876"><abbr class="timeago" title="2024年04月25日">1 月前</abbr></a>
+            </span>
+          </div>
+          
+          <div class="markdown">
+            <p>1 楼我的评论被删除了。有什么问题吗？请删除的管理员回复下。谢谢。</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380876" data-login="gazeldx" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="68" data-prefetch="false" href="/topics/43661/replies/380876/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380876" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380878" id="reply4">
+    <div id="reply-380878" data-floor="4">
+        <div class="avatar"><a title="lehf" href="/lehf"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/31465/06eab4.jpg!md"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="" href="/lehf">lehf</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#4</span>
+              <a class="time" href="#reply-380878"><abbr class="timeago" title="2024年04月25日">1 月前</abbr></a>
+            </span>
+          </div>
+            <div class="reply-to-block" data-reply-to-id="380876">
+    <div class="info">
+      对
+        <a data-remote="true" href="/topics/43661/replies/380878/reply_to">
+          <img class="media-object avatar-16" src="https://l.ruby-china.com/user/avatar/68/9fbc9c.jpg!xs"><span class="user-name">gazeldx</span>
+          <span class="reply-floor">#3</span>
+</a>      回复
+    </div>
+  </div>
+
+          <div class="markdown">
+            <p>最近总有纯英文回复的机器人，估计看是纯英文就给删了<img title=":joy:" alt="😂" src="https://twemoji.ruby-china.com/2/svg/1f602.svg" class="twemoji"> </p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380878" data-login="lehf" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="31465" data-prefetch="false" href="/topics/43661/replies/380878/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380878" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380879" id="reply5">
+    <div id="reply-380879" data-floor="5">
+        <div class="avatar"><a title="Rei (Rei)" href="/Rei"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/1.jpg!md"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="Rei" href="/Rei">Rei</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#5</span>
+              <a class="time" href="#reply-380879"><abbr class="timeago" title="2024年04月25日">1 月前</abbr></a>
+            </span>
+          </div>
+          
+          <div class="markdown">
+            <p>恢复了，估计是看错了。</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380879" data-login="Rei" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="1" data-prefetch="false" href="/topics/43661/replies/380879/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380879" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380881" id="reply6">
+    <div id="reply-380881" data-floor="6">
+        <div class="avatar"><a title="gakki (April_1991)" href="/gakki"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/29736/740d44.jpg!md"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="April_1991" href="/gakki">gakki</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#6</span>
+              <a class="time" href="#reply-380881"><abbr class="timeago" title="2024年04月26日">1 月前</abbr></a>
+            </span>
+          </div>
+          
+          <div class="markdown">
+            <p>最近纯英文的机器人挺多的，他们的回答中一般带有链接</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380881" data-login="gakki" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="29736" data-prefetch="false" href="/topics/43661/replies/380881/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380881" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380904" id="reply7">
+    <div id="reply-380904" data-floor="7">
+        <div class="avatar"><a title="huacnlee (李华顺)" href="/huacnlee"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/2/de6df3.png!md"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="李华顺" href="/huacnlee">huacnlee</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#7</span>
+              <a class="time" href="#reply-380904"><abbr class="timeago" title="2024年04月29日">28 天前</abbr></a>
+            </span>
+          </div>
+            <div class="reply-to-block" data-reply-to-id="380876">
+    <div class="info">
+      对
+        <a data-remote="true" href="/topics/43661/replies/380904/reply_to">
+          <img class="media-object avatar-16" src="https://l.ruby-china.com/user/avatar/68/9fbc9c.jpg!xs"><span class="user-name">gazeldx</span>
+          <span class="reply-floor">#3</span>
+</a>      回复
+    </div>
+  </div>
+
+          <div class="markdown">
+            <p>可能是我那天批量处理，看走眼了</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380904" data-login="huacnlee" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="2" data-prefetch="false" href="/topics/43661/replies/380904/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380904" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380908" id="reply8">
+    <div id="reply-380908" data-floor="8">
+        <div class="avatar"><a title="AsuraA (Asura)" href="/AsuraA"><img class="media-object avatar-48" src="https://ruby-china.org/system/letter_avatars/a.png"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="Asura" href="/AsuraA">AsuraA</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#8</span>
+              <a class="time" href="#reply-380908"><abbr class="timeago" title="2024年04月29日">27 天前</abbr></a>
+            </span>
+          </div>
+          
+          <div class="markdown">
+            <p>机器人？</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380908" data-login="AsuraA" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="100184" data-prefetch="false" href="/topics/43661/replies/380908/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380908" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380943" id="reply9">
+    <div id="reply-380943" data-floor="9">
+        <div class="avatar"><a title="yxmmrwx (dftan)" href="/yxmmrwx"><img class="media-object avatar-48" src="https://ruby-china.org/system/letter_avatars/y.png"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="dftan" href="/yxmmrwx">yxmmrwx</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#9</span>
+              <a class="time" href="#reply-380943"><abbr class="timeago" title="2024年05月07日">19 天前</abbr></a>
+            </span>
+          </div>
+          
+          <div class="markdown">
+            <p>除了速度，综合来讲可以完败其它语言，还好现实世界有不少的事件不是时间敏感的，而且 ruby 速度也没那么不堪</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380943" data-login="yxmmrwx" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="84692" data-prefetch="false" href="/topics/43661/replies/380943/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380943" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="reply" data-id="380944" id="reply10">
+    <div id="reply-380944" data-floor="10">
+        <div class="avatar"><a title="Catherine (Tafurs)" href="/Catherine"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/23196.jpg!md"></a></div>
+        <div class="infos">
+          <div class="info">
+            <span class="name">
+              <a class="user-name" data-name="Tafurs" href="/Catherine">Catherine</a>
+            </span>
+            <span class="sub-info">
+              <span class="floor">#10</span>
+              <a class="time" href="#reply-380944"><abbr class="timeago" title="2024年05月08日">19 天前</abbr></a>
+            </span>
+          </div>
+          
+          <div class="markdown">
+            <p>绝大部分公司的核心业务并不需要靠编程语言的性能来驱动</p>
+          </div>
+          <div class="actions opts">
+            <div class="hideable">
+              <a data-id="380944" data-login="Catherine" title="回复此楼" class="btn-reply fa fa-reply" href="#"></a>
+              <a class="edit fa fa-edit" title="修改" data-uid="23196" data-prefetch="false" href="/topics/43661/replies/380944/edit"></a>
+            </div>
+            <div class="actions-left">
+              <a title="赞" data-count="0" data-state="deactive" data-type="Reply" data-id="380944" class="likeable deactive" href="#"><i class="icon fa fa-heart"></i> <span></span></a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+      <div class="mb-4 card">
+        <div class="card-body">
+          <div id="reply" class="form box">
+            <div style="padding:20px;" data-turbolinks-action="replace">
+              需要 <a href="/account/sign_in" class="btn btn-primary">登录</a> 后方可回复, 如果你还没有账号请 <a href="/account/sign_up">注册新账号</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <div class="hidden md:flex md:w-60 lg:w-72 shrink-0">
+      <div id="topic-sidebar" data-spy="affix" data-offset-bottom="65" class="fixed md:w-60 lg:w-72">
+  <div class="mb-4 card">
+    <div class="card-body">
+      <div class="user-profile-card">
+  <div class="flex">
+    <div class="avatar-box"> 
+      <a title="zzz6519003 (Snowmanzzz)" href="/zzz6519003"><img class="media-object avatar-48" src="https://l.ruby-china.com/user/avatar/6553.jpg!md"></a>
+    </div>
+    <div class="flex-grow-1 flex justify-content-between">
+      <a class="name-box" href="/zzz6519003">
+        <div class="fullname">
+          Snowmanzzz
+        </div>
+        <div class="login">
+          @zzz6519003
+        </div>
+</a>    </div>
+  </div>
+    <div class="item tagline">梦游</div>
+  <hr>
+  <div class="item social">
+      <a class="twitter" rel="nofollow" href="https://twitter.com/zzz6519003"><i class="icon fab fa-twitter"></i> </a>
+        <a target="_blank" rel="nofollow" href="https://github.com/zzz6519003"><i class="icon fab fa-github"></i> </a>
+      <a target="_blank" rel="nofollow" href="https://github.com/zzz6519003/blog/"><i class="icon fa fa-globe"></i></a>
+  </div>
+    <div class="item company">
+      unemployed, pre SAP Lab, Microsoft
+    </div>
+    <div class="item location">
+      Anhui Maanshan, Nanjing
+    </div>
+    <hr>
+    <div class="item buttons flex items-center">
+      
+    </div>
+</div>
+
+    </div>
+  </div>
+  <div class="mb-4 card">
+    <div class="card-body">
+      <div class="buttons">
+        <div class="group likes opts">
+          <a data-count="2" data-state="deactive" data-type="Topic" data-id="43661" class="likeable deactive tooltipstered" href="#"><i class="icon fa fa-heart"></i> <span>2 个赞</span></a>
+        </div>
+        <div class="group">
+          <div class="opts">
+            
+            
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="group">
+        <div class="social-share-button" data-title="Ruby：极致的脚本语言" data-img="" data-url="" data-desc="" data-via="">
+<a rel="nofollow " data-site="twitter" class="ssb-icon ssb-twitter" onclick="return SocialShareButton.share(this);" title="分享到 Twitter" href="#"></a>
+<a rel="nofollow " data-site="weibo" class="ssb-icon ssb-weibo" onclick="return SocialShareButton.share(this);" title="分享到 新浪微博" href="#"></a>
+<a rel="nofollow " data-site="facebook" class="ssb-icon ssb-facebook" onclick="return SocialShareButton.share(this);" title="分享到 Facebook" href="#"></a>
+<a rel="nofollow " data-site="wechat" class="ssb-icon ssb-wechat" onclick="return SocialShareButton.share(this);" title="分享到 微信" data-wechat-footer="打开微信，点击底部的 “发现”，<br/> 使用 “扫一扫” 即可将网页分享至朋友圈。" href="#"></a>
+</div>
+      </div>
+      <hr>
+      <div class="reply-buttons">
+        <div class="total">
+          共收到 <b>10</b> 条回复
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class=" notify-updated">
+    <a class="update" href="#"><div class="notify-badge"></div> 收到新回复，点击立即加载</a>
+  </div>
+</div>
+
+    </div>
+</div>
+
+  </div>
+    <footer class="footer" id="footer" data-turbolinks-permanent="">
+      <div class="container mx-auto">
+        <div class="media" data-turbolinks="false">
+  <div class="media-left" style="margin-right:20px;">
+    <img class="media-object" src="//l.ruby-china.com/photo/2016/c309db0b49cab85a32f756541ea0e2b0.png" style="width: 64px;">
+  </div>
+  
+  <div class="media-body">
+    <div class="links">
+      <a href="/wiki/about">关于</a> / <a href="http://rubyconfchina.org" target="_blank" title="RubyConf China 大会">RubyConf</a> / <a href="/wiki/ruby-mirror" title="Ruby 镜像">Ruby 镜像</a> / <a href="https://
+gems.ruby-china.com" target="_blank" title="RubyGems 镜像">RubyGems 镜像</a> / <a href="/users">活跃会员</a> / <a href="/teams">组织</a> / <a href="https://api.ruby-china.org">API</a> / <a href="/wiki/contributors">贡献者</a>
+    </div>
+    <div class="copyright">
+      由众多爱好者共同维护的 Ruby 中文社区，本站使用 <a href="https://homeland.ruby-china.org">Homeland</a> 构建，并采用 Docker 部署。
+    </div>
+<div class="supports" style="margin: 10px 0;">
+    <span style="margin-right: 20px">服务器由 <a href="http://www.ucloud.cn/?utm_source=zanzhu&amp;utm_campaign=rubychina&amp;utm_medium=display&amp;utm_content=yejiao&amp;ytag=rubychina_logo" target="_blank" rel="twipsy" title="本站服务器由 UCloud 赞助"><img src="//l.ruby-china.com/photo/2016/e1eb47a05578576bf134da65736cc5b4.png" style="height: 20px; margin-top: -2px"></a> 赞助</span>
+    <span style="margin-right: 20px">CDN 由 <a href="https://www.upyun.com/https.html?utm_source=ruby&amp;utm_medium=Referral&amp;utm_content=httpsad" target="_blank" style="display:inline-block;" rel="twipsy" title="CDN, Ruby Mirror, RubyGems CDN 由又拍云赞助"><img src="//l.ruby-china.com/photo/2017/e094bd44-fd71-4ab7-9dcf-f4931f480705.png" style="height: 20px; margin-top: -2px"></a> 赞助</span>
+   </div>
+   <div class="links" style="margin-top:8px">
+     <span class="socials">
+     <a href="https://github.com/ruby-china" target="_blank" rel="nofollow" title="本站在 GitHub 上面的开源内容"><i class="fab fa-github"></i></a>
+     <a href="https://twitter.com/ruby_china" target="_blank" rel="nofollow" title="本站的 Twitter 账号"><i class="fab fa-twitter"></i></a>
+     <a href="http://weibo.com/u/3168836987" target="_blank" rel="nofollow" title="本站的 Weibo 账号"><i class="fab fa-weibo"></i></a>
+     <a href="https://www.youtube.com/channel/UCOLKFS_uA7nX26_u8z9V9og/feed" target="_blank" rel="nofollow" title="本站在 YouTube 上面的视频内容"><i class="fab fa-youtube"></i></a>
+     <a href="/topics/feed" target="_blank" rel="nofollow"><i class="fa fa-rss"></i></a>
+     </span>
+
+     <span style="margin-left:20px;"><a href="https://itunes.apple.com/us/app/ruby-china/id1072028763">iOS 客户端</a> / <a href="https://play.google.com/store/apps/details?id=org.ruby_china.android">Android 客户端</a></span>
+
+     <a href="?locale=zh-CN" rel="nofollow" style="margin-left: 20px">简体中文</a> / <a href="?locale=en" rel="nofollow">English</a>
+   </div>
+  </div>
+</div>
+      </div>
+    </footer>
+  <script type="text/javascript" data-turbolinks-eval="false">
+    App.root_url = "https://ruby-china.org/";
+    App.asset_url = "https://l.ruby-china.com";
+    App.twemoji_url = "https://twemoji.ruby-china.com/2";
+    App.locale = "zh-CN";
+  </script>
+    <script type="text/javascript">
+    Topics.topic_id = 43661;
+    $(document).ready(function(){
+
+      $.post("/topics/43661/read");
+    })
+  </script>
+
+  <script>
+    ga('create', 'G-JSHKWZ664J', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+  <div class="zoom-overlay"></div>
+
+
+</body>

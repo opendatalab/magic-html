@@ -59,9 +59,11 @@ def evaluate_result(datas):
     rec = []
     for x in datas:
         scores.append(rouge_eval(x["content"], x["extract_content"]))
-    for item in scores:
+    for idx, item in enumerate(scores):
         prec.append(item["prec"])
         rec.append(item["rec"])
+        # if item['f1'] <= 0.4:
+        #     print(datas[idx]["url"], item['f1'])
 
     prec_mean = np.array(prec).mean()
     rec_mean = np.array(rec).mean()
@@ -86,7 +88,6 @@ global_info = {
     "rec_mean": [],
     "f1_mean": [],
 }
-
 with open("data/forum/base.json", "r", encoding="utf-8") as f:
     for k, v in json.loads(f.read()).items():
         html_str = ""
@@ -164,7 +165,10 @@ def run_goose3(name):
     g = Goose()
     datas = deepcopy(global_datas)
     for x in datas:
-        x["extract_content"] = g.extract(raw_html=x["html"]).cleaned_text
+        try:
+            x["extract_content"] = g.extract(raw_html=x["html"]).cleaned_text
+        except:
+            x["extract_content"]= ""
     global_info["func"].append(name)
     evaluate_result(datas)
 

@@ -1,0 +1,3363 @@
+<head>
+
+	
+	<link rel="preconnect" href="https://apps.developermedia.com">
+	<link rel="preconnect" href="https://cdn1.developermedia.com">
+	<link rel="preconnect" href="https://cdn.ampproject.org">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://ajax.googleapis.com">
+	<link rel="preconnect" href="https://adservice.google.com">
+	<link rel="preconnect" href="https://www.googletagservices.com">
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<link rel="preconnect" href="https://www.google.com">
+	<link rel="preconnect" href="https://www.google-analytics.com">
+	<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+
+	<link rel="preconnect" href="https://codeproject.freetls.fastly.net">
+
+
+	<link rel="preload" href="https://codeproject.freetls.fastly.net/App_Themes/CodeProject/Img/logo250x135.gif" as="image">
+
+
+	<link rel="preload" href="/App_Themes/CodeProject/Img/logo135-bg.gif" as="image">
+	<link rel="preload" href="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js" as="script" type="text/javascript">
+
+<title>How I can integrate EID reader with tablet - CodeProject</title><!-- inlined file /App_Themes/CodeProject/Css/Question.Critical.min.css. -->
+<style type="text/css">
+.theme1-background {
+  background-color: #ff9900;
+}
+.contrast1-color {
+  color: #666666;
+}
+html,
+div,
+span,
+applet,
+object,
+iframe,
+a,
+abbr,
+acronym,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+tr,
+td,
+th,
+dd,
+dt {
+  font-family: "Segoe UI", Arial, Sans-Serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #111111;
+}
+body {
+  margin: 0;
+}
+h1,
+h3,
+h4,
+h5,
+th {
+  font-weight: bold;
+}
+h1 {
+  color: #333333;
+  padding: 0px;
+  margin: 0 0 7px;
+  text-align: left;
+}
+h2 {
+  margin: 20px 0 11px;
+  padding: 0;
+  padding-bottom: 10px;
+  color: #333333;
+}
+h3 {
+  color: #ff9900;
+}
+h1 {
+  font-size: 38px;
+  font-weight: 400;
+}
+h2 {
+  font-size: 29px;
+  font-weight: 400;
+}
+h3 {
+  font-size: 19px;
+  font-weight: normal;
+}
+pre {
+  color: black;
+  background-color: #FBEDBB;
+  padding: 6px;
+  font: 14px Consolas, monospace, mono;
+  white-space: pre;
+  overflow: auto;
+  border: solid 1px #FBEDBB;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  -webkit-tab-size: 4;
+  tab-size: 4;
+}
+code {
+  color: #990000;
+  font: 15px Consolas, monospace, mono;
+}
+table {
+  background-color: Transparent;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+a {
+  text-decoration: none;
+  color: #005782;
+}
+a:visited {
+  color: #800080;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+input[type="text"],
+input[type="url"],
+input[type="search"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+  border: 1px solid #D7D7D7;
+  font-size: 16px;
+  padding: 5px;
+}
+textarea {
+  font-family: Consolas, monospace;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  -webkit-tab-size: 4;
+  tab-size: 4;
+}
+a.button,
+a.button-large,
+.button,
+.button-large {
+  color: white;
+  background-color: #E08900;
+  border: 1px solid #cccccc;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 100%;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.button-large {
+  font-size: 17px;
+  padding: 4px 9px;
+}
+a.button.safe,
+a.button.unsafe {
+  color: white;
+}
+.button.compose {
+  color: white;
+  background-color: #D14836;
+  border-color: #D14836;
+}
+.button.unsafe {
+  border-color: red;
+}
+.button.safe {
+  border-color: #76AB40;
+}
+.tiny-text {
+  font-size: 13px;
+}
+table.small-text td,
+ul.small-text li,
+ol.small-text li,
+.small-text {
+  font-size: 14px;
+}
+.medium-text {
+  font-size: 17px;
+}
+.invisible {
+  display: none;
+}
+.subdue,
+.subdue li,
+tr.subdue td {
+  color: #808080;
+}
+.bold {
+  font-weight: bold;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.align-middle {
+  vertical-align: middle;
+}
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+}
+.extended {
+  width: 100%;
+  box-sizing: border-box;
+}
+.tight,
+.m-0 {
+  margin: 0;
+}
+.spaced,
+.m-2 {
+  margin: 0.5rem;
+}
+.tight,
+.p-0 {
+  padding: 0;
+}
+.padded-top,
+.pt-4,
+.py-4 {
+  padding-top: 1.5rem;
+}
+.padded-bottom,
+.pb-4,
+.py-4 {
+  padding-bottom: 1.5rem;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.clipped {
+  overflow: hidden;
+}
+.inline {
+  display: inline-block;
+}
+ol,
+ul {
+  padding-left: 40px;
+  margin: 10px 0;
+}
+ol.spaced,
+ul.spaced {
+  margin: 3px;
+}
+ol.spaced li,
+ul.spaced li {
+  margin: 10px 0 10px 0;
+  *margin: 10px 0 10px 25px;
+}
+.callout {
+  margin: 20px 0;
+  background-color: #FFFFe1;
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.trace {
+  padding: 20px;
+  background-color: #eeeeee;
+  color: #333333;
+  border: 1px solid red;
+  font-size: 13px;
+}
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.ui-tabs-nav {
+  list-style: none;
+  margin: 0px;
+  padding: 0px 0px 0px 3px;
+  background-color: white;
+  border: none;
+}
+.ui-tabs-nav:after {
+  display: block;
+  clear: both;
+  content: " ";
+}
+.ui-tabs-nav li {
+  display: inline;
+  margin: 0px 0px 0px 2px;
+  font-weight: bold;
+  border: none;
+}
+.ui-tabs-nav a,
+.ui-tabs-nav a span {
+  float: left;
+  font-weight: bold;
+}
+.ui-tabs-nav a {
+  padding-left: 0px;
+  text-decoration: none;
+  white-space: nowrap;
+  outline: none;
+}
+.ui-tabs-nav a span {
+  margin-bottom: 0px;
+  font-weight: normal;
+  padding: 5px 7px;
+  color: #808080;
+  background-color: #FFF8DF;
+}
+.ui-tabs-nav a:link,
+.ui-tabs-nav a:visited {
+  color: #333333;
+}
+.ui-tabs-nav .ui-tabs-selected a {
+  color: #333333;
+}
+.ui-tabs-nav .ui-tabs-active a span,
+.ui-tabs-nav .ui-tabs-selected a span,
+.ui-tabs-nav a:hover span {
+  background-color: #ff9900;
+  color: white;
+  text-decoration: none;
+}
+.ui-tabs-panel {
+  display: block;
+  clear: both;
+  border: 1px solid #f2f2f2;
+  padding: 10px;
+  background: #fff;
+}
+.container-content {
+  background-color: white;
+  position: relative;
+  zoom: 1;
+  padding: 0 9px;
+  cursor: default;
+}
+.container-content-wrap {
+  margin: auto;
+  max-width: 1270px;
+}
+.container-main {
+  zoom: 1;
+  padding: 0 0px;
+}
+.container-main .text-sidebar {
+  margin-left: 20px;
+}
+.container-content pre,
+.container-code pre,
+.answer pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  _white-space: pre;
+  /* IE only hack to re-specify in addition to word-wrap  */
+  word-break: break-word;
+  -ms-word-break: break-word;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-content-start		{ justify-content: start; }
+.justify-content-end		{ justify-content: end; }
+.justify-content-center		{ justify-content: center; }
+.justify-content-between	{ justify-content: space-between; }
+.justify-content-around     { justify-content: space-around}
+.flex-wrap          { flex-wrap: wrap; }
+.flex-nowrap		{ flex-wrap: nowrap; }
+.row > * {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+.col {
+  flex: 1 0 0%;
+}
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+.flex-container {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.flex-extend {
+  justify-content: space-between;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-item {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+}
+.flex-item-tight {
+  flex: 0 1 auto;
+}
+.hover-container {
+  display: block;
+  position: relative;
+}
+.clearfix:after,
+.container:after {
+  display: block;
+  content: '.';
+  visibility: hidden;
+  height: 0px;
+  clear: both;
+}
+.clearfix,
+.container {
+  display: block;
+  /* Mac IE5 doesn't see this, but everyone else does */
+}
+.access-link,
+.access-link img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1px;
+  height: 1px;
+  z-index: 101;
+  border-style: none;
+  margin-top: -1px;
+  overflow: hidden;
+}
+.site-top-menu {
+  white-space: nowrap;
+  position: absolute;
+  z-index: 101;
+  width: 100%;
+}
+.site-top-menu .main-content {
+  width: 100%;
+}
+.site-top-menu .main-content .memberbar {
+  margin-left: 90px;
+  margin-right: 10px;
+}
+.site-top-menu.fixed .main-content {
+  margin: auto;
+  max-width: 1270px;
+}
+.site-header {
+  background-image: url('/App_Themes/CodeProject/Img/logo135-bg.gif');
+  white-space: nowrap;
+  overflow: hidden;
+}
+.site-header .main-content {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.site-header .logo {
+  display: inline-block;
+}
+.site-header .promo {
+  display: inline-block;
+  position: absolute;
+  top: 33px;
+  right: 0;
+}
+.site-header.fixed .main-content {
+  margin: auto;
+  max-width: 1270px;
+}
+.sub-headerbar {
+  padding-right: 9px;
+  position: relative;
+  margin: auto;
+  max-width: 1270px;
+}
+.sub-headerbar-divider {
+  margin-left: 10px;
+  height: 1px;
+  border-bottom: 1px solid #cccccc;
+  position: absolute;
+  bottom: 2px;
+  left: 0px;
+  right: 9px;
+}
+.memberbar {
+    height: 25px;
+    padding-top: 5px;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+.memberbar a {
+  color: #808080;
+  font-size: 14px;
+}
+div.navbar {
+  white-space: nowrap;
+}
+.navmenu {
+  background: white;
+  color: #4d4d4d;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  height: 25px;
+}
+.navmenu ul,
+.navmenu li {
+  margin: 0;
+  padding: 0;
+}
+.navmenu .has-submenu {
+  position: absolute;
+  right: 5px;
+  padding-left: 10px;
+}
+.navmenu ul,
+.navmenu > li.open:hover > a,
+.navmenu > li.open > a:active {
+  border: 1px solid #cccccc;
+  border-bottom-color: white;
+}
+.navmenu > li {
+  margin: 0 11px 2px 2px;
+}
+.navmenu > li > a {
+  padding: 2px 7px 6px 7px;
+  border: 1px solid transparent;
+  font-weight: bold;
+}
+.navmenu a {
+  display: block;
+  float: left;
+  color: #666666;
+  background: white;
+  font-size: 17px;
+  padding: 0px 9px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navmenu a.fly {
+  white-space: nowrap;
+}
+.navmenu ul {
+  background: white;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  list-style: none;
+}
+.navmenu li {
+  float: left;
+  color: #4d4d4d;
+}
+.navmenu li.last {
+  height: 9px;
+}
+.navmenu li > a:active,
+.navmenu li:hover,
+.navmenu li:hover > a,
+.navmenu li:hover.heading,
+.navmenu li a.selected {
+  position: relative;
+  color: white;
+  background-color: #ff9900;
+}
+.navmenu li ul {
+  border-bottom: 5px solid #ff9900;
+}
+.navmenu li li {
+  float: none;
+}
+.navmenu li li a {
+  float: none;
+  font-size: 16px;
+  font-weight: normal;
+}
+.navmenu li li a.fly {
+  color: #4d4d4d;
+  background-color: white;
+  padding: 2px 20px;
+}
+.navmenu li li a.break {
+  margin-bottom: 15px;
+}
+.navmenu li li a.highlight1,
+.navmenu li li a.highlight1:active,
+.navmenu li li a.highlight1:hover {
+  background-color: #009900;
+}
+.navmenu li li a.highlight2,
+.navmenu li li a.highlight2:active,
+.navmenu li li a.highlight2:hover {
+  background-color: #ff9900;
+}
+.navmenu li li a.highlight3,
+.navmenu li li a.highlight3:active,
+.navmenu li li a.highlight3:hover {
+  background-color: #000000;
+}
+.navmenu li li a.highlight1,
+.navmenu li li a.highlight2,
+.navmenu li li a.highlight3 {
+  color: white;
+  font-size: 16px;
+  margin: 5px 0;
+  padding: 9px 20px;
+}
+.site-footer {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  border-top: 3px solid #ff9900;
+  padding: 10px 10px 0 10px;
+  margin-top: 10px;
+  width: calc(100% - 20px);
+  font-size: 13px;
+  color: #999999;
+}
+.site-footer .align-left,
+.site-footer .align-center,
+.site-footer .align-right {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+}
+.site-footer .align-left {
+  flex: 1 0 100px;
+}
+.site-footer .align-center {
+  flex: 0 1 0%;
+  white-space: nowrap;
+}
+.site-footer .align-right {
+  flex: 1 0 100px;
+}
+.site-footer .page-width .active {
+  border-bottom: 2px solid #ff9900;
+}
+.searchbar {
+  padding: 0;
+}
+.searchbar .search {
+  margin-bottom: 4px;
+  padding: 2px 5px 0px;
+  border: 1px solid #cccccc;
+}
+.searchbar .search.subdue {
+  color: #cccccc;
+}
+.searchbar input.search {
+  width: 190px;
+  border: none;
+  font-size: 13px;
+  padding: 4px 2px;
+}
+.searchbar .search-advanced {
+  padding: 8px;
+  width: 203px;
+  z-index: 1000;
+  background-color: white;
+  border: solid 1px #cccccc;
+  position: absolute;
+  top: -4px;
+  right: 0px;
+}
+.searchbar .popup {
+  display: none;
+}
+.sub-headerbar .searchbar {
+  /*
+	.search-advanced
+	{
+        .transition(width, .1s, linear);
+
+        &.open
+        {
+    		width: 320px;
+        }
+    }
+    */
+}
+.sub-headerbar .searchbar input.search {
+  /*
+        &:focus,&:active
+        {
+            position     : absolute;
+            top          : 3px;
+            right        : 36px;
+            height       : 19px;
+            border       : 1px solid #ccc;
+            border-right : none;
+            width:         300px;
+
+            .transition(width, .1s, linear);
+        }
+        */
+}
+.search td {
+  background-color: white;
+}
+.container-entry {
+  background-color: white;
+  _border: solid 1px white;
+  zoom: 1;
+  position: relative;
+  min-height: 600px;
+}
+.container-entry .text-sidebar {
+  width: 300px;
+  max-width: 300px;
+  min-height: 100%;
+}
+.container-entry .mainlinks {
+  margin-top: 25px;
+  line-height: 22px;
+  white-space: nowrap;
+  min-width: 645px;
+}
+.container-entry .mainlinks .navigation {
+  padding: 6px 0px 0 0;
+}
+.container-entry .mainlinks a {
+  text-decoration: none;
+  font-size: 17px;
+  padding: 4px;
+  white-space: nowrap;
+  color: #333333;
+}
+.container-entry .mainlinks a:hover {
+  color: white;
+  background-color: #ff9900;
+}
+.container-entry .mainlinks .compose {
+  margin-right: 20px;
+}
+.container-entry .mainlinks .faq {
+  margin-left: 10px;
+}
+.container-entry.container-question .text-sidebar {
+  background-color: white;
+  z-index: 3;
+}
+.container-entry.container-question h1 {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+.container-entry.container-question .container-content {
+  border-left: none;
+  border-right: none;
+}
+.container-entry.container-question .answer-list-header {
+  border-bottom: 1px solid #CCCCCC;
+  margin: 50px 0 20px;
+}
+.container-entry.container-question .answer-list-header .ui-tabs-nav a span {
+  border: 1px solid #f2f2f2;
+  border-bottom: none;
+  background-color: white;
+  color: #cccccc;
+}
+.container-entry.container-question .answer-list-header .ui-tabs-nav .ui-tabs-selected a span {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  color: #333333;
+}
+.container-entry.container-question .answer {
+  margin-top: 60px;
+  margin-bottom: 5px;
+  padding-right: 1px;
+  border-top: solid 1px #ff9900;
+}
+.container-entry.container-question .answer .header {
+  padding: 10px 0px;
+  border-style: none;
+}
+.container-entry.container-question .answer .header .rating-container {
+  background: white;
+  border-radius: 5px;
+  padding: 2px 2px 0 3px;
+  margin-right: 3px;
+}
+.container-entry.container-question .answer.first {
+  margin-top: 0px;
+  border-top-style: none;
+}
+.container-entry.container-question .answer .text {
+  zoom: 1;
+  background-color: transparent;
+  width: 99%;
+  padding: 5px 10px 25px 5px;
+}
+.container-question .rate-item,
+.answer .rate-item {
+  text-align: right;
+  color: #666;
+}
+.container-question .rate-group,
+.answer .rate-group {
+  float: right;
+  margin-left: 15px;
+}
+.question .comment-header,
+.answer .comment-header {
+  font-size: 16px;
+  padding: 10px 10px 2px 28px;
+  color: #808080;
+}
+.container-question .ui-tabs-panel {
+  border: 0;
+}
+.qa-info {
+  font-size: 14px;
+  color: #999;
+  padding: 20px 0;
+}
+.qa-info .commands {
+  width: 20rem;
+  margin-left: 2px;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear 0ms;
+  -moz-transition: opacity 0.2s linear 0ms;
+  -o-transition: opacity 0.2s linear 0ms;
+  transition: opacity 0.2s linear 0ms;
+}
+.qa-info .meta-data {
+  float: left;
+  margin-left: 10px;
+}
+.qa-info .version {
+  padding-left: 5px;
+  float: left;
+}
+.answer-row:hover .qa-info .commands,
+.question:hover .qa-info .commands {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s linear 0ms;
+  -moz-transition: opacity 0.2s linear 0ms;
+  -o-transition: opacity 0.2s linear 0ms;
+  transition: opacity 0.2s linear 0ms;
+}
+.answer-row {
+  zoom: 1;
+}
+.qa-post {
+  padding-top: 10px;
+}
+.container-post {
+  zoom: 1;
+  overflow: hidden;
+  position: relative;
+  margin-top: 25px;
+}
+.container-post .preview {
+  background-color: #F2F2F2;
+  width: min(100%, 600px);
+  padding: 3px;
+  border: solid 1px #ff9900;
+}
+.qa-top-pager {
+  position: relative;
+  top: -11px;
+}
+.container-question {
+  padding: 5px 0px;
+  width: auto;
+  min-height: 315px;
+}
+.container-question .tags .t {
+  font-size: 17px;
+}
+.text-sidebar .header {
+  font-size: 22px;
+  color: white;
+  background-color: #ff9900;
+  padding: 8px;
+  font-weight: 400;
+}
+.container-comments {
+  margin: 5px 4px 10px 10px;
+  zoom: 1;
+}
+.container-comments a {
+  text-decoration: none;
+}
+.comment-header,
+.comment-footer {
+  font-size: 17px;
+  text-align: left;
+}
+.comment-list {
+  overflow: visible;
+  padding-left: 25px;
+}
+.comment-list .mine .comment-author {
+  font-weight: bold;
+}
+.comment-content {
+  padding: 0px 0px 5px 0px;
+  /*&.expanded pre { white-space: pre-wrap; } - not needed */
+}
+.comment-item {
+  font-size: 13px;
+  color: #666666;
+  padding: 3px 0;
+  min-height: 1px;
+  padding-left: 0;
+}
+.comment-commands {
+  opacity: 0.25;
+  white-space: nowrap;
+  -webkit-transition: opacity 0.1s linear 0ms;
+  -moz-transition: opacity 0.1s linear 0ms;
+  -o-transition: opacity 0.1s linear 0ms;
+  transition: opacity 0.1s linear 0ms;
+}
+.locked {
+  color: Red;
+}
+.text-editor {
+  border: 1px solid #cccccc;
+}
+.msg-728x90 {
+  width: 728px;
+  height: 90px;
+  overflow: hidden;
+}
+.msg-300x250 {
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+}
+.content-list {
+  margin-bottom: 17px;
+}
+.content-list-item {
+  margin: 10px 0;
+}
+.tags {
+  line-height: 190%;
+}
+.tags.horizontal .t {
+  display: inline-block;
+}
+.tags .t {
+  background: none repeat scroll 0 0 transparent;
+  border: 1px solid #FBEDBB;
+  border-radius: 12px 0 0 12px;
+  line-height: 1.4;
+  padding: 0 2px 2px 3px;
+  position: relative;
+  text-decoration: none;
+  margin: 2px 5px 4px 0;
+  white-space: nowrap;
+}
+.tags .t a {
+  color: #666666;
+  display: inline-block;
+  margin-right: 3px;
+  padding-left: 5px;
+  text-overflow: ellipsis;
+}
+.container-breadcrumb {
+  font-size: 14px;
+  margin-top: 7px;
+  color: #808080;
+  margin: 12px 0 35px;
+}
+.pre-lang {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  background-color: #FBEDBB;
+  justify-content: space-between;
+  padding: 4px 8px;
+  margin-top: 5px;
+  color: #999999;
+  border-bottom: solid 1px #ffd044;
+}
+.code-keyword {
+  color: Blue;
+}
+.code-preprocessor {
+  color: gray;
+}
+pre.lang-terminal {
+  background-color: #292929;
+  color: #2FEA2E;
+  font-family: 'VT323', consolas, monospace;
+  font-size: 17px;
+}
+.pre-action-link {
+  font-size: 13px;
+  color: #999999;
+}
+.pre-action-link span {
+  cursor: pointer;
+  margin: 0;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+}
+.speech-bubble-container-down,
+.speech-bubble-container-up,
+.speech-bubble-container-up-right,
+.speech-bubble-container-left,
+.speech-bubble-container-right {
+  position: relative;
+}
+.ie .speech-bubble-container-up,
+.firefox .speech-bubble-container-up,
+.chrome .speech-bubble-container-up,
+.ie .speech-bubble-container-up-right,
+.firefox .speech-bubble-container-up-right,
+.chrome .speech-bubble-container-up-right {
+  margin-top: -4px;
+}
+.tooltip {
+  position: relative;
+  text-decoration: none;
+}
+.tooltip .speech-bubble-container-up,
+.tooltip .speech-bubble-container-down,
+.tooltip .speech-bubble-container-left,
+.tooltip .speech-bubble-container-right,
+.tooltip .speech-bubble-container-up-right,
+.tooltip .tooltip-flyout {
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear 0ms;
+  -moz-transition: opacity 0.5s linear 0ms;
+  -o-transition: opacity 0.5s linear 0ms;
+  transition: opacity 0.5s linear 0ms;
+}
+.tooltip-flyout {
+  position: relative;
+  border: 1px solid #cccccc;
+  color: #666666;
+  background-color: white;
+  margin: 15px;
+  z-index: 2147483646;
+  white-space: normal;
+  font-weight: normal;
+  text-align: left;
+  cursor: text;
+  width: 175px;
+  -moz-box-shadow: 4px 4px 16px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 4px 4px 16px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 16px 1px rgba(0, 0, 0, 0.25);
+}
+.micromodal {
+  display: none;
+}
+.bottom-promo {
+  height: 90px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.bottom-promo .msg-728x90 {
+  width: 728px;
+  margin: 0 auto;
+}
+.msg-728x90 {
+  overflow: hidden;
+  position: relative;
+  height: 90px;
+  min-width: 728px;
+}
+body .msg-728x90 {
+  *float: right;
+}
+body .bottom-promo .msg-728x90 {
+  *float: none;
+}
+.container-editor {
+  float: left;
+  width: 100%;
+  zoom: 1;
+  position: relative;
+}
+.paste-dialog {
+  position: absolute;
+  width: 150px;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid #ff9900;
+  overflow: hidden;
+  z-index: 10;
+  -moz-box-shadow: 4px 4px 16px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 4px 4px 16px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 16px 1px rgba(0, 0, 0, 0.25);
+}
+.new-message .toolbar {
+  border: solid 1px transparent;
+  _border: solid 1px white;
+  padding: 1px;
+  -webkit-transition: border-color 0.1s linear;
+  -moz-transition: border-color 0.1s linear;
+  -o-transition: border-color 0.1s linear;
+  transition: border-color 0.1s linear;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1s linear;
+  -o-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+.new-message button.toolbar {
+  border: solid 1px white;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  padding: 1px;
+}
+.member-signin td {
+  vertical-align: baseline;
+}
+.member-signin input[type="text"],
+.member-signin input[type="email"],
+.member-signin input[type="password"],
+.member-signin input[type="button"],
+.member-signin input[type="submit"],
+.member-signin button,
+.member-signin select {
+  border: 1px solid #cccccc;
+  padding: 0.5rem;
+  width: 200px;
+  margin-bottom: 10px;
+}
+.member-signin .forgot {
+  padding: 0;
+}
+.member-signin a.forgot {
+  color: #808080;
+}
+a.member-rep-box,
+td.member-rep-box,
+span.member-rep-box {
+  padding: 0 2px;
+  margin: 4px;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  /*
+	&.bronze	{ background-color:#EFB277; }
+	&.silver	{ background-color:#DFDFDF; }
+	&.gold		{ background-color:#FFCC00; }
+	&.platinum	{ background-color:#CFE7FF; }
+    */
+}
+a.member-rep-box.platinum,
+td.member-rep-box.platinum,
+span.member-rep-box.platinum {
+  border: solid 2px #CFE7FF;
+}
+.member-rep-container {
+  max-width: 175px;
+}
+.top-experts,
+.experts-list {
+  width: 100%;
+}
+.top-experts .subheader td,
+.experts-list .subheader td {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 2px;
+}
+.top-experts tr,
+.experts-list tr {
+  vertical-align: top;
+}
+.top-experts td.name,
+.experts-list td.name {
+  padding: 2px 0   2px 0;
+}
+.top-experts td.points,
+.experts-list td.points {
+  padding: 2px 5px 2px 0;
+  font-size: 13px;
+  color: gray;
+}
+.top-experts td a,
+.experts-list td a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  width: 115px;
+}
+.rating-container {
+  /*
+	.rating-close
+	{
+		font-size       : @FontSize-MediumSmall;
+		font-weight     : bold;
+		// display         : inline-block;
+		// height          : 19px;
+		padding         : 0px 7px 3px 5px;
+		text-decoration : none;
+		border          : 1px solid transparent;
+		position        : absolute;
+		right           : 1px;
+		top             : -1px;
+		
+		&:hover { border : 1px solid @Colour-Theme1; }
+	}*/
+}
+.rating-container .rating-votes {
+  margin-left: 5px;
+}
+.rating-container.large-stars,
+.rating-container.medium-stars,
+.rating-container.small-stars {
+  margin-left: 7px;
+}
+.rating-container.medium-stars .rating-votes,
+.rating-container.medium-stars .rating-prompt,
+.rating-container.medium-stars .rating-poor,
+.rating-container.medium-stars .rating-good {
+  line-height: 17px;
+}
+@media (min-width: 1024px) {
+    .desktop-only {
+        display: inherit;
+    }
+
+    .desktop-block-only {
+        display: block;
+    }
+
+    .tablet-only,
+    .tablet-block-only {
+        display: none;
+    }
+
+    .mobile-only,
+    .mobile-block-only {
+        display: none;
+    }
+
+    .desktop-only.tablet-only {
+        display: inherit;
+    }
+
+    .desktop-block-only.tablet-block-only {
+        display: block;
+    }
+
+    @media (min-width: 821px) {
+        .tablet-only, .mobile-only {
+            display: none;
+        }
+
+        .tablet-block-only,
+        .mobile-block-only {
+            display: none;
+        }
+
+        .tablet-only.desktop-only {
+            display: inherit;
+        }
+
+        .tablet-block-only.desktop-block-only {
+            display: block;
+        }
+
+        .cc-window {
+            opacity: 1;
+            background-color: #ff9900;
+            /*
+  -webkit-transition: opacity .25s ease;
+  -moz-transition: opacity .25s ease;
+  -ms-transition: opacity .25s ease;
+  -o-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+  */
+        }
+
+            .cc-window.cc-invisible {
+                opacity: 0;
+            }
+
+        .cc-animate.cc-revoke {
+            /*
+  -webkit-transition: transform .25s ease;
+  -moz-transition: transform .25s ease;
+  -ms-transition: transform .25s ease;
+  -o-transition: transform .25s ease;
+  transition: transform .25s ease;
+  */
+        }
+
+            .cc-animate.cc-revoke.cc-bottom {
+                transform: translateY(2em);
+            }
+
+        .cc-window,
+        .cc-revoke {
+            position: fixed;
+            overflow: hidden;
+            box-sizing: border-box;
+            /* exclude padding when dealing with width */
+            font-family: "Segoe UI", Arial, Sans-Serif;
+            font-size: 13px;
+            /* by setting the base font here, we can size the rest of the popup using CSS `em` */
+            line-height: 1.5em;
+            display: flex;
+            flex-wrap: nowrap;
+            /* the following are random unjustified styles - just because - should probably be removed */
+            z-index: 9999;
+        }
+
+            .cc-window.cc-banner {
+                padding: 0.7em 1.8em;
+                width: 100%;
+                flex-direction: row;
+            }
+
+        .cc-revoke {
+            padding: 0.5em;
+        }
+
+        .cc-btn,
+        .cc-link,
+        .cc-close,
+        .cc-revoke {
+            cursor: pointer;
+        }
+
+        .cc-link {
+            opacity: 0.8;
+            display: inline-block;
+            padding: 0.2em;
+            text-decoration: underline;
+        }
+
+            .cc-link:active,
+            .cc-link:visited {
+                color: initial;
+            }
+
+        .cc-btn {
+            display: block;
+            padding: 0.4em 0.8em;
+            font-size: 0.9em;
+            font-weight: bold;
+            border-width: 2px;
+            border-style: solid;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .cc-banner .cc-btn:last-child {
+            min-width: 110px;
+            margin-left: 10px;
+        }
+
+        .cc-highlight .cc-btn:first-child {
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        .cc-revoke.cc-bottom {
+            bottom: 0;
+            left: 3em;
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
+        }
+
+        .cc-bottom {
+            bottom: 1em;
+        }
+
+        .cc-window.cc-banner {
+            align-items: center;
+        }
+
+        .cc-banner.cc-bottom {
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .cc-banner .cc-message {
+            flex: 1;
+        }
+
+        .cc-compliance {
+            display: flex;
+            align-items: center;
+            align-content: space-between;
+        }
+
+            .cc-compliance > .cc-btn {
+                flex: 1;
+            }
+
+        .cc-btn + .cc-btn {
+            margin-left: 0.5em;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+            .clearfix:after {
+                clear: both;
+            }
+
+            .clearfix:before,
+            .clearfix:after {
+                content: " ";
+                display: table;
+            }
+
+</style>
+<link rel="stylesheet" type="text/css" href="https://codeproject.freetls.fastly.net/App_Themes/CodeProject/Css/Main.min.css?dt=2.8:2024-05-23:1" media="all" onload="if(media!=&quot;all&quot;)media=&quot;all&quot;">
+<noscript><link rel='stylesheet' type='text/css' href='https://codeproject.freetls.fastly.net/App_Themes/CodeProject/Css/Main.min.css?dt=2.8:2024-05-23:1'></noscript>
+
+<style type="text/css">
+div.grippie { background:#eee url(https://codeproject.freetls.fastly.net/images/gripH.png) no-repeat scroll center 2px;
+border-color:#ddd;
+border-style:solid;
+border-width:0pt 1px 1px;
+cursor:s-resize;
+height:9px;
+overflow:hidden;
+}
+.resizable-control textarea {
+display:block;
+margin-bottom:0pt;
+width:95%;
+height: 20%;
+}
+
+</style>
+
+<script type="text/javascript" async="" src="https://www.gstatic.cn/recaptcha/releases/joHA60MeME-PNviL59xVH9zs/recaptcha__zh_cn.js" crossorigin="anonymous" integrity="sha384-do25PiVFWbtADSOr3bfUQtKE6VbdyaWoLl0LNM0yNC1B188yO6CkDtC9Bd+1cqpB"></script><script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js" defer=""></script>
+<script type="text/javascript" src="https://codeproject.freetls.fastly.net/script/JS/spin.min.js" defer=""></script>
+<script type="text/javascript" src="https://codeproject.freetls.fastly.net/script/Content/JS/editor.min.js?dt=2.8:2024-05-23:1" defer=""></script>
+<script type="text/javascript" src="https://www.recaptcha.net/recaptcha/api.js" defer=""></script>
+<script type="text/javascript" src="https://codeproject.freetls.fastly.net/script/Answers/JS/qa.min.js?dt=2.8:2024-05-23:1" defer=""></script>
+<script type="text/javascript" src="https://accounts.google.com/gsi/client" defer="" async=""></script>
+<script type="text/javascript" src="/script/JS/PasswordStrength.min.js" defer=""></script>
+<script type="text/javascript" src="/script/JS/advertisement.min.js" defer=""></script>
+<script type="text/javascript" src="/a.min.js?v=1.3?r=2.8:2024-05-23:1" defer=""></script>
+
+<meta http-equiv="content-language" content="en-US">
+<meta charset="UTF-8">
+<meta name="Description" content="Free source code and tutorials for Software developers and Architects.; Updated: 20 May 2024">
+<meta name="Keywords" content="Free source code, tutorials">
+<meta name="Author" content="CodeProject">
+<meta name="Rating" content="General">
+<meta name="Revisit-After" content="1 days">
+<meta name="application-name" content="CodeProject">
+<meta name="google-translate-customization" content="d908bb7ce7aff658-4c2f3a504525c916-g629383f736781a8a-13">
+
+<meta name="msapplication-navbutton-color" content="#FF9900">
+<meta name="msapplication-tooltip" content="For those who code.">
+<meta name="msapplication-starturl" content="https://www.codeproject.com/?pinned=true">
+<meta name="msapplication-task" content="name=Homepage;action-uri=https://www.codeproject.com/;icon-uri=https://www.codeproject.com/favicon/favicon.ico">
+<meta name="msapplication-task" content="name=Latest Articles;action-uri=https://www.codeproject.com/script/articles/Latest.aspx;icon-uri=https://www.codeproject.com/favicon/favicon.ico">
+<meta name="msapplication-task" content="name=Questions and Answers;action-uri=https://www.codeproject.com/script/Answers/;icon-uri=https://www.codeproject.com/favicon/favicon.ico">
+<meta name="msapplication-task" content="name=The Lounge;action-uri=https://www.codeproject.com/Lounge.aspx;icon-uri=https://www.codeproject.com/favicon/favicon.ico">
+
+<link rel="dns-prefetch" href="//ajax.googleapis.com"> 
+<link rel="canonical" href="/Questions/5382597/How-I-can-integrate-EID-reader-with-tablet">
+
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - All Topics" href="https://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=1">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - Python" href="https://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=34">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Lounge Postings" href="https://www.codeproject.com/webservices/LoungeRSS.aspx">
+<meta name="robots" content="index, follow">
+
+<link rel="search" type="application/opensearchdescription+xml" title="CodeProject" href="https://www.codeproject.com/info/OpenSearch.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"> 
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"> 
+<link rel="manifest" href="/favicon/manifest.json"> 
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#ff9900"><base target="_top">
+
+
+<script type="text/javascript">
+function defrm () { /* thanks twitter */
+    document.write = '';
+    window.top.location = window.self.location;
+    setTimeout(function() { document.body.innerHTML = ''; }, 0);
+    window.self.onload = function(evt) { document.body.innerHTML = ''; };
+}
+
+if (window.top !== window.self) {
+    try {
+        if (window.top.location.host) { /* will throw for all except chrome */ }
+        else { defrm(); /* chrome */ }
+    } catch (ex) { defrm(); /* everyone else */ }
+}
+
+// Specific case where a site is screwing with us.
+if (typeof(DemoUrl) !== 'undefined') {
+    document.write(unescape('%3Cme') + 'ta http' + '-equiv="re' + 'fresh con' +
+                           'tent="1;url=' + DemoUrl + unescape('"%3CE'));
+}
+</script>
+
+
+
+
+
+    <script async="" type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-YZNPNQ0F2S"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YZNPNQ0F2S' , {'user_id': '2e25f47c-479a-4441-a1a9-9b6d69ef9710'});
+    </script>
+<style id="googleidentityservice_button_styles">.qJTHM{-webkit-user-select:none;color:#202124;direction:ltr;-webkit-touch-callout:none;font-family:"Roboto-Regular",arial,sans-serif;-webkit-font-smoothing:antialiased;font-weight:400;margin:0;overflow:hidden;-webkit-text-size-adjust:100%}.ynRLnc{left:-9999px;position:absolute;top:-9999px}.L6cTce{display:none}.bltWBb{word-break:break-all}.hSRGPd{color:#1a73e8;cursor:pointer;font-weight:500;text-decoration:none}.Bz112c-W3lGp{height:16px;width:16px}.Bz112c-E3DyYd{height:20px;width:20px}.Bz112c-r9oPif{height:24px;width:24px}.Bz112c-uaxL4e{-webkit-border-radius:10px;border-radius:10px}.LgbsSe-Bz112c{display:block}.S9gUrf-YoZ4jf,.S9gUrf-YoZ4jf *{border:none;margin:0;padding:0}.fFW7wc-ibnC6b>.aZ2wEe>div{border-color:#4285f4}.P1ekSe-ZMv3u>div:nth-child(1){background-color:#1a73e8!important}.P1ekSe-ZMv3u>div:nth-child(2),.P1ekSe-ZMv3u>div:nth-child(3){background-image:linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),linear-gradient(to right,#1a73e8,#1a73e8)!important}.haAclf{display:inline-block}.nsm7Bb-HzV7m-LgbsSe{-webkit-border-radius:4px;border-radius:4px;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s;transition:background-color .218s,border-color .218s;-webkit-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;border:1px solid #dadce0;color:#3c4043;cursor:pointer;font-family:"Google Sans",arial,sans-serif;font-size:14px;height:40px;letter-spacing:0.25px;outline:none;overflow:hidden;padding:0 12px;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}@media screen and (-ms-high-contrast:active){.nsm7Bb-HzV7m-LgbsSe{border:2px solid windowText;color:windowText}}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe{font-size:14px;height:32px;letter-spacing:0.25px;padding:0 10px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe{font-size:11px;height:20px;letter-spacing:0.3px;padding:0 8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe{padding:0;width:40px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe{width:32px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe{width:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{-webkit-border-radius:20px;border-radius:20px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.pSzOP-SxQuSe{-webkit-border-radius:16px;border-radius:16px}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK.purZT-SxQuSe{-webkit-border-radius:10px;border-radius:10px}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc{border:none;color:#fff}.nsm7Bb-HzV7m-LgbsSe.MFS4be-v3pZbf-Ia7Qfc{background-color:#1a73e8}.nsm7Bb-HzV7m-LgbsSe.MFS4be-JaPV2b-Ia7Qfc{background-color:#202124;color:#e8eaed}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:18px;margin-right:8px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:14px;min-width:14px;width:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{height:10px;min-width:10px;width:10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin-left:8px;margin-right:-4px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:10px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:8px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c{padding:4px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-top-left-radius:3px;border-top-left-radius:3px;-webkit-border-bottom-left-radius:3px;border-bottom-left-radius:3px;display:-webkit-box;display:-webkit-flex;display:flex;justify-content:center;-webkit-align-items:center;align-items:center;background-color:#fff;height:36px;margin-left:-10px;margin-right:12px;min-width:36px;width:36px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c,.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf .nsm7Bb-HzV7m-LgbsSe-Bz112c{margin:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:28px;margin-left:-8px;margin-right:10px;min-width:28px;width:28px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{height:16px;margin-left:-6px;margin-right:8px;min-width:16px;width:16px}.nsm7Bb-HzV7m-LgbsSe.Bz112c-LgbsSe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:3px;border-radius:3px;margin-left:2px;margin-right:0;padding:0}.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:18px;border-radius:18px}.nsm7Bb-HzV7m-LgbsSe.pSzOP-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:14px;border-radius:14px}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:8px;border-radius:8px}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-bN97Pc-sM5MNb{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-flex-direction:row;flex-direction:row;justify-content:space-between;-webkit-flex-wrap:nowrap;flex-wrap:nowrap;height:100%;position:relative;width:100%}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX{justify-content:center}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:1;flex-grow:1;font-family:"Google Sans",arial,sans-serif;font-weight:500;overflow:hidden;text-overflow:ellipsis;vertical-align:top}.nsm7Bb-HzV7m-LgbsSe.purZT-SxQuSe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-weight:300}.nsm7Bb-HzV7m-LgbsSe .oXtfBe-l4eHX .nsm7Bb-HzV7m-LgbsSe-BPrWId{-webkit-flex-grow:0;flex-grow:0}.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-MJoBVe{-webkit-transition:background-color .218s;transition:background-color .218s;bottom:0;left:0;position:absolute;right:0;top:0}.nsm7Bb-HzV7m-LgbsSe:hover,.nsm7Bb-HzV7m-LgbsSe:focus{-webkit-box-shadow:none;box-shadow:none;border-color:#d2e3fc;outline:none}.nsm7Bb-HzV7m-LgbsSe:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.04)}.nsm7Bb-HzV7m-LgbsSe:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(66,133,244,.1)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:hover .nsm7Bb-HzV7m-LgbsSe-MJoBVe,.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:focus .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.24)}.nsm7Bb-HzV7m-LgbsSe.MFS4be-Ia7Qfc:active .nsm7Bb-HzV7m-LgbsSe-MJoBVe{background:rgba(255,255,255,.32)}.nsm7Bb-HzV7m-LgbsSe .n1UuX-DkfjY{-webkit-border-radius:50%;border-radius:50%;display:-webkit-box;display:-webkit-flex;display:flex;height:20px;margin-left:-4px;margin-right:8px;min-width:20px;width:20px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId{font-family:"Roboto";font-size:12px;text-align:left}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .ssJRIf,.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .fmcmS{overflow:hidden;text-overflow:ellipsis}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;color:#5f6368;fill:#5f6368;font-size:11px;font-weight:400}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.MFS4be-Ia7Qfc .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff{color:#e8eaed;fill:#e8eaed}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-BPrWId .K4efff .Bz112c{height:18px;margin:-3px -3px -3px 2px;min-width:18px;width:18px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-top-left-radius:0;border-top-left-radius:0;-webkit-border-bottom-left-radius:0;border-bottom-left-radius:0;-webkit-border-top-right-radius:3px;border-top-right-radius:3px;-webkit-border-bottom-right-radius:3px;border-bottom-right-radius:3px;margin-left:12px;margin-right:-10px}.nsm7Bb-HzV7m-LgbsSe.jVeSEe.JGcpL-RbRzK .nsm7Bb-HzV7m-LgbsSe-Bz112c-haAclf{-webkit-border-radius:18px;border-radius:18px}.L5Fo6c-sM5MNb{border:0;display:block;left:0;position:relative;top:0}.L5Fo6c-bF1uUb{-webkit-border-radius:4px;border-radius:4px;bottom:0;cursor:pointer;left:0;position:absolute;right:0;top:0}.L5Fo6c-bF1uUb:focus{border:none;outline:none}sentinel{}</style><style type="text/css"></style><style type="text/css"></style><link id="googleidentityservice" type="text/css" media="all" rel="stylesheet" href="https://accounts.google.com/gsi/style"><style></style><meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202405210101/pubads_impl.js" async=""></script><script async="" src="https://fundingchoicesmessages.google.com/i/6839?ers=3"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxX6C0xZnxbTDkn4TIeqOz1gbWScnJ3j7DMh9YrRGfX8fR_BRk-Mf_7YVtAjTYMxg6Ib7UZMDjKdKcYPl3D7NhF_YLT451wyccoIgYoaRd0wZXbnEYziZUrUiAMDLA9gTixcgJx-ug==?fccs=W1siQUtzUm9sX3RLZDFiaVFGUndEWFRMdFBOdkcySUZHbmg4eWdCdEY2Zm15eGpxUnl2M0h2NjlsU19nWTlwdlYtRzRWSEFERHlYRGgzRDhFWDloZ1Y3UWhJcllOdEhlSjEzZFJnZ2J2anI1Nl9EeVNWbDJQalhaMmt1R1ZLQVdzeEFFWXcwRHBVN1lNY3RLRmdwVUhBMGE1OFdDaTRRZUtOQ2lBPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3MTY4NjQyNDksMzk0MDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbN11dLCJodHRwczovL3d3dy5jb2RlcHJvamVjdC5jb20vUXVlc3Rpb25zLzUzODI1OTcvSG93LUktY2FuLWludGVncmF0ZS1FSUQtcmVhZGVyLXdpdGgtdGFibGV0IixudWxsLFtbOCwiWWNVVzdGcWhROGsiXSxbOSwiemgtQ04iXSxbMjAsIltudWxsLG51bGwsWzk1MzI5ODQyXSwxMyw1XSJdLFsxOSwiMiJdLFsxNywiWzBdIl1dXQ"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxUrNGss5JhmPlW7y8TPEkxmZF2rMC1JinXYVojtMp0lsVZpiQe7TLSqevdn2yWBWqKiL2mnDpzb-vcLo0pB_ayZNc-Cli7EAAkRdHdFvcyc5Z4rF9-IzdtLbqRpYQ-liMS8V8w9uQ==?fccs=W1siQUtzUm9sX3RLZDFiaVFGUndEWFRMdFBOdkcySUZHbmg4eWdCdEY2Zm15eGpxUnl2M0h2NjlsU19nWTlwdlYtRzRWSEFERHlYRGgzRDhFWDloZ1Y3UWhJcllOdEhlSjEzZFJnZ2J2anI1Nl9EeVNWbDJQalhaMmt1R1ZLQVdzeEFFWXcwRHBVN1lNY3RLRmdwVUhBMGE1OFdDaTRRZUtOQ2lBPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3MTY4NjQyNDksNDU2MDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbNyw5XSxudWxsLDIsbnVsbCwiemgtQ04iXSwiaHR0cHM6Ly93d3cuY29kZXByb2plY3QuY29tL1F1ZXN0aW9ucy81MzgyNTk3L0hvdy1JLWNhbi1pbnRlZ3JhdGUtRUlELXJlYWRlci13aXRoLXRhYmxldCIsbnVsbCxbWzgsIlljVVc3RnFoUThrIl0sWzksInpoLUNOIl0sWzIwLCJbbnVsbCxudWxsLFs5NTMyOTg0Ml0sMTMsNV0iXSxbMTksIjIiXSxbMTcsIlswXSJdXV0"></script></head>
+
+<body class="edge edge125" itemscope="" itemtype="http://schema.org/QAPage"><div class="cc-revoke cc-bottom cc-animate cc-color-override--316233370" style="display: none;">Cookie Policy</div><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-opt-in-out cc-theme-edgeless cc-bottom cc-color-override--316233370 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">Like every other website we use cookies. By using our site you acknowledge that you have read and understand our <a href="/info/cookie.aspx">Cookie Policy</a>, <a href="/info/privacy.aspx">Privacy Policy</a>, and our <a href="/info/TermsOfUse.aspx">Terms of Service</a>. <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="https://www.codeproject.com/info/privacy.aspx" rel="noopener noreferrer nofollow" target="_blank">Learn more</a></span><div class="cc-compliance cc-highlight"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">Ask me later</a><a aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a><a aria-label="allow cookies" role="button" tabindex="0" class="cc-btn cc-allow">Allow cookies</a></div><!--googleon: all--></div>
+
+	<div id="ctl00_ctl00_OneTap_OneTap">
+    <div id="g_id_onload" data-client_id="857795997829.apps.googleusercontent.com" data-login_uri="/script/Membership/OAuthLogOn.aspx?auth=Google">
+    </div>
+</div>
+
+
+
+<a class="access-link" href="#Main"><img alt="Click here to Skip to main content" src="https://codeproject.freetls.fastly.net/images/t.gif"></a>
+
+    <div class="page-background">
+
+	
+	<div id="ctl00_ctl00_STM" class="site-top-menu fixed">
+		<div class="main-content">
+			
+
+<div class="container memberbar clearfix flex-container flex-extend">
+
+	<div id="ctl00_ctl00_MemberBar_GenInfo" class="flex-item align-left">15,906,625 members</div>
+
+	<div class="flex-item">
+		
+	</div>
+
+	<div class="flex-item align-right">
+
+		
+
+		
+
+		
+
+			<script type="text/javascript">//<!--
+			function doSubmit(secure)
+			{
+				if (secure)
+					document.signinForm.action = "https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f5382597%2fHow-I-can-integrate-EID-reader-with-tablet"
+				else
+					document.signinForm.action = "https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f5382597%2fHow-I-can-integrate-EID-reader-with-tablet"
+				document.signinForm.submit();
+				return true;
+			}//-->
+			</script>
+
+			<a name="SignUp"></a>
+			<span class="member-signin">
+				<a data-micromodal-trigger="modal-1" href="javascript:;">Sign in</a>
+				<!--<a href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f5382597%2fHow-I-can-integrate-EID-reader-with-tablet">Sign in</a>-->
+
+				<div class="micromodal" id="modal-1" aria-hidden="true">
+
+					<div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+					  <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+						<header class="modal_header">
+							<h4 class="modal_title" id="modal-1-title">
+								Sign in
+							</h4>
+							<button class="modal_close" aria-label="Close modal" data-micromodal-close=""></button>
+						</header>
+
+						<form name="signinForm" id="signinForm" action="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f5382597%2fHow-I-can-integrate-EID-reader-with-tablet" method="post" class="tight align-left">
+
+							
+							<input id="FormName" name="FormName" value="MenuBarForm" type="hidden">
+
+							<div>Email</div>
+							<div><input type="email" name="Email" id="Email" autocomplete="email"></div>
+							<div>Password</div>
+							<div><input type="password" name="Password" id="Password" autocomplete="current-password"></div>
+							<div class="action">
+								<input type="hidden" name="fld_quicksign" value="true">
+								<input type="submit" value="Sign in" class="signin" onclick="return doSubmit(false);">
+								<input id="joinBtn" type="button" class="create hidden" onclick="return Join();" value="Join" style="visibility: visible;">
+							</div>
+
+							<div class="container">						
+								<a id="ctl00_ctl00_MemberBar_SendPassword" class="forgot" href="/script/Membership/SendPassword.aspx?rp=/Questions/5382597/How-I-can-integrate-EID-reader-with-tablet">Forgot your password?</a>
+							</div>
+						</form>
+
+						<hr class="divider-dark">
+
+						Sign in with &nbsp;<a class="oauth" alt="Sign in using Github" title="Sign in using Github" href="/script/Membership/OAuthLogOn.aspx?auth=GitHub"><img src="/script/Membership/Images/octicons_github-lg.png" style="vertical-align:middle;padding-right:3px;border:0;"></a>
+<a class="oauth" alt="Sign in using Facebook" title="Sign in using Facebook" href="/script/Membership/OAuthLogOn.aspx?auth=Facebook"><img src="/script/Membership/Images/facebook-lg.png" style="vertical-align:middle;padding-right:3px;border:0;"></a>
+<a class="oauth" alt="Sign in using Google" title="Sign in using Google" href="/script/Membership/OAuthLogOn.aspx?auth=Google"><img src="/script/Membership/Images/google-plus-lg.png" style="vertical-align:middle;padding-right:3px;border:0;"></a>
+<a class="oauth" alt="Sign in using Microsoft" title="Sign in using Microsoft" href="/script/Membership/OAuthLogOn.aspx?auth=Microsoft"><img src="/script/Membership/Images/microsoft-lg.png" style="vertical-align:middle;padding-right:3px;border:0;"></a>
+
+
+
+					  </div>
+					</div>
+				  </div>
+
+            </span>
+		
+	</div>
+</div>
+		</div>
+	</div>
+
+	
+	<div id="ctl00_ctl00_SH" class="site-header fixed">
+		<div class="main-content">
+			<div class="logo"><a href="/"><img id="ctl00_ctl00_Logo" tabindex="1" title="CodeProject" src="https://codeproject.freetls.fastly.net/App_Themes/CodeProject/Img/logo250x135.gif" alt="Home" style="height:135px;width:250px;border-width:0px;"></a></div>
+			<div class="promo"><div class="msg-728x90" data-format="728x90" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros" data-country="US" data-tags="Android,pos_top"><noscript><a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=728x90&c=936159"><img src="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=728x90&c=936159"  width="728px" height="90px" target="_blank"/></a></noscript><div id="div-gpt-ad-lqm.codeproject.site/ros-1" style="height: 90px; width: 728px; box-sizing: border-box; border: 0px; font-size: 0px;"><div id="google_ads_iframe_/6839/lqm.codeproject.site/ros_0__container__" style="border: 0pt none; width: 728px; height: 0px;"></div></div></div></div>
+		</div>
+	</div>
+
+	
+	<div id="ctl00_ctl00_TPR" class="sub-headerbar flex-container flex-extend flex-wrap fixed">
+		<div class="flex-item" style="min-width:20rem">
+			
+
+<div class="navbar clearfix">
+<ul class="navmenu openable">
+
+<li class="desktop-only"><a id="ctl00_ctl00_TopNavBar_Home" href="https://www.codeproject.com">home</a>
+
+
+</li><li class="openable"><a id="ctl00_ctl00_TopNavBar_Art" class="down" href="/script/Articles/Latest.aspx">articles</a>
+
+	<ul>
+		<li class="openable"><a id="ctl00_ctl00_TopNavBar_ArtTopicList" class="fly" onmouseover="navBarMenu.ShowMap(this, 'ctl00_ctl00_TopNavBar_MapFlyout');" href="/script/Content/SiteMap.aspx">Browse Topics<span class="has-submenu">&gt;</span></a><ul id="ctl00_ctl00_TopNavBar_MapFlyout" class="taxonomy">
+			<li>
+				<div id="siteMap"></div>
+			</li>
+			</ul>
+		</li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtLatestArts" class="fly" href="/script/Articles/Latest.aspx">Latest Articles</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtTop" class="fly" href="/script/Articles/TopArticles.aspx?ta_so=5">Top Articles</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtGuide" class="fly" href="/info/Submit.aspx">Posting/Update Guidelines</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtHelpForum" class="fly" href="/Forums/1641/Article-Writing">Article Help Forum</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtPostArticle" class="fly highlight1" href="/script/Articles/Submit.aspx">
+			<img src="https://codeproject.freetls.fastly.net/images/write13.png" width="13" height="13"> Submit an article or tip
+			</a></li>
+        
+		<li><a id="ctl00_ctl00_TopNavBar_ArtImportGitHub" class="fly highlight3" href="/script/Articles/ImportArticle.aspx">
+			<img src="https://codeproject.freetls.fastly.net/images/write13.png" width="13" height="13"> Import GitHub Project
+			</a></li>
+        
+		<li><a id="ctl00_ctl00_TopNavBar_ArtPostBlog" class="fly highlight2" href="/script/Articles/BlogFeed.aspx">
+			<img src="https://codeproject.freetls.fastly.net/images/write13.png" width="13" height="13"> Import your Blog
+			</a></li>		
+        
+        <li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+<li class="openable">
+<a id="ctl00_ctl00_TopNavBar_Answers" class=" selected" href="/script/Answers/List.aspx?tab=active">
+    <span class="desktop-only tablet-only">quick answers</span><span class="mobile-only">Q&amp;A</span>
+</a>
+	<ul>
+		
+
+		<li><a id="ctl00_ctl00_TopNavBar_QAAsk" class="fly highlight2" href="/Questions/ask.aspx"><img src="https://codeproject.freetls.fastly.net/images/write13.png" width="13" height="13"> Ask a Question</a></li>
+
+		<li><a id="ctl00_ctl00_TopNavBar_QAUnanswered" class="fly" href="/script/Answers/List.aspx?tab=unanswered">View Unanswered Questions</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_QALatest" class="fly" href="/script/Answers/List.aspx?tab=active">View All Questions</a></li>
+        
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl00_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;amp;alltags=true&amp;amp;tags=81" style="padding-left:30px">View C# questions</a></li>
+			
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl01_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;amp;alltags=true&amp;amp;tags=78" style="padding-left:30px">View C++ questions</a></li>
+			
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl02_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;amp;alltags=true&amp;amp;tags=87" style="padding-left:30px">View Javascript questions</a></li>
+			
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl03_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;amp;alltags=true&amp;amp;tags=83" style="padding-left:30px">View Visual&nbsp;Basic questions</a></li>
+			
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl04_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;amp;alltags=true&amp;amp;tags=268" style="padding-left:30px">View Python questions</a></li>
+			
+    
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+<li class="openable"><a id="ctl00_ctl00_TopNavBar_Forums" href="/script/Forums/List.aspx">
+        <span class="desktop-only tablet-only">discussions</span><span class="mobile-only">forums</span>
+</a>
+
+	<ul>
+		<li><a id="ctl00_ctl00_TopNavBar_CodeProjectAI" class="fly" href="/Feature/CodeProjectAI-Discussions.aspx">CodeProject.AI Server</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_MessageBoardsAll" class="fly" href="/script/Forums/List.aspx">All Message Boards...</a></li>
+		<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/1580997/Application-Lifecycle">Application Lifecycle<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/1533717/Running-a-Business">Running a Business</a></li>
+<li><a class="fly" href="/Forums/1533716/Sales-Marketing">Sales / Marketing</a></li>
+<li><a class="fly" href="/Forums/1651/Collaboration-Beta-Testing">Collaboration / Beta Testing</a></li>
+<li><a class="fly" href="/Forums/3304/Work-Issues">Work  Issues</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/369270/Design-and-Architecture">Design and Architecture</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1969389/Artificial-Intelligence">Artificial Intelligence</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/12076/ASP-NET">ASP.NET</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1580226/JavaScript">JavaScript</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1969388/Internet-of-Things">Internet of Things</a>
+</li>
+<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/1647/C-Cplusplus-MFC">C / C++ / MFC<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/4486/ATL-WTL-STL">ATL /  WTL / STL</a></li>
+<li><a class="fly" href="/Forums/3785/Managed-Cplusplus-CLI">Managed C++/CLI</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1649/Csharp">C#</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1627782/Free-Tools">Free Tools</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1827460/Objective-C-and-Swift">Objective-C and Swift</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1725/Database">Database</a>
+</li>
+<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/186301/Hardware-Devices">Hardware &amp; Devices<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/1644/System-Admin">System Admin</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1606152/Hosting-and-Servers">Hosting and Servers</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1643/Java">Java</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1942421/Linux-Programming">Linux Programming</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1988311/Python">Python</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1650/NET-Core-and-Framework">.NET (Core and Framework)</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1848626/Android">Android</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1876716/iOS">iOS</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/13695/Mobile">Mobile</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1004257/WPF">WPF</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1646/Visual-Basic">Visual Basic</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1640/Web-Development">Web Development</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/suggestions.aspx">Site Bugs / Suggestions</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1652005/Spam-and-Abuse-Watch">Spam and Abuse Watch</a>
+</li>
+
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+<li class="openable"><a id="ctl00_ctl00_TopNavBar_Features" href="/Feature/">
+      <span class="desktop-only tablet-only">features</span><span class="mobile-only">features</span>
+</a>
+
+	<ul>
+		<li><a id="ctl00_ctl00_TopNavBar_Comps" class="fly" href="/script/Contests/CurrentCompetitions.aspx?cmpTpId=3&amp;amp;awsac=true">Competitions</a></li>
+        
+		<li><a id="ctl00_ctl00_TopNavBar_News" class="fly" href="/script/News/List.aspx">News</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_Insider" class="fly" href="/Feature/Insider/">The Insider Newsletter</a></li>
+    	<li><a id="ctl00_ctl00_TopNavBar_DailyBuild" class="fly" href="/Feature/DailyBuild">The Daily Build Newsletter</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_Newsletters" class="fly" href="/script/Mailouts/Archive.aspx?mtpid=1">Newsletter archive</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_Surveys" class="fly" href="/script/Surveys/List.aspx">Surveys</a></li>
+		
+        
+		<li><a id="ctl00_ctl00_TopNavBar_Stuff" class="fly" href="/Info/Stuff.aspx">CodeProject Stuff</a></li>
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+<li class="openable"><a id="ctl00_ctl00_TopNavBar_Lounge" href="/Lounge.aspx">
+            <span class="desktop-only tablet-only">community</span><span class="mobile-only">lounge</span>
+</a>
+
+	<ul>
+		<li><a id="ctl00_ctl00_TopNavBar_WhosWho" class="fly" href="/script/Membership/Profiles.aspx">Who's Who</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_MVPs" class="fly break" href="/script/Contests/Winners.aspx?obtid=1&amp;amp;cmpTpId=2&amp;amp;cid=0">Most Valuable Professionals</a></li>
+
+		<li><a id="ctl00_ctl00_TopNavBar_LoungeLnk" class="fly highlight2" href="/Lounge.aspx">The Lounge &nbsp;</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_SiteBlog" class="fly break" href="/Members/CodeProject#_comments">The CodeProject Blog</a></li>
+
+		<li><a id="ctl00_ctl00_TopNavBar_WhereAmILink" class="fly" href="/Forums/1939564/Where-I-am-Member-Photos">Where I Am: Member Photos</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_InsiderLnk" class="fly" href="/Insider.aspx">The Insider News</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_WeirdWonderful" class="fly" href="/Feature/WeirdAndWonderful.aspx">The Weird &amp; The Wonderful</a></li>
+
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+<li class="openable" style="margin-left:20px"><a id="ctl00_ctl00_TopNavBar_Help" href="/KB/FAQs/">
+    <span class="desktop-only tablet-only">help</span><span class="mobile-only">?</span>
+</a>
+
+
+	<ul>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpWhatIs" class="fly" href="/info/guide.aspx">What is 'CodeProject'?</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpGeneral" class="fly break" href="/KB/FAQs/">General FAQ</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpPostQuestion" class="fly break highlight2" href="/Questions/ask.aspx">Ask a Question</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpBugs" class="fly" href="/suggestions.aspx">Bugs and Suggestions</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpArticles" class="fly" href="/Forums/1641/Article-Writing">Article Help Forum</a></li>
+		
+		
+		
+		
+		<li><a id="ctl00_ctl00_TopNavBar_HelpAboutUs" class="fly" href="/info/about.aspx">About Us</a></li>
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+</ul>
+
+</div>
+		</div>
+		<div class="flex-item-tight align-right">
+			
+
+<div class="searchbar">
+
+<form method="get" action="/search.aspx?sbo=kw" name="Search" class="tight">
+
+
+<table border="0" cellspacing="0" cellpadding="0" class="search"><tbody><tr><td><input tabindex="2" class="search subdue" id="sb_tb" autocomplete="off" value="" name="q"></td><td><input type="image" src="https://codeproject.freetls.fastly.net/images/search.gif"></td></tr></tbody></table>
+
+<div class="hover-container">
+	<div id="SearchFilter" class="search-advanced small-text align-left" style="display: none;">
+	<b>Search within:<br></b>
+		
+		<input type="radio" id="sb_kw" name="sbo" value="kw"><label for="sb_kw">Articles</label><br>
+<input type="radio" id="sb_qa" name="sbo" value="qa" checked="checked"><label for="sb_qa">Quick Answers</label><br>
+<input type="radio" id="sb_fm" name="sbo" value="fm"><label for="sb_fm">Messages</label><br>
+
+
+		
+		<div id="ctl00_ctl00_SearchBarCtrl_UseSavedFilters" class="padded-top"><input type="checkbox" id="usf" name="usf"><label for="usf">Use my saved <a target="_blank" href="https://www.codeproject.com/script/Membership/Modify.aspx#contentfilter">content filters</a></label><input type="hidden" id="usfc" name="usfc" value="false"></div>
+
+		
+		
+	</div>
+</div>
+</form>
+
+</div>
+		</div>
+		<div class="sub-headerbar-divider"></div>
+	</div>		
+	
+
+	<div id="C" class="container-content-wrap fixed"> 
+		<div class="container-content">
+
+			<div class="container-breadcrumb">
+			
+			</div>
+
+			
+			<div id="ctl00_ctl00_ContentPane" class="container-main">
+
+				<div class="flex-container flex-extend">
+
+					
+					
+					
+
+					
+					<div style="min-height:600px" class="flex-item">
+
+						<a name="Main"></a>
+
+						
+						
+
+						
+						
+
+						
+						
+
+
+<form name="aspnetForm" method="post">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+
+<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakOULBdUi8ZrehokNunhauO29fg_hDwzWrrydB-L3tqh2NxgwAQRTHG5XlZPipP5vHft4T8w1&amp;t=638368886615952268" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="47897F27">
+</div>
+
+<div id="Q" class="container-entry container-question flex-container flex-extend">
+
+	
+	<div id="T" class="text flex-item fixed">
+	
+		<div class="clearfix">
+			
+			<div id="ctl00_ctl00_MC_QARow" class="mainlinks flex-container flex-extend">
+				<div class="flex-item">
+					<a id="ctl00_ctl00_MC_AskQ" class="button compose" href="/Questions/ask.aspx">Ask a Question</a>
+				</div>
+				<div class="navigation flex-item align-right">
+					<a id="ctl00_ctl00_MC_Latest" href="/script/Answers/List.aspx?tab=active">All<span class="desktop-only"> Questions</span></a>
+					<a id="ctl00_ctl00_MC_Unansw" href="/script/Answers/List.aspx?tab=unanswered"><span class="desktop-only">All </span>Unanswered</a> 
+					
+					<a id="ctl00_ctl00_MC_Help" class="faq" href="/KB/FAQs/QuickAnswersFAQ.aspx">FAQ</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="contentdiv">
+	
+		<!-- Main Page Contents Start -->
+		
+
+<script type="text/javascript">
+function ConfirmDelete() { return window.confirm("Are you sure you want to delete this item?"); }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<a name="_articleTop"></a>
+
+
+<div class="float-right" style="width:150px">
+	
+</div>
+
+<div itemprop="mainEntity" itemscope="" itemtype="http://schema.org/Question">
+
+    <div class="question">
+
+    
+    <div class="header">
+	    <a id="ctl00_ctl00_MC_AMC_TitleLink" class="header tight padded-top" href="/Questions/5382597/How-I-can-integrate-EID-reader-with-tablet"><h1 id="ctl00_ctl00_MC_AMC_ItemTitle" itemprop="name">How I can integrate EID reader with tablet</h1></a>
+    </div>
+
+    <div id="CC" class="container-content">
+
+	    
+	    <div class="container-question clearfix extended">
+
+		    <div class="rate-group">
+
+			    
+			    <div class="rate-item">
+			        <div id="ctl00_ctl00_MC_AMC_RatingCtrl_RatingTable" class="small-text" data-objectref="2_5382597_2">
+
+	<meta itemprop="upvoteCount" content="0">
+
+
+	<div id="ctl00_ctl00_MC_AMC_RatingCtrl_RatingRow" class="flex-container rating-container medium-stars">
+
+					
+		
+
+		
+		<div class="nowrap tooltip">
+
+			
+			
+			
+
+			
+			<div id="ctl00_ctl00_MC_AMC_RatingCtrl_RatingHistWrap" class="tooltip">
+
+				
+				<div id="ctl00_ctl00_MC_AMC_RatingCtrl_ResultWithHist" class="rating-result"><div class="flex-container rating-stars medium-stars"><div><img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/star-fill-md.png" style="width:16px;height:16px"></div><div style="width:16px;position:relative" class="clipped"><img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/star-empty-md.png" style="width:16px;height:16px;position:absolute;top:0px;right:0"></div><div><img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/star-empty-md.png" style="width:16px;height:16px"></div><div><img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/star-empty-md.png" style="width:16px;height:16px"></div><div><img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/star-empty-md.png" style="width:16px;height:16px"></div></div></div>
+				
+
+				<div class="speech-bubble-container-up-right" style="width:170px">
+					<div class="speech-bubble-up-right">
+						<div class="histogram"></div>
+					</div>
+					<div class="speech-bubble-pointer-up-right">
+						<div class="speech-bubble-pointer-up-right-inner"></div>
+					</div>
+				</div>
+			</div>
+
+			
+            
+
+			
+            <span id="ctl00_ctl00_MC_AMC_RatingCtrl_RatingSignin" class="speech-bubble-container-down">
+		        <div class="speech-bubble-down">
+                    Please <a id="ctl00_ctl00_MC_AMC_RatingCtrl_SignUp" href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f5382597%2fHow-I-can-integrate-EID-reader-with-tablet">Sign up or sign in</a> 
+                    to vote.
+		        </div>
+		        <div class="speech-bubble-pointer-down">
+			        <div class="speech-bubble-pointer-down-inner"></div>
+		        </div>
+	        </span>    
+
+		</div>
+		
+	
+		
+		<div id="ctl00_ctl00_MC_AMC_RatingCtrl_VoteCountNoHist" class="rating-votes nowrap">1.00/5  (2 votes)</div>	
+
+		
+
+		
+		<div class="rating-undo" title="Undo vote" style="margin-left:5px;display:none"></div>
+
+		
+		
+	</div>
+
+	
+	
+
+</div>
+
+			    </div>
+
+			    
+
+		    </div>
+
+		    
+		    <div style="height:16px;width:100%">
+			    <span id="ctl00_ctl00_MC_AMC_TagList_TagWrp" class="medium-text tags horizontal">
+
+	
+	<span id="ctl00_ctl00_MC_AMC_TagList_TagLabel" class="bold">See more:</span>
+
+	
+	<span id="ctl00_ctl00_MC_AMC_TagList_VisibleTags"><div class="t"><a href="/script/Answers/List.aspx?tab=active&amp;tags=280" data-id="280">Android</a></div></span> 
+
+	
+	
+</span>
+
+
+		    </div>
+
+		    <div style="margin-top:25px" itemprop="text">
+			    How I can integrate EID with Tablet  Do I need Mobile application for that ?<br>
+<br>
+<b>What I have tried:</b><br>
+<br>
+i read the documents in ICO and I figure out android SDK
+		    </div>
+	    </div>
+
+    </div>
+
+    <div class="qa-info row">
+
+
+	    
+	    <div class="col">
+		    <strong>Posted</strong> <time itemprop="dateCreated" datetime="2024-05-20T03:07:00">20-May-24 3:07am</time>
+<div class="member-rep-container">  
+	<a id="ctl00_ctl00_MC_AMC_QuestionAuthorRepInfo_MemberName" href="/script/Membership/View.aspx?mid=16172662"><span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">Nasma Zahir</span></span></a><span id="ctl00_ctl00_MC_AMC_QuestionAuthorRepInfo_TotalPoints" title="Total reputation points" class="member-rep-box"></span>
+</div>
+
+	    </div>
+
+	    
+	    
+	    <div class="col" style="margin-left:10px">
+		    <b>Updated</b> 20-May-24 3:17am
+<div class="member-rep-container">  
+	<a id="ctl00_ctl00_MC_AMC_QuestionEditorRepInfo_MemberName" href="/script/Membership/View.aspx?mid=2587207"><span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">PIEBALDconsult</span></span></a><span id="ctl00_ctl00_MC_AMC_QuestionEditorRepInfo_TotalPoints" title="Total reputation points" class="member-rep-box"></span>
+</div>
+
+	    </div>
+	    
+	    <div class="version"><a href="/script/Articles/ListVersions.aspx?aid=5382597">v2</a></div>
+
+	    <div class="col align-right small-text commands">
+
+		    
+		    
+	    </div>	
+	
+    </div>
+
+    
+
+    
+    <div class="spaced padded-top">
+	    <a id="ctl00_ctl00_MC_AMC_AddChild1" class="button large anchorLink" href="#NewEntryGroup" name="anchorTarget" style="display: none;">Add a Solution</a>
+    </div>
+
+    
+    <a id="ctl00_ctl00_MC_AMC_QuestionComments_ContainerPermalink" class="CommentAnchor" name="cmt2_5382597"></a>
+<div id="ctl00_ctl00_MC_AMC_QuestionComments_ComHdr" class="comment-header">Comments</div>
+<div id="ctl00_ctl00_MC_AMC_QuestionComments_CommentContainer" class="container-comments" objectref="2_5382597_2" pagenumber="0" pagesize="0" boldmemberid="16172662" currentmemberid="0" modifystatus="False">	 
+
+	
+	
+
+	
+	<div name="CP-CommentList" class="comment-list">
+		
+
+
+
+		<div id="ctl00_ctl00_MC_AMC_QuestionComments_CommentsList_List_ctl00_CR_CommentItem" class="comment-item hover-row first" commentid="1126665" authorid="52727" associatedobjectref="2_5382597_2">
+
+	<div class="flex-container flex-extend">
+		<div class="flex-item">
+			<a href="/script/Membership/View.aspx?mid=52727" id="ctl00_ctl00_MC_AMC_QuestionComments_CommentsList_List_ctl00_CR_MemberLink" class="comment-author">David Crow</a><span id="cmt-jump-1126665"></span>
+			<span id="ctl00_ctl00_MC_AMC_QuestionComments_CommentsList_List_ctl00_CR_DatePosted">5 days ago</span> 
+			
+			&nbsp; &nbsp; 
+
+			
+			
+		</div>
+
+		<div class="comment-commands flex-item-tight">
+			
+			
+
+			
+
+			
+		</div>	
+	</div>
+
+	<div id="ctl00_ctl00_MC_AMC_QuestionComments_CommentsList_List_ctl00_CR_CommentContent" class="comment-content">An EID (a 32-bit number) allows your tablet to connect to a cellular network without the need for a physical SIM card, so you do not need an app for that.</div>
+
+	<div id="EditDialogPlaceholder"></div>
+	<div id="ReplyDialogPlaceholder"></div>
+
+</div>
+
+	
+
+
+
+
+
+	</div> 
+
+	 
+	
+
+	  
+
+</div> 
+
+
+    </div>
+	<hr>
+
+    
+
+    
+    <div id="NewEntryGroup" class="container" style="">
+	    
+
+<div id="PostEntryContainer" class="qa-post">
+
+
+<h2 id="ctl00_ctl00_MC_AMC_PostEntryObj_NewEntryHeading" class="contrast1-color">Add your solution here</h2>
+
+
+<input name="ctl00$ctl00$MC$AMC$PostEntryObj$CustomValidationHook" type="text" id="ctl00_ctl00_MC_AMC_PostEntryObj_CustomValidationHook" style="display:none">
+
+
+
+
+
+
+
+<div id="ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1" class="error callout" style="color:Red;display:none;">
+
+</div>
+
+
+
+<div class="container-post new-message pe-3">
+
+	<div class="inline">
+
+		
+		
+
+		<a name="PostContent"></a>
+
+		
+		
+
+		
+		<div class="clearfix">
+            
+
+<div id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_FormatBar" class="desktop-block-only tablet-block-only"><button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('b');return false;" title="Wrap the Selected Text in HTML bold Tags"><b>&nbsp;B&nbsp;</b></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('i');return false;" title="Wrap the Selected Text in HTML Italic Tags"><i>&nbsp;I&nbsp;</i></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('u');return false;" title="Wrap the Selected Text in HTML Underline Tags">&nbsp;<u>U</u>&nbsp;</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('strike');return false;" title="Wrap the Selected Text in HTML strike through Tags"><strike>&nbsp;S&nbsp;</strike></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('small');return false;" title="Wrap the Selected Text in HTML small Tags"><small>small</small></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('big');return false;" title="Wrap the Selected Text in HTML big Tags">BIG</button>
+<span class="tooltip"><button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre', null, false);return false;" title="Wrap the Selected Text in 'pre' Tags: For separate source code blocks"><tt style="background-color: #FBEDBB;">code</tt></button>
+<div class="tooltip-flyout small-text" style="width:auto !important"><div class="flex-container"><div class="flex-item"><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;text&quot;')">Plain Text</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;ASM&quot;')">ASM</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;ASP&quot;')">ASP</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;ASP.NET&quot;')">ASP.NET</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;BASIC&quot;')">BASIC</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;BAT&quot;')">BAT</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;C#&quot;')">C#</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;C++&quot;')">C++</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;COBOL&quot;')">COBOL</div></div><div class="flex-item"><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;CoffeeScript&quot;')">CoffeeScript</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;CSS&quot;')">CSS</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Dart&quot;')">Dart</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;dbase&quot;')">dbase</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;F#&quot;')">F#</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;FORTRAN&quot;')">FORTRAN</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;HTML&quot;')">HTML</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Java&quot;')">Java</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Javascript&quot;')">Javascript</div></div><div class="flex-item"><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Kotlin&quot;')">Kotlin</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Lua&quot;')">Lua</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;MIDL&quot;')">MIDL</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;MSIL&quot;')">MSIL</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;ObjectiveC&quot;')">ObjectiveC</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Pascal&quot;')">Pascal</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;PERL&quot;')">PERL</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;PHP&quot;')">PHP</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;PowerShell&quot;')">PowerShell</div></div><div class="flex-item"><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Python&quot;')">Python</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Razor&quot;')">Razor</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Ruby&quot;')">Ruby</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Scala&quot;')">Scala</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Shell&quot;')">Shell</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;SLN&quot;')">SLN</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;SQL&quot;')">SQL</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Swift&quot;')">Swift</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;T4&quot;')">T4</div></div><div class="flex-item"><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Terminal&quot;')">Terminal</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;TypeScript&quot;')">TypeScript</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;VB&quot;')">VB</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;VBScript&quot;')">VBScript</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;XML&quot;')">XML</div><div class="list-item nowrap" style="cursor:pointer" onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;YAML&quot;')">YAML</div></div></div></div></span><button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('code', null, false);return false;" title="Wrap the Selected Text in 'code' Tags: For code within sentences"><code>var</code></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.insertText('&amp;l' + 't;');return false;" title="Insert HTML Extended Character Code For <">&nbsp;&lt;&nbsp;</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.insertText('&amp;g' + 't;');return false;" title="Insert HTML Extended Character Code For >">&nbsp;&gt;&nbsp;</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.insertText('&amp;a' + 'mp;');return false;" title="Insert HTML Extended Character Code For &amp;">&nbsp;&amp;&nbsp;</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.inLinkErAte(null, false);return false;" title="Convert URL to a hyperlink">link</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.inLinkErAte(null, true);return false;" title="Convert URL to a hyperlink with optional 'New Window' link">[^]</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.encoderate();return false;" title="HTML encode text">encode</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.untab();return false;" title="Replace tabs with spaces">untab</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.fixCase();return false;" title="Fix the casing of a sentence">case</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.adjustLeading(4);return false;" title="indent">indent</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.adjustLeading(-4);return false;" title="outdent">outdent</button>
+</div>
+
+<div id="EditWrap">
+	<table id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_EditContainer" cellpadding="0" cellspacing="0" class="container-editor">
+	<tbody><tr valign="top">
+		<td style="width:100%">
+		<div class="resizable-control"><span><textarea name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$MessageText" id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText" class="resizable text-editor processed" style="width:100%;height:250px;"></textarea><div class="grippie" style="margin-right: -12px;"> </div></span></div>
+		
+        
+	</td>
+	</tr>
+</tbody></table>
+
+</div>
+
+<div id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_pasteDialog" class="paste-dialog invisible">
+
+	<div class="header"><a href="#" class="close-notify">OK</a>Paste as</div>
+
+    <div class="padded">
+	<table id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting" class="small-text paste-options extended" border="0">
+	<tbody><tr>
+		<td><span title="HTML markup will be removed from text" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;text&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_0" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="text" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;text&quot;);" tabindex="8"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_0">Strip HTML</label></span></td>
+	</tr><tr>
+		<td><span title="Pasted text will automatically be HTML-encoded" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;encoded&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_1" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="encoded" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;encoded&quot;);" tabindex="8"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_1">Encode HTML</label></span></td>
+	</tr><tr>
+		<td><span title="Clipboard will be pasted as-is, preserving HTML tags and entities." onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;html&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_2" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="html" checked="checked" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;html&quot;);" tabindex="8"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_2">Paste as-is</label></span></td>
+	</tr><tr>
+		<td><span title="Clipboard text will be wrapped in PRE tags, and content HTML encoded, always" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;code&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_3" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="code" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;code&quot;);" tabindex="8"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_3">Code block</label></span></td>
+	</tr><tr>
+		<td><span title="Clipboard text will be pasted within a quote block" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;quote&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_4" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="quote" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;quote&quot;);" tabindex="8"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_4">Quoted Text</label></span></td>
+	</tr><tr>
+		<td><span title="Sniff pasted text to see if it contains code, and wrap in PRE blocks if it does" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;auto&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_5" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="auto" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;auto&quot;);" tabindex="8"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_5">Best guess</label></span></td>
+	</tr>
+</tbody></table>
+	</div>
+
+	<div id="expando" class="invisible">
+		<div class="header">To display as</div>
+		<table width="100%" cellpadding="0" cellspacing="0">
+		<tbody><tr><td class="MsgBd BdSel"><div id="pasteHtmlPreview" class="paste-preview"></div></td></tr>
+		</tbody></table>
+	</div>
+
+</div><span id="ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal" style="color:Red;display:none;">The content must be between 30 and 50000 characters.</span>
+		</div>
+
+		
+
+        
+
+		<div class="small-text padded-top">
+			<span class="small-text invisible"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml" type="checkbox" name="ctl00$ctl00$MC$AMC$PostEntryObj$IgnoreHtml" tabindex="6"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml">Treat my content as plain text, not as HTML</label></span>
+		</div>
+
+		
+		<h2>Preview <span id="refresh-count" style="display:none">0</span></h2>
+		<div id="Preview" class="preview">…</div>
+
+		
+		
+
+		
+		<br>
+		<p id="AjaxLogonErrors" class="error callout" style="display:none"></p>
+		
+
+<div id="LogOnContainer">
+
+	<table class="member-signin" cellspacing="0">
+	
+	<tbody><tr>
+		<td id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_ExistHead" colspan="2"><h3>Existing Members</h3>
+			<div style="margin:-20px 0 10px" class="subdue">Sign in to your account</div>
+		</td>
+<td id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickSignHead" colspan="2"><h3 id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickTitle">...or Join us</h3>
+			<div style="margin:-20px 0 10px" class="subdue">Download, Vote, Comment, Publish.</div>
+		</td>
+
+	</tr>
+
+	<tr valign="top">
+
+		
+		<td>
+
+			<table>
+			<tbody><tr>
+				<td class="align-middle align-right nowrap">Your Email &nbsp;</td>
+				<td><input name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$CurrentEmail" id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_CurrentEmail" class="small-text" type="email" autocomplete="email" style="width:175px;"></td>
+			</tr>
+			<tr>
+				<td class="align-middle align-right nowrap">Password &nbsp;</td>
+				<td><input name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$CurrentPassword" type="password" id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_CurrentPassword" class="small-text" autocomplete="current-password" style="width:175px;"></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="align-middle align-right nowrap">
+					
+					<div><a id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_SendPassword" class="forgot small-text" href="https://www.codeproject.com/script/Membership/SendPassword.aspx?rp=/">Forgot your password?</a></div>
+				</td>
+			</tr>
+			</tbody></table>
+
+		</td>
+		<td width="70px">&nbsp;</td>
+
+		<td>
+
+			<table>
+			<tbody><tr>
+				<td class="align-middle align-right nowrap">Your Email &nbsp;</td>
+				<td class="align-right">
+					<input name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$QuickEmail" id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickEmail" class="small-text" type="email" autocomplete="off" style="width:175px;">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div id="NewEmailError" class="locked invisible small-text" style="margin-top: -10px; display: none;">This
+					email is in use. Do you need your <a id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_Password2" href="https://www.codeproject.com/script/Membership/SendPassword.aspx?rp=/">password</a>?</div>
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="align-middle align-right nowrap subdue">
+					Optional Password &nbsp;
+					<input name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$QuickPassword" type="password" id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickPassword" class="small-text" autocomplete="new-password" style="width:125px;">
+					<div id="password-strength-quick" style="margin-top: -10px; padding-bottom: 10px;"><span class="passStrengthify" style="display: inline-block; visibility: hidden;"><div><span style="font-size: smaller;">Strength<span style="margin-left: 1em; color: gray;">Too short</span></span></div><span style="height: 3px; width: 15px; margin-right: 3px; max-height: 3px; font-size: 1px; float: left; padding-right: 0px; background-color: gray;"></span><span style="height: 3px; width: 15px; margin-right: 3px; max-height: 3px; font-size: 1px; float: left; padding-right: 0px; background-color: gray;"></span><span style="height: 3px; width: 15px; margin-right: 3px; max-height: 3px; font-size: 1px; float: left; padding-right: 0px; background-color: gray;"></span><span style="height: 3px; width: 15px; margin-right: 3px; max-height: 3px; font-size: 1px; float: left; padding-right: 0px; background-color: gray;"></span><span style="height: 3px; width: 15px; margin-right: 3px; max-height: 3px; font-size: 1px; float: left; padding-right: 0px; background-color: gray;"></span><span style="height: 3px; width: 15px; margin-right: 3px; max-height: 3px; font-size: 1px; float: left; padding-right: 0px; background-color: gray;"></span><span style="height: 3px; width: 15px; margin-right: 3px; max-height: 3px; font-size: 1px; float: left; padding-right: 0px; background-color: gray;"></span></span></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="align-right small-text">
+					
+				</td>
+			</tr>
+			</tbody></table>
+
+		</td>
+		<td width="70px">&nbsp;</td>
+
+		
+	</tr>
+
+	
+
+	</tbody></table>
+
+	<div id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_Choices" style="margin-top:20px;width:275px;margin-left:335px;" class="small-text subdue">
+		<input id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_TermsOfUse" type="checkbox" name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$TermsOfUse" checked="checked"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_TermsOfUse">I have read and agree to the <a target="_blank" href="/info/TermsOfUse.aspx">Terms of Service</a> and <a target="_blank" href="/info/privacy.aspx">Privacy Policy</a></label><br>
+		<span onchange="logonCtrlObject.OnNewslettersCheckChange(this);"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_AllNewsletters" type="checkbox" name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$AllNewsletters" checked="checked"><label for="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_AllNewsletters">Please subscribe me to the CodeProject newsletters</label></span>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+    function LogonCtrlObject()
+    {
+        var clickedOptin = false;
+
+        this.OnCountryChange = function (CASL, subscribing) {
+        }
+
+        this.OnNewslettersCheckChange = function (checkbox) {
+            clickedOptin = true;
+        }
+
+        this.OnCountrySelectionChange = function (dropdown) {
+            var CASLCountries = [ "Canada",];
+            if (dropdown.selectedIndex >= 0) {
+                var country = dropdown[dropdown.selectedIndex].text;
+
+                var useCASL = false;
+                for (i = 0; i < CASLCountries.length; i++) {
+                    if (CASLCountries[i] == country) {
+                        useCASL = true;
+                        break;
+                    }
+                }
+
+                if (!clickedOptin)
+                    $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_AllNewsletters').prop('checked', !useCASL);
+
+                logonCtrlObject.OnCountryChange(useCASL, $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_AllNewsletters').prop('checked'));
+            }
+        }
+    }
+
+    var logonCtrlObject = new LogonCtrlObject();
+</script>
+
+
+		
+		<div class="clearfix padded-top">
+		
+		<div id="AjaxSubmitGroup" style="">
+			<a href="javascript:void(0)" id="ctl00_ctl00_MC_AMC_PostEntryObj_AjaxSubmit" class="button-large safe" onclick="OnAjaxSubmit(); return false;">Submit your solution</a>
+		</div>
+		</div>
+
+		
+		<p id="AjaxSubmitErrors" class="error callout" style="display:none"></p>
+
+        
+        <div id="PostEntryMessage" class="padded-top"></div>
+
+		
+		<div class="callout">
+	    	When answering a question please:<br>
+		    <ol class="spaced">
+			<li>Read the question carefully.</li>
+			<li>Understand that English isn't everyone's first language so be lenient of bad
+			spelling and grammar.</li>
+			<li>If a question is poorly phrased then either ask for clarification, ignore it, or
+			<b>edit the question</b> and fix the problem. Insults are not welcome.</li>
+            <li>Don't tell someone to read the manual. Chances are they have and don't get it.
+                Provide an answer or move on to the next question.
+		    </li></ol>
+		    Let's work to help developers, not make them feel stupid.
+		</div>
+		
+
+	</div>
+
+    
+	
+
+	
+    <div class="clearfix"></div>
+
+	
+</div>
+
+
+</div>
+<br style="clear:both">
+    </div>
+
+    
+    <div id="ctl00_ctl00_MC_AMC_LicenseTerms" class="small-text" style="margin-top:20px;"><p class="small-text">This content, along with any associated source code and files, is licensed under <a href="http://www.codeproject.com/info/cpol10.aspx" rel="license">The Code Project Open License (CPOL)</a></p></div>
+</div> 
+
+
+
+
+		<!-- Main Page Contents End -->
+
+		</div>
+
+	</div>
+	
+
+	
+	<div id="ctl00_ctl00_MC_NavRight" class="text-sidebar question flex-item">
+
+		
+
+<div class="align-right">
+    <div style="display:inline-block;position:relative;top:-5px">
+        
+    </div>
+    &nbsp;
+    <a id="ctl00_ctl00_MC_Tools_PrintLnk" data-enabletooltip="true" data-tooltip="Print" data-width="auto" rel="nofollow" href="/Questions/5382597/How-I-can-integrate-EID-reader-with-tablet?display=Print" class="tooltip" title=""><img src="/App_Themes/CodeProject/Img/print48.png" style="width:24px;height:24px;border:0pt none;" alt="Print"><div class="speech-bubble-container-up" style="width:auto">  <div class="speech-bubble-up" style="text-align:center"> Print</div>  <div class="speech-bubble-pointer-up">    <div class="speech-bubble-pointer-up-inner"></div>  </div></div></a>
+
+     
+
+    <a id="ctl00_ctl00_MC_Tools_AnswersRSS" data-enabletooltip="true" data-tooltip="Quick Answers RSS feed" href="/webservices/QuestionRSS.aspx" class="tooltip" title="">
+        <img src="/App_Themes/CodeProject/Img/rss48.png" alt="Answers RSS" style="width:24px;height:24px;border:0pt none;">
+        <div class="speech-bubble-container-up" style="width:200px">  <div class="speech-bubble-up" style="text-align:center"> Quick Answers RSS feed</div>  <div class="speech-bubble-pointer-up">    <div class="speech-bubble-pointer-up-inner"></div>  </div></div></a>
+
+    
+
+</div>
+
+		
+
+		<div class="padded-top" style="height:250px;width:300px">
+			
+			<div class="msg-300x250" data-format="300x250" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros" data-country="US" data-loadonview="true" data-tags="Android"><noscript><a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=300x250&c=936159"><img src="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=300x250&c=936159"  width="300px" height="250px" target="_blank"/></a></noscript><div id="div-gpt-ad-lqm.codeproject.site/ros-2" style="height: 250px; width: 300px; box-sizing: border-box; border: 0px; font-size: 0px;"><div id="google_ads_iframe_/6839/lqm.codeproject.site/ros_1__container__" style="border: 0pt none; width: 300px; height: 0px;"></div></div></div>
+		</div>
+
+		<div class="sticky">
+			
+
+			
+
+			
+
+			<table class="experts-list padded-top">
+				<tbody><tr><td colspan="2" class="header">Top Experts</td></tr>
+				<tr class="subheader"><td width="50%">Last 24hrs</td><td width="50%">This month</td></tr>
+				<tr>
+					<td>
+
+<div class="">
+
+
+
+<table class="experts-list">
+<tbody><tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=283762">Dave Kreskowiak</a></td>
+<td align="right" class="points"><span title="Points earned in period">20</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=6122202">OriginalGriff</a></td>
+<td align="right" class="points"><span title="Points earned in period">20</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=5203325">George Swan</a></td>
+<td align="right" class="points"><span title="Points earned in period">10</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=14785880">Hemil Gandhi</a></td>
+<td align="right" class="points"><span title="Points earned in period">-59</span></td>
+</tr>
+</tbody></table>
+</div></td>
+					<td>
+
+<div class="">
+
+
+
+<table class="experts-list">
+<tbody><tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=213147">Pete O'Hanlon</a></td>
+<td align="right" class="points"><span title="Points earned in period">1,750</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=6122202">OriginalGriff</a></td>
+<td align="right" class="points"><span title="Points earned in period">1,387</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=34187">Richard Deeming</a></td>
+<td align="right" class="points"><span title="Points earned in period">550</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=283762">Dave Kreskowiak</a></td>
+<td align="right" class="points"><span title="Points earned in period">493</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=767687">Richard MacCutchan</a></td>
+<td align="right" class="points"><span title="Points earned in period">355</span></td>
+</tr>
+</tbody></table>
+</div></td>
+				</tr>
+			</tbody></table>
+
+			
+
+			
+		
+			<div style="margin:auto;width:160px;margin-top:10px;border: 1px solid #eee">
+				<div class="msg-160x600" data-format="160x600" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros" data-country="US" data-tags="Android"><noscript><a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=160x600&c=936159"><img src="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=160x600&c=936159"  width="160px" height="600px" target="_blank"/></a></noscript><div id="div-gpt-ad-lqm.codeproject.site/ros-3" style="height: 600px; width: 160px; box-sizing: border-box; border: 0px; font-size: 0px;"><div id="google_ads_iframe_/6839/lqm.codeproject.site/ros_2__container__" style="border: 0pt none; width: 160px; height: 0px;"></div></div></div>
+			</div>
+
+			
+
+			<div class="padded-top related">
+				
+	<div id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl00_header" class="header">Related Questions</div>
+	<div class="content-list">	
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl02_Link" href="//www.codeproject.com/Questions/637647/Magnetic-card-reader-integration-with-delphi">Magnetic card reader integration with delphi</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl03_Link" href="//www.codeproject.com/Questions/5381388/How-do-I-detect-spots-on-tablets">How do I detect spots on tablets</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl04_Link" href="//www.codeproject.com/Questions/242944/Integraion-of-RFID-Reader-with-c-sharp-window-appl">Integration of  RFID Reader with C# Windows application</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl05_Link" href="//www.codeproject.com/Questions/770756/integrate-barcode-reader-in-my-application-using-c">integrate barcode reader in my application using c#</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl06_Link" href="//www.codeproject.com/Questions/5370400/Guidance-requested-for-programming-tablet-devices">Guidance requested for programming tablet devices</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl07_Link" href="//www.codeproject.com/Questions/805205/I-Am-Developing-A-Fingerprint-Reader-Integration-B">I Am Developing A Fingerprint Reader Integration But I Am Not Able To Interact With The Device ?</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl08_Link" href="//www.codeproject.com/Questions/211542/fingerprint-reader-integration-in-asp-net-and-Csha">fingerprint reader integration in asp.net and C#</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl09_Link" href="//www.codeproject.com/Questions/79699/Using-Tablet-PC-to-Write-on-a-Form">Using Tablet PC to Write on a Form</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl10_Link" href="//www.codeproject.com/Questions/5371994/Mysql-data-reader-if-is-null-field-Csharp">Mysql data reader if is null field C#</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl11_Link" href="//www.codeproject.com/Questions/168851/How-to-show-RDLC-reports-in-Acrobat-Reader-which-i">How to show RDLC reports in Acrobat Reader which is integrated in .Net Windows Forms Application.</a>
+		
+	</div>
+	
+	</div>
+	
+
+			</div>
+
+		</div>
+
+	</div>
+	
+
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1"));
+var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1 = document.all ? document.all["ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1"] : document.getElementById("ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1");
+ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1.validationGroup = "ItemDetails";
+var ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal = document.all ? document.all["ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal"] : document.getElementById("ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal");
+ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal.errormessage = "The content must be between 30 and 50000 characters.";
+ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal.display = "Dynamic";
+ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal.validationGroup = "ItemDetails";
+ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal.evaluationfunction = "CustomValidatorEvaluateIsValid";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+
+
+
+						
+						
+
+						<br clear="all">
+					</div>
+
+					
+					
+
+				</div>
+
+				<div class="theme1-background padded-top padded-bottom bottom-promo">
+					<div class="msg-728x90" data-format="728x90" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros" data-country="US" data-loadonview="true" data-tags="Android,pos_bottom"><noscript><a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=728x90&c=936159"><img src="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=728x90&c=936159"  width="728px" height="90px" target="_blank"/></a></noscript></div>
+				</div>
+
+				<div class="site-footer">
+					<div class="align-left">
+						<a id="ctl00_ctl00_AdvertiseLink" href="http://developermedia.com/">Advertise </a><br>
+						<a id="ctl00_ctl00_PrivacyLink" href="/info/privacy.aspx">Privacy</a><br>
+   						<a id="ctl00_ctl00_CookiePolicyLink" href="/info/cookie.aspx">Cookies</a><br>
+						<a id="ctl00_ctl00_TermsOfUseLink" href="/info/TermsOfUse.aspx">Terms of Use</a><br>
+						Last Updated 20 May 2024
+					</div>
+
+					<div class="align-center">
+						
+
+
+<div class="page-width">
+    Layout: <a id="ctl00_ctl00_PageWidth_FixedT" title="Fixed width layout" rel="nofollow" class=" active" href="/Questions/5382597/How-I-can-integrate-EID-reader-with-tablet?PageFlow=FixedWidth">fixed</a>
+    |
+    <a id="ctl00_ctl00_PageWidth_FluidT" title="Fluid layout" rel="nofollow" href="/Questions/5382597/How-I-can-integrate-EID-reader-with-tablet?PageFlow=Fluid">fluid</a>
+</div>
+
+
+						
+					</div>
+
+					<div class="align-right">
+						Copyright © <a href="mailto:webmaster@codeproject.com">CodeProject</a>, 1999-2024 <br>
+						All Rights Reserved.<br>
+						<br>
+						Web02
+						2.8:2024-05-23:1<br>
+					</div>
+				</div>
+
+				<br clear="all">
+
+				
+
+			</div>
+			
+
+		</div>
+		
+
+	</div>
+	
+
+	<div id="ctl00_ctl00_Address" class="tiny-text subdue align-center padded-top">
+	CodeProject,
+	20 Bay Street, 11th Floor Toronto, Ontario, Canada M5J 2N8
+	+1 (416) 849-8900
+	</div>
+
+</div>
+<div id="page-bottom"></div>
+
+
+
+<script type="text/javascript"> // IMMEDIATE script
+
+var editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content;
+
+var editor_ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried;
+
+function UpdateSize(elmName, indicator) {
+ var elm = document.getElementById(elmName);
+ if (elm) {
+  var indElm = document.getElementById(indicator);
+  if (indElm) indElm.value = elm.value.length.toString();
+ }
+}
+
+function OnEdit() { 
+    $('#Preview').html('');
+    $('#AjaxSubmitErrors').hide();
+    $('#AjaxLogonErrors').hide();
+}
+var validationData = {};
+validationData.postErrorDivId   = 'AjaxSubmitErrors';
+validationData.logonErrorDivId  = 'AjaxLogonErrors';
+validationData.generalErrorMsg  = 'An error occurred and we were unable to complete your request. The error has been logged and an administrator notified. Sorry :(';
+validationData.minContentLength = 30;
+validationData.maxContentLength = 50000;
+validationData.badLengthMsg     = 'Please provide more content.';
+
+var newEntryData = {};
+newEntryData.postUrl          = '/script/Answers/WebServices/ProcessNewEntry.aspx';
+newEntryData.typeName         = 'answer';
+newEntryData.parentId         = 5382597;
+newEntryData.parentTypeName   = 'answer';
+newEntryData.containerId      = 'PostEntryContainer';
+newEntryData.messageId        = 'PostEntryMessage';
+newEntryData.contentId        = 'ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText';
+newEntryData.whatHaveYouTriedId = 'ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageText';
+newEntryData.submitBtnId      = 'AjaxSubmit';
+newEntryData.helpTipsId       = 'ctl00_ctl00_MC_AMC_PostEntryObj_HelpTips';
+newEntryData.useWysiwygEditor = false;
+newEntryData.ignoreHtmlId     = 'ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml';
+newEntryData.onPasteMode      = 'html';
+newEntryData.getEditorObject  = function(){ return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content; };
+newEntryData.recaptchaId      = 'g-recaptcha-response';
+
+var logonData = {};
+logonData.loggedIn    = false;
+logonData.postUrl     = 'https://www.codeproject.com/script/Membership/Ajax/ProcessLogonOrSignup.aspx';
+logonData.containerId = 'LogOnContainer';
+
+function OnAjaxSubmit() {
+    TryPostNewEntry(validationData, newEntryData, logonData);
+}
+
+var lastPreviewContent='';function RefreshPreview(previewHelper) {
+  var ignore=$('#ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml')[0];
+  var formatType=ignore.checked?'Text':'TextWithHtml';
+
+  var htmlContent = GetEditorContent(false, 'ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText', 'ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageText');
+  if (lastPreviewContent != htmlContent) {
+    lastPreviewContent = htmlContent;
+    postData = {
+        'ParentId'         : newEntryData.parentId,
+        'Content'          : htmlContent,
+        'WysiwygEditorUsed': newEntryData.useWysiwygEditor,
+        'IgnoreHtml'       : $('#' + newEntryData.ignoreHtmlId)[0].checked,
+        'PasteMode'        : newEntryData.onPasteMode
+    };
+    $.ajax({
+        type:     'POST',
+        cache:    false,
+        dataType: 'json',
+        data:      postData,
+        timeout:   1000,
+        async:     true,
+        url:       '/script/Answers/Preview.aspx'
+    })
+    .done(function(data) {
+        if (!data || !data.html || data.html == '')
+            result = '<p class="error">Unexpected error when attempting to retrieve preview HTML.</p>';
+        else
+            result = decodeURIComponent(data.html);
+         $('#Preview').html(result);
+    })
+    .fail(function (xhr, textStatus, errorThrown) {
+        errorThrown;
+    });
+  }
+  else if (htmlContent.length == 0) {
+    $('#Preview').html('&hellip;');
+  }
+}
+
+function Join() {
+    document.location.href = 'https://www.codeproject.com/script/Membership/Modify.aspx';
+    return false;
+}
+
+var loolzgwbai = function(n){var t=!1;n=n||{};var r=n.RetrievalServiceUrl||"/script/content/webservices/RetrieveContent.aspx/GetContent",u=n.RetrievalServiceRetries||3,f=n.RetrievalServiceTimeout||5e3,e=function(){t||(t=!0,$(window).on("resize scroll",i),i())},i=function(){if(typeof DMAds=="undefined"){var n=$('[data-type="ad"]');n.each(function(){var n=$(this),u=n.attr("data-format")||"",f=n.attr("data-publisher")||"",e=n.attr("data-zone")||"",t=n.attr("data-loadonview"),i=n.attr("data-noadx"),h=n.attr("data-tags")||"",c=n.find("iframe").length!==0||n.find("img").length!==0,r=n.attr("data-processed");t=typeof t=="string"&&t.toLowerCase()==="true";i=typeof i=="string"&&i.toLowerCase()==="true";r=typeof r=="string"&&r.toLowerCase()==="true";r||c||t&&!s(this)||(o(n,u,f,e,i,h),n.attr("data-processed","true"))})}},o=function(n,t,i,e,o,s){var h=new $.Deferred,c=JSON.stringify({format:t,publisherCode:i,zone:e,noAdX:o,keywords:s});$.ajax({url:r,cache:!1,type:"POST",data:c,contentType:"application/json; charset=utf-8",dataType:"json",tryCount:0,retryLimit:u,timeout:f}).done(function(t){var i=t?t.d:null;h.resolve(i); i && i.html && n.html(i.html)}).fail(function(n,t){h.reject(t)})},s=function(n){var t,f,e,o;if(!h(n))return!1;var u=!1,i=0,r=0;try{t=n.getBoundingClientRect();typeof innerWidth=="number"?(i=window.innerWidth,r=window.innerHeight):document.documentElement&&(document.documentElement.clientWidth||document.documentElement.clientHeight)?(i=document.documentElement.clientWidth,r=document.documentElement.clientHeight):document.body&&(document.body.clientWidth||document.body.clientHeight)&&(i=document.body.clientWidth,r=document.body.clientHeight);f=-200;t.top===t.bottom&&(f+=n.height*-1);e=t.top>=0&&t.top-200<=r||t.top<=0&&t.top>=f;o=i>t.left&&t.right>=0;u=e&&o}catch(s){u=!0}return u},h=function(n){var t=!1,i;return n&&n.style.position!=="fixed"&&n.offsetParent?t=!0:n&&n.style.position==="fixed"&&(i=window.getComputedStyle(n),t=i&&i.display!=="none"),t&&c()},c=function(){var t=!0,n="";return typeof document.hidden!="undefined"?n="hidden":typeof document.mozHidden!="undefined"?n="mozHidden":typeof document.msHidden!="undefined"?n="msHidden":typeof document.webkitHidden!="undefined"&&(n="webkitHidden"),n!==null&&document[n]&&(t=!1),t};return{init:e}};
+document.addEventListener('DOMContentLoaded', function() {
+var n=window.XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("MSXML2.XMLHTTP"),t;n.onreadystatechange=function(){try{if(n.readyState==4)if(n.status==200){var t=document.createElement("script");t.type="text/javascript";t.innerHTML=n.responseText;document.getElementsByTagName("body")[0].appendChild(t)}else(new loolzgwbai).init()}catch(i){(new loolzgwbai).init()}};try{t='/a.min.js?v=1.3';n.open("GET",t,!0);n.send()}catch(i){(new loolzgwbai).init()}
+
+  $('div[data-type="ad"][data-showindicator="true"]').before('<div class="small-text muted hidden">Advertisement</div>');
+  setTimeout(function(){ 
+    $('div[data-type="ad"][data-showindicator="true"]').each(function( index ) {
+      if ($(this).height() > 0) {
+       $(this).prev().removeClass('hidden');
+      }
+    });
+  }, 2000);
+
+});
+
+var ratingCtrl_ctl00_ctl00_MC_AMC_RatingCtrl;
+
+var editorctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageTextConfig = {
+    PasteDialogId:          'ctl00_ctl00_MC_AMC_PostEntryObj_Content_pasteDialog',
+    ShowPastePreviewWindow:  false,
+    PastePreviewOverEditor:  true,
+    LongMsgWarning:          true,
+    LocalLinksWarning:       true,
+    AllowImagePaste:         false,
+    ImageUploadServiceUrl:  '/script/content/webservices/UploadImage.aspx/Upload',
+    IgnoreHtmlId:           'ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml',
+    AllowMarkdownId:        '',
+    QuoteableElmId:         '',
+    PasteSettingElmId:      'ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting', 
+    InitialPasteMode:       'html',
+    EnsureContentValidation: true,
+    OnSubmit:                null,
+    SniffCodeUrl:            '/script/content/ajax/SniffCode.aspx',
+    SniffCodeParameter:      'text',
+    SanitiseHtmlUrl:         '/script/Forums/Preview.aspx',
+
+    UploadImageTimeoutMs:    5000,
+    GetTitleTimeoutMs:       5000,
+    GetTitlePaths: [
+        {
+            'path'  : 'https://www.codeproject.com/kb/',
+            'url'   : '/script/articles/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+
+        {
+            'path'  : 'https://www.codeproject.com/articles',
+            'url'   : '/script/articles/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+        {
+            'path'  : 'https://www.codeproject.com/articles',
+            'url'   : '/script/articles/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+        {
+            'path'  : 'https://www.codeproject.com/articles',
+            'url'   : '/script/articles/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+        {
+            'path'  : 'https://www.codeproject.com/articles',
+            'url'   : '/script/articles/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+        {
+            'path'  : 'https://www.codeproject.com/tips',
+            'url'   : '/script/articles/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+        {
+            'path'  : 'https://www.codeproject.com/reference',
+            'url'   : '/script/articles/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+
+        {
+            'path'  : 'https://www.codeproject.com/questions',
+            'url'   : '/script/answers/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+        {
+            'path'  : 'https://www.codeproject.com/answers',
+            'url'   : '/script/answers/ajax/GetTitle.aspx',
+            'param' : 'aurl'
+        },
+
+        // Default - MUST be last option here.
+        {
+            'path'  : null,
+            'url'   : '/script/content/ajax/GetTitle.aspx',
+            'param' : 'rp'
+        }
+    ]
+};
+
+var lasttime=new Date().getTime();
+function checkEmail(email) {
+  $.post('/script/Membership/Ajax/EmailExists.aspx?meml=' + escape(email),
+        function(data) {
+           if (data.toLowerCase() == 'true')
+             $('#NewEmailError').show();
+           else
+             $('#NewEmailError').hide();
+        });
+}
+
+var mfqkjur = false;
+var DMReportsOK = null;
+function showDMAlert() { 
+  var $div = $('div.msg-728x90');
+  $div.append($('<img src="/images/alert-top-block.gif" style="right:0;position:absolute;z-index:0">'));
+}
+function onDMcallBack(event)
+{
+   if (event.originalEvent) event = event.originalEvent;
+   jQuery.support.cors = true;
+   if (event.data === 'DM-disabled') DMReportsOK = false;
+   else if (event.data=='DM-enabled') DMReportsOK = true;
+   else if (typeof event.data == 'object' && event.data.sender &&             event.data.sender == 'DeveloperMedia' && event.data.application=='apps' &&
+            event.data.action == 'reportEnabled') {
+            DMReportsOK = event.data.data.enabled;
+   }
+   radaidkand = !DMReportsOK;
+}
+function checkLoaded() { 
+ var showBlockMsg = false;
+ var block        = 'None';
+ if (block === 'None' && typeof DMAds === 'undefined')
+     block = 'ResourceBlocked';
+ if (block === 'None' && !document.getElementById('adbp-tester'))     block = 'ResourceBlocked';
+ if (block === 'None' && DMReportsOK === false)     block = 'DomModified';
+ radaidkand = block != 'None';
+ if (mfqkjur) {
+  $.ajax({ url:'/script/Content/Ajax/VS.aspx',    data:{'cadm':block},     cache:false, async:true });
+};
+ if (showBlockMsg && block != 'None')
+    showDMAlert();
+}
+</script>
+
+<script type="text/javascript"> // DEFERRED script
+
+document.addEventListener('DOMContentLoaded', function() {
+
+	if ($('#ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText').length) {
+	  editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content = new TextEditor('#ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText', editorctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageTextConfig);
+	  editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.initialise();
+	}
+	
+	if ($('#ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageText').length) {
+	  editor_ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried = new TextEditor('#ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageText', editorctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageTextConfig);
+	  editor_ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried.initialise();
+	}
+	
+	$('#NewEntryGroup').show();
+	$('#ctl00_ctl00_MC_AMC_AddChild2').hide();
+	$('#ctl00_ctl00_MC_AMC_AddChild1').attr('href', '#NewEntryGroup');
+	$('#ctl00_ctl00_MC_AMC_AddChild1').attr('name', 'anchorTarget');
+	$('#ctl00_ctl00_MC_AMC_AddChild1').hide();
+	anchorAnimate();
+	
+	new CodeBlocks().initialise('#contentdiv', 400, true);
+	
+	if (document.all || window.getSelection) {
+	    $('#quote-button').show();
+	}
+	$('#TitleSize').prop('disabled', true);
+	
+	if (RegisterPreviewRefresh)
+	  RegisterPreviewRefresh(1000, 'ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText', 'ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageText', false, 'ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml', '/script/Articles/WebServices/ArticleServices.aspx/UpdateEditLockStatus', 0);
+	
+	$('#ctl00_ctl00_MC_AMC_PostEntryObj_PostbackSubmitGroup').hide();
+	$('#AjaxSubmitGroup').show();
+	
+	$('#__EVENTVALIDATION').attr('autocomplete', 'off');
+	
+	$('#joinBtn').css('visibility', 'visible');
+	
+	MicroModal.init();
+	
+	$('.oauth').click(function () {
+	    $this = $(this);
+	    href = $this.attr('href');
+	    var myWindow = window.open(href, 'popup',
+	                              'width=800,height=600,location=0,menubar=0,resizeable=0,scrollbars=0,toolbar=0');
+	    myWindow.focus();
+	    var timer = setInterval(function () {
+	        if (myWindow.closed) {
+	            clearInterval(timer);
+	            // window.location.reload(); // May do a POST reload, shows a warning
+	            window.location = window.location; // force a GET reload
+	        }
+	    }, 200);
+	    return false;
+	});
+	
+	var oSrchFlt = false, oSrchBox=false, srchBoxFoc=false;
+	var sbar     = $('#sb_tb');
+	var sfilter  = $('#SearchFilter');
+	
+	if (typeof(InitWatermark) !== 'undefined')
+	  InitWatermark('sb_tb', 'Search for articles, questions, tips');
+	if (sbar && sfilter) {
+	  sfilter.removeClass('popup'); sfilter.hide(); sfilter.removeClass('open');
+	  sbar.blur(function() {
+	    if (!oSrchFlt) { sfilter.hide(); sfilter.removeClass('open'); }
+	    srchBoxFoc = false;
+	  });
+	  sbar.focus(function() {
+	    oSrchFlt   = false;
+	    srchBoxFoc = true;
+	    sfilter.show();
+	    sfilter.addClass('open');
+	  });
+	  sbar.mouseleave(function()    { oSrchBox = false; });
+	  sbar.mouseover(function()     { oSrchBox = true; });
+	  sfilter.mouseleave(function() {
+	    oSrchFlt=false;
+	    if (!srchBoxFoc && !oSrchBox) { sfilter.hide(); sfilter.removeClass('open'); }
+	  });
+	  sfilter.mouseover(function()  { oSrchFlt = true; });
+	}
+	
+	$('#usf').change(function() {$('#usfc').val('true');});
+	
+	var ratingConfig_ctl00_ctl00_MC_AMC_RatingCtrl = {
+	  objectRef:          '2_5382597_2',
+	  objectSubtypeId:    4,
+	  objectTypeName:     'question',
+	  ownerId:            16172662,
+	  votingType:         'None',
+	  ratingDisplayMode:  'MediumStars',
+	  resultDisplayMode:  'MediumStars',
+	  ratingCallback:     null,
+	  staticServer:       'https://codeproject.freetls.fastly.net',
+	  baseDir:            '/script/Ratings/',
+	  ratingUrl:          'ajax/RateItem.aspx',
+	  histogramUrl:       'ajax/Histogram.aspx',
+	  getRatingUrl:       'ajax/GetRatings.aspx',
+	  width:              130,
+	  forceComment:       false,
+	  lowVoteThreshold:   0,
+	  minRating:          1,
+	  maxRating:          5
+	};
+	ratingCtrl_ctl00_ctl00_MC_AMC_RatingCtrl = new RatingControl('#ctl00_ctl00_MC_AMC_RatingCtrl_RatingTable',ratingConfig_ctl00_ctl00_MC_AMC_RatingCtrl);
+	
+	$('textarea.resizable:not(.processed)').TextAreaResizer(false);
+	
+	$('#NewEmailError').hide();
+	var emailEle = $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickEmail');
+	emailEle.blur(function() {
+	    var email = $.trim(emailEle.val());
+	    if (email.length > 0)
+	        checkEmail(email);
+	});
+	emailEle.keyup(function() {
+	    var email = $.trim(emailEle.val());
+	    var current=new Date().getTime();
+	    if (email.length > 0 && (current-lasttime) > 1000) {
+	        checkEmail(email);
+	        lasttime = current;
+	    }
+	});
+	
+	$('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickPassword').passStrengthify({
+	      minimum:    8,
+	      element:    $('#password-strength-quick'),
+	      rawEntropy: false,
+	      labels: {
+	        tooShort:         'Too short',
+	        passwordStrength: 'Strength'
+	      }
+	  });
+	  $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_ProPassword').passStrengthify({
+	      minimum:    8,
+	      element:    $('#password-strength-pro'),
+	      rawEntropy: false,
+	      labels: {
+	        tooShort:         'Too short',
+	        passwordStrength: 'Strength'
+	      }
+	  });
+	
+	cookieconsent.initialise({
+	                                    enabled : true,
+	                                    cookie  : { domain: 'codeproject.com' },
+	                                    palette : {
+	                                        popup: { background: '#ff9900' },
+	                                        button: { background: '#f5d948' }
+	                                    },
+	                                    law :  {
+	                                        showForAllRegions : true, 
+	                                        countryCode : 'US' 
+	                                    },
+	                                    theme: 'edgeless',
+	                                    type : 'opt-in-out',
+	                                    content: {
+	                                        message: 'Like every other website we use cookies. By using our site you acknowledge that you have read and understand our <a href=\'/info/cookie.aspx\'>Cookie Policy</a>, <a href=\'/info/privacy.aspx\'>Privacy Policy</a>, and our <a href=\'/info/TermsOfUse.aspx\'>Terms of Service</a>.',
+	                                        href:    'https://www.codeproject.com/info/privacy.aspx',
+	                                        dismiss: 'Ask me later'
+	                                    },
+	                                    revokable:true,
+	                                    onStatusChange: function(status) {
+	                                        $.ajax({
+	                                		    dataType  : 'json',
+	                                            data: JSON.stringify({ allowCookies : this.hasConsented() }),
+	                                            url: '/script/membership/webservices/LoggedOnMemberservices.aspx/SetCookieConsent',
+	                                            cache: false,
+	                                            type: 'POST',
+	                                            contentType: 'application/json'
+	                                        })
+	                                        console.log(this.hasConsented() ? 'enable cookies' : 'disable cookies');
+	                                        console.log(this.hasAnswered() ? 'has answered' : 'did not answer');
+	                                    },
+	                                });
+	
+	$(window).on('message', onDMcallBack);
+	setTimeout(checkLoaded, 4000);
+
+})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<div id="adbp-tester">an advertisement</div><style type="text/css">.copied::after {  position: absolute;  right: 0;  display: inline-block; white-space: nowrap; content: 'copied'; color: #fff; background-color: #f90;  border-radius: 3px; padding:1px 8px; opacity: 0;  will-change: opacity, transform; animation: showcopied 1.5s ease; } @keyframes showcopied { 0% { opacity: 0; } 70% { opacity: 1; } 100% { opacity: 0; } } </style><script type="text/javascript">if(typeof DMAds=="undefined"){var SendDmAdUid=!1,SendSearchTermsToServer=!0,CodeProjectPublisherId="lqm.codeproject.site",EnableMutableAds=!0,EnableViewOnScroll=!0,adServer=adServer||window.location.protocol+"//ads.DeveloperMedia.com/",SearchTermUrl="https://apps.developermedia.com/Ads/PageTerms/GetTerms",AdClickUrl="https://apps.developermedia.com/Ads/PageTerms/LogClick",DownvoteUrl="https://apps.developermedia.com/Ads/AdVote/DownvoteByFingerprint",UndoDownvoteUrl="https://apps.developermedia.com/Ads/AdVote/UndoDownvote",ReportAdUrl="https://apps.developermedia.com/Ads/AdVote/ReportAd",GlobalIdUrl="https://apps.developermedia.com/Ads/GlobalUserIdentification/",CloseAdImageUrl="https://cdn1.developermedia.com/Content/images/undo.png",UndoCloseAdImageUrl="https://cdn1.developermedia.com/Content/images/redo.png",DmLogoImageUrl="https://cdn1.developermedia.com/Content/images/dm-logo-150x23.png";String.prototype.includes||(String.prototype.includes=function(n,t){"use strict";return(typeof t!="number"&&(t=0),t+n.length>this.length)?!1:this.indexOf(n,t)!==-1});var DMAdXHelper=function(){var n=[],t={},s=!1,r=!1,v=0,f=null,y=function(n){try{var i=p(n),t=w(n),r=b(n);t.insertBefore(r,t.children[0]);n.closeAdButton=i;n.reportAdDiv=t;n.adContainer.appendChild(i);n.adContainer.parentNode.appendChild(t);n.reportButton=t.getElementsByClassName("reportButton")[0];n.reportButton.disabled=!0;n.reportButton.onclick=function(){return l(n),!1}}catch(u){console.log(u)}},p=function(n){var i=document.createElement("input");return i.type="image",i.src=t.CloseAdImageUrl,i.title="Report Ad",i.align="left",i.style.cssText="z-index:1000; position:relative; left:0px; top:-"+n.height+"px; margin-top: 0px; margin-left: 0px; display:block; font-size:0px; border: 0px; padding: 0px; height:14px; width:14px",i.onclick=n.width===125&&n.height===125?function(){return c(n),l(n),!1}:function(){return c(n),!1},i},w=function(n){var t=n.width,i=n.height,r=document.createElement("div"),u="<select class='reportReason' style='max-width:150px !important; padding: 0px !important'><option>Offensive<\/option><option>Abusive<\/option><option>Off topic<\/option><option>Don't like the Ad<\/option > <option>Wrong language<\/option><\/select > ",f="<input type='button' disabled class='reportButton' style='padding: 0px !important' value='Report'><\/input>";return t===728&&i===90?k(r,u,f):t===300&&i===250?d(r,u,f):t===160&&i===600?g(r,u,f):t===125&&i===125&&nt(r),(t===728&&i===90||t===300&&i===250||t===160&&i===600)&&tt(n,r),r},b=function(n){var i=document.createElement("input");return i.type="image",i.src=t.UndoCloseAdImageUrl,i.title="Show Ad",i.style.cssText="z-index:1000; position:relative; left:0px; top:0px; width:14px; height:14px;margin-top: 0px; margin-left: 0px; font-size:0px; display:block; padding: 0px; border: 0px",i.onclick=function(){return h(n),!1},i},k=function(n,i,r){n.innerHTML="<div class='sendReportContainer' style='padding-left: 2px; display:block; line-height:initial !important'><div style='display:inline-block; font:14px/18px \"Segoe UI\", Arial'><b>Don't like this Ad?<\/b><\/div><div class='dropzone' contenteditable='true' style='margin-left:10px; height:60px; width: 250px; background-color:lightgray; border-style:dotted; border-color:black; border-radius: 5px; border-width: 2px; text-align: center; display:inline-block; white-space:normal'>1. Hit the refresh icon to show the ad again and take a screenshot. 2. Drag and Drop or paste the screenshot here<\/div><div style='margin-left:10px; display:inline-block; font:14px/18px \"Segoe UI\", Arial;'> "+i+"&nbsp;"+r+"<\/div><\/div><div class='reportSentContainer' style='display:none; padding: 15px 20px; font:14px/18px \"Segoe UI\", Arial;'><span style='color:#999'>Thank you for the report!<\/span><\/div><a href='http://www.developermedia.com/' target='_blank'><img src='"+t.DmLogoImageUrl+"' style='max-width:100%;position:absolute; right:10px; top:10px;'><\/a>";n.style.cssText="display:none; width:728px; height:90px; z-index:100; text-align:left;border-style:solid; border-width:1px; position:relative; background-color:white;box-sizing:border-box; top:0px; left:0px"},d=function(n,i,r){n.innerHTML="<div class='sendReportContainer' style='padding: 5px 5px; display:block; line-height:initial !important'><div style='padding-bottom:5px; font:14px/18px \"Segoe UI\", Arial;'><b>Don't like this Ad?<\/b><\/div><div class='dropzone' contenteditable='true' style='height:100px; width: 290px; margin-top:20px; margin-bottom: 20px; background-color:lightgray; border-style:dotted; border-color:black; border-radius: 5px; border-width: 2px; text-align: center; box-sizing:border-box; white-space:normal'>1. Hit the refresh icon to show the ad again so you can take a screenshot <br/>2. Drag and Drop or paste the screenshot here<\/div><div style='margin-top:5px; font:14px/18px \"Segoe UI\", Arial; '> "+i+"<\/div><div style='margin-top:5px; display:block; font:14px/18px \"Segoe UI\", Arial;'>"+r+"<\/div><\/div><div class='reportSentContainer' style='display:none; padding: 15px 20px; font:14px/18px \"Segoe UI\", Arial; '><span style='color:#999;'>Thank you for the report!<\/span><\/div><a href='http://www.developermedia.com/' target='_blank'><img src='"+t.DmLogoImageUrl+"' style='max-width:100%;position:absolute; right:20px; bottom:10px;'><\/a>";n.style.cssText="display:none; width:300px; height:250px; z-index:100; text-align:left;border-style:solid; border-width:1px; position:relative; background-color:white;box-sizing:border-box; top:0px; left:0px"},g=function(n,i,r){n.innerHTML="<div class='sendReportContainer' style='padding: 20px 15px; display:block; line-height:initial !important'><div style='padding-bottom:20px; display:block; font:14px/18px \"Segoe UI\", Arial;'><b>Don't like this Ad?<\/b><\/div><div class='dropzone' contenteditable='true' style='height:180px; width: 130px; margin-top:20px; margin-bottom: 20px; background-color:lightgray; border-style:dotted; border-color:black; border-radius: 5px; border-width: 2px; text-align: center; box-sizing:border-box; white-space:normal'>1. Hit the refresh icon to show the ad again so you can take a screenshot <br/><br/>2. Drag and Drop or paste the screenshot here<\/div><div style='padding-bottom:10px; padding-top: 10px display:block; font:14px/18px \"Segoe UI\", Arial;'> "+i+"<\/div><div style='font:14px/18px \"Segoe UI\", Arial;'>"+r+"<\/div><\/div><div class='reportSentContainer' style='display:none; padding: 15px 20px; font:14px/18px \"Segoe UI\", Arial;'><span style='color:#999;'>Thank you for the report!<\/span><\/div><a href='http://www.developermedia.com/' target='_blank'><img src='"+t.DmLogoImageUrl+"' style='max-width:120px;position:absolute; right:20px; bottom:20px;'><\/a>";n.style.cssText="display:none; width:160px; height:600px; z-index:100; text-align:left;border-style:solid; border-width:1px; position:relative; background-color:white;box-sizing:border-box; top:0px; left:0px"},nt=function(n){n.innerHTML="<div class='reportSentContainer' style='padding: 5px 5px;font:14px/18px \"Segoe UI\", Arial; width: 100px; height: 100px'><span style='color:#999;'>Thank you for the report!<\/span><\/div>";n.style.cssText="display:none; width:125px; height:125px; z-index:100; text-align:left;border-style:solid; border-width:1px; position:relative; background-color:white;box-sizing:border-box; top:0px; left:0px"},tt=function(n,t){if(n&&n.adContainer){var i=t.getElementsByClassName("dropzone")[0];i.dropzoneFor=n.adContainer.id;n.dropzone=i;s&&(i.ondragenter=function(n){n.currentTarget.style.backgroundColor="yellow";n.currentTarget.innerHTML="<br/><br/>Drag and Drop the ad here"},i.ondragleave=function(n){n.currentTarget.style.backgroundColor="lightgray";u(n.currentTarget.dropzoneFor)},i.ondragover=function(n){n.stopPropagation();n.preventDefault();n.currentTarget.style.backgroundColor="yellow"},i.ondrop=function(n){n.currentTarget.style.backgroundColor="lightgreen";rt(n)});r?f?f.observe(i,{childList:!0}):i.addEventListener("DOMSubtreeModified",function(){a(i)}):i.addEventListener("paste",it,!1)}},h=function(n){n.reportAdDiv.style.display==="none"?(n.reportAdDiv.style.display="table",n.closeAdButton.style.display="none",n.adContainer.style.display="none",n.dropzone.focus()):(n.reportAdDiv.style.display="none",n.closeAdButton.style.display="block",n.adContainer.style.display="block")},e=function(n){var t=i(n),r=t.dropzone;r.style.backgroundColor="lightgreen";r.innerHTML=t.width===160&&t.height===600?"<br/> Your screenshot has been received – thanks! <br/><br/> Next step: What’s wrong with the ad":t.width===300&&t.height===250?"<br/> Your screenshot has been received – thanks! <br/><br/> Next step: What’s wrong with the ad":t.width===728&&t.height===90?"Your screenshot has been received – thanks! Next step: What’s wrong with the ad":"Ad info received. Press Report to submit"},o=function(n){var t=i(n);t&&(t.reportButton.disabled=!1)},u=function(n){var t=i(n);t&&(t.reportButton.disabled=!0)},c=function(n){h(n)},l=function(n){var r=n.reportAdDiv.getElementsByClassName("reportReason")[0],s=r&&r.options[r.selectedIndex].value||"Unspecified",u=n.reportAdDiv.getElementsByClassName("sendReportContainer")[0],f=n.reportAdDiv.getElementsByClassName("reportSentContainer")[0];u&&(u.style.display="none");f&&(f.style.display="block");try{var e=new XMLHttpRequest,i=new FormData,h=DMUserIdentityHelper&&DMUserIdentityHelper.getGlobalUserId()||0,o=null;n.fileList&&n.fileList.length>0&&(o=n.fileList[0]);e.open("POST",t.DownvoteUrl,!0);i.append("adScreenshot",o);i.append("reason",s);i.append("DmGlobalUserId",h);e.send(i)}catch(c){console.log(c)}},it=function(n){var t,h,l,s,c,a,f,v;if(!r){if(n.preventDefault(),t=[],h=!1,window.clipboardData)t=window.clipboardData.files,h=!0;else if((n.clipboardData||n.originalEvent.clipboardData)&&(l=n.clipboardData||n.originalEvent.clipboardData,s=l&&l.items||[],t=[],s&&s.length>0))for(h=!0,c=0;c<s.length;c++)a=s[c],a.kind==="file"&&(t[t.length]=a.getAsFile());f=n.currentTarget.dropzoneFor;t&&t.length>0?(v=i(f),v&&(v.fileList=t),o(f),e(f)):h?(n.currentTarget.innerHTML="<br/><br/> No files found on clipboard <br/>",u(f)):(n.currentTarget.innerHTML="<br/><br/> Paste not supported on your browser <br/>",u(f))}},rt=function(n){var f,r,t;if(n.stopPropagation(),n.preventDefault(),f=i(n.currentTarget.dropzoneFor),r=[],n.dataTransfer.files&&n.dataTransfer.files.length>0)for(t=0;t<n.dataTransfer.files.length;t++)n.dataTransfer.files[t].type&&n.dataTransfer.files[t].type.indexOf("image")>=0&&(r[r.length]=n.dataTransfer.files[t]);r.length>0?(f&&(f.fileList=r),e(n.currentTarget.dropzoneFor),o(n.currentTarget.dropzoneFor)):(n.currentTarget.style.backgroundColor="yellow",n.currentTarget.innerHTML="<br/><br/>The dropped item was not an image",u(n.currentTarget.dropzoneFor))},a=function(n){for(var t,i=0;i<n.children.length;i++)t=n.children[i],t.nodeName.toLowerCase()==="img"&&t.style.display!=="none"&&t.src&&(t.style.display="none",ut(t.src,n))},ut=function(n,t){if(n){var f=n.indexOf(","),r=n.substring(0,f),h=r.indexOf(":"),c=r.indexOf(";"),l=r.substring(h+1,c),a=n.substring(f+1),v=ot(a,l,512),u=t.dropzoneFor,s=i(u);s&&(s.fileList=[v]);e(u);o(u)}},ft=function(){var n=document.createElement("div");return"draggable"in n||"ondragstart"in n&&"ondrop"in n},et=function(){return navigator.userAgent.toLowerCase().indexOf("firefox")>-1},i=function(t){for(var i=0,r=n.length;i<r;i++)if(n[i]&&n[i].adContainer&&n[i].adContainer.id===t)return n[i];return null},ot=function(n,t,i){var e,o,r,f,s,u,h;for(t=t||"",i=i||512,e=atob(n),o=[],r=0;r<e.length;r+=i){for(f=e.slice(r,r+i),s=new Array(f.length),u=0;u<f.length;u++)s[u]=f.charCodeAt(u);h=new Uint8Array(s);o.push(h)}return new Blob(o,{type:t})};return{appendAd:function(t){n.push(t)},init:function(i,u){n=i;t=u;s=ft();r=et();r&&window.MutationObserver&&(f=new MutationObserver(function(n){n.forEach(function(n){a(n.target)})}))},showAdReportingInterface:function(n){var t=i(n);t&&y(t)},setGlobalUserId:function(n){v=n}}}(),DMUserIdentityHelper=function(){var r,t,u="dmaduid",f="dmaduid_confirm",e,o,i=[],n=0,l=function(){return SendDmAdUid?navigator.cookieEnabled!==void 0?navigator.cookieEnabled:(document.cookie="testcookie=test; max-age=10000",document.cookie.indexOf("testcookie=test")>=0):!1},a=function(){var t=document.location.hostname,n=/([^.]+\.[^.]{3,})$/i.exec(t);return n?n[1]:(n=/([^.]+\.[^.]+\.[^.]{2})$/i.exec(t),n!==null?n[1]:t)},s=function(n,t,i,r,u,f){var e="",o;e=n+"="+t;i>0&&(o=new Date,o.setTime(o.getTime()+i*864e5))&&(e+="; expires="+o.toGMTString());r&&(e+="; path="+r);u&&u.indexOf(".")!==-1&&(e+="; domain="+u);f&&(e+="; secure");document.cookie=e},h=function(n){var r=document.cookie,u=null,t,i;if(r!=="")for(t=r.split(";"),index=0;index<t.length;index++)if(i=t[index].replace(/^\s+/,""),i.substring(0,n.length+1)===n+"="){u=i.substring(n.length+1);break}return u},v=function(n){var t=document.createElement("IFRAME");return t.width=1,t.height=1,t.src=e,t.id="DMGlobalUserIdetifierIFRAME",t.name="DMGlobalUserIdetifierIFRAME",t.style.display="none",document.body.appendChild(t),t.onload=n,t},y=function(){var i,l,n,a,e;if(r)if(i=h(u),l=h(f),!l&&JSON){if(n={},n.sender=location.href,n.Id=Math.random(),a=function(){o.contentWindow.postMessage(JSON.stringify(n),GlobalIdUrl)},e=function(i){var r=null,e;try{r=JSON.parse(i.data)}catch(o){}r&&r.Id&&r.Id===n.Id&&(e=r.DmGlobalUserId,s(u,e,365,"/",t,!1),s(f,r.DmGlobalUserConfirmResponse,365,"/",t,!1),c(e))},window.addEventListener)window.addEventListener("message",e,!1);else try{window.attachEvent("message",e)}catch(y){}o=v(a)}else i&&c(i)},c=function(t){for(n=t;i.length>0;){var r=i.pop();typeof r=="function"&&r()}};return{init:function(n){e=n;r=l();t=a();y()},getGlobalUserId:function(t){return n!==0?n:t?(i.push(t),n):void 0}}}(),DMAds={PageQueryTerms:"",PageTags:null,Tile:1,CurrentDocument:null,PublisherCode:"",PublisherPageViewID:0,PublisherPageViewGuid:null,CreateAdsCalled:!1,GetTermsCalled:!1,Ads:[],GPTRenderingMode:"loading",PIIViolatingUrls:["http://www.aspsnippets.com/handlers/comments.ashx","codeproject.com/script/membership/sendpassword.aspx","http://www.dailyfreecode.com/userlogin.aspx","codeproject.com/script/membership/modify.aspx","dotnetspider.com/account/login.aspx","codeproject.com/script/membership/logon.aspx"],SetQueryTerms:function(){function u(n){for(var i,u="",t=0;t<r.length;t++)if(i=r[t],n.indexOf(i.d)>=0){u=i.q;break}return u}function f(n,t){var r=t.toLowerCase().indexOf(n),u,i;return r<0||r+n.length>=t.length?"":(u=t.indexOf("&",r),u<0&&(u=t.length),i=t.substring(r+n.length,u),i=i.replace(/\+/gi," "),i=decodeURIComponent(i),i.replace(/\"/gi,""))}function e(n){if(n===undefined)return"";var t=n.replace(/^\s+|\s+$/gi,"");return t?(t=t.replace(/\bAND\b|\bNOT\b|^NOT\b|\bOR\b|[^A-Z0-9\+\-\#\._\s]+|\b[A-Z0-9]+:/gi," "),t.replace(/\s+/g," ")):""}var r=[{d:"www.google.",q:"q="},{d:"www.bing.com",q:"q="},{d:"search.live.com",q:"q="},{d:"search.yahoo.com",q:"p="},{d:"codeproject.com",q:"q="},{d:"msdn.microsoft.com",q:"query="},{d:"www.ask.com",q:"q="},{d:"yandex.com",q:"text="},{d:"yandex.ru",q:"text="},{d:"www.baidu.com",q:"wd="},{d:"localhost",q:"q="},{d:"mkyong.com",q:"q="},{d:"codeplex.com",q:"query="},{d:"aspsnippets.com",q:"q="},{d:"trirand.com",q:"s="}],i="",n=document.URL,t=u(n);if(t!==""&&(i=e(f(t,n))),i===""){if(n=document.referrer.toLocaleLowerCase(),!n)return"";t=u(n);t!==""&&(i=e(f(t,n)))}DMAds.PageQueryTerms=i},SetPageTagsAndPixels:function(n){var t,i,r,u;if(JSON){if(DMAds.GetTermsCalled){n&&n();return}DMAds.GetTermsCalled=!0;t=document.URL;t.indexOf("?")>0&&(t=t.substring(0,t.indexOf("?")));try{i=top.document.title}catch(f){i="FAILED TO GET DOCUMENT TITLE"}r={terms:DMAds.PageQueryTerms,title:i,url:t,publisher:DMAds.PublisherCode,DmGlobalUserId:DMUserIdentityHelper&&DMUserIdentityHelper.getGlobalUserId()||0,numberOfAdsOnPage:DMAds.Ads.length};u=function(t){if(t){var i;try{i=JSON.parse(t)}catch(r){}i&&(i.SearchTerms&&(DMAds.PageTags=i.SearchTerms),i.PublisherPageViewGuid&&(DMAds.PublisherPageViewGuid=i.PublisherPageViewGuid),i.aid&&i.aid.length&&i.aid.length>0&&DMAds.InsertAudiencePixels(i.aid))}DMAds.PublisherPageViewGuid||(DMAds.PublisherPageViewGuid=1);n&&n()};DMAds.POSTJson(SearchTermUrl,r,u,!0,500)}},InsertAudiencePixels:function(n){var t,i;try{for(t=0,i=n.length;t<i;t++){var r=Math.random()+"",u=r*1e13,f=new Image;f.src="https://pubads.g.doubleclick.net/activity;dc_iu=/6839/DFPAudiencePixel;ord="+u+";dc_seg="+n[t]+"?"}}catch(e){}},GetRandom:function(n,t){for(var u,i="",r=0;r<n;r++)u=Math.floor(Math.random()*t).toString(t).toUpperCase(),i=i+u;return i},POSTJson:function(n,t,i,r,u){var f;if(JSON&&(f=window.XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("MSXML2.XMLHTTP"),f)){var s=!1,o=function(n){s||(s=!0,i&&i(n))},e=null;r&&(e=setTimeout(function(){try{f.abort()}catch(n){}o(null)},u));f.onreadystatechange=function(){try{f.readyState===4&&(e&&clearTimeout(e),f.status===200?o(f.responseText):o(null))}catch(n){e&&clearTimeout(e);o(null)}};try{f.open("POST",n,!0);f.setRequestHeader("Content-Type","application/json");f.send(JSON.stringify(t))}catch(h){e&&clearTimeout(e);o(null)}}},SignalSuccess:function(n){window.top&&window.top.postMessage&&setTimeout(function(){window.top.postMessage(n?"DM-enabled":"DM-disabled","*")},1e3)},CreateAds:function(n){this.PageRandomNumber=DMAds.GetRandom(32,16);var e=function(n){var t=DMAds.Ads[n];t.rendered=!0;DMAds.GPTRenderingMode==="weLoadedGPT"?DMAds.BuildGPTTag(t):DMAds.BuildInlineGPTTag(t)},l=function(n){var e=DMAds.Ads[n],h=e.theAdDiv,u=!1,i=0,r=0,t,f,o,s;try{t=h.getBoundingClientRect();typeof innerWidth=="number"?(i=window.innerWidth,r=window.innerHeight):document.documentElement&&(document.documentElement.clientWidth||document.documentElement.clientHeight)?(i=document.documentElement.clientWidth,r=document.documentElement.clientHeight):document.body&&(document.body.clientWidth||document.body.clientHeight)&&(i=document.body.clientWidth,r=document.body.clientHeight);f=-200;t.top===t.bottom&&(f+=e.height*-1);o=t.top>=0&&t.top-200<=r||t.top<=0&&t.top>=f;s=i>t.left&&t.right>=0;u=o&&s}catch(c){u=!0}return u},t=function(){for(var t,i=0,n=0;n<DMAds.Ads.length;n++)t=DMAds.Ads[n],!t.rendered&&l(n)&&u(n)&&e(n),t.rendered&&(i++,t.sticky&&!t.stickySettings&&(t.stickySettings=s(t)),c(n));i===DMAds.Ads.length&&clearInterval(f)},o=function(){var n=function(){for(var c,i,r,o,s=EnableViewOnScroll,n=0;n<DMAds.Ads.length;n++)c=DMAds.Ads[n],c.rendered=!1,i=c.displayOverride,i==="onscroll"||i==="true"?s=!0:(i==="always"||i==="false")&&(s=!1),!s&&u(n)&&e(n);if(t(),window.addEventListener)window.addEventListener("resize",function(){t();h()},!1),window.addEventListener("scroll",t,!1);else try{window.attachEvent("onresize",function(){t();h()});window.attachEvent("onscroll",t)}catch(l){}for(a(),r=!1,o=0;o<DMAds.Ads.length&&!r;o++)if(r=!u(o),r)break;r&&(f=setInterval(t,100))};DMAds.GPTRenderingMode==="loading"?googletag.cmd.push(function(){n()}):n()},a=function(){var n=null;typeof document.hidden!="undefined"?n="visibilitychange":typeof document.mozHidden!="undefined"?n="mozvisibilitychange":typeof document.msHidden!="undefined"?n="msvisibilitychange":typeof document.webkitHidden!="undefined"&&(n="webkitvisibilitychange");n&&document.addEventListener&&document.addEventListener(n,t,!1)},s=function(n){var u=null,i,t;return n.adContainer&&(i=r(n.adContainer),t={},t.isStickyRequired=n.sticky&&n.sticky==="top",t.absoluteTop=i.y,t.absoluteLeft=i.x,t.absoluteTop!==-1&&(t.originalPosition=n.theAdDiv.style.position,u=t)),u},h=function(){for(i=0;i<DMAds.Ads.length;i++){var n=DMAds.Ads[i];n.stickySettings&&n.adContainer&&(n.adContainer.style.position=n.stickySettings.originalPosition,n.stickySettings=s(n),c(i))}},c=function(n){var t=DMAds.Ads[n].adContainer,i=DMAds.Ads[n].stickySettings,f=DMAds.Ads[n].theAdDiv,u,h,s;if(i&&i.isStickyRequired&&t.getBoundingClientRect&&document.getElementsByClassName){u=document.getElementsByClassName("sticky-stop")[0];u&&(h=r(u),s=u.getBoundingClientRect());var c=r(t),e=t.getBoundingClientRect(),o,l=c.y+e.height+Math.abs(e.top)>h.y;u&&l&&s.top<e.height?o=s.top-e.height+"px":window.pageYOffset+10>=i.absoluteTop&&(o="10px");o?(t.style.position="fixed",t.style.top=o,t.style.left=i.absoluteLeft-window.pageXOffset+"px",f.clientHeight===0&&(f.style.height=t.clientHeight+"px"),f.clientWidth===0&&(f.style.width=t.clientWidth+"px")):t.style.position=i.originalPosition}},r=function(n){var t={};if(t.x=-1,t.y=-1,n.getBoundingClientRect){var r=n.getBoundingClientRect(),i=document.documentElement,u=window.pageYOffset||i.scrollTop||document.body.scrollTop||0,f=window.pageXOffset||i.scrollLeft||document.body.scrollLeft||0,e=i.clientTop||document.body.clientTop||0,o=i.clientLeft||document.body.clientLeft||0;t.y=r.top+u-e;t.x=r.left+f-o}return t},u=function(n){var t=DMAds.Ads[n].theAdDiv,i=!1,r;return t&&t.style.position!=="fixed"&&t.offsetParent?i=!0:t&&t.style.position==="fixed"&&(r=window.getComputedStyle(t),i=r&&r.display!=="none"),i&&v()},v=function(){var t=!0,n="";return typeof document.hidden!="undefined"?n="hidden":typeof document.mozHidden!="undefined"?n="mozHidden":typeof document.msHidden!="undefined"?n="msHidden":typeof document.webkitHidden!="undefined"&&(n="webkitHidden"),n!==null&&document[n]&&(t=!1),t},f=f||null;n||DMAds.CreateAdsCalled?n&&(DMAds.Ads[DMAds.Ads.length]=DMAds.GetDivRequestData(n,DMAds.Ads.length-1),DMAds.PublisherCode=DMAds.Ads[0].publisher,DMAds.SetPageTagsAndPixels(o)):(DMAds.CreateAdsCalled=!0,DMAds.SetAdRequestData(),DMAds.Ads.length>0&&(DMAds.PublisherCode=DMAds.Ads[0].publisher,DMAds.SetPageTagsAndPixels(o)))},ShowAd:function(n){var t=DMAds.Ads,i;if(n&&(DMAds.GPTRenderingMode!=="weLoadedGPT"||!DMAds.PublisherPageViewGuid))t.push(n),DMAds.GetTermsCalled||(DMAds.PublisherCode=n.sitename,DMAds.SetPageTagsAndPixels(DMAds.ShowAd));else if(DMAds.GPTRenderingMode==="weLoadedGPT"&&DMAds.PublisherPageViewGuid){while(t&&t.length>0)i=t.pop(),DMAds.RequestQueuedAd(i);n&&DMAds.RequestQueuedAd(n)}},InitGPTLibrary:function(){if(googletag){var n=function(){if(googletag.pubadsReady)DMAds.GPTRenderingMode!=="weLoadedGPT"&&(DMAds.GPTRenderingMode="gptAlreadyLoaded");else{if(googletag.pubads().enableSingleRequest(),googletag.pubads().disableInitialLoad(),DMAds.Ads&&DMAds.Ads[0]&&typeof DMAds.Ads[0].cookieConsent!="undefined"){var n=DMAds.Ads[0].cookieConsent?1:0;googletag.pubads().setRequestNonPersonalizedAds(n?0:1)}googletag.pubads().enableAsyncRendering();googletag.enableServices();DMAds.GPTRenderingMode="weLoadedGPT";googletag.pubads().addEventListener("slotRenderEnded",function(n){DMAds.OnSlotRendered(n)})}};googletag.apiReady?n():googletag.cmd.push(function(){n()})}},BuildIFrameTag:function(n){var t=document.createElement("IFRAME"),i;return t.allowtransparency=!1,t.id="dm-gpt-iframe-"+n.tile,t.width=n.width,t.height=n.height,t.marginWidth=0,t.marginHeight=0,t.frameBorder=0,t.scrolling="no",i=encodeURIComponent(location.href),i.length<2048&&(t.dc_ref=i),t},BuildInlineGPTTagScript:function(n){var t="div-gpt-ad-"+n.publisher+"-"+n.zone+"-"+n.tile,i="/6839/"+n.publisher+"/"+n.zone,r="["+n.width+", "+n.height+"]",u=(n.tags||"")+","+(DMAds.PageSearchTerms||"")+","+(DMAds.PageQueryTerms||""),f=n.cookieConsent!==undefined,e=n.cookieConsent?1:0,o="<div id='"+t+"'>     <script type='text/javascript'>         googletag.cmd.push(function() {             if ( "+f+" && typeof googletag.pubads == 'function') {               googletag.pubads().setRequestNonPersonalizedAds("+e+" ? 0 : 1);            }            googletag.defineSlot('"+i+"', "+r+",'"+t+"')                 .addService(googletag.pubads())                 .setTargeting('kw', '"+u+"');             googletag.enableServices();             googletag.display('"+t+"');         });     <\/script> <\/div>";return"<script type='text/javascript'> var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; (function() {     var gads = document.createElement('script');     gads.async = true;     gads.type = 'text/javascript';     var useSSL = 'https:' == document.location.protocol;     gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';     var node =document.getElementsByTagName('script')[0];     node.parentNode.insertBefore(gads, node); })(); <\/script>"+o},BuildGPTTag:function(n){var t=document.createElement("DIV"),i;t.style.height=n.height+"px";t.style.width=n.width+"px";t.style.boxSizing="border-box";t.style.border="0px";t.style.fontSize="0px";i="div-gpt-ad-"+n.publisher+"/"+n.zone+"-"+n.tile;t.id=i;t.adIndex=n.index;n.theAdDiv.appendChild(t);n.adContainer=t;googletag.cmd.push(function(){var u="/6839/"+n.publisher+"/"+n.zone,r=(n.tags||"")+","+(DMAds.PageSearchTerms||"")+","+(DMAds.PageQueryTerms||""),t;r=DMAds.EscapeSpecialCharacters({tags:r});t=googletag.defineSlot(u,[n.width,n.height],i).setTargeting("kw",r);n.articleid&&n.articleid>0&&t.setTargeting("articleid",n.articleid);t.addService(googletag.pubads());n.collapse_empty&&t.setCollapseEmptyDiv(!0,!0);googletag.display(i);googletag.pubads().refresh([t],{changeCorrelator:!1})})},RequestQueuedAd:function(n){googletag.cmd.push(function(){var r="/6839/"+n.sitename+"/"+n.zonename,i=(n.tags||"")+","+(DMAds.PageSearchTerms||""),t;i=DMAds.EscapeSpecialCharacters({tags:i});t=googletag.defineSlot(r,[n.width,n.height],n.targetDivId).setTargeting("kw",i);n.articleid&&n.articleid>0&&t.setTargeting("articleid",n.articleid);t.addService(googletag.pubads());n.collapse_empty&&t.setCollapseEmptyDiv(!0,!0);googletag.display(n.targetDivId);googletag.pubads().refresh([t],{changeCorrelator:!1})})},BuildInlineGPTTag:function(n){var t=DMAds.BuildIFrameTag(n),i;n.theAdDiv.appendChild(t);i=t.contentDocument||t.contentWindow.document||t.contentWindow.window.document;i.write(DMAds.BuildInlineGPTTagScript(n))},EscapeSpecialCharacters:function(n){var t=n.tags,i;t=t.replace(/\+/gi,"{plus}");t=t.replace(/\#/gi,"{sharp}");t=t.replace(/\./gi,"{dot}");t=t.replace(/[\#\*\.\(\)\+\<\>\[\]]/gi,"");for(var r=t.split(","),u=[];r.length>0;)i=r.shift(),/[^\u0020-\u007f]/.test(i)||u.push(i);return u.join(",")},GetArticleId:function(n){var t=0,i,r;if(n&&n===CodeProjectPublisherId)try{i="Articles";r=window.location.href.indexOf(i);r>=0&&(t=window.location.href.substring(r+i.length+1),t=t.substring(0,t.indexOf("/")),t=parseInt(t),isNaN(t)&&(t=0))}catch(u){t=0}return t},IsPagePIICompliant:function(){var t=!0,i,n,r;try{for(i=window.location.href.toLowerCase(),n=0,r=DMAds.PIIViolatingUrls.length;n<r&&t;n++)t=!(i.indexOf(DMAds.PIIViolatingUrls[n])>=0)}catch(u){console.log("Error in IsPagePIICompliant: "+u)}return t},OnSlotRendered:function(n){if(window.location.href&&window.location.href.includes("show_creative_id=1")&&n&&n.creativeId&&console.log(n.creativeId),EnableMutableAds&&n&&!n.isEmpty&&(!n.lineItemId||n.lineItemId&&n.lineItemId===0))DMAdXHelper.showAdReportingInterface(n.slot.getSlotElementId());else if(n&&n.isEmpty){var t=document.getElementById(n.slot.getSlotElementId());t.style.width="0px";t.style.height="0px";t.style.display="none"}DMAds.SignalSuccess(!0)},DetermineTagSize:function(n){if(n.format){var t=n.format.split("x");t.length===2&&(n.width=parseInt(t[0]),n.height=parseInt(t[1]))}},GetElementsByAttr:function(n,t,i,r){var o=[],u,e;i||(i=document);r||(r="*");var f=i.getElementsByTagName(r),s=f.length,h=new RegExp("(^|\\s)"+t+"(\\s|$)");for(u=0,e=0;u<s;u++)h.test(f[u].getAttribute(n))&&(o[e]=f[u],e++);return o},GetElementsByClass:function(n,t,i){var e=[],r,f;t||(t=document);i||(i="*");var u=t.getElementsByTagName(i),o=u.length,s=new RegExp("(^|\\s)"+n+"(\\s|$)");for(r=0,f=0;r<o;r++)s.test(u[r].className)&&(e[f]=u[r],f++);return e},SetAdRequestData:function(){var n=DMAds.GetElementsByAttr("data-type","ad",document,"div"),t;for((n===null||n.length<=0)&&(n=DMAds.GetElementsByClass("lqm_ad",document,"div")),t=0;t<n.length;t++)DMAds.Ads[DMAds.Ads.length]=DMAds.GetDivRequestData(n[t],t)},GetDivRequestData:function(n,t){for(var u,f,r,o=n.attributes,s=o.length,i={},e=0;e<s;e++)u=o.item(e),u.nodeName.indexOf("lqm_")===0&&(f=u.nodeName.slice(4),i[f]=u.value||u.nodeValue),u.nodeName.indexOf("data-")===0&&(f=u.nodeName.slice(5),i[f]=u.value||u.nodeValue);return r={height:0,width:0,publisher:i.publisher,zone:i.zone||"ros",site:i.site,tags:i.tags,sitename:undefined,zonename:undefined,target:"_blank",format:i.format,index:t,tile:t+1,type:i.type,noadx:i.noadx,collapse_empty:i.collapse_empty,displayOverride:i.display||i.loadOnView,sticky:i.sticky,charity:i.charity,cookieConsent:i.cookieconsent,theAdDiv:n},r.tags&&(r.tags=decodeURIComponent(r.tags)),DMAds.DetermineTagSize(r),r.publisher&&r.publisher===CodeProjectPublisherId&&(r.articleid=DMAds.GetArticleId(r.publisher)),r},SetupAds:function(){DMAds.IsPagePIICompliant()&&(DMAds.InitGPTLibrary(),DMAds.SetQueryTerms(),DMAdXHelper.init(DMAds.Ads,{DownvoteUrl:DownvoteUrl,UndoDownvoteUrl:UndoDownvoteUrl,ReportAdUrl:ReportAdUrl,CloseAdImageUrl:CloseAdImageUrl,UndoCloseAdImageUrl:UndoCloseAdImageUrl,DmLogoImageUrl:DmLogoImageUrl}),DMUserIdentityHelper.init(GlobalIdUrl),DMAds.CreateAds())},Initialise:function(){if(DMAds.IsPagePIICompliant())if(window.googletag)DMAds.SetupAds();else{var t="https:"===document.location.protocol,n=document.createElement("script");n.async=!0;n.type="text/javascript";n.src=(t?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";n.onload=this.SetupAds;document.body.appendChild(n)}}};window.DMAds=DMAds}if(DMAds.IsPagePIICompliant())if(window.addEventListener)window.addEventListener("load",function(){DMAds.Initialise()},!1);else try{window.attachEvent("onload",function(){DMAds.Initialise()})}catch(e){DMAds.Initialise()}</script><script async="" type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script async="" type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script><iframe src="https://ab330f27d7f0d67dc94363e2016dc9e7.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" style="visibility: hidden; display: none;"></iframe><iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><div class="ad_column_box adv_banner_hor bsac sidebar__ad ads-wrap" style="width: 1px; height: 1px; position: absolute; left: -10000px; top: -10002px;"></div></body>
