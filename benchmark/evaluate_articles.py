@@ -70,10 +70,10 @@ def evaluate_result(datas, name=""):
             if ori_scores.get(datas[idx]["url"], ""):
                 if item['f1'] > ori_scores[datas[idx]["url"]]['f1']:
                     up_dum += 1
-                    print(datas[idx]["url"], item['f1'], 'up', item['f1'] - ori_scores[datas[idx]["url"]]['f1'])
+                    # print(datas[idx]["url"], item['f1'], 'up', item['f1'] - ori_scores[datas[idx]["url"]]['f1'])
                 elif item['f1'] < ori_scores[datas[idx]["url"]]['f1']:
                     down_num += 1
-                    print(datas[idx]["url"], item['f1'], 'down', item['f1'] - ori_scores[datas[idx]["url"]]['f1'])
+                    # print(datas[idx]["url"], item['f1'], 'down', item['f1'] - ori_scores[datas[idx]["url"]]['f1'])
             current_scores[datas[idx]["url"]] = {
                 "f1": item['f1']
             }
