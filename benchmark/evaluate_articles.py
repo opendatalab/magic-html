@@ -7,6 +7,7 @@ import json
 import jieba
 
 jieba.setLogLevel(logging.INFO)
+from datetime import datetime
 from tabulate import tabulate
 import numpy as np
 
@@ -53,18 +54,37 @@ def rouge_eval(ref, cand):
     return t
 
 
-def evaluate_result(datas):
+def evaluate_result(datas, name=""):
     scores = []
     prec = []
     rec = []
+    current_scores = {}
+    down_num = 0
+    up_dum = 0
     for x in datas:
         scores.append(rouge_eval(x["content"], x["extract_content"]))
     for idx, item in enumerate(scores):
         prec.append(item["prec"])
         rec.append(item["rec"])
-        # if item['f1'] <= 0.4:
-        #     print(datas[idx]["url"], item['f1'])
-
+        if name == "magic_html":
+            if ori_scores.get(datas[idx]["url"], ""):
+                if item['f1'] > ori_scores[datas[idx]["url"]]['f1']:
+                    up_dum += 1
+                    print(datas[idx]["url"], item['f1'], 'up', item['f1'] - ori_scores[datas[idx]["url"]]['f1'])
+                elif item['f1'] < ori_scores[datas[idx]["url"]]['f1']:
+                    down_num += 1
+                    print(datas[idx]["url"], item['f1'], 'down', item['f1'] - ori_scores[datas[idx]["url"]]['f1'])
+            current_scores[datas[idx]["url"]] = {
+                "f1": item['f1']
+            }
+            if item['f1'] < 0.5:
+                print(datas[idx]["url"], item['f1'])
+    if name == "magic_html":
+        print('magic_html', 'up:', up_dum, 'down:', down_num)
+        now = datetime.now()
+        current_time = now.strftime("%Y-%m-%d_%H-%M-%S")
+        with open(f'data/article/scores/{current_time}.json', 'w', encoding='utf-8') as f:
+            f.write(json.dumps(current_scores, ensure_ascii=False))
 
     prec_mean = np.array(prec).mean()
     rec_mean = np.array(rec).mean()
@@ -109,7 +129,7 @@ def run_magic_html(name):
             extractor.extract(html=x["html"], base_url=x["url"])["html"]
         )
     global_info["func"].append(name)
-    evaluate_result(datas)
+    evaluate_result(datas, name=name)
 
 
 def run_trafilatura(name):
@@ -202,6 +222,14 @@ def run_gne(name):
     evaluate_result(datas)
 
 
+# magic_html每条测试数据分数变化
+ori_scores = {}
+try:
+    with open('data/article/scores/ori.json', 'r', encoding='utf-8') as f:
+        ori_scores = json.loads(f.read())
+except:
+    pass
+
 # 自定义需要对比的方法
 all_funcs = {
     "magic_html": run_magic_html,
@@ -226,21 +254,21 @@ print(
 ╒══════════════════════╤═════════════╤════════════╤═══════════╕
 │ func                 │   prec_mean │   rec_mean │   f1_mean │
 ╞══════════════════════╪═════════════╪════════════╪═══════════╡
-│ magic_html           │    0.955549 │   0.993721 │  0.974261 │
+│ magic_html           │    0.908865 │   0.95032  │  0.92913  │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ trafilatura          │    0.887413 │   0.84243  │  0.864336 │
+│ trafilatura          │    0.833434 │   0.912384 │  0.871124 │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ trafilatura_fallback │    0.893388 │   0.93853  │  0.915403 │
+│ trafilatura_fallback │    0.831229 │   0.933713 │  0.879496 │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ readability-lxml     │    0.860823 │   0.885361 │  0.87292  │
+│ readability-lxml     │    0.86587  │   0.861391 │  0.863625 │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ newspaper3k          │    0.527753 │   0.551633 │  0.539429 │
+│ newspaper3k          │    0.409585 │   0.372083 │  0.389935 │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ goose3               │    0.543127 │   0.531672 │  0.537338 │
+│ goose3               │    0.525717 │   0.457669 │  0.489339 │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ justext              │    0.484097 │   0.334175 │  0.395402 │
+│ justext              │    0.224945 │   0.117092 │  0.154014 │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ gne                  │    0.869631 │   0.859659 │  0.864617 │
+│ gne                  │    0.828849 │   0.629112 │  0.715299 │
 ╘══════════════════════╧═════════════╧════════════╧═══════════╛
 """.strip()
 )

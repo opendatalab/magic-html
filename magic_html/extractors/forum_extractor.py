@@ -44,7 +44,7 @@ class ForumExtractor(BaseExtractor):
         except:
             body_tree = Element("body")
             body_tree.extend(body_html_tree)
-        main_ids = body_tree.xpath(f"./*/@{Unique_ID}")
+        main_ids = body_tree.xpath(f".//@{Unique_ID}")
 
         for main_id in main_ids:
             main_tree = normal_tree.xpath(
@@ -62,7 +62,9 @@ class ForumExtractor(BaseExtractor):
                 x = normal_tree.xpath(c_xpath)[0]
                 self.remove_node(x)
                 if "'post-'" in c_xpath:
-                    if not (re.findall('post-\d+', x.attrib.get("id", "").lower()) or re.findall('post_\d+', x.attrib.get("id", "").lower())):
+                    if not (re.findall('post-\d+', x.attrib.get("id", "").lower()) or re.findall('post_\d+',
+                                                                                                 x.attrib.get("id",
+                                                                                                              "").lower())):
                         continue
                 if (
                         "header" in x.attrib.get("class", "").lower()
