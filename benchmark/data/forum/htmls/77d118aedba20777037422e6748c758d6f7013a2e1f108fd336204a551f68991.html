@@ -1,0 +1,923 @@
+<head>
+<title>SV1, SV2, SV-TT update</title>
+<!-- start: headerinclude -->
+<link rel="alternate" type="application/rss+xml" title="Latest Threads (RSS 2.0)" href="https://theultimatetone.com/syndication.php">
+<link rel="alternate" type="application/atom+xml" title="Latest Threads (Atom 1.0)" href="https://theultimatetone.com/syndication.php?type=atom1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script type="text/javascript" src="https://theultimatetone.com/jscripts/jquery.js?ver=1823"></script>
+<script type="text/javascript" src="https://theultimatetone.com/jscripts/jquery.plugins.min.js?ver=1821"></script>
+<script type="text/javascript" src="https://theultimatetone.com/jscripts/general.js?ver=1827"></script>
+
+<link type="text/css" rel="stylesheet" href="https://theultimatetone.com/cache/themes/theme2/global.css?t=1539611035">
+<link type="text/css" rel="stylesheet" href="https://theultimatetone.com/cache/themes/theme1/star_ratings.css?t=1634422321">
+<link type="text/css" rel="stylesheet" href="https://theultimatetone.com/cache/themes/theme1/showthread.css?t=1634422321">
+<link type="text/css" rel="stylesheet" href="https://theultimatetone.com/cache/themes/theme1/css3.css?t=1634422321">
+<link type="text/css" rel="stylesheet" href="https://theultimatetone.com/cache/themes/theme2/color_sun.css?t=1533583988">
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "An unknown error has occurred.";
+	lang.confirm_title = "Please Confirm";
+	lang.expcol_collapse = "[-]";
+	lang.expcol_expand = "[+]";
+	lang.select2_match = "One result is available, press enter to select it.";
+	lang.select2_matches = "{1} results are available, use up and down arrow keys to navigate.";
+	lang.select2_nomatches = "No matches found";
+	lang.select2_inputtooshort_single = "Please enter one or more character";
+	lang.select2_inputtooshort_plural = "Please enter {1} or more characters";
+	lang.select2_inputtoolong_single = "Please delete one character";
+	lang.select2_inputtoolong_plural = "Please delete {1} characters";
+	lang.select2_selectiontoobig_single = "You can only select one item";
+	lang.select2_selectiontoobig_plural = "You can only select {1} items";
+	lang.select2_loadmore = "Loading more results&hellip;";
+	lang.select2_searching = "Searching&hellip;";
+
+	var templates = {
+		modal: '<div class=\"modal\">\
+	<div style=\"overflow-y: auto; max-height: 400px;\">\
+		<table border=\"0\" cellspacing=\"0\" cellpadding=\"5\" class=\"tborder\">\
+			<tr>\
+				<td class=\"thead\"><strong>__title__</strong></td>\
+			</tr>\
+			<tr>\
+				<td class=\"trow1\">__message__</td>\
+			</tr>\
+			<tr>\
+				<td class=\"tfoot\">\
+					<div style=\"text-align: center\" class=\"modal_buttons\">__buttons__</div>\
+				</td>\
+			</tr>\
+		</table>\
+	</div>\
+</div>',
+		modal_button: '<input type=\"submit\" class=\"button\" value=\"__title__\"/>&nbsp;'
+	};
+
+	var cookieDomain = ".theultimatetone.com";
+	var cookiePath = "/";
+	var cookiePrefix = "";
+	var cookieSecureFlag = "0";
+	var deleteevent_confirm = "Are you sure you want to delete this event?";
+	var removeattach_confirm = "Are you sure you want to remove the selected attachment from this post?";
+	var loading_text = 'Loading. <br />Please Wait&hellip;';
+	var saving_changes = 'Saving changes&hellip;';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "5cfb708bb00de625a1ea3767da608fbe";
+	var rootpath = "https://theultimatetone.com";
+	var imagepath = "https://theultimatetone.com/images";
+  	var yes_confirm = "Yes";
+	var no_confirm = "No";
+	var MyBBEditor = null;
+	var spinner_image = "https://theultimatetone.com/images/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+// -->
+</script>
+<!-- end: headerinclude -->
+<script type="text/javascript">
+<!--
+	var quickdelete_confirm = "Are you sure you want to delete this post?";
+	var quickrestore_confirm = "Are you sure you want to restore this post?";
+	var allowEditReason = "1";
+	lang.save_changes = "Save Changes";
+	lang.cancel_edit = "Cancel Edit";
+	lang.quick_edit_update_error = "There was an error editing your reply:";
+	lang.quick_reply_post_error = "There was an error posting your reply:";
+	lang.quick_delete_error = "There was an error deleting your reply:";
+	lang.quick_delete_success = "The post was deleted successfully.";
+	lang.quick_delete_thread_success = "The thread was deleted successfully.";
+	lang.quick_restore_error = "There was an error restoring your reply:";
+	lang.quick_restore_success = "The post was restored successfully.";
+	lang.editreason = "Edit Reason";
+	lang.post_deleted_error = "You can not perform this action to a deleted post.";
+	lang.softdelete_thread = "Soft Delete Thread";
+	lang.restore_thread = "Restore Thread";
+// -->
+</script>
+<!-- jeditable (jquery) -->
+<script type="text/javascript" src="https://theultimatetone.com/jscripts/report.js?ver=1820"></script>
+<script src="https://theultimatetone.com/jscripts/jeditable/jeditable.min.js"></script>
+<script type="text/javascript" src="https://theultimatetone.com/jscripts/thread.js?ver=1827"></script>
+<meta name="description" content="Hi Guys Back when I designed SV1, SV2 and SV-TT it seemed like &quot;a good thing&quot; to add some tiny caps to reduce the bandwidth of the otherwise wide-bandwidth regulator sections. The idea was that noise">
+<link rel="canonical" href="https://theultimatetone.com/thread-214.html">
+</head>
+<body>
+	<!-- start: header -->
+<div id="container">
+		<a name="top" id="top"></a>
+		<div id="header">
+			<div id="logo">
+				<div class="wrapper">
+					<a href="https://theultimatetone.com/index.php"><img src="https://theultimatetone.com/images/tut-logo-plus-pyramids-plus-text-xparent.png" alt="Tube Amp Forum: The Ultimate Tone" title="Tube Amp Forum: The Ultimate Tone"></a>
+					<ul class="menu top_links">
+						<!-- start: header_menu_portal -->
+<li><a href="https://theultimatetone.com/portal.php" class="portal">Portal</a></li>
+<!-- end: header_menu_portal -->
+						<!-- start: header_menu_search -->
+<li><a href="https://theultimatetone.com/search.php" class="search">Search</a></li>
+<!-- end: header_menu_search -->
+						
+						
+						<li><a href="https://theultimatetone.com/misc.php?action=help" class="help">Help</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="panel">
+				<div class="upper">
+					<div class="wrapper">
+						<!-- start: header_quicksearch -->
+						<form action="https://theultimatetone.com/search.php">
+						<fieldset id="search">
+							<input name="keywords" type="text" class="textbox">
+							<input value="Search" type="submit" class="button">
+							<input type="hidden" name="action" value="do_search">
+							<input type="hidden" name="postthread" value="1">
+						</fieldset>
+						</form>
+<!-- end: header_quicksearch -->
+						<!-- start: header_welcomeblock_guest -->
+						<!-- Continuation of div(class="upper") as opened in the header template -->
+						<span class="welcome">Hello There, Guest! <a href="https://theultimatetone.com/member.php?action=login" onclick="$('#quick_login').modal({ fadeDuration: 250, keepelement: true, zIndex: (typeof modal_zindex !== 'undefined' ? modal_zindex : 9999) }); return false;" class="login">Login</a> <a href="https://theultimatetone.com/member.php?action=register" class="register">Register</a></span>
+					</div>
+				</div>
+				<div class="modal" id="quick_login" style="display: none;">
+					<form method="post" action="https://theultimatetone.com/member.php">
+						<input name="action" type="hidden" value="do_login">
+						<input name="url" type="hidden" value="https://theultimatetone.com/thread-214.html">
+						<input name="quick_login" type="hidden" value="1">
+						<input name="my_post_key" type="hidden" value="5cfb708bb00de625a1ea3767da608fbe">
+						<table width="100%" cellspacing="0" cellpadding="5" border="0" class="tborder">
+							<tbody><tr>
+								<td class="thead" colspan="2"><strong>Login</strong></td>
+							</tr>
+							<!-- start: header_welcomeblock_guest_login_modal -->
+<tr>
+	<td class="trow1" width="25%"><strong>Username:</strong></td>
+	<td class="trow1"><input name="quick_username" id="quick_login_username" type="text" value="" class="textbox initial_focus"></td>
+</tr>
+<tr>
+	<td class="trow2"><strong>Password:</strong></td>
+	<td class="trow2">
+		<input name="quick_password" id="quick_login_password" type="password" value="" class="textbox"><br>
+		<a href="https://theultimatetone.com/member.php?action=lostpw" class="lost_password">Lost Password?</a>
+	</td>
+</tr>
+<tr>
+	<td class="trow1">&nbsp;</td>
+	<td class="trow1 remember_me">
+		<input name="quick_remember" id="quick_login_remember" type="checkbox" value="yes" class="checkbox" checked="checked">
+		<label for="quick_login_remember">Remember me</label>
+	</td>
+</tr>
+<tr>
+	<td class="trow2" colspan="2">
+		<div align="center"><input name="submit" type="submit" class="button" value="Login"></div>
+	</td>
+</tr>
+<!-- end: header_welcomeblock_guest_login_modal -->
+						</tbody></table>
+					</form>
+				</div>
+				<script type="text/javascript">
+					$("#quick_login input[name='url']").val($(location).attr('href'));
+				</script>
+<!-- end: header_welcomeblock_guest -->
+					<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+				<!-- </div> in header_welcomeblock_member and header_welcomeblock_guest -->
+			</div>
+		</div>
+		<div id="content">
+			<div class="wrapper">
+				
+				
+				
+				
+				
+				
+				 
+               <!-- BAM --><!-- start: bam_announcement_container -->
+
+<style>
+	.bam_announcement.yellow {
+		background: #FFF6BF;
+		border: 1px solid #FFD324;
+	}
+
+	.bam_announcement.green {
+		background: #D6ECA6;
+		border: 1px solid #8DC93E;
+	}
+
+	.bam_announcement.blue {
+		background: #ADCBE7;
+		border: 1px solid #0F5C8E;
+	}
+
+	.bam_announcement.red {
+		background: #FBE3E4;
+		border: 1px solid #A5161A;
+	}
+
+	.bam_announcement {
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px; 
+		text-align: center;
+		margin: 10px auto;
+		padding: 8px 12px;
+		background: #EBEBEB;
+		color: #000000;
+		border: 1px solid #ADADAD;
+	}
+
+	.bam_date {
+		color: #636161;
+		font-size: 0.78em;
+		margin-left: 6px;
+	}	
+
+	/* Insert Custom CSS Here */
+</style>
+<div class="bam_announcements"></div>
+<!-- end: bam_announcement_container --><!-- /BAM -->
+<!-- PLACE WHATEVER GRAPHIC YOU WANT IN THE HEADER AFTER THIS -->
+				<center><!-- IN HERE --><a href="https://www.londonpower.com"><img src="https://theultimatetone.com/images/lp-need-our-products-ad.gif" alt="London Power ad" width="400"></a><!-- /IN HERE --></center>
+				<!-- start: nav -->
+
+<div class="navigation">
+<!-- start: nav_bit -->
+<a href="https://theultimatetone.com/index.php">Tube Amp Forum: The Ultimate Tone</a><!-- start: nav_sep -->
+›
+<!-- end: nav_sep -->
+<!-- end: nav_bit --><!-- start: nav_bit -->
+<a href="forum-1.html">Tube Amp Community (Hi-fi too!)</a><!-- start: nav_sep -->
+›
+<!-- end: nav_sep -->
+<!-- end: nav_bit --><!-- start: nav_bit -->
+<a href="forum-5.html">Power Scaling</a>
+<!-- end: nav_bit --><!-- start: nav_sep_active -->
+<br><img src="https://theultimatetone.com/images/nav_bit.png" alt="">
+<!-- end: nav_sep_active --><!-- start: nav_bit_active -->
+<span class="active">SV1, SV2, SV-TT update</span>
+<!-- end: nav_bit_active -->
+</div>
+<!-- end: nav -->
+				<br>
+<!-- end: header -->
+	
+	
+	<div class="float_left">
+		
+	</div>
+	<div class="float_right">
+		
+	</div>
+	<!-- start: asb_begin -->
+<table width="100%" border="0" cellspacing="5">
+	<tbody><tr>
+		<!-- start: ASB left column -->
+		<!-- start: asb_sidebox_column -->
+			<td style="width: 200px;" id="asb_left_column_id" valign="top">
+				
+		<!-- start side box #7 - box type search_box -->
+		<!-- start: asb_wrapped_sidebox -->
+		<table id="search_box_main_7" style="table-layout: fixed; word-wrap: break-word;" border="0" cellspacing="0" cellpadding="5" class="tborder search_box_main_7">
+			<thead>
+				<tr>
+					<td class="thead">
+<!-- start: asb_expander -->
+						<div class="expcolimage">
+							<img src="https://theultimatetone.com/images/collapse.png" id="search_box_7_img" class="expander" alt="[-]" title="[-]" style="cursor: pointer;">
+						</div>
+<!-- end: asb_expander -->
+						<strong>Search the Forum</strong>
+					</td>
+				</tr>
+			</thead>
+			<tbody style="" id="search_box_7_e">
+		<!-- start: asb_search -->
+				<tr>
+					<td class="trow1">
+						<form method="post" action="https://theultimatetone.com/search.php">
+							<input type="hidden" name="action" value="do_search">
+							<input type="hidden" name="forums" value="all">
+							<input type="hidden" name="sortby" value="lastpost">
+							<input type="hidden" name="sortordr" value="desc">
+							<label><strong>Search In:</strong></label><br>
+							<input type="radio" class="radio" name="postthread" value="1" checked="checked">
+							<label for="postthread">Messages</label>
+							<input type="radio" class="radio" name="postthread" value="2">
+							<label for="postthread">Titles</label><br><br>
+							<label><strong>Results As:</strong></label><br>
+							<input type="radio" class="radio" name="showresults" value="posts">
+							<label for="showresults">Posts</label>
+							<input type="radio" class="radio" name="showresults" value="threads" checked="checked">
+							<label for="showresults">Threads</label><br><br>
+							<label for="keywords"><strong>Search Keywords</strong></label><br>
+							<input style="width: 95%;" type="text" class="textbox" name="keywords">
+							<!-- start: gobutton -->
+<input type="submit" class="button" value="Go">
+<!-- end: gobutton -->
+						</form><br>
+						<span class="smalltext">
+						(<a href="https://theultimatetone.com/search.php">Advanced Search</a>)
+						</span>
+					</td>
+				</tr>
+<!-- end: asb_search -->
+			</tbody>
+		</table><br>
+<!-- end: asb_wrapped_sidebox -->
+		<!-- end side box #7 - box type search_box -->
+				<!-- start: asb_content_pad -->
+
+		<img src="https://theultimatetone.com/images/asb/transparent.png" style="width: 200px;" height="1" alt="">
+<!-- end: asb_content_pad -->
+			</td>
+<!-- end: asb_sidebox_column -->
+		<!-- end: ASB left column -->
+		<!-- start: ASB middle column (page contents of showthread.php) -->
+		<td width="auto" valign="top">
+<!-- end: asb_begin -->
+	<table border="0" cellspacing="0" cellpadding="5" class="tborder tfixed clear">
+		<tbody><tr>
+			<td class="thead">
+				<div class="float_right">
+					<span class="smalltext"><strong><a href="showthread.php?mode=threaded&amp;tid=214&amp;pid=830#pid830">Threaded Mode</a></strong></span>
+				</div>
+				<div>
+					<strong>SV1, SV2, SV-TT update</strong>
+				</div>
+			</td>
+		</tr>
+<tr><td id="posts_container">
+	<div id="posts">
+		<!-- start: postbit_classic -->
+
+<a name="pid830" id="pid830"></a>
+<div class="post classic " style="" id="post_830">
+<div class="post_author scaleimages">
+	<!-- start: postbit_avatar -->
+<div class="author_avatar"><a href="user-3.html"><img src="https://theultimatetone.com/images/default_avatar.png" alt="" width="55" height="55"></a></div>
+<!-- end: postbit_avatar -->
+	<div class="author_information">
+			<strong><span class="largetext"><a href="https://theultimatetone.com/user-3.html">K O'Connor</a></span></strong> <!-- start: postbit_offline -->
+<img src="https://theultimatetone.com/images/buddy_offline.png" title="Offline" alt="Offline" class="buddy_status">
+<!-- end: postbit_offline --><br>
+			<span class="smalltext">
+				<br>
+				
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		<!-- start: postbit_author_user -->
+
+	Posts: 486<br>
+	Threads: 53<br>
+	Joined: Aug 2018
+	<!-- start: postbit_profilefield -->
+<br>Location: CANADA
+<!-- end: postbit_profilefield -->
+<!-- end: postbit_author_user --><!-- start: postbit_country -->
+<br>Country: <img src="images/flags/canada.png" alt="Canada" title="Canada">
+<!-- end: postbit_country -->
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		<!-- start: postbit_posturl -->
+<div class="float_right" style="vertical-align: top">
+<strong><a href="thread-214-post-830.html#pid830" title="SV1, SV2, SV-TT update">#1</a></strong>
+
+</div>
+<!-- end: postbit_posturl -->
+		
+		<span class="post_date">07-12-2021, 02:20 PM <span class="post_edit" id="edited_by_830"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_830">
+		Hi Guys<br>
+<br>
+Back when I designed SV1, SV2 and SV-TT it seemed like "a good thing" to add some tiny caps to reduce the bandwidth of the otherwise wide-bandwidth regulator sections. The idea was that noise on the supply line that might be impressed across the Power Scale control could be amplified through the regulators and be heard through the amp. Of course, C1 across the pot output would clean this up all on its own.<br>
+<br>
+In most installations these caps do not present a problem and everything works fine. However, some installations will show some oscillation and removing the small feedback cap 56-68pF will eliminate the oscillation. In SV1 and SV-TT, remove the 270pF from the bias regulator. Do this in TBS if there are issues. The bias regulator cap can cause a secondary oscillation.<br>
+<br>
+Over the life of these kits, the 330k-1W feeding the Power Scale pot was split into 150k + 180k and a filter cap to ground was added at their junction. This cap helps reduce hum, ripple or other noise getting to the pot. Some installers found that C1 could be removed without any audible effect, although the main purpose for C1 is to keep DC-related pot-scratchy sounds from happening.<br>
+<br>
+Techs report that he removal of these caps makes the amp sound better. It should, since these are very wide-bandwidth regulators which present a low-impedance voltage source to the amp allowing any frequency restrictions to be only those imposed by the amp itself.<br>
+<br>
+I annotated the kit notes but if you have old notes or ones without the update, at least the information is accessible here on the forum.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_830">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		<!-- start: postbit_find -->
+<a href="search.php?action=finduser&amp;uid=3" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+<!-- end: postbit_find -->
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		<!-- start: postbit_quote -->
+<a href="newreply.php?tid=214&amp;replyto=830" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+<!-- end: postbit_quote -->
+	</div>
+</div>
+</div>
+<!-- end: postbit_classic --><!-- start: postbit_classic -->
+
+<a name="pid1076" id="pid1076"></a>
+<div class="post classic " style="" id="post_1076">
+<div class="post_author scaleimages">
+	<!-- start: postbit_avatar -->
+<div class="author_avatar"><a href="user-3.html"><img src="https://theultimatetone.com/images/default_avatar.png" alt="" width="55" height="55"></a></div>
+<!-- end: postbit_avatar -->
+	<div class="author_information">
+			<strong><span class="largetext"><a href="https://theultimatetone.com/user-3.html">K O'Connor</a></span></strong> <!-- start: postbit_offline -->
+<img src="https://theultimatetone.com/images/buddy_offline.png" title="Offline" alt="Offline" class="buddy_status">
+<!-- end: postbit_offline --><br>
+			<span class="smalltext">
+				<br>
+				
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		<!-- start: postbit_author_user -->
+
+	Posts: 486<br>
+	Threads: 53<br>
+	Joined: Aug 2018
+	<!-- start: postbit_profilefield -->
+<br>Location: CANADA
+<!-- end: postbit_profilefield -->
+<!-- end: postbit_author_user --><!-- start: postbit_country -->
+<br>Country: <img src="images/flags/canada.png" alt="Canada" title="Canada">
+<!-- end: postbit_country -->
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		<!-- start: postbit_posturl -->
+<div class="float_right" style="vertical-align: top">
+<strong><a href="thread-214-post-1076.html#pid1076" title="RE: SV1, SV2, SV-TT update">#2</a></strong>
+
+</div>
+<!-- end: postbit_posturl -->
+		
+		<span class="post_date">04-08-2023, 02:34 PM <span class="post_edit" id="edited_by_1076"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_1076">
+		Hi Guys<br>
+<br>
+SV1 and SV2 are now much smaller than they used to be by about one-third. This allows them to be placed in  smaller chassis or into tighter spaces. We used cord-wood construction to achieve this, with all the power resistors standing on end with one lead folded back to the board.<br>
+<br>
+The revision also changes how the Power Scale control is wired, improving low-level resolution of the control. This rewiring is actually the original way I wired the PS pot in my amps, but then changed it for the kits to allow easy ground-referenced selection of multiple PS pots. Although that was a useful feature, only two builders ever took advantage of it.<br>
+<br>
+That multi-PS selection optimisation did a quirky thing to the PS sweep which was nonoptimal yet still allowed dialing power to zero. The new/old wiring is nearly ideal in its pot sweep and the power range is from 100% down to 0% as it always has been.<br>
+<br>
+In the Japanese naming style adopted for the Power Scaling kits, the Super Budget SB-series used a very simple circuit that required a very expensive pot. The pot price got to be prohibitive and it was eventually replaced with good-quality 16mm types that are far less expensive, but required a more complex regulator circuit. In my amps, I called this the Super Design SD-series, and with the modified PS connection, the kits became Super Versatile or Super Value SV-series. The kits now conform to the SD form.<br>
+<br>
+The kit evolution also allowed an increase in the voltage range for SV1 and SV2, eliminating the need for SV-TT and SV3. SV84 was originally designed for use in the ValveJr, which uses a single-ended EL-84 PA with a single supply node for the output stage. SV84 has been redesigned as above and its voltage range has been extended to 750V from 450V. The product description will be updated when the new PCBs arrive.
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_1076">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		<!-- start: postbit_find -->
+<a href="search.php?action=finduser&amp;uid=3" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+<!-- end: postbit_find -->
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		<!-- start: postbit_quote -->
+<a href="newreply.php?tid=214&amp;replyto=1076" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+<!-- end: postbit_quote -->
+	</div>
+</div>
+</div>
+<!-- end: postbit_classic --><!-- start: postbit_classic -->
+
+<a name="pid1082" id="pid1082"></a>
+<div class="post classic " style="" id="post_1082">
+<div class="post_author scaleimages">
+	<!-- start: postbit_avatar -->
+<div class="author_avatar"><a href="user-239.html"><img src="https://theultimatetone.com/images/default_avatar.png" alt="" width="55" height="55"></a></div>
+<!-- end: postbit_avatar -->
+	<div class="author_information">
+			<strong><span class="largetext"><a href="https://theultimatetone.com/user-239.html">DCarrer</a></span></strong> <!-- start: postbit_offline -->
+<img src="https://theultimatetone.com/images/buddy_offline.png" title="Offline" alt="Offline" class="buddy_status">
+<!-- end: postbit_offline --><br>
+			<span class="smalltext">
+				<br>
+				
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		<!-- start: postbit_author_user -->
+
+	Posts: 11<br>
+	Threads: 1<br>
+	Joined: Dec 2020
+	<!-- start: postbit_profilefield -->
+<br>Location: Canada
+<!-- end: postbit_profilefield -->
+<!-- end: postbit_author_user --><!-- start: postbit_country -->
+<br>Country: <img src="images/flags/canada.png" alt="Canada" title="Canada">
+<!-- end: postbit_country -->
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		<!-- start: postbit_posturl -->
+<div class="float_right" style="vertical-align: top">
+<strong><a href="thread-214-post-1082.html#pid1082" title="RE: SV1, SV2, SV-TT update">#3</a></strong>
+
+</div>
+<!-- end: postbit_posturl -->
+		
+		<span class="post_date">04-24-2023, 09:55 PM <span class="post_edit" id="edited_by_1082"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_1082">
+		Hey Kevin,<br>
+<br>
+Great news about the SV updates! <br>
+<br>
+I used the ground-referenced, multi-PS pot circuits in at least one Island Amp model back in the day. Sadly it's been so long I can't remember which one(s) actually made it past the prototype phase. Few players at the time seemed to grasp the concept of multiple channels each with independent control over power amp variables including Scale, Drive Comp, Body, NFB, etc.<br>
+<br>
+Was I one of the two builders? =)
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_1082">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		<!-- start: postbit_find -->
+<a href="search.php?action=finduser&amp;uid=239" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+<!-- end: postbit_find -->
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		<!-- start: postbit_quote -->
+<a href="newreply.php?tid=214&amp;replyto=1082" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+<!-- end: postbit_quote -->
+	</div>
+</div>
+</div>
+<!-- end: postbit_classic --><!-- start: postbit_classic -->
+
+<a name="pid1083" id="pid1083"></a>
+<div class="post classic " style="" id="post_1083">
+<div class="post_author scaleimages">
+	<!-- start: postbit_avatar -->
+<div class="author_avatar"><a href="user-3.html"><img src="https://theultimatetone.com/images/default_avatar.png" alt="" width="55" height="55"></a></div>
+<!-- end: postbit_avatar -->
+	<div class="author_information">
+			<strong><span class="largetext"><a href="https://theultimatetone.com/user-3.html">K O'Connor</a></span></strong> <!-- start: postbit_offline -->
+<img src="https://theultimatetone.com/images/buddy_offline.png" title="Offline" alt="Offline" class="buddy_status">
+<!-- end: postbit_offline --><br>
+			<span class="smalltext">
+				<br>
+				
+				
+			</span>
+	</div>
+	<div class="author_statistics">
+		<!-- start: postbit_author_user -->
+
+	Posts: 486<br>
+	Threads: 53<br>
+	Joined: Aug 2018
+	<!-- start: postbit_profilefield -->
+<br>Location: CANADA
+<!-- end: postbit_profilefield -->
+<!-- end: postbit_author_user --><!-- start: postbit_country -->
+<br>Country: <img src="images/flags/canada.png" alt="Canada" title="Canada">
+<!-- end: postbit_country -->
+	</div>
+</div>
+<div class="post_content">
+	<div class="post_head">
+		<!-- start: postbit_posturl -->
+<div class="float_right" style="vertical-align: top">
+<strong><a href="thread-214-post-1083.html#pid1083" title="RE: SV1, SV2, SV-TT update">#4</a></strong>
+
+</div>
+<!-- end: postbit_posturl -->
+		
+		<span class="post_date">04-24-2023, 11:50 PM <span class="post_edit" id="edited_by_1083"></span></span>
+	
+	</div>
+	<div class="post_body scaleimages" id="pid_1083">
+		Hi Dante<br>
+<br>
+I guess there were three <img src="https://theultimatetone.com/images/smilies/biggrin.png" alt="Big Grin" title="Big Grin" class="smilie smilie_4"><br>
+<br>
+It is kind of funny about Human interfaces for tech items. Some players dream of a 3-knob amp, or even less, while others want an amp they can control from their phone. I like versatility and default to having sometimes too many controls - most that are for voicing and end up being set as the player needs then forgotten, while a few controls remain "daily users". Then the player thinks a 3-knob amp would suffice.<br>
+<br>
+The closest I came to a 3-knob amp was a variation of STUDIO with 3-knobs plus some switches, but no one ever ordered one. The next was AURORA with 6-knoibs and no switches - slightly more popular - haha.<br>
+<br>
+Since Power Scale and Drive Compensation are "unusual" for most players, i can see that having two of them would be more intimidating - then add "master" versions of them for global control. Yikes!<br>
+<br>
+have fun
+	</div>
+	
+	
+	<div class="post_meta" id="post_meta_1083">
+		
+		<div class="float_right">
+			
+		</div>
+	</div>
+	
+</div>
+<div class="post_controls">
+	<div class="postbit_buttons author_buttons float_left">
+		<!-- start: postbit_find -->
+<a href="search.php?action=finduser&amp;uid=3" title="Find all posts by this user" class="postbit_find"><span>Find</span></a>
+<!-- end: postbit_find -->
+	</div>
+	<div class="postbit_buttons post_management_buttons float_right">
+		<!-- start: postbit_quote -->
+<a href="newreply.php?tid=214&amp;replyto=1083" title="Quote this message in a reply" class="postbit_quote postbit_mirage"><span>Reply</span></a>
+<!-- end: postbit_quote -->
+	</div>
+</div>
+</div>
+<!-- end: postbit_classic -->
+	</div>
+</td></tr>
+		<tr>
+			<td class="tfoot">
+				<!-- start: showthread_search -->
+	<div class="float_right">
+		<form action="search.php" method="post">
+			<input type="hidden" name="action" value="thread">
+			<input type="hidden" name="tid" value="214">
+			<input type="text" name="keywords" value="Enter Keywords" onfocus="if(this.value == 'Enter Keywords') { this.value = ''; }" onblur="if(this.value=='') { this.value='Enter Keywords'; }" class="textbox" size="25">
+			<input type="submit" class="button" value="Search Thread">
+		</form>
+	</div>
+<!-- end: showthread_search -->
+				<div>
+					<strong>« <a href="thread-214-nextoldest.html">Next Oldest</a> | <a href="thread-214-nextnewest.html">Next Newest</a> »</strong>
+				</div>
+			</td>
+		</tr>
+	</tbody></table>
+	<div class="float_left">
+		
+	</div>
+	<div style="padding-top: 4px;" class="float_right">
+		
+	</div>
+	<br class="clear">
+	
+	
+	
+	<br>
+	<div class="float_left">
+		<ul class="thread_tools">
+			<!-- start: showthread_printthread -->
+<li class="printable"><a href="printthread.php?tid=214">View a Printable Version</a></li>
+<!-- end: showthread_printthread -->
+			
+			
+			
+		</ul>
+	</div>
+
+	<div class="float_right" style="text-align: right;">
+		
+		<!-- start: forumjump_advanced -->
+<form action="forumdisplay.php" method="get">
+<span class="smalltext"><strong>Forum Jump:</strong></span>
+<select name="fid" class="forumjump">
+<option value="-4">Private Messages</option>
+<option value="-3">User Control Panel</option>
+<option value="-5">Who's Online</option>
+<option value="-2">Search</option>
+<option value="-1">Forum Home</option>
+<!-- start: forumjump_bit -->
+<option value="1"> Tube Amp Community (Hi-fi too!)</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="2">-- TUT Q&amp;A</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="5" selected="selected">-- Power Scaling</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="8">-- PCB Design</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="9">-- Power Supplies</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="20">-- Power Amps</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="10">-- Preamp Mods &amp; Design</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="7">-- Sag &amp; Sustain</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="11">-- Switching</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="12">-- Wiring</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="6">-- Personal Projects</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="19">-- Test &amp; Measurement</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="13">-- New Member Introductions</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="3"> Marketplace &amp; Products</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="15">-- London Power Amps &amp; Gear</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="16">-- London Power Kits &amp; Mods</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="14">-- Gear for Sale by Forum Members</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="4">-- Vendor Info</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="17">-- Miscellaneous for Sale</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="21"> Recording &amp; Playback</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="22">-- Recording Methods</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="23">-- Headphones for Music Playback</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="24">-- Playback of Recorded Music</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="25">-- Specialized Headphone Amplifiers</option>
+<!-- end: forumjump_bit --><!-- start: forumjump_bit -->
+<option value="26">-- Stereo Playback Systems for Music</option>
+<!-- end: forumjump_bit -->
+</select>
+<!-- start: gobutton -->
+<input type="submit" class="button" value="Go">
+<!-- end: gobutton -->
+</form>
+<script type="text/javascript">
+$(".forumjump").on('change', function() {
+	var option = $(this).val();
+
+	if(option < 0)
+	{
+		window.location = 'forumdisplay.php?fid='+option;
+	}
+	else
+	{
+		window.location = 'forum-'+option+'.html';
+	}
+});
+</script>
+<!-- end: forumjump_advanced -->
+	</div>
+	<br class="clear">
+	
+	<!-- start: asb_end -->
+		</td>
+		<!-- end: ASB middle column (page contents of showthread.php) -->
+		<!-- start: ASB right column -->
+		<!-- start: asb_sidebox_column -->
+			<td style="width: 200px;" id="asb_right_column_id" valign="top">
+				
+		<!-- start side box #8 - box type asb_custom_1 -->
+		<!-- start: asb_wrapped_sidebox -->
+		<table id="asb_custom_1_main_8" style="table-layout: fixed; word-wrap: break-word;" border="0" cellspacing="0" cellpadding="5" class="tborder asb_custom_1_main_8">
+			<thead>
+				<tr>
+					<td class="thead">
+<!-- start: asb_expander -->
+						<div class="expcolimage">
+							<img src="https://theultimatetone.com/images/collapse.png" id="asb_custom_1_8_img" class="expander" alt="[-]" title="[-]" style="cursor: pointer;">
+						</div>
+<!-- end: asb_expander -->
+						<strong>Come in where it's warm!</strong>
+					</td>
+				</tr>
+			</thead>
+			<tbody style="" id="asb_custom_1_8_e">
+		<tr>
+	<td class="trow1">A warm welcome to tube amp modding fans and those interested in hi-fi audio! Readers of <a href="http://www.londonpower.com/about-us"><b>Kevin O'Connor's</b></a> <i><b><a href="http://www.londonpower.com/audio-design-books">The Ultimate Tone (TUT)</a></b></i><a href="http://www.londonpower.com/audio-design-books"> book series</a> form a part of our population. Kevin O'Connor is the creator of the popular <a href="http://www.londonpower.com/power-scaling-faq"><b>Power Scaling</b> methodology</a> for amplifiers.</td>
+	</tr>
+	<tr>
+		<td class="trow2"> Please remember these three principles:<b><i> respect, sharing, community</i></b>.</td>
+	</tr>
+	<tr>
+		<td class="trow1">Not familiar with <i><b>The Ultimate Tone</b></i> book series? See discussion topics, or click <a href="http://www.londonpower.com"><b>here</b> to visit <b>London Power/Power Press Publishing</b></a>.</td>
+	</tr>
+			</tbody>
+		</table><br>
+<!-- end: asb_wrapped_sidebox -->
+		<!-- end side box #8 - box type asb_custom_1 -->
+		<!-- start side box #12 - box type asb_custom_2 -->
+		<!-- start: asb_wrapped_sidebox -->
+		<table id="asb_custom_2_main_12" style="table-layout: fixed; word-wrap: break-word;" border="0" cellspacing="0" cellpadding="5" class="tborder asb_custom_2_main_12">
+			<thead>
+				<tr>
+					<td class="thead">
+<!-- start: asb_expander -->
+						<div class="expcolimage">
+							<img src="https://theultimatetone.com/images/collapse.png" id="asb_custom_2_12_img" class="expander" alt="[-]" title="[-]" style="cursor: pointer;">
+						</div>
+<!-- end: asb_expander -->
+						<strong><a href="https://londonpower.com">Tube Amp Forum Hosted by London Power</a></strong>
+					</td>
+				</tr>
+			</thead>
+			<tbody style="" id="asb_custom_2_12_e">
+		<tr>
+		<td class="trow1"><a href="http://www.londonpower.com"><img src="images/lp-logo-180.jpg" alt="London Power logo"></a></td>
+	</tr>
+	
+			</tbody>
+		</table><br>
+<!-- end: asb_wrapped_sidebox -->
+		<!-- end side box #12 - box type asb_custom_2 -->
+				<!-- start: asb_content_pad -->
+
+		<img src="https://theultimatetone.com/images/asb/transparent.png" style="width: 200px;" height="1" alt="">
+<!-- end: asb_content_pad -->
+			</td>
+<!-- end: asb_sidebox_column -->
+		<!-- end: ASB right column -->
+</tr>
+</tbody></table>
+<!-- end: asb_end --><!-- start: footer -->
+
+	</div>
+</div>
+<div id="footer">
+	<div class="upper">
+		<div class="wrapper">
+			
+			
+			<ul class="menu bottom_links">
+				
+				<!-- start: footer_contactus -->
+<li><a href="mailto:tut@theultimatetone.com">Contact Us</a></li>
+<!-- end: footer_contactus -->
+				<li><a href="https://theultimatetone.com/">The Ultimate Tone Forum - Tube &amp; Hi-fi Amps</a></li>
+				<li><a href="#top">Return to Top</a></li>
+				<li><a href="https://theultimatetone.com/archive/index.php/thread-214.html">Lite (Archive) Mode</a></li>
+				<li><a href="https://theultimatetone.com/misc.php?action=markread">Mark all forums read</a></li>
+				<li><a href="https://theultimatetone.com/misc.php?action=syndication">RSS Syndication</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="lower">
+		<div class="wrapper">
+			<span id="current_time"><strong>Current time:</strong> 05-26-2024, 11:19 PM</span>
+			<span id="copyright">
+				<!-- MyBB is free software developed and maintained by a volunteer community.
+					It would be much appreciated by the MyBB Group if you left the full copyright and "powered by" notice intact,
+					to show your support for MyBB.  If you choose to remove or modify the copyright below,
+					you may be refused support on the MyBB Community Forums.
+
+					This is free software, support us and we'll support you. -->
+				Powered By <a href="https://mybb.com" target="_blank" rel="noopener">MyBB</a>, © 2002-2024 <a href="https://mybb.com" target="_blank" rel="noopener">MyBB Group</a>.
+				<!-- End powered by -->
+			</span>
+		</div>
+	</div>
+</div>
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE --><!-- start: task_image -->
+<img src="https://theultimatetone.com/task.php" width="1" height="1" alt="">
+<!-- end: task_image --><!-- End task image code -->
+
+</div>
+<!-- end: footer -->
+	<script type="text/javascript">
+		var thread_deleted = "0";
+		if(thread_deleted == "1")
+		{
+			$("#quick_reply_form, .new_reply_button, .thread_tools, .inline_rating").hide();
+			$("#moderator_options_selector option.option_mirage").attr("disabled","disabled");
+		}
+	</script>
+
+
+</body>

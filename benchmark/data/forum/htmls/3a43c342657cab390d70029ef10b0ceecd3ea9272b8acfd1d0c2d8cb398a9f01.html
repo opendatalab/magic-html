@@ -1,0 +1,717 @@
+<head>
+        <meta charset="utf-8">
+        <title>有没有强制用户登录插件？ - Flarum 中文社区</title>
+
+        <link rel="canonical" href="https://discuss.flarum.org.cn/d/15648">
+<link rel="preload" href="https://discuss.flarum.org.cn/assets/forum.js?v=55bbea88" as="script">
+<link rel="preload" href="https://discuss.flarum.org.cn/assets/forum-zh-Hans.js?v=5a432387" as="script">
+<link rel="preload" href="https://discuss.flarum.org.cn/assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="https://discuss.flarum.org.cn/assets/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<meta name="description" content="问题描述（报错内容）：访问flarum社区，自动弹出登录窗口，访问子页会自动跳转到首页">
+<meta name="theme-color" content="#276bb0">
+<meta name="application-name" content="Flarum 中文社区">
+<meta name="robots" content="index, follow">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://discuss.flarum.org.cn/assets/site-image-idnmtfuc.png">
+<meta name="twitter:title" content="有没有强制用户登录插件？">
+<meta name="article:published_time" content="2024-05-15T12:20:00+00:00">
+<meta name="twitter:description" content="问题描述（报错内容）：访问flarum社区，自动弹出登录窗口，访问子页会自动跳转到首页">
+<meta name="twitter:url" content="https://discuss.flarum.org.cn/d/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian">
+<meta name="color-scheme" content="light">
+<link rel="stylesheet" media="not all and (prefers-color-scheme: dark)" class="nightmode-light" href="https://discuss.flarum.org.cn/assets/forum.css?v=2a28de69">
+<link rel="stylesheet" media="(prefers-color-scheme: dark)" class="nightmode-dark" href="https://discuss.flarum.org.cn/assets/forum-dark.css?v=d5a8624f">
+<link rel="shortcut icon" href="https://discuss.flarum.org.cn/assets/favicon-mvffjom6.png">
+<meta property="og:site_name" content="Flarum 中文社区">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://discuss.flarum.org.cn/assets/site-image-idnmtfuc.png">
+<meta property="og:title" content="有没有强制用户登录插件？">
+<meta property="og:description" content="问题描述（报错内容）：访问flarum社区，自动弹出登录窗口，访问子页会自动跳转到首页">
+<meta property="og:url" content="https://discuss.flarum.org.cn/d/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-GPTFRS2HLR&amp;l=dataLayer&amp;cx=c"></script><script src="https://zz.bdstatic.com/linksubmit/push.js"></script><script type="application/ld+json">[{"@context":"http:\/\/schema.org","@type":"QAPage","publisher":{"@type":"Organization","name":"Flarum \u4e2d\u6587\u793e\u533a","url":"https:\/\/discuss.flarum.org.cn","description":"\u6b22\u8fce\u8bbf\u95ee Flarum \u4e2d\u6587\u7ad9\u3002Flarum \u662f\u4e00\u4e2a\u4f18\u96c5\u7684\u8f7b\u8bba\u575b\u8f6f\u4ef6\uff0c\u7b80\u7ea6\u754c\u9762\u56de\u5f52\u793e\u533a\u672c\u8d28\u3002\u8fd9\u91cc\u6ca1\u6709\u592a\u591a\u7684\u6761\u6761\u6846\u6846\u89c4\u5b9a\uff0c\u5728\u8fd9\u91cc\u4f60\u53ef\u4ee5\u8c08\u5929\u8bf4\u5730\uff0c\u53ef\u4ee5\u5728\u6700\u77ed\u7684\u65f6\u95f4\u6536\u96c6\u7075\u611f\uff0c\u5bfb\u627e\u6709\u8da3\u7684\u4e1c\u897f\u3002","logo":null},"image":"https:\/\/discuss.flarum.org.cn\/assets\/site-image-idnmtfuc.png","headline":"\u6709\u6ca1\u6709\u5f3a\u5236\u7528\u6237\u767b\u5f55\u63d2\u4ef6\uff1f","datePublished":"2024-05-15T12:20:00+00:00","description":"\u95ee\u9898\u63cf\u8ff0\uff08\u62a5\u9519\u5185\u5bb9\uff09\uff1a\u8bbf\u95eeflarum\u793e\u533a\uff0c\u81ea\u52a8\u5f39\u51fa\u767b\u5f55\u7a97\u53e3\uff0c\u8bbf\u95ee\u5b50\u9875\u4f1a\u81ea\u52a8\u8df3\u8f6c\u5230\u9996\u9875","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian","mainEntity":{"@type":"Question","name":"\u6709\u6ca1\u6709\u5f3a\u5236\u7528\u6237\u767b\u5f55\u63d2\u4ef6\uff1f","text":"\u003Cp\u003E\u95ee\u9898\u63cf\u8ff0\uff08\u62a5\u9519\u5185\u5bb9\uff09\uff1a\u8bbf\u95eeflarum\u793e\u533a\uff0c\u81ea\u52a8\u5f39\u51fa\u767b\u5f55\u7a97\u53e3\uff0c\u8bbf\u95ee\u5b50\u9875\u4f1a\u81ea\u52a8\u8df3\u8f6c\u5230\u9996\u9875\u003C\/p\u003E","dateCreated":"2024-05-15T12:20:00+00:00","author":{"@type":"Person","name":"\u6709\u70b9\u8822"},"answerCount":9,"acceptedAnswer":{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/2\" class=\"PostMention\" data-id=\"30142\" rel=\"\" target=\"\"\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u6d4b\u8bd5\u4e86\uff0c\u53ef\u4ee5\u5b89\u88c5\uff0c\u662f\u514d\u8d39\u7684\u3002\u611f\u8c22\uff01\u003C\/p\u003E\n\n\u003Ch3\u003E\u5b89\u88c5\u003C\/h3\u003E\n\u003Cp\u003E\u003Ccode\u003Ecomposer require sycho\/flarum-private-facade:\"*\"\u003C\/code\u003E\u003C\/p\u003E\n\n\u003Ch3\u003E\u66f4\u65b0\u003C\/h3\u003E\n\u003Cpre\u003E\u003Ccode\u003Ecomposer update sycho\/flarum-private-facade:\"*\"\nphp flarum migrate\nphp flarum cache:clear\u003C\/code\u003E\u003Cscript async=\"\" crossorigin=\"anonymous\" data-hljs-style=\"github\" integrity=\"sha384-fSWmbgQwbzLXpKFwOj6DlXOstUp9\/gRcSSNLI50wWQYg7XIihuBcYUTG\/GR7ocjz\" src=\"https:\/\/cdn.jsdelivr.net\/gh\/s9e\/hljs-loader@1.0.33\/loader.min.js\"\u003E\u003C\/script\u003E\u003Cscript\u003E\n                    if(window.hljsLoader && !document.currentScript.parentNode.hasAttribute('data-s9e-livepreview-onupdate')) {\n                        window.hljsLoader.highlightBlocks(document.currentScript.parentNode);\n                    }\n                \u003C\/script\u003E\u003C\/pre\u003E","dateCreated":"2024-05-16T08:12:38+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/3","author":{"@type":"Person","name":"\u6709\u70b9\u8822"},"upvoteCount":0},"suggestedAnswer":[{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/1\" class=\"PostMention\" data-id=\"30135\" rel=\"\" target=\"\"\u003E\u6709\u70b9\u8822\u003C\/a\u003E \u003Cbr\u003E\nPrivate Forum Facade \u8fd9\u4e2a\u63d2\u4ef6\u53ef\u4ee5\u5b9e\u73b0\uff0c\u4f46\u662f\u95ee\u9898\u662f\u003Cbr\u003E\n\u2460\u9700\u8981\u4ed8\u8d39\u003Cbr\u003E\n\u2461\u663e\u793a\u4e0d\u517c\u5bb9flarum1.8.5\uff08\u867d\u7136\u6211\u8fd9\u91cc\u597d\u50cf\u8fd8\u80fd\u7528\uff0c\u4f46\u662f\u4e0d\u4fdd\u969c\u5176\u5b83\u4eba\u6ca1\u95ee\u9898\uff09\u003C\/p\u003E","dateCreated":"2024-05-16T07:48:10+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/2","author":{"@type":"Person","name":"\u5bd2\u51b0\u51bd"},"upvoteCount":0},{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/3\" class=\"PostMention\" data-id=\"30143\" rel=\"\" target=\"\"\u003E\u6709\u70b9\u8822\u003C\/a\u003E \u8349\uff0c\u5f53\u65f6\u898115\u7f8e\u5143\uff08\uff09\u6211\u8fd8\u4e70\u4e86\u2026\u2026\u2026\u2026..\u003C\/p\u003E","dateCreated":"2024-05-16T10:40:59+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/4","author":{"@type":"Person","name":"\u5bd2\u51b0\u51bd"},"upvoteCount":0},{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/4\" class=\"PostMention\" data-id=\"30144\" rel=\"\" target=\"\"\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u6211\u5b89\u88c5\u4e86\uff0c\u4e0d\u662f\u6211\u60f3\u8981\u7684\uff0c\u6211\u60f3\u8981\u7684\u662f\u8fdb\u6807\u7b7e\u9875\u6216\u8005\u5185\u5bb9\u9875\uff0c\u4f1a\u5f39\u51fa\u767b\u5f55\u7a97\u53e3\u6216\u8005\u8df3\u8f6c\u767b\u5f55\u9875\u003C\/p\u003E","dateCreated":"2024-05-16T12:52:44+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/5","author":{"@type":"Person","name":"\u6709\u70b9\u8822"},"upvoteCount":0},{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/5\" class=\"PostMention\" data-id=\"30146\" rel=\"\" target=\"\"\u003E\u6709\u70b9\u8822\u003C\/a\u003E \u90a3\u53ef\u4ee5\u7528login2see\uff0c\u8fd9\u4e2a\u5e94\u8be5\u5f88\u591a\u7684\u003C\/p\u003E","dateCreated":"2024-05-16T16:08:24+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/6","author":{"@type":"Person","name":"\u5bd2\u51b0\u51bd"},"upvoteCount":0},{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/6\" class=\"PostMention\" data-id=\"30147\" rel=\"\" target=\"\"\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u8fd9\u4e2a\u53ea\u80fd\u9690\u85cf\u6307\u5b9a\u5185\u5bb9\uff0c\u5e76\u4e0d\u662f\u6211\u9700\u8981\u7684\u529f\u80fd\u3002\u003C\/p\u003E","dateCreated":"2024-05-16T17:31:16+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/7","author":{"@type":"Person","name":"\u6709\u70b9\u8822"},"upvoteCount":0},{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/7\" class=\"PostMention\" data-id=\"30151\" rel=\"\" target=\"\"\u003E\u6709\u70b9\u8822\u003C\/a\u003E \u4f60\u4e00\u5b9a\u5e0c\u671b\u5f39\u51fa\u7684\u8bdd\u5f97\u52a0\u4e1c\u897f\u4e86\uff0c\u6309\u5e73\u65f6\u901b\u63d2\u4ef6\u5e02\u573a\u5e94\u8be5\u662f\u6ca1\u6709\u8fd9\u4e2a\u63d2\u4ef6\uff0c\u4f46\u662f\u5b9e\u9645\u4e0a\u7684\u8bdd\u914d\u7f6elogin2see\u8fbe\u6210\u7684\u6548\u679c\u4e00\u6837\u8bbe\u7f6e\u66f4\u597d\uff1f\u56e0\u4e3a\u5f39\u51fa\u5185\u5bb9\u7684\u8bdd\u7528\u6237\u53ef\u4ee5\u5173\u6389\uff0c\u6211\u8fd8\u60f3\u5230\u4e00\u4e2a\u76f8\u5bf9\u7b80\u5355\u7684\u65b9\u6cd5\u662f\u914d\u7f6e\u9875\u9762\u89c4\u5219\u8ba9\u9664\u4e86\u9996\u9875\u4e4b\u5916\u7684\u9875\u9762\u5168\u90e8\u91cd\u5b9a\u5411\u5230Private Forum Facade\uff0c\u540c\u65f6\u4e0d\u5f00\u542fPrivate Forum Facade\u7684\u5f3a\u5236\u767b\u5f55\uff0c\u8fd9\u6837\u5c31\u80fd\u5b9e\u73b0\u9996\u9875\u53ef\u4ee5\u770b\uff0c\u5176\u5b83\u7684\u70b9\u5f00\u5c31\u4f1a\u8df3\u8f6c\u5230\u767b\u5f55\u9875\uff0c\u4f46\u662f\u603b\u4e4b\u542c\u8d77\u6765\u5f88\u9ebb\u70e6\u800c\u4e14\u53ef\u80fd\u5e26\u6765\u5404\u79cd\u5947\u602a\u95ee\u9898\uff0c\u8981\u4e48\u5c31\u662f\u627e\u4eba\u4e8c\u5f00\u63d2\u4ef6\uff0c\u8fd9\u4e2a\u662f\u6211\u80fd\u60f3\u5230\u7684\uff0c\u73b0\u6210\u7684\u80fd\u5b89\u88c5\u4e00\u4e0b\u5c31\u641e\u5b9a\u7684\u5e94\u8be5\u662f\u65e0\u3002\u603b\u4e4b\u542c\u8d77\u6765\u8fd8\u4e0d\u5982\u5c31\u7b80\u5355\u7528login2see\u003C\/p\u003E","dateCreated":"2024-05-16T18:09:29+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/8","author":{"@type":"Person","name":"\u5bd2\u51b0\u51bd"},"upvoteCount":0},{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/8\" class=\"PostMention\" data-id=\"30152\" rel=\"\" target=\"\"\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u65b9\u6cd5\u4e00\u8fd8\u5f97\u52a0\u767b\u5f55\u72b6\u6001\u5224\u65ad\uff0c\u4e5f\u4e0d\u7b80\u5355\u4e86\u2026\u2026\u003C\/p\u003E","dateCreated":"2024-05-16T18:11:35+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/9","author":{"@type":"Person","name":"\u5bd2\u51b0\u51bd"},"upvoteCount":0},{"@type":"Answer","text":"\u003Cp\u003E\u003Ca href=\"https:\/\/discuss.flarum.org.cn\/d\/15648\/9\" class=\"PostMention\" data-id=\"30153\" rel=\"\" target=\"\"\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u597d\u7684\uff0c\u770b\u6765\u53ea\u80fd\u627e\u4eba\u4e8c\u5f00\u63d2\u4ef6\u4e86\u3002\u8c22\u8c22\u4f60\u003C\/p\u003E","dateCreated":"2024-05-17T07:44:01+00:00","url":"https:\/\/discuss.flarum.org.cn\/d\/15648-you-mei-you-qiang-zhi-yong-hu-deng-lu-cha-jian\/10","author":{"@type":"Person","name":"\u6709\u70b9\u8822"},"upvoteCount":0}]}},{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","itemListElement":{"@type":"ListItem","name":"\u5df2\u89e3\u51b3","item":"https:\/\/discuss.flarum.org.cn\/t\/solved","position":2}},{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/discuss.flarum.org.cn\/","potentialAction":{"@type":"SearchAction","target":"https:\/\/discuss.flarum.org.cn\/?q={search_term_string}","query-input":"required name=search_term_string"}}]</script>
+
+        <script>
+            /* fof/nightmode workaround for browsers without (prefers-color-scheme) CSS media query support */
+            if (!window.matchMedia('not all and (prefers-color-scheme), (prefers-color-scheme)').matches) {
+                document.querySelector('link.nightmode-light').removeAttribute('media');
+            }
+        </script>
+        
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-155097920-4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+</script>
+
+    <style></style><style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.immersive-translate-loading-spinner {
+  vertical-align: middle !important;
+  width: 10px !important;
+  height: 10px !important;
+  display: inline-block !important;
+  margin: 0 4px !important;
+  border: 2px rgba(221, 244, 255, 0.6) solid !important;
+  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+}
+
+@-webkit-keyframes immersive-translate-loading-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes immersive-translate-loading-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.immersive-translate-input-loading {
+  --loading-color: #f78fb6;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  color: white;
+  left: -100px;
+  box-sizing: border-box;
+  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
+}
+
+@keyframes immersiveTranslateShadowRolling {
+  0% {
+    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  12% {
+    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  25% {
+    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  36% {
+    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
+  }
+
+  62% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
+  }
+
+  75% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
+  }
+
+  87% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
+  }
+
+  100% {
+    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
+  }
+}
+
+
+.immersive-translate-search-recomend {
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  font-size: 16px;
+}
+
+.immersive-translate-search-enhancement-en-title {
+  color: #4d5156;
+}
+
+/* dark */
+@media (prefers-color-scheme: dark) {
+  .immersive-translate-search-recomend {
+    border: 1px solid #3c4043;
+  }
+
+  .immersive-translate-close-action svg {
+    fill: #bdc1c6;
+  }
+
+  .immersive-translate-search-enhancement-en-title {
+    color: #bdc1c6;
+  }
+}
+
+
+.immersive-translate-search-settings {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.immersive-translate-search-recomend::before {
+  /* content: " "; */
+  /* width: 20px; */
+  /* height: 20px; */
+  /* top: 16px; */
+  /* position: absolute; */
+  /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
+}
+
+.immersive-translate-search-title {}
+
+.immersive-translate-search-title-wrapper {}
+
+.immersive-translate-search-time {
+  font-size: 12px;
+  margin: 4px 0 24px;
+  color: #70757a;
+}
+
+.immersive-translate-expand-items {
+  display: none;
+}
+
+.immersive-translate-search-more {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.immersive-translate-modal {
+  display: none;
+  position: fixed;
+  z-index: 2147483647;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 15px;
+}
+
+.immersive-translate-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 40px 24px 24px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 270px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative
+}
+
+.immersive-translate-modal .immersive-translate-modal-content-in-input {
+  max-width: 500px;
+}
+.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+  text-align: left;
+  max-height: unset;
+}
+
+.immersive-translate-modal-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.immersive-translate-modal-body {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  word-break: break-all;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .immersive-translate-modal-body {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}
+
+.immersive-translate-close {
+  color: #666666;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.immersive-translate-close:hover,
+.immersive-translate-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.immersive-translate-modal-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.immersive-translate-btn {
+  width: fit-content;
+  color: #fff;
+  background-color: #ea4c89;
+  border: none;
+  font-size: 16px;
+  margin: 0 8px;
+  padding: 9px 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.immersive-translate-btn:hover {
+  background-color: #f082ac;
+}
+
+.immersive-translate-cancel-btn {
+  /* gray color */
+  background-color: rgb(89, 107, 120);
+}
+
+
+.immersive-translate-cancel-btn:hover {
+  background-color: hsl(205, 20%, 32%);
+}
+
+.immersive-translate-action-btn {
+  background-color: transparent;
+  color: #EA4C89;
+  border: 1px solid #EA4C89
+}
+
+.immersive-translate-btn svg {
+  margin-right: 5px;
+}
+
+.immersive-translate-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #007bff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-primary-link {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+  text-decoration: none;
+  color: #ea4c89;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+}
+
+.immersive-translate-modal input[type="radio"] {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.immersive-translate-modal label {
+  cursor: pointer;
+}
+
+.immersive-translate-close-action {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/github.min.css"><script async="" defer="" src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script></head>
+
+    <img class="safum-vpn-status" id="ehjolcpljogfgggnkddgefpecllepcba-img" src="chrome-extension://ehjolcpljogfgggnkddgefpecllepcba/web_accessible_resources/status_on.png" alt="status"><body class="no-touch"><div role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-edgeless cc-bottom cc-color-override-199366558 " style=""><!--googleoff: all--><span id="cookieconsent:desc" class="cc-message">本站使用 cookie 数据以确保网站正常运行，并帮助我们为您提供最佳用户体验。点击“同意”即表示您同意我们使用 cookie。 <a aria-label="learn more about cookies" role="button" tabindex="0" class="cc-link" href="" rel="noopener noreferrer nofollow" target="_blank">了解更多</a></span><div class="cc-compliance"><a aria-label="dismiss cookie message" role="button" tabindex="0" class="cc-btn cc-dismiss">我同意</a></div><!--googleon: all--></div>
+        <div id="app" class="App affix App--discussion" aria-hidden="false">
+
+    <div id="app-navigation" class="App-navigation"><div class="Navigation ButtonGroup App-backControl"><a class="Button Navigation-back Button--icon hasIcon" aria-label="返回主题列表" href="/" active="false"><i aria-hidden="true" class="icon fas fa-chevron-left Button-icon"></i><span class="Button-label"></span></a></div></div>
+
+    <div id="drawer" class="App-drawer">
+
+        <header id="header" class="App-header navbar-fixed-top">
+            <div id="header-navigation" class="Header-navigation"><div class="Navigation ButtonGroup"><a class="Button Navigation-back Button--icon hasIcon" aria-label="返回主题列表" href="/" active="false"><i aria-hidden="true" class="icon fas fa-chevron-left Button-icon"></i><span class="Button-label"></span></a></div></div>
+            <div class="container">
+                <div class="Header-title">
+                    <a href="https://discuss.flarum.org.cn" id="home-link">
+                                                    Flarum 中文社区
+                                            </a>
+                </div>
+                <div id="header-primary" class="Header-primary"><ul class="Header-controls"><li class="item-link18"><div class="ButtonGroup Dropdown dropdown Dropdown--split LinkDropdown itemCount3"><a class="LinksButton SplitDropdown-button Button  Button--link" external="" href="https://flarum.org.cn/"><span class="LinksButton-title">首页</span></a><button class="Dropdown-toggle Button Button--icon  Button--link" data-toggle="dropdown"><i aria-hidden="true" class="icon fas fa-caret-down Button-caret"></i></button><ul class="Dropdown-menu dropdown-menu Dropdown-menu--right"><li class="item-link18"><a class="LinksButton SplitDropdown-button Button  Button--link" external="" href="https://flarum.org.cn/"><span class="LinksButton-title">首页</span></a></li><li class="item-link18-9"><a class="LinksButton Button Button--link LinksButton--inDropdown" rel="noopener noreferrer" target="_blank" href="https://discuss.flarum.org"><i aria-hidden="true" class="icon far fa-comment Button-icon LinksButton-icon"></i><span class="LinksButton-title">英文社区</span></a></li><li class="item-link18-4"><a class="LinksButton Button Button--link LinksButton--inDropdown" rel="noopener noreferrer" target="_blank" href="https://discuss.flarum.org.cn/flarumites"><i aria-hidden="true" class="icon far fa-lightbulb Button-icon LinksButton-icon"></i><span class="LinksButton-title">社区展</span></a></li></ul></div></li><li class="item-link8"><div class="ButtonGroup Dropdown dropdown Dropdown--split LinkDropdown itemCount2"><a class="LinksButton SplitDropdown-button Button  Button--link" rel="noopener noreferrer" target="_blank" href="https://docs.flarum.org"><span class="LinksButton-title">文档</span></a><button class="Dropdown-toggle Button Button--icon  Button--link" data-toggle="dropdown"><i aria-hidden="true" class="icon fas fa-caret-down Button-caret"></i></button><ul class="Dropdown-menu dropdown-menu Dropdown-menu--right"><li class="item-link8"><a class="LinksButton SplitDropdown-button Button  Button--link" rel="noopener noreferrer" target="_blank" href="https://docs.flarum.org"><span class="LinksButton-title">文档</span></a></li><li class="item-link8-17"><a class="LinksButton Button Button--link LinksButton--inDropdown" rel="noopener noreferrer" target="_blank" href="https://discuss.flarum.org.cn/docs/protocol.html"><span class="LinksButton-title">规范</span></a></li></ul></div></li><li class="item-link16"><div class="ButtonGroup Dropdown dropdown Dropdown--split LinkDropdown itemCount3"><button class="LinksButton SplitDropdown-button Button  Button--link LinksButton--label" type="button" data-toggle="dropdown"><span class="Button-label"><span class="LinksButton-title">更多</span></span></button><button class="Dropdown-toggle Button Button--icon  Button--link" data-toggle="dropdown"><i aria-hidden="true" class="icon fas fa-caret-down Button-caret"></i></button><ul class="Dropdown-menu dropdown-menu Dropdown-menu--right"><li class="item-link16"><button class="LinksButton SplitDropdown-button Button  Button--link LinksButton--label" type="button" data-toggle="dropdown"><span class="Button-label"><span class="LinksButton-title">更多</span></span></button></li><li class="item-link16-14"><a class="LinksButton Button Button--link LinksButton--inDropdown" rel="noopener noreferrer" target="_blank" href="https://extiverse.com/"><i aria-hidden="true" class="icon fas fa-plus-square Button-icon LinksButton-icon"></i><span class="LinksButton-title">扩展市场</span></a></li><li class="item-link16-11"><a class="LinksButton Button Button--link LinksButton--inDropdown" rel="noopener noreferrer" target="_blank" href="https://github.com/FFans"><i aria-hidden="true" class="icon far fa-smile Button-icon LinksButton-icon"></i><span class="LinksButton-title">粉丝组织</span></a></li></ul></div></li></ul></div>
+                <div id="header-secondary" class="Header-secondary"><ul class="Header-controls"><li class="item-search"><div role="search" aria-label="搜索论坛" class="Search"><div class="Search-input"><input aria-label="搜索" class="FormControl" type="search" placeholder="搜索"></div><ul class="Dropdown-menu Search-results" aria-hidden="" style="max-height: 908px;"></ul></div></li><li class="item-locale"><div class="ButtonGroup Dropdown dropdown Dropdown--select itemCount3"><button class="Dropdown-toggle Button Button--link" aria-haspopup="menu" aria-label="更改论坛语言" data-toggle="dropdown"><span class="Button-label">简体中文</span><i aria-hidden="true" class="icon fas fa-sort Button-caret"></i></button><ul class="Dropdown-menu dropdown-menu "><li class=""><button class="hasIcon" type="button" active=""><i aria-hidden="true" class="icon fas fa-check Button-icon"></i><span class="Button-label">简体中文</span></button></li><li class=""><button class="hasIcon" type="button"><i aria-hidden="true" class="icon Button-icon"></i><span class="Button-label">English</span></button></li><li class=""><button class="hasIcon" type="button"><i aria-hidden="true" class="icon Button-icon"></i><span class="Button-label">正體中文</span></button></li></ul></div></li><li class="item-nightmode"><button class="Button Button--flat hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-adjust Button-icon"></i><span class="Button-label">切换论坛主题</span></button></li><li class="item-signUp"><button class="Button Button--link" type="button"><span class="Button-label">注册</span></button></li><li class="item-logIn"><button class="Button Button--link" type="button"><span class="Button-label">登录</span></button></li></ul></div>
+            </div>
+        </header>
+
+    </div>
+
+    <main class="App-content">
+        <div id="content"><div><div></div><div class="DiscussionPage"><div class="DiscussionPage-discussion"><header class="Hero DiscussionHero DiscussionHero--colored text-contrast--light" style="--hero-bg: #4b93d1;"><div class="container"><ul class="DiscussionHero-items"><li class="item-badges"><ul class="DiscussionHero-badges badges"><li class="item-bestAnswer"><div class="Badge Badge--bestAnswer text-contrast--unchanged" title="" aria-label="已解决" style="" data-original-title="已解决"><i aria-hidden="true" class="icon fas fa-check Badge-icon"></i></div></li></ul></li><li class="item-tags"><span class="TagsLabel"><a class="TagLabel  colored text-contrast--light" title="获取支持帮助，包括但不限于安装、设置、使用 Flarum。" href="/t/support" style="--tag-bg: #4b93d1;"><span class="TagLabel-text"><i class="TagLabel-icon icon icon fas fa-wrench"></i><span class="TagLabel-name">求助</span></span></a><a class="TagLabel  colored text-contrast--light" title="已解决的问题。" href="/t/solved" style="--tag-bg: #6dbb3e;"><span class="TagLabel-text"><i class="TagLabel-icon icon fas fa-check-circle"></i><span class="TagLabel-name">已解决</span></span></a></span></li><li class="item-title"><h1 class="DiscussionHero-title">有没有强制用户登录插件？</h1></li></ul></div></header><div class="container"><nav class="DiscussionPage-nav"><ul><li class="item-controls"><div class="ButtonGroup Dropdown dropdown App-primaryControl Dropdown--split itemCount1"><button class="SplitDropdown-button Button Button--primary hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-reply Button-icon"></i><span class="Button-label">登录以回复</span></button><button class="Dropdown-toggle Button Button--icon Button--primary" aria-haspopup="menu" aria-label="主题下拉菜单开关" data-toggle="dropdown"><i aria-hidden="true" class="icon fas fa-ellipsis-v Button-icon"></i><i aria-hidden="true" class="icon fas fa-caret-down Button-caret"></i></button><ul class="Dropdown-menu dropdown-menu Dropdown-menu--right"><li class="item-reply"><button class="hasIcon" type="button"><i aria-hidden="true" class="icon fas fa-reply Button-icon"></i><span class="Button-label">登录以回复</span></button></li></ul></div></li><li class="item-scrubber"><div class="PostStreamScrubber Dropdown App-titleControl"><button class="Button Dropdown-toggle" data-toggle="dropdown"><span class="Scrubber-index">1</span> / <span class="Scrubber-count">10</span> 条 <i aria-hidden="true" class="icon fas fa-sort"></i></button><div class="Dropdown-menu dropdown-menu"><div class="Scrubber"><a class="Scrubber-first"><i aria-hidden="true" class="icon fas fa-angle-double-up"></i> 最早内容</a><div class="Scrubber-scrollbar" style="max-height: 569.219px;"><div class="Scrubber-before" style="height: 0%;"></div><div class="Scrubber-handle" style="height: 18.5101%;"><div class="Scrubber-bar"></div><div class="Scrubber-info"><strong><span class="Scrubber-index">1</span> / <span class="Scrubber-count">10</span> 条</strong><span class="Scrubber-description">五月 2024</span></div></div><div class="Scrubber-after" style="height: 81.4899%;"></div><div class="Scrubber-unread" style="top: 100%; height: 0%; opacity: 0;">0 条未读</div></div><a class="Scrubber-last"><i aria-hidden="true" class="icon fas fa-angle-double-down"></i> 最新回复</a></div></div></div></li></ul></nav><div class="DiscussionPage-stream"><div class="PostStream" role="feed" aria-live="off" aria-busy="false"><div class="PostStream-item" data-index="0" data-time="2024-05-15T12:20:00.000Z" data-number="1" data-id="30135" data-type="comment"><article class="CommentPost Post Post--by-start-user"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/bnazxc1"><span class="Avatar PostUser-avatar" loading="lazy" style="--avatar-bg: #c9e5a0;">有</span><span class="username">有点蠢</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-15T20:20:00+08:00" title="2024年5月15日星期三 20点20分" data-humantime="">12 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #1</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-15T20:20:00+08:00">2024年5月15日星期三 20点20分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p>问题描述（报错内容）：访问flarum社区，自动弹出登录窗口，访问子页会自动跳转到首页</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/2" data-number="2"><span class="username">寒冰冽</span></a> 回复了此帖</span></div></li><li class="item-bestAnswerPost"><div class="CommentPost"><div class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3><a href="/u/bnazxc1"><span class="username">有点蠢</span></a></h3></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-16T16:12:38+08:00" title="2024年5月16日星期四 16点12分" data-humantime="">11 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #3</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-16T16:12:38+08:00">2024年5月16日星期四 16点12分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li><li class="Post--BestAnswer"><span><i aria-hidden="true" class="icon fas fa-check"></i>最佳回复</span><span class="BestAnswer--User">由 <a><span class="username">有点蠢</span></a> 选择</span></li></ul></div><div class="Post-body" style="--max-lines: 0;"><p><a href="https://discuss.flarum.org.cn/d/15648/2" class="PostMention" data-id="30142" rel="" target="">寒冰冽</a> 测试了，可以安装，是免费的。感谢！</p>
+
+<h3>安装</h3>
+<p><code>composer require sycho/flarum-private-facade:"*"</code></p>
+
+<h3>更新</h3>
+<pre class="copy-ready language-bash"><button class="clipboard github" data-clipboard-snippet=""><svg aria-hidden="true" role="img" class="clipboard-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button><code class="hljs language-bash">composer update sycho/flarum-private-facade:<span class="hljs-string">"*"</span>
+php flarum migrate
+php flarum cache:clear</code><script async="" crossorigin="anonymous" data-hljs-style="github" integrity="sha384-fSWmbgQwbzLXpKFwOj6DlXOstUp9/gRcSSNLI50wWQYg7XIihuBcYUTG/GR7ocjz" src="https://cdn.jsdelivr.net/gh/s9e/hljs-loader@1.0.33/loader.min.js"></script><script>
+                    if(window.hljsLoader && !document.currentScript.parentNode.hasAttribute('data-s9e-livepreview-onupdate')) {
+                        window.hljsLoader.highlightBlocks(document.currentScript.parentNode);
+                    }
+                </script></pre></div></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="1" data-time="2024-05-16T07:48:10.000Z" data-number="2" data-id="30142" data-type="comment"><article class="CommentPost Post"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/Han2023"><img class="Avatar PostUser-avatar" loading="lazy" src="https://discuss.flarum.org.cn/assets/avatars/BnIDf7xFxbMnh52o.png" alt=""><span class="username">寒冰冽</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-16T15:48:10+08:00" title="2024年5月16日星期四 15点48分" data-humantime="">11 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #2</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-16T15:48:10+08:00">2024年5月16日星期四 15点48分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/1" class="PostMention" data-id="30135" rel="" target="">有点蠢</a> <br>
+Private Forum Facade 这个插件可以实现，但是问题是<br>
+①需要付费<br>
+②显示不兼容flarum1.8.5（虽然我这里好像还能用，但是不保障其它人没问题）</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/3" data-number="3"><span class="username">有点蠢</span></a> 回复了此帖</span></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="2" data-time="2024-05-16T08:12:38.000Z" data-number="3" data-id="30143" data-type="comment"><article class="Post--bestAnswer CommentPost Post--edited Post Post--by-start-user"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/bnazxc1"><span class="Avatar PostUser-avatar" loading="lazy" style="--avatar-bg: #c9e5a0;">有</span><span class="username">有点蠢</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-16T16:12:38+08:00" title="2024年5月16日星期四 16点12分" data-humantime="">11 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #3</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-16T16:12:38+08:00">2024年5月16日星期四 16点12分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li><li class="item-edited"><span class="PostEdited" title="" aria-label="有点蠢 编辑于 11 天前" data-original-title="有点蠢 编辑于 11 天前">已编辑</span></li><li class="item-isBestAnswer"><li class="Post--BestAnswer"><span><i aria-hidden="true" class="icon fas fa-check"></i>最佳回复</span><span class="BestAnswer--User">由 <a><span class="username">有点蠢</span></a> 选择</span></li></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/2" class="PostMention" data-id="30142" rel="" target="">寒冰冽</a> 测试了，可以安装，是免费的。感谢！</p>
+
+<h3>安装</h3>
+<p><code>composer require sycho/flarum-private-facade:"*"</code></p>
+
+<h3>更新</h3>
+<pre class="copy-ready language-bash"><button class="clipboard github" data-clipboard-snippet=""><svg aria-hidden="true" role="img" class="clipboard-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg></button><code class="hljs language-bash">composer update sycho/flarum-private-facade:<span class="hljs-string">"*"</span>
+php flarum migrate
+php flarum cache:clear</code><script async="" crossorigin="anonymous" data-hljs-style="github" integrity="sha384-fSWmbgQwbzLXpKFwOj6DlXOstUp9/gRcSSNLI50wWQYg7XIihuBcYUTG/GR7ocjz" src="https://cdn.jsdelivr.net/gh/s9e/hljs-loader@1.0.33/loader.min.js"></script><script>
+                    if(window.hljsLoader && !document.currentScript.parentNode.hasAttribute('data-s9e-livepreview-onupdate')) {
+                        window.hljsLoader.highlightBlocks(document.currentScript.parentNode);
+                    }
+                </script></pre></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/4" data-number="4"><span class="username">寒冰冽</span></a> 回复了此帖</span></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="3" data-time="2024-05-16T10:40:59.000Z" data-number="4" data-id="30144" data-type="comment"><article class="CommentPost Post"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/Han2023"><img class="Avatar PostUser-avatar" loading="lazy" src="https://discuss.flarum.org.cn/assets/avatars/BnIDf7xFxbMnh52o.png" alt=""><span class="username">寒冰冽</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-16T18:40:59+08:00" title="2024年5月16日星期四 18点40分" data-humantime="">11 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #4</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-16T18:40:59+08:00">2024年5月16日星期四 18点40分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/3" class="PostMention" data-id="30143" rel="" target="">有点蠢</a> 草，当时要15美元（）我还买了…………..</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/5" data-number="5"><span class="username">有点蠢</span></a> 回复了此帖</span></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="4" data-time="2024-05-16T12:52:44.000Z" data-number="5" data-id="30146" data-type="comment"><article class="CommentPost Post Post--by-start-user"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/bnazxc1"><span class="Avatar PostUser-avatar" loading="lazy" style="--avatar-bg: #c9e5a0;">有</span><span class="username">有点蠢</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-16T20:52:44+08:00" title="2024年5月16日星期四 20点52分" data-humantime="">11 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #5</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-16T20:52:44+08:00">2024年5月16日星期四 20点52分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/4" class="PostMention" data-id="30144" rel="" target="">寒冰冽</a> 我安装了，不是我想要的，我想要的是进标签页或者内容页，会弹出登录窗口或者跳转登录页</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/6" data-number="6"><span class="username">寒冰冽</span></a> 回复了此帖</span></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="5" data-time="2024-05-16T16:08:24.000Z" data-number="6" data-id="30147" data-type="comment"><article class="CommentPost Post"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/Han2023"><img class="Avatar PostUser-avatar" loading="lazy" src="https://discuss.flarum.org.cn/assets/avatars/BnIDf7xFxbMnh52o.png" alt=""><span class="username">寒冰冽</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-17T00:08:24+08:00" title="2024年5月17日星期五 00点08分" data-humantime="">11 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #6</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-17T00:08:24+08:00">2024年5月17日星期五 00点08分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/5" class="PostMention" data-id="30146" rel="" target="">有点蠢</a> 那可以用login2see，这个应该很多的</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/7" data-number="7"><span class="username">有点蠢</span></a> 回复了此帖</span></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="6" data-time="2024-05-16T17:31:16.000Z" data-number="7" data-id="30151" data-type="comment"><article class="CommentPost Post Post--by-start-user"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/bnazxc1"><span class="Avatar PostUser-avatar" loading="lazy" style="--avatar-bg: #c9e5a0;">有</span><span class="username">有点蠢</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-17T01:31:16+08:00" title="2024年5月17日星期五 01点31分" data-humantime="">10 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #7</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-17T01:31:16+08:00">2024年5月17日星期五 01点31分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/6" class="PostMention" data-id="30147" rel="" target="">寒冰冽</a> 这个只能隐藏指定内容，并不是我需要的功能。</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/8" data-number="8"><span class="username">寒冰冽</span></a> 回复了此帖</span></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="7" data-time="2024-05-16T18:09:29.000Z" data-number="8" data-id="30152" data-type="comment"><article class="CommentPost Post"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/Han2023"><img class="Avatar PostUser-avatar" loading="lazy" src="https://discuss.flarum.org.cn/assets/avatars/BnIDf7xFxbMnh52o.png" alt=""><span class="username">寒冰冽</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-17T02:09:29+08:00" title="2024年5月17日星期五 02点09分" data-humantime="">10 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #8</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-17T02:09:29+08:00">2024年5月17日星期五 02点09分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/7" class="PostMention" data-id="30151" rel="" target="">有点蠢</a> 你一定希望弹出的话得加东西了，按平时逛插件市场应该是没有这个插件，但是实际上的话配置login2see达成的效果一样设置更好？因为弹出内容的话用户可以关掉，我还想到一个相对简单的方法是配置页面规则让除了首页之外的页面全部重定向到Private Forum Facade，同时不开启Private Forum Facade的强制登录，这样就能实现首页可以看，其它的点开就会跳转到登录页，但是总之听起来很麻烦而且可能带来各种奇怪问题，要么就是找人二开插件，这个是我能想到的，现成的能安装一下就搞定的应该是无。总之听起来还不如就简单用login2see</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/9" data-number="9"><span class="username">寒冰冽</span></a> 回复了此帖</span></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="8" data-time="2024-05-16T18:11:35.000Z" data-number="9" data-id="30153" data-type="comment"><article class="CommentPost Post"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/Han2023"><img class="Avatar PostUser-avatar" loading="lazy" src="https://discuss.flarum.org.cn/assets/avatars/BnIDf7xFxbMnh52o.png" alt=""><span class="username">寒冰冽</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-17T02:11:35+08:00" title="2024年5月17日星期五 02点11分" data-humantime="">10 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #9</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-17T02:11:35+08:00">2024年5月17日星期五 02点11分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/8" class="PostMention" data-id="30152" rel="" target="">寒冰冽</a> 方法一还得加登录状态判断，也不简单了……</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"><ul><li class="item-replies"><div class="Post-mentionedBy"><span class="Post-mentionedBy-summary"><i aria-hidden="true" class="icon fas fa-reply"></i><a href="/d/15648/10" data-number="10"><span class="username">有点蠢</span></a> 回复了此帖</span></div></li></ul></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul><ul class="Dropdown-menu Post-mentionedBy-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="9" data-time="2024-05-17T07:44:01.000Z" data-number="10" data-id="30156" data-type="comment"><article class="CommentPost Post Post--by-start-user"><div><header class="Post-header"><ul><li class="item-user"><div class="PostUser"><h3 class="PostUser-name"><a href="/u/bnazxc1"><span class="Avatar PostUser-avatar" loading="lazy" style="--avatar-bg: #c9e5a0;">有</span><span class="username">有点蠢</span></a></h3><ul class="PostUser-badges badges"></ul></div></li><li class="item-meta"><div class="Dropdown PostMeta"><a class="Dropdown-toggle" data-toggle="dropdown"><time pubdate="" datetime="2024-05-17T15:44:01+08:00" title="2024年5月17日星期五 15点44分" data-humantime="">10 天前</time></a><div class="Dropdown-menu dropdown-menu"><span class="PostMeta-number">发布 #10</span> <span class="PostMeta-time"><time pubdate="" datetime="2024-05-17T15:44:01+08:00">2024年5月17日星期五 15点44分</time></span> <span class="PostMeta-ip"></span><input class="FormControl PostMeta-permalink"></div></div></li></ul></header><div class="Post-body"><p><a href="https://discuss.flarum.org.cn/d/15648/9" class="PostMention" data-id="30153" rel="" target="">寒冰冽</a> 好的，看来只能找人二开插件了。谢谢你</p></div><aside class="Post-actions"><ul><li class="item-reply"><button class="Button Button--link" type="button"><span class="Button-label">回复</span></button></li></ul></aside><footer class="Post-footer"></footer></div><ul class="Dropdown-menu PostMention-preview fade"></ul></article><div class="Post-quoteButtonContainer"></div></div><div class="PostStream-item" data-index="10"><button class="Post ReplyPlaceholder"><span class="Post-header"><span class="Avatar PostUser-avatar" loading="lazy"></span> 说点什么吧...</span></button></div></div></div></div></div></div></div></div>
+
+        <div id="flarum-loading" style="display: none;">
+    正在加载…
+</div>
+
+<noscript>
+    <div class="Alert">
+        <div class="container">
+            请使用更现代的浏览器并启用 JavaScript 以获得最佳浏览体验。
+        </div>
+    </div>
+</noscript>
+
+<div id="flarum-loading-error" style="display: none">
+    <div class="Alert">
+        <div class="container">
+            加载论坛时出错，请强制刷新页面重试。
+        </div>
+    </div>
+</div>
+
+<noscript id="flarum-content">
+    <div class="container">
+    <h1>有没有强制用户登录插件？</h1>
+
+    <div>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">有点蠢</h3></div>
+                <div class="Post-body">
+                    <p>问题描述（报错内容）：访问flarum社区，自动弹出登录窗口，访问子页会自动跳转到首页</p>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">寒冰冽</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/1" class="PostMention" data-id="30135" rel="" target="">有点蠢</a> <br>
+Private Forum Facade 这个插件可以实现，但是问题是<br>
+①需要付费<br>
+②显示不兼容flarum1.8.5（虽然我这里好像还能用，但是不保障其它人没问题）</p>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">有点蠢</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/2" class="PostMention" data-id="30142" rel="" target="">寒冰冽</a> 测试了，可以安装，是免费的。感谢！</p>
+
+<h3>安装</h3>
+<p><code>composer require sycho/flarum-private-facade:"*"</code></p>
+
+<h3>更新</h3>
+<pre><code>composer update sycho/flarum-private-facade:"*"
+php flarum migrate
+php flarum cache:clear</code><script async="" crossorigin="anonymous" data-hljs-style="github" integrity="sha384-fSWmbgQwbzLXpKFwOj6DlXOstUp9/gRcSSNLI50wWQYg7XIihuBcYUTG/GR7ocjz" src="https://cdn.jsdelivr.net/gh/s9e/hljs-loader@1.0.33/loader.min.js"></script><script>
+                    if(window.hljsLoader && !document.currentScript.parentNode.hasAttribute('data-s9e-livepreview-onupdate')) {
+                        window.hljsLoader.highlightBlocks(document.currentScript.parentNode);
+                    }
+                </script></pre>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">寒冰冽</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/3" class="PostMention" data-id="30143" rel="" target="">有点蠢</a> 草，当时要15美元（）我还买了…………..</p>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">有点蠢</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/4" class="PostMention" data-id="30144" rel="" target="">寒冰冽</a> 我安装了，不是我想要的，我想要的是进标签页或者内容页，会弹出登录窗口或者跳转登录页</p>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">寒冰冽</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/5" class="PostMention" data-id="30146" rel="" target="">有点蠢</a> 那可以用login2see，这个应该很多的</p>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">有点蠢</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/6" class="PostMention" data-id="30147" rel="" target="">寒冰冽</a> 这个只能隐藏指定内容，并不是我需要的功能。</p>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">寒冰冽</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/7" class="PostMention" data-id="30151" rel="" target="">有点蠢</a> 你一定希望弹出的话得加东西了，按平时逛插件市场应该是没有这个插件，但是实际上的话配置login2see达成的效果一样设置更好？因为弹出内容的话用户可以关掉，我还想到一个相对简单的方法是配置页面规则让除了首页之外的页面全部重定向到Private Forum Facade，同时不开启Private Forum Facade的强制登录，这样就能实现首页可以看，其它的点开就会跳转到登录页，但是总之听起来很麻烦而且可能带来各种奇怪问题，要么就是找人二开插件，这个是我能想到的，现成的能安装一下就搞定的应该是无。总之听起来还不如就简单用login2see</p>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">寒冰冽</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/8" class="PostMention" data-id="30152" rel="" target="">寒冰冽</a> 方法一还得加登录状态判断，也不简单了……</p>
+                </div>
+            </article>
+
+            <hr>
+                    <article>
+                                <div class="PostUser"><h3 class="PostUser-name">有点蠢</h3></div>
+                <div class="Post-body">
+                    <p><a href="https://discuss.flarum.org.cn/d/15648/9" class="PostMention" data-id="30153" rel="" target="">寒冰冽</a> 好的，看来只能找人二开插件了。谢谢你</p>
+                </div>
+            </article>
+
+            <hr>
+            </div>
+
+    
+    </div>
+
+</noscript>
+
+
+        <div class="App-composer">
+            <div class="container">
+                <div id="composer"><div class="Composer " style="display: none; bottom: -300px; height: 300px;"><div class="Composer-handle" style="cursor: row-resize;"></div><ul class="Composer-controls"><li class="item-minimize App-backControl"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="最小化" itemclassname="App-backControl"><i aria-hidden="true" class="icon fas fa-minus minimize Button-icon"></i><span class="Button-label"></span></button></li><li class="item-fullScreen"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="全屏"><i aria-hidden="true" class="icon fas fa-expand Button-icon"></i><span class="Button-label"></span></button></li><li class="item-close"><button class="Button Button--icon Button--link hasIcon" type="button" aria-label="关闭"><i aria-hidden="true" class="icon fas fa-times Button-icon"></i><span class="Button-label"></span></button></li></ul><div class="Composer-content"></div></div></div>
+            </div>
+        </div>
+    </main>
+
+</div>
+
+<!-- 外链跳转 -->
+<script>
+    document.addEventListener('click', event => {
+        let t = event.target;
+        if (t.matches('.Post-body a')) {
+            let url = new URL(t.href);
+            if (url.origin == document.location.origin) {
+                t.removeAttribute('target');
+                t.removeAttribute('rel');
+            }else{
+                t.setAttribute('target', '_blank');
+            }
+        }
+    }, false);
+</script>
+
+<!-- 百度站长 -->
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<script>
+window.onload = function(){
+        $('.Afrux-NewsWidget-line').each((i, item)=>{
+        let match = item.innerHTML.match('[a-zA-z]+://[^\s]*');
+        $(item).html(`<a href="${match.input.substring(match.index)}" style="display:flex;align-items:center;">${match.input.substring(0, match.index).trim()} <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>`)
+    })}
+</script>
+
+<!-- 版本 -->
+<script>
+  window.addEventListener('load', function() {
+    const version = document.getElementById('cnVersion').src.match(/-v(\d+(?:\.\d+){2})/)?.[1]
+    const date = document.getElementById('cnDate').dataset.date
+    localStorage.setItem('version', version + '-' + date)
+  })
+</script>
+
+<!-- 页脚 -->
+<footer>
+    <div class="site-footer">
+        <div style="color: rgb(137, 137, 140);font-size:0.9em;" class="footer-container rm-link-color">
+            <p>
+                <!-- 加载时间 -->
+                <script>
+                    var start_time = new Date();
+                    var end_time = "";
+                    var loadt = setInterval(function () {
+                        if (document.readyState == "complete") {
+                            showLoadTime();
+                        }
+                    }, 500)
+
+                    function showLoadTime() {
+                        end_time = new Date();
+                        loadtime_span.innerHTML = "T " + (end_time.getTime() - start_time.getTime()) + " ms";
+                        clearInterval(loadt);
+                    }
+                </script>
+                <!-- IP -->
+				<span id="ip_span" align="center"></span>
+                <!-- <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script> -->
+                <script type="text/javascript">;
+                    function handleIpCallback(res) {
+                    returnCitySN = res
+                    ip_span.innerHTML = (returnCitySN["city"] || returnCitySN["province"]) + returnCitySN["isp"] + " " + returnCitySN["ip"];
+                }
+                </script>
+                <!-- <script type="text/javascript" src="https://ip.useragentinfo.com/jsonp?callback=handleIpCallback"></script> -->
+
+                <span class="mx-2">|</span>
+
+                <span id="loadtime_span">T 1001 ms</span>
+
+                <span class="mx-2">|</span>
+
+                <a id="stats" href="https://status.itnt.xyz/status/flarum-cn" target="_blank">状态</a>
+
+            </p>
+            <p>
+                <a id="prot_span" href="https://discuss.flarum.org.cn/docs/protocol.html">社区规范</a>
+
+                <span class="mx-2">|</span>
+
+                <a id="rept_span" href="mailto:flarumcn@qq.com">违法和不良信息举报</a>
+
+                <span class="mx-2">|</span>
+
+                <span id="ver_span">版本 1.8.1-230907</span>
+				</p><p id="right_span">本站独立于 Flarum 基金会运行。<a href="https://flarum.org/verified-communities"><i class="fas fa-info-circle"></i> 了解认证社区</a></p>
+            <p></p>
+            <!-- 声明 -->
+            <script type="text/javascript">
+                var site_version = "1.8.1-230907";
+                var lang = document.getElementsByTagName("html");
+                var userLang = lang[0].getAttribute("lang");
+                if (userLang.includes("zh")) {
+					stats.innerHTML = "状态";
+                    prot_span.innerHTML = "社区规范";
+                    rept_span.innerHTML = "违法和不良信息举报";
+                    ver_span.innerHTML = "版本 " + site_version;
+                    right_span.innerHTML = "本站独立于 Flarum 基金会运行。<a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> 了解认证社区</a>";
+                }
+                else {
+					stats.innerHTML = "Status";
+                    prot_span.innerHTML = "Protocol";
+                    rept_span.innerHTML = "Report";
+                    ver_span.innerHTML = "Version " + site_version;
+                   right_span.innerHTML = "This site operates independently of the Flarum Foundation. Read more about <a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> verified communities</a>.";
+                }
+            </script>
+        </div>
+    </div>   
+</footer>
+
+
+
+        <div id="modal"></div>
+        <div id="alerts"><div class="AlertManager"></div></div>
+
+        <script>
+            document.getElementById('flarum-loading').style.display = 'block';
+            var flarum = {extensions: {}};
+        </script>
+
+        <script src="https://discuss.flarum.org.cn/assets/forum.js?v=55bbea88"></script>
+<script src="https://discuss.flarum.org.cn/assets/forum-zh-Hans.js?v=5a432387"></script>
+
+        <script id="flarum-json-payload" type="application/json">{"fof-nightmode.assets.day":"https:\/\/discuss.flarum.org.cn\/assets\/forum.css?v=2a28de69","fof-nightmode.assets.night":"https:\/\/discuss.flarum.org.cn\/assets\/forum-dark.css?v=d5a8624f","resources":[{"type":"forums","id":"1","attributes":{"title":"Flarum \u4e2d\u6587\u793e\u533a","description":"\u6b22\u8fce\u8bbf\u95ee Flarum \u4e2d\u6587\u7ad9\u3002Flarum \u662f\u4e00\u4e2a\u4f18\u96c5\u7684\u8f7b\u8bba\u575b\u8f6f\u4ef6\uff0c\u7b80\u7ea6\u754c\u9762\u56de\u5f52\u793e\u533a\u672c\u8d28\u3002\u8fd9\u91cc\u6ca1\u6709\u592a\u591a\u7684\u6761\u6761\u6846\u6846\u89c4\u5b9a\uff0c\u5728\u8fd9\u91cc\u4f60\u53ef\u4ee5\u8c08\u5929\u8bf4\u5730\uff0c\u53ef\u4ee5\u5728\u6700\u77ed\u7684\u65f6\u95f4\u6536\u96c6\u7075\u611f\uff0c\u5bfb\u627e\u6709\u8da3\u7684\u4e1c\u897f\u3002","showLanguageSelector":true,"baseUrl":"https:\/\/discuss.flarum.org.cn","basePath":"","baseOrigin":"https:\/\/discuss.flarum.org.cn","debug":false,"apiUrl":"https:\/\/discuss.flarum.org.cn\/api","welcomeTitle":"\u6b22\u8fce\u6765\u5230 Flarum \u4e2d\u6587\u793e\u533a","welcomeMessage":"\u4e2d\u6587\u793e\u533a\u7531\u4f17\u591a\u7231\u597d\u8005\u5171\u540c\u7ef4\u62a4\n\u003Cbr\u003E\n\u5728\u60a8\u63d0\u95ee\u524d\uff0c\u8bf7\u52a1\u5fc5\u9605\u8bfb  \u003Ca href=\u0022https:\/\/docs.flarum.org\/zh\u0022 target=\u0022_blank\u0022\u003E\u5b98\u65b9\u6587\u6863\u003C\/a\u003E \u53ca \u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/325\u0022 target=\u0022_blank\u0022\u003E\u5e38\u89c1\u95ee\u9898\u003C\/a\u003E\n\u003Cbr\u003E\n\u56de\u7b54\u95ee\u9898\u8fdb\u5165 QQ \u7fa4\uff1a\u003Ca href=\u0022https:\/\/jq.qq.com\/?_wv=1027\u0026k=5V0qHhI\u0022 target=\u0022_blank\u0022\u003E188723593\u003C\/a\u003E | \u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/2140\u0022\u003E\u6f14\u793a\u7ad9\u70b9\u003C\/a\u003E\n\u003Cbr\u003E\n\n\u003Cp\u003E \u003Ca href=\u0022https:\/\/github.com\/flarum\/flarum\u0022 target=\u0022_blank\u0022\u003E \u003Cimg src=\u0022https:\/\/img.shields.io\/github\/v\/release\/flarum\/core?\u0026label=Lastest\u0026color=f9725c\u0026style=flat-square\u0022 alt=\u0022\u6700\u65b0\u7248\u672c\u0022 title=\u0022\u6700\u65b0\u7248\u672c\u0022 \/\u003E\u003Cimg src=\u0022https:\/\/img.shields.io\/github\/release-date\/flarum\/core?label=\u0026style=flat-square\u0022 alt=\u0022\u53d1\u5e03\u65e5\u671f\u0022 title=\u0022\u53d1\u5e03\u65e5\u671f\u0022 \/\u003E \u003C\/a\u003E \u003Cbr \/\u003E \u003Ca href=\u0022https:\/\/weblate.rob006.net\/engage\/flarum\/zh_Hans\/\u0022\u003E \u003Cimg src=\u0022https:\/\/weblate.rob006.net\/widgets\/flarum\/zh_Hans\/88x31-grey.png\u0022 alt=\u0022\u7ffb\u8bd1\u72b6\u6001\u0022 \/\u003E \u003C\/a\u003E\n\u003C\/p\u003E","themePrimaryColor":"#276bb0","themeSecondaryColor":"#6699cc","logoUrl":null,"faviconUrl":"https:\/\/discuss.flarum.org.cn\/assets\/favicon-mvffjom6.png","headerHtml":"","footerHtml":"\u003C!-- \u5916\u94fe\u8df3\u8f6c --\u003E\n\u003Cscript\u003E\n    document.addEventListener(\u0027click\u0027, event =\u003E {\n        let t = event.target;\n        if (t.matches(\u0027.Post-body a\u0027)) {\n            let url = new URL(t.href);\n            if (url.origin == document.location.origin) {\n                t.removeAttribute(\u0027target\u0027);\n                t.removeAttribute(\u0027rel\u0027);\n            }else{\n                t.setAttribute(\u0027target\u0027, \u0027_blank\u0027);\n            }\n        }\n    }, false);\n\u003C\/script\u003E\n\n\u003C!-- \u767e\u5ea6\u7ad9\u957f --\u003E\n\u003Cscript\u003E\n    (function () {\n        var bp = document.createElement(\u0027script\u0027);\n        var curProtocol = window.location.protocol.split(\u0027:\u0027)[0];\n        if (curProtocol === \u0027https\u0027) {\n            bp.src = \u0027https:\/\/zz.bdstatic.com\/linksubmit\/push.js\u0027;\n        } else {\n            bp.src = \u0027http:\/\/push.zhanzhang.baidu.com\/push.js\u0027;\n        }\n        var s = document.getElementsByTagName(\u0022script\u0022)[0];\n        s.parentNode.insertBefore(bp, s);\n    })();\n\u003C\/script\u003E\n\n\u003Cscript\u003E\nwindow.onload = function(){\n        $(\u0027.Afrux-NewsWidget-line\u0027).each((i, item)=\u003E{\n        let match = item.innerHTML.match(\u0027[a-zA-z]+:\/\/[^\\s]*\u0027);\n        $(item).html(`\u003Ca href=\u0022${match.input.substring(match.index)}\u0022 style=\u0022display:flex;align-items:center;\u0022\u003E${match.input.substring(0, match.index).trim()} \u003Csvg xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022 aria-hidden=\u0022true\u0022 x=\u00220px\u0022 y=\u00220px\u0022 viewBox=\u00220 0 100 100\u0022 width=\u002215\u0022 height=\u002215\u0022 class=\u0022icon outbound\u0022\u003E\u003Cpath fill=\u0022currentColor\u0022 d=\u0022M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z\u0022\u003E\u003C\/path\u003E \u003Cpolygon fill=\u0022currentColor\u0022 points=\u002245.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9\u0022\u003E\u003C\/polygon\u003E\u003C\/svg\u003E\u003C\/a\u003E`)\n    })}\n\u003C\/script\u003E\n\n\u003C!-- \u7248\u672c --\u003E\n\u003Cscript\u003E\n  window.addEventListener(\u0027load\u0027, function() {\n    const version = document.getElementById(\u0027cnVersion\u0027).src.match(\/-v(\\d+(?:\\.\\d+){2})\/)?.[1]\n    const date = document.getElementById(\u0027cnDate\u0027).dataset.date\n    localStorage.setItem(\u0027version\u0027, version + \u0027-\u0027 + date)\n  })\n\u003C\/script\u003E\n\n\u003C!-- \u9875\u811a --\u003E\n\u003Cfooter\u003E\n    \u003Cdiv class=\u0022site-footer\u0022\u003E\n        \u003Cdiv style=\u0022color: rgb(137, 137, 140);font-size:0.9em;\u0022 class=\u0022footer-container rm-link-color\u0022\u003E\n            \u003Cp\u003E\n                \u003C!-- \u52a0\u8f7d\u65f6\u95f4 --\u003E\n                \u003Cscript\u003E\n                    var start_time = new Date();\n                    var end_time = \u0022\u0022;\n                    var loadt = setInterval(function () {\n                        if (document.readyState == \u0022complete\u0022) {\n                            showLoadTime();\n                        }\n                    }, 500)\n\n                    function showLoadTime() {\n                        end_time = new Date();\n                        loadtime_span.innerHTML = \u0022T \u0022 + (end_time.getTime() - start_time.getTime()) + \u0022 ms\u0022;\n                        clearInterval(loadt);\n                    }\n                \u003C\/script\u003E\n                \u003C!-- IP --\u003E\n\t\t\t\t\u003Cspan id=\u0022ip_span\u0022 align=center\u003E\u003C\/span\u003E\n                \u003C!-- \u003Cscript src=\u0022https:\/\/pv.sohu.com\/cityjson?ie=utf-8\u0022\u003E\u003C\/script\u003E --\u003E\n                \u003Cscript type=\u0022text\/javascript\u0022\u003E;\n                    function handleIpCallback(res) {\n                    returnCitySN = res\n                    ip_span.innerHTML = (returnCitySN[\u0022city\u0022] || returnCitySN[\u0022province\u0022]) + returnCitySN[\u0022isp\u0022] + \u0022 \u0022 + returnCitySN[\u0022ip\u0022];\n                }\n                \u003C\/script\u003E\n                \u003C!-- \u003Cscript type=\u0022text\/javascript\u0022 src=\u0022https:\/\/ip.useragentinfo.com\/jsonp?callback=handleIpCallback\u0022\u003E\u003C\/script\u003E --\u003E\n\n                \u003Cspan class=\u0022mx-2\u0022\u003E|\u003C\/span\u003E\n\n                \u003Cspan id=\u0022loadtime_span\u0022\u003ET\u003C\/span\u003E\n\n                \u003Cspan class=\u0022mx-2\u0022\u003E|\u003C\/span\u003E\n\n                \u003Ca id=\u0022stats\u0022 href=\u0022https:\/\/status.itnt.xyz\/status\/flarum-cn\u0022 target=\u0022_blank\u0022\u003E\u003C\/a\u003E\n\n            \u003C\/p\u003E\n            \u003Cp\u003E\n                \u003Ca id=\u0022prot_span\u0022 href=\u0022https:\/\/discuss.flarum.org.cn\/docs\/protocol.html\u0022\u003E\u003C\/a\u003E\n\n                \u003Cspan class=\u0022mx-2\u0022\u003E|\u003C\/span\u003E\n\n                \u003Ca id=\u0022rept_span\u0022 href=\u0022mailto:flarumcn@qq.com\u0022\u003E\u003C\/a\u003E\n\n                \u003Cspan class=\u0022mx-2\u0022\u003E|\u003C\/span\u003E\n\n                \u003Cspan id=\u0022ver_span\u0022\u003E\u003C\/span\u003E\n\t\t\t\t\u003Cp id=\u0022right_span\u0022\u003E\u003C\/p\u003E\n            \u003C\/p\u003E\n            \u003C!-- \u58f0\u660e --\u003E\n            \u003Cscript type=\u0022text\/javascript\u0022\u003E\n                var site_version = \u00221.8.1-230907\u0022;\n                var lang = document.getElementsByTagName(\u0022html\u0022);\n                var userLang = lang[0].getAttribute(\u0022lang\u0022);\n                if (userLang.includes(\u0022zh\u0022)) {\n\t\t\t\t\tstats.innerHTML = \u0022\u72b6\u6001\u0022;\n                    prot_span.innerHTML = \u0022\u793e\u533a\u89c4\u8303\u0022;\n                    rept_span.innerHTML = \u0022\u8fdd\u6cd5\u548c\u4e0d\u826f\u4fe1\u606f\u4e3e\u62a5\u0022;\n                    ver_span.innerHTML = \u0022\u7248\u672c \u0022 + site_version;\n                    right_span.innerHTML = \u0022\u672c\u7ad9\u72ec\u7acb\u4e8e Flarum \u57fa\u91d1\u4f1a\u8fd0\u884c\u3002\u003Ca href=\\\u0022https:\/\/flarum.org\/verified-communities\\\u0022\u003E\u003Ci class=\\\u0022fas fa-info-circle\\\u0022\u003E\u003C\/i\u003E \u4e86\u89e3\u8ba4\u8bc1\u793e\u533a\u003C\/a\u003E\u0022;\n                }\n                else {\n\t\t\t\t\tstats.innerHTML = \u0022Status\u0022;\n                    prot_span.innerHTML = \u0022Protocol\u0022;\n                    rept_span.innerHTML = \u0022Report\u0022;\n                    ver_span.innerHTML = \u0022Version \u0022 + site_version;\n                   right_span.innerHTML = \u0022This site operates independently of the Flarum Foundation. Read more about \u003Ca href=\\\u0022https:\/\/flarum.org\/verified-communities\\\u0022\u003E\u003Ci class=\\\u0022fas fa-info-circle\\\u0022\u003E\u003C\/i\u003E verified communities\u003C\/a\u003E.\u0022;\n                }\n            \u003C\/script\u003E\n        \u003C\/div\u003E\n    \u003C\/div\u003E   \n\u003C\/footer\u003E\n","allowSignUp":true,"defaultRoute":"\/all","canViewForum":true,"canStartDiscussion":false,"canSearchUsers":true,"canCreateAccessToken":false,"canModerateAccessTokens":false,"assetsBaseUrl":"https:\/\/discuss.flarum.org.cn\/assets","canViewFlags":false,"guidelinesUrl":null,"afrux-forum-widgets-core.config":{"instances":[{"id":"afrux-news-widget:news","extension":"afrux-news-widget","key":"news","placement":"top","position":0},{"id":"justoverclock-custom-html-widget:CustomHtml","extension":"justoverclock-custom-html-widget","key":"CustomHtml","placement":"start_bottom","position":0}],"disabled":["afrux-online-users-widget:onlineUsers","afrux-forum-stats-widget:forumStats","justoverclock-hot-discussions:discHot"]},"afrux-forum-widgets-core.preferDataWithInitialLoad":false,"canBypassTagCounts":false,"minPrimaryTags":"1","maxPrimaryTags":"4","minSecondaryTags":"0","maxSecondaryTags":"4","canSeeUserDirectoryLink":false,"userDirectorySmallCards":true,"userDirectoryDisableGlobalSearchSource":true,"userDirectoryDefaultSort":"newest","canGiveBadge":false,"canViewDetailedBadgeUsers":true,"editOwnUserCardBadges":false,"editUserCardBadges":false,"showBadgesOnUserCard":false,"numberOfBadgesOnUserCard":5,"textFormattingForDiffPreviews":false,"malago-achievements.show-post-footer":"0","malago-achievements.show-user-card":"0","malago-achievements.link-left-column":"0","justoverclock-custom-html-widget.customCode":"\u003Cbr\u003E\n\u003Ccenter\u003E\n\u003Ca target=\u0022_blank\u0022 href=\u0022https:\/\/flarum.org\/verified-communities\u0022 rel=\u0022noopener\u0022\u003E\u003Cimg src=\u0022\/\/discuss.flarum.org.cn\/verified-community.svg\u0022 alt=\u0022\u5b98\u65b9\u8ba4\u8bc1\u793e\u533a\u0022 title=\u0022\u5b98\u65b9\u8ba4\u8bc1\u793e\u533a\u0022 draggable=\u0022false\u0022\/\u003E\u003C\/a\u003E\n\u003C\/center\u003E","fof-user-bio.maxLength":200,"fof-upload.canUpload":false,"fof-upload.canDownload":true,"fof-upload.composerButtonVisiblity":"both","fof-terms.signup-legal-text":"","fof-terms.hide-updated-at":false,"fof-terms.date-format":"YYYY-MM-DD","fof-terms.canSeeUserPoliciesState":false,"fof-socialprofile.allow_external_favicons":true,"canStartPolls":false,"allowPollOptionImage":false,"pollMaxOptions":10,"fof-oauth":[null,null,{"name":"github","icon":"fab fa-github","priority":0},null,null,null,null],"fof-oauth.only_icons":false,"fofNightMode_autoUnsupportedFallback":1,"fofNightMode.showThemeToggleOnHeaderAlways":false,"fof-nightmode.default_theme":0,"fof-merge-discussions.search_limit":4,"canSaveDrafts":false,"canScheduleDrafts":false,"drafts.enableScheduledDrafts":true,"fof-cookie-consent.consentText":"\u672c\u7ad9\u4f7f\u7528 cookie \u6570\u636e\u4ee5\u786e\u4fdd\u7f51\u7ad9\u6b63\u5e38\u8fd0\u884c\uff0c\u5e76\u5e2e\u52a9\u6211\u4eec\u4e3a\u60a8\u63d0\u4f9b\u6700\u4f73\u7528\u6237\u4f53\u9a8c\u3002\u70b9\u51fb\u201c\u540c\u610f\u201d\u5373\u8868\u793a\u60a8\u540c\u610f\u6211\u4eec\u4f7f\u7528 cookie\u3002","fof-cookie-consent.buttonText":"\u6211\u540c\u610f","fof-cookie-consent.learnMoreLinkText":"\u4e86\u89e3\u66f4\u591a","fof-cookie-consent.backgroundColor":"#000000","fof-cookie-consent.textColor":"#FFF","fof-cookie-consent.buttonBackgroundColor":"#FF0000","fof-cookie-consent.buttonTextColor":"#FFF","fof-cookie-consent.ccTheme":"edgeless","canSelectBestAnswerOwnPost":true,"useAlternativeBestAnswerUi":false,"showBestAnswerFilterUi":true,"fof-best-answer.show_max_lines":0,"fof-best-answer.tags":["39"],"pusherKey":"b827e7a6fdc683df359b","pusherCluster":"ap3","displayNameDriver":"nickname","setNicknameOnRegistration":true,"randomizeUsernameOnRegistration":false,"allowUsernameMentionFormat":true,"themeName":"github","isCopyEnable":true,"isShowCodeLang":true,"canBypassAds":false,"kilowhatMailingCanMailAll":false,"kilowhatMailingCanMailIndividual":false,"clarkwinkelmann-group-list.showSideNavLink":true,"clarkwinkelmann-group-list.showAvatarBadges":false,"clarkwinkelmann-group-list.showOnlineStatus":false,"emojioneAreaEnableSearch":true,"emojioneAreaEnableRecent":true,"emojioneAreaEnableTones":true,"emojioneAreaFiltersPositionBottom":true,"emojioneAreaSearchPositionBottom":true,"emojioneAreaHideFlarumButton":true,"clarkwinkelmannAuthorChangeCanEditUser":false,"clarkwinkelmannAuthorChangeCanEditDate":false,"askvortsov-discussion-templates.no_tag_template":null,"appendTemplateOnTagChange":false,"afrux-news-widget.lines":[]},"relationships":{"groups":{"data":[{"type":"groups","id":"1"},{"type":"groups","id":"2"},{"type":"groups","id":"3"},{"type":"groups","id":"4"},{"type":"groups","id":"5"},{"type":"groups","id":"6"}]},"tags":{"data":[{"type":"tags","id":"1"},{"type":"tags","id":"2"},{"type":"tags","id":"5"},{"type":"tags","id":"6"},{"type":"tags","id":"18"},{"type":"tags","id":"20"},{"type":"tags","id":"21"},{"type":"tags","id":"27"},{"type":"tags","id":"40"},{"type":"tags","id":"44"},{"type":"tags","id":"39"},{"type":"tags","id":"10"},{"type":"tags","id":"24"},{"type":"tags","id":"12"}]},"fofTermsPolicies":{"data":[{"type":"fof-terms-policies","id":"1"},{"type":"fof-terms-policies","id":"2"}]},"links":{"data":[{"type":"links","id":"4"},{"type":"links","id":"8"},{"type":"links","id":"9"},{"type":"links","id":"11"},{"type":"links","id":"14"},{"type":"links","id":"16"},{"type":"links","id":"17"},{"type":"links","id":"18"}]}}},{"type":"groups","id":"1","attributes":{"nameSingular":"\u7ba1\u7406\u5458","namePlural":"\u7ba1\u7406","color":"#B72A2A","icon":"fa fa-tools","isHidden":0}},{"type":"groups","id":"2","attributes":{"nameSingular":"\u6e38\u5ba2","namePlural":"\u6e38\u5ba2","color":null,"icon":null,"isHidden":0}},{"type":"groups","id":"3","attributes":{"nameSingular":"\u6ce8\u518c\u7528\u6237","namePlural":"\u6ce8\u518c\u7528\u6237","color":null,"icon":null,"isHidden":0}},{"type":"groups","id":"4","attributes":{"nameSingular":"\u7248\u4e3b","namePlural":"\u7248\u4e3b","color":"#80349E","icon":"fas fa-bolt","isHidden":0}},{"type":"groups","id":"5","attributes":{"nameSingular":"\u5b98\u65b9","namePlural":"\u5b98\u65b9","color":"#f3763f","icon":"fas fa-crown","isHidden":0}},{"type":"groups","id":"6","attributes":{"nameSingular":"\u56fd\u9645\u793e\u533a","namePlural":"\u56fd\u9645\u793e\u533a","color":"#e7672e","icon":"fas fa-certificate","isHidden":0}},{"type":"tags","id":"1","attributes":{"name":"\u6d4b\u8bd5\u6c99\u76d2","description":"\u5728\u6b64\u6807\u7b7e\u4e2d\u6d4b\u8bd5 Flarum\u3002\u6b64\u6807\u7b7e\u4e2d\u7684\u8ba8\u8bba\u53ef\u4ee5\u88ab\u9891\u7e41\u53d1\u5e03\u4ee5\u53ca\u5220\u9664\u3002","slug":"sandbox","color":"#b59e8c","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-vial","discussionCount":336,"position":0,"defaultSort":null,"isChild":false,"isHidden":true,"lastPostedAt":"2024-04-05T07:40:56+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"tags","id":"2","attributes":{"name":"\u6c42\u52a9","description":"\u83b7\u53d6\u652f\u6301\u5e2e\u52a9\uff0c\u5305\u62ec\u4f46\u4e0d\u9650\u4e8e\u5b89\u88c5\u3001\u8bbe\u7f6e\u3001\u4f7f\u7528 Flarum\u3002","slug":"support","color":"#4b93d1","backgroundUrl":null,"backgroundMode":null,"icon":"icon fas fa-wrench","discussionCount":1651,"position":3,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-05-22T05:52:08+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":true,"reminders":true,"template":"\u3010\u4ee5\u4e0b\u5747\u53ef\u5220\u9664\u3011\n\u63d0\u95ee\u524d\u8bf7\u52a1\u5fc5\u4ed4\u7ec6\u9605\u8bfb [\u5982\u4f55\u6392\u67e5\u6545\u969c](https:\/\/docs.flarum.org\/zh\/troubleshoot) \u548c [\u5e38\u89c1\u95ee\u9898](https:\/\/iflarum.cn\/faq)\u3002\n\n\u95ee\u9898\u63cf\u8ff0\uff08\u62a5\u9519\u5185\u5bb9\uff09\uff1a\n\n\n\u5df2\u5c1d\u8bd5\u7684\u89e3\u51b3\u529e\u6cd5\uff08\u6f14\u793a\u7f51\u5740\u6216\u56fe\u7247\uff09\uff1a"}},{"type":"tags","id":"5","attributes":{"name":"\u6269\u5c55","description":"\u53d1\u5e03 Flarum \u6269\u5c55\u7a0b\u5e8f\uff0c\u5e76\u5411\u7528\u6237\u63d0\u4f9b\u5e2e\u52a9\u3002\u5bf9\u4e8e\u8bbe\u8ba1\/\u60f3\u6cd5\u529f\u80fd\uff0c\u8bf7\u5728\u201c\u53cd\u9988\u201d\u4e2d\u53d1\u5e03\u3002\u8981\u83b7\u53d6\u6784\u5efa\u6269\u5c55\u7684\u5e2e\u52a9\uff0c\u8bf7\u5728\u201c\u5f00\u53d1\u201d\u003E\u201c\u53ef\u6269\u5c55\u6027\u201d\u4e2d\u53d1\u5e03\u3002","slug":"extensions","color":"#48bf83","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-plug","discussionCount":316,"position":6,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-05-22T00:12:42+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":"\u003E **\u539f\u6587\uff1a**https:\/\/\u8f6c\u8f7d\u539f\u6587\u94fe\u63a5\uff0c\u82e5\u53d1\u5e03\u539f\u521b\u63d2\u4ef6\uff0c\u8bf7\u5220\u9664\u3002\n\n## \u6269\u5c55\u6807\u9898 \uff08\u4e2d\u6587\u5728\u524d\uff0c\u4f8b\u5982\uff1aFoF \u6587\u4ef6\u4e0a\u4f20 | FoF Upload\uff09\n##### \u526f\u6807\u9898\u8bf4\u660e \uff08\u7b80\u5355\u4e00\u53e5\u8bdd\u6982\u62ec\u6269\u5c55\u6838\u5fc3\u7528\u9014\u6216\u4eae\u70b9\uff09\n--------------\n\u82e5\u662f\u8f6c\u8f7d\u7ffb\u8bd1\uff0c\u8bf7\u6dfb\u52a0 \n![\u672c\u6587\u7ffb\u8bd1](https:\/\/img.shields.io\/badge\/\u672c\u6587\u7ffb\u8bd1-\u7ffb\u8bd1\u4eba\u5458\u540d\u79f0-blueviolet?style=flat-square) \n\n\u82e5\u662f\u539f\u521b\uff0c\u8bf7\u6dfb\u52a0 \n![\u539f\u521b](https:\/\/img.shields.io\/badge\/\u539f\u521b\u4f5c\u8005-\u4f5c\u8005\u540d\u79f0-blueviolet?style=flat-square) \n\n\u8d34\u4e0a\u76f8\u5173\u4fe1\u606f\u6807\u7b7e\uff0c\u53ef\u5728 [shields.io](https:\/\/shields.io) \u8fdb\u884c\u8bbe\u7f6e\u83b7\u53d6\uff0c\u6837\u5f0f\u63a8\u8350\u4f7f\u7528 `flat-square` \uff0c\n\u82e5\u65e0\u6807\u7b7e\u8bf7\u5ffd\u7565\u5e76\u5220\u9664\n\u4f8b\uff1a[![MIT](https:\/\/img.shields.io\/badge\/license-MIT-blue.svg?label=\u8bb8\u53ef\u8bc1\u0026style=flat-square)](\u94fe\u63a5\u5730\u5740) \n\n\n\u003E \u26a0 \u5176\u4ed6\u6ce8\u610f\u4e8b\u9879\n\n--------------\n\n\u6b63\u6587\u5185\u5bb9\uff0c\u82e5\u53d1\u5e03\u539f\u521b\u63d2\u4ef6\uff0c\u8bf7\u5220\u9664\u8f6c\u8f7d\u4fe1\u606f\u3002"}},{"type":"tags","id":"6","attributes":{"name":"\u5f00\u53d1","description":"\u5f00\u53d1\u8005\u4e13\u533a\u3002\u83b7\u53d6\u6216\u7814\u8ba8 Flarum \u7684\u5f00\u53d1\u3001\u6269\u5c55\u7a0b\u5e8f\u7684\u6784\u5efa\u3001\u4e3b\u9898\u5236\u4f5c\u548c\u7ffb\u8bd1\u7b49\u3002","slug":"dev","color":"#414141","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-code","discussionCount":108,"position":5,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-05-14T07:21:01+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":true,"reminders":false,"template":""}},{"type":"tags","id":"18","attributes":{"name":"\u8d44\u6e90","description":"\u5206\u4eab Flarum \u76f8\u5173\u7684\u8d44\u6e90\u548c\u670d\u52a1\uff1a\u6258\u7ba1\u3001\u6559\u7a0b\u548c\u6837\u5f0f\u7b49\u3002","slug":"resources","color":"#626c78","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-toolbox","discussionCount":201,"position":7,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-05-16T16:25:59+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"tags","id":"20","attributes":{"name":"\u53cd\u9988","description":"\u5bf9\u4e8e Flarum \u5728\u8bbe\u8ba1\u4e0a\u3001\u529f\u80fd\u4e0a\u6709\u4ec0\u4e48\u597d\u7684\u5efa\u8bae\u5462\uff1f\u5982\u679c\u60a8\u9700\u8981\u6280\u672f\u652f\u63f4\uff0c\u8bf7\u5728 \u201c\u6c42\u52a9\u201d \u8282\u70b9\u5bfb\u6c42\u5e2e\u52a9\u3002","slug":"feedback","color":"#9354ca","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-comment-dots","discussionCount":111,"position":4,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-02-18T15:36:34+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":true,"reminders":false,"template":""}},{"type":"tags","id":"21","attributes":{"name":"\u95f2\u804a","description":"feel free to flood","slug":"chat","color":"#888888","backgroundUrl":null,"backgroundMode":null,"icon":"fa fa-icons","discussionCount":225,"position":8,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-05-08T12:22:45+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"tags","id":"27","attributes":{"name":"\u516c\u544a","description":"\u4e2d\u6587\u793e\u533a\u7684\u516c\u544a\u4ee5\u53ca\u7248\u52a1\u4eba\u5458\u6709\u5e8f\u7684\u7ec4\u7ec7\u548c\u5b89\u6392\u4e00\u4e9b\u793e\u533a\u4e8b\u4ef6\u3002","slug":"announce","color":"#ef564f","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-bullhorn","discussionCount":40,"position":1,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2023-10-22T03:27:18+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"tags","id":"40","attributes":{"name":"Flarum","description":"\u8f6c\u8f7d\/\u7ffb\u8bd1 Flarum \u82f1\u6587\u5b98\u65b9\u535a\u5ba2\u3001\u52a8\u6001\u548c\u6587\u6863\u7b49\u3002","slug":"flarum","color":"#f3763f","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-comment-alt","discussionCount":72,"position":2,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-02-29T03:05:29+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"tags","id":"44","attributes":{"name":"\u7ad9\u52a1","description":"\u8bba\u575b\u4e8b\u52a1\u5904\u7406","slug":"depot","color":"#f8504b","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-clipboard-list","discussionCount":5,"position":9,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2023-10-22T03:27:18+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"tags","id":"39","attributes":{"name":"\u5df2\u89e3\u51b3","description":"\u5df2\u89e3\u51b3\u7684\u95ee\u9898\u3002","slug":"solved","color":"#6dbb3e","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-check-circle","discussionCount":189,"position":null,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-05-17T07:44:01+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":true,"reminders":true,"template":""}},{"type":"tags","id":"10","attributes":{"name":"PHP","description":"","slug":"php","color":"","backgroundUrl":null,"backgroundMode":null,"icon":"","discussionCount":37,"position":null,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2023-04-17T11:33:26+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"tags","id":"24","attributes":{"name":"Javascript","description":"","slug":"javascript","color":"","backgroundUrl":null,"backgroundMode":null,"icon":"","discussionCount":10,"position":null,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2023-04-17T11:33:26+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"tags","id":"12","attributes":{"name":"Composer","description":"","slug":"composer","color":"","backgroundUrl":null,"backgroundMode":null,"icon":"","discussionCount":9,"position":null,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-04-05T15:19:46+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":false,"reminders":false,"template":""}},{"type":"fof-terms-policies","id":"1","attributes":{"sort":null,"name":"\u7528\u6237\u534f\u8bae","url":"https:\/\/discuss.flarum.org.cn\/docs\/terms.html","update_message":"\u6211\u4eec\u4e0e\u5317\u4eac\u65f6\u95f42020\u5e747\u670820\u65e5\u66f4\u65b0\u4e86\u7528\u6237\u534f\u8bae\uff0c\u8bf7\u67e5\u770b\u3002","terms_updated_at":"2020-07-20T14:31:42+00:00"}},{"type":"fof-terms-policies","id":"2","attributes":{"sort":null,"name":"\u9690\u79c1\u653f\u7b56","url":"https:\/\/discuss.flarum.org.cn\/docs\/privacy.html","update_message":"\u6211\u4eec\u4e8e\u5317\u4eac\u65f6\u95f42020\u5e747\u670820\u65e5\u66f4\u65b0\u4e86\u9690\u79c1\u653f\u7b56\uff0c\u6e05\u67e5\u770b\u3002","terms_updated_at":"2020-07-20T14:32:43+00:00"}},{"type":"links","id":"4","attributes":{"id":4,"title":"\u793e\u533a\u5c55","icon":"far fa-lightbulb","url":"https:\/\/discuss.flarum.org.cn\/flarumites","position":1,"isInternal":false,"isNewtab":true,"isChild":true,"visibility":"everyone"},"relationships":{"parent":{"data":{"type":"links","id":"18"}}}},{"type":"links","id":"18","attributes":{"id":18,"title":"\u9996\u9875","icon":"","url":"https:\/\/flarum.org.cn\/","position":0,"isInternal":false,"isNewtab":false,"isChild":false,"visibility":"everyone"}},{"type":"links","id":"8","attributes":{"id":8,"title":"\u6587\u6863","icon":"","url":"https:\/\/docs.flarum.org","position":1,"isInternal":false,"isNewtab":true,"isChild":false,"visibility":"everyone"}},{"type":"links","id":"9","attributes":{"id":9,"title":"\u82f1\u6587\u793e\u533a","icon":"far fa-comment","url":"https:\/\/discuss.flarum.org","position":0,"isInternal":false,"isNewtab":true,"isChild":true,"visibility":"everyone"},"relationships":{"parent":{"data":{"type":"links","id":"18"}}}},{"type":"links","id":"11","attributes":{"id":11,"title":"\u7c89\u4e1d\u7ec4\u7ec7","icon":"far fa-smile","url":"https:\/\/github.com\/FFans","position":1,"isInternal":false,"isNewtab":true,"isChild":true,"visibility":"everyone"},"relationships":{"parent":{"data":{"type":"links","id":"16"}}}},{"type":"links","id":"16","attributes":{"id":16,"title":"\u66f4\u591a","icon":"","url":"","position":2,"isInternal":false,"isNewtab":false,"isChild":false,"visibility":"everyone"}},{"type":"links","id":"14","attributes":{"id":14,"title":"\u6269\u5c55\u5e02\u573a","icon":"fas fa-plus-square","url":"https:\/\/extiverse.com\/","position":0,"isInternal":false,"isNewtab":true,"isChild":true,"visibility":"everyone"},"relationships":{"parent":{"data":{"type":"links","id":"16"}}}},{"type":"links","id":"17","attributes":{"id":17,"title":"\u89c4\u8303","icon":"","url":"https:\/\/discuss.flarum.org.cn\/docs\/protocol.html","position":0,"isInternal":false,"isNewtab":true,"isChild":true,"visibility":"everyone"},"relationships":{"parent":{"data":{"type":"links","id":"8"}}}}],"session":{"userId":0,"csrfToken":"0P7OjSI4lttMi7v5yo2a7kkIOphDs9u1hYSRuJXr"},"locales":{"zh-Hans":"\u7b80\u4f53\u4e2d\u6587","en":"English","zh-Hant":"\u6b63\u9ad4\u4e2d\u6587"},"locale":"zh-Hans","fof-socialprofile.test":null,"fof-prevent-necrobumping.message.title":"","fof-prevent-necrobumping.message.description":"","fof-prevent-necrobumping.message.agreement":"","googleTrackingCode":"UA-155097920-4","davwheat-ads.ad-code.between_posts":"","davwheat-ads.ad-code.discussion_header":"","davwheat-ads.ad-code.discussion_sidebar":"","davwheat-ads.ad-code.footer":"","davwheat-ads.ad-code.header":"","davwheat-ads.ad-code.sidebar":"","davwheat-ads.ad-code.between_posts.js":"","davwheat-ads.ad-code.discussion_header.js":"","davwheat-ads.ad-code.discussion_sidebar.js":"","davwheat-ads.ad-code.footer.js":"","davwheat-ads.ad-code.header.js":"","davwheat-ads.ad-code.sidebar.js":"","davwheat-ads.between-n-posts":"15","davwheat-ads.enable-ad-after-placeholder":"0","davwheat-ads.enabled-ad-locations":"[]","apiDocument":{"data":{"type":"discussions","id":"15648","attributes":{"title":"\u6709\u6ca1\u6709\u5f3a\u5236\u7528\u6237\u767b\u5f55\u63d2\u4ef6\uff1f","slug":"15648","commentCount":10,"participantCount":2,"createdAt":"2024-05-15T12:20:00+00:00","lastPostedAt":"2024-05-17T07:44:01+00:00","lastPostNumber":10,"canReply":false,"canRename":false,"canDelete":false,"canHide":false,"isApproved":true,"hasBestAnswer":30143,"bestAnswerSetAt":"2024-05-16T08:13:07+00:00","canTag":false,"canSplit":false,"fof-prevent-necrobumping":120,"hasPoll":false,"canStartPoll":false,"canMerge":false,"frontpage":false,"frontdate":null,"front":false,"canSelectBestAnswer":false,"subscription":null,"isSticky":false,"canSticky":false,"isLocked":false,"canLock":false,"replyTemplate":"","canManageReplyTemplates":false},"relationships":{"user":{"data":{"type":"users","id":"8666"}},"posts":{"data":[{"type":"posts","id":"30135"},{"type":"posts","id":"30142"},{"type":"posts","id":"30143"},{"type":"posts","id":"30144"},{"type":"posts","id":"30146"},{"type":"posts","id":"30147"},{"type":"posts","id":"30151"},{"type":"posts","id":"30152"},{"type":"posts","id":"30153"},{"type":"posts","id":"30156"}]},"tags":{"data":[{"type":"tags","id":"2"},{"type":"tags","id":"39"}]},"bestAnswerPost":{"data":{"type":"posts","id":"30143"}},"bestAnswerUser":{"data":{"type":"users","id":"8666"}}}},"included":[{"type":"users","id":"8666","attributes":{"username":"bnazxc1","displayName":"\u6709\u70b9\u8822","avatarUrl":null,"slug":"bnazxc1","achievements":[],"joinTime":"2024-05-11T20:39:12+00:00","discussionCount":10,"commentCount":30,"canEdit":false,"canEditCredentials":false,"canEditGroups":false,"canDelete":false,"lastSeenAt":"2024-05-21T04:39:25+00:00","canSuspend":false,"canSpamblock":false,"bio":"","canViewBio":true,"canEditBio":false,"fof-upload-uploadCountCurrent":11,"fof-upload-uploadCountAll":12,"canViewSocialProfile":false,"bestAnswerCount":3,"isBanned":false,"canBanIP":false,"canEditNickname":false},"relationships":{"groups":{"data":[]},"userBadges":{"data":[]},"achievements":{"data":[]}}},{"type":"users","id":"5687","attributes":{"username":"Han2023","displayName":"\u5bd2\u51b0\u51bd","avatarUrl":"https:\/\/discuss.flarum.org.cn\/assets\/avatars\/BnIDf7xFxbMnh52o.png","slug":"Han2023","achievements":[],"joinTime":"2023-04-26T00:14:20+00:00","discussionCount":1,"commentCount":7,"canEdit":false,"canEditCredentials":false,"canEditGroups":false,"canDelete":false,"lastSeenAt":"2024-05-19T13:25:38+00:00","canSuspend":false,"canSpamblock":false,"bio":"\u5c51\u5bd2","canViewBio":true,"canEditBio":false,"fof-upload-uploadCountCurrent":1,"fof-upload-uploadCountAll":1,"canViewSocialProfile":false,"bestAnswerCount":0,"isBanned":false,"canBanIP":false,"canEditNickname":false},"relationships":{"groups":{"data":[]},"userBadges":{"data":[]},"achievements":{"data":[]}}},{"type":"posts","id":"30135","attributes":{"number":1,"createdAt":"2024-05-15T12:20:00+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u95ee\u9898\u63cf\u8ff0\uff08\u62a5\u9519\u5185\u5bb9\uff09\uff1a\u8bbf\u95eeflarum\u793e\u533a\uff0c\u81ea\u52a8\u5f39\u51fa\u767b\u5f55\u7a97\u53e3\uff0c\u8bbf\u95ee\u5b50\u9875\u4f1a\u81ea\u52a8\u8df3\u8f6c\u5230\u9996\u9875\u003C\/p\u003E","renderFailed":false,"canEdit":false,"canDelete":false,"canHide":false,"mentionedByCount":1,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"discussion":{"data":{"type":"discussions","id":"15648"}},"user":{"data":{"type":"users","id":"8666"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30142"}]},"likes":{"data":[]}}},{"type":"posts","id":"30142","attributes":{"number":2,"createdAt":"2024-05-16T07:48:10+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/1\u0022 class=\u0022PostMention\u0022 data-id=\u002230135\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u6709\u70b9\u8822\u003C\/a\u003E \u003Cbr\u003E\nPrivate Forum Facade \u8fd9\u4e2a\u63d2\u4ef6\u53ef\u4ee5\u5b9e\u73b0\uff0c\u4f46\u662f\u95ee\u9898\u662f\u003Cbr\u003E\n\u2460\u9700\u8981\u4ed8\u8d39\u003Cbr\u003E\n\u2461\u663e\u793a\u4e0d\u517c\u5bb9flarum1.8.5\uff08\u867d\u7136\u6211\u8fd9\u91cc\u597d\u50cf\u8fd8\u80fd\u7528\uff0c\u4f46\u662f\u4e0d\u4fdd\u969c\u5176\u5b83\u4eba\u6ca1\u95ee\u9898\uff09\u003C\/p\u003E","renderFailed":false,"mentionedByCount":1,"canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"5687"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30143"}]},"likes":{"data":[]}}},{"type":"posts","id":"30143","attributes":{"number":3,"createdAt":"2024-05-16T08:12:38+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/2\u0022 class=\u0022PostMention\u0022 data-id=\u002230142\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u6d4b\u8bd5\u4e86\uff0c\u53ef\u4ee5\u5b89\u88c5\uff0c\u662f\u514d\u8d39\u7684\u3002\u611f\u8c22\uff01\u003C\/p\u003E\n\n\u003Ch3\u003E\u5b89\u88c5\u003C\/h3\u003E\n\u003Cp\u003E\u003Ccode\u003Ecomposer require sycho\/flarum-private-facade:\u0022*\u0022\u003C\/code\u003E\u003C\/p\u003E\n\n\u003Ch3\u003E\u66f4\u65b0\u003C\/h3\u003E\n\u003Cpre\u003E\u003Ccode\u003Ecomposer update sycho\/flarum-private-facade:\u0022*\u0022\nphp flarum migrate\nphp flarum cache:clear\u003C\/code\u003E\u003Cscript async=\u0022\u0022 crossorigin=\u0022anonymous\u0022 data-hljs-style=\u0022github\u0022 integrity=\u0022sha384-fSWmbgQwbzLXpKFwOj6DlXOstUp9\/gRcSSNLI50wWQYg7XIihuBcYUTG\/GR7ocjz\u0022 src=\u0022https:\/\/cdn.jsdelivr.net\/gh\/s9e\/hljs-loader@1.0.33\/loader.min.js\u0022\u003E\u003C\/script\u003E\u003Cscript\u003E\n                    if(window.hljsLoader \u0026\u0026 !document.currentScript.parentNode.hasAttribute(\u0027data-s9e-livepreview-onupdate\u0027)) {\n                        window.hljsLoader.highlightBlocks(document.currentScript.parentNode);\n                    }\n                \u003C\/script\u003E\u003C\/pre\u003E","renderFailed":false,"mentionedByCount":0,"editedAt":"2024-05-16T08:13:03+00:00","canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"8666"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"editedUser":{"data":{"type":"users","id":"8666"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30144"}]},"likes":{"data":[]}}},{"type":"posts","id":"30144","attributes":{"number":4,"createdAt":"2024-05-16T10:40:59+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/3\u0022 class=\u0022PostMention\u0022 data-id=\u002230143\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u6709\u70b9\u8822\u003C\/a\u003E \u8349\uff0c\u5f53\u65f6\u898115\u7f8e\u5143\uff08\uff09\u6211\u8fd8\u4e70\u4e86\u2026\u2026\u2026\u2026..\u003C\/p\u003E","renderFailed":false,"mentionedByCount":1,"canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"5687"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30146"}]},"likes":{"data":[]}}},{"type":"posts","id":"30146","attributes":{"number":5,"createdAt":"2024-05-16T12:52:44+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/4\u0022 class=\u0022PostMention\u0022 data-id=\u002230144\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u6211\u5b89\u88c5\u4e86\uff0c\u4e0d\u662f\u6211\u60f3\u8981\u7684\uff0c\u6211\u60f3\u8981\u7684\u662f\u8fdb\u6807\u7b7e\u9875\u6216\u8005\u5185\u5bb9\u9875\uff0c\u4f1a\u5f39\u51fa\u767b\u5f55\u7a97\u53e3\u6216\u8005\u8df3\u8f6c\u767b\u5f55\u9875\u003C\/p\u003E","renderFailed":false,"mentionedByCount":1,"canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"8666"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30147"}]},"likes":{"data":[]}}},{"type":"posts","id":"30147","attributes":{"number":6,"createdAt":"2024-05-16T16:08:24+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/5\u0022 class=\u0022PostMention\u0022 data-id=\u002230146\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u6709\u70b9\u8822\u003C\/a\u003E \u90a3\u53ef\u4ee5\u7528login2see\uff0c\u8fd9\u4e2a\u5e94\u8be5\u5f88\u591a\u7684\u003C\/p\u003E","renderFailed":false,"mentionedByCount":1,"canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"5687"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30151"}]},"likes":{"data":[]}}},{"type":"posts","id":"30151","attributes":{"number":7,"createdAt":"2024-05-16T17:31:16+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/6\u0022 class=\u0022PostMention\u0022 data-id=\u002230147\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u8fd9\u4e2a\u53ea\u80fd\u9690\u85cf\u6307\u5b9a\u5185\u5bb9\uff0c\u5e76\u4e0d\u662f\u6211\u9700\u8981\u7684\u529f\u80fd\u3002\u003C\/p\u003E","renderFailed":false,"mentionedByCount":1,"canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"8666"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30152"}]},"likes":{"data":[]}}},{"type":"posts","id":"30152","attributes":{"number":8,"createdAt":"2024-05-16T18:09:29+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/7\u0022 class=\u0022PostMention\u0022 data-id=\u002230151\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u6709\u70b9\u8822\u003C\/a\u003E \u4f60\u4e00\u5b9a\u5e0c\u671b\u5f39\u51fa\u7684\u8bdd\u5f97\u52a0\u4e1c\u897f\u4e86\uff0c\u6309\u5e73\u65f6\u901b\u63d2\u4ef6\u5e02\u573a\u5e94\u8be5\u662f\u6ca1\u6709\u8fd9\u4e2a\u63d2\u4ef6\uff0c\u4f46\u662f\u5b9e\u9645\u4e0a\u7684\u8bdd\u914d\u7f6elogin2see\u8fbe\u6210\u7684\u6548\u679c\u4e00\u6837\u8bbe\u7f6e\u66f4\u597d\uff1f\u56e0\u4e3a\u5f39\u51fa\u5185\u5bb9\u7684\u8bdd\u7528\u6237\u53ef\u4ee5\u5173\u6389\uff0c\u6211\u8fd8\u60f3\u5230\u4e00\u4e2a\u76f8\u5bf9\u7b80\u5355\u7684\u65b9\u6cd5\u662f\u914d\u7f6e\u9875\u9762\u89c4\u5219\u8ba9\u9664\u4e86\u9996\u9875\u4e4b\u5916\u7684\u9875\u9762\u5168\u90e8\u91cd\u5b9a\u5411\u5230Private Forum Facade\uff0c\u540c\u65f6\u4e0d\u5f00\u542fPrivate Forum Facade\u7684\u5f3a\u5236\u767b\u5f55\uff0c\u8fd9\u6837\u5c31\u80fd\u5b9e\u73b0\u9996\u9875\u53ef\u4ee5\u770b\uff0c\u5176\u5b83\u7684\u70b9\u5f00\u5c31\u4f1a\u8df3\u8f6c\u5230\u767b\u5f55\u9875\uff0c\u4f46\u662f\u603b\u4e4b\u542c\u8d77\u6765\u5f88\u9ebb\u70e6\u800c\u4e14\u53ef\u80fd\u5e26\u6765\u5404\u79cd\u5947\u602a\u95ee\u9898\uff0c\u8981\u4e48\u5c31\u662f\u627e\u4eba\u4e8c\u5f00\u63d2\u4ef6\uff0c\u8fd9\u4e2a\u662f\u6211\u80fd\u60f3\u5230\u7684\uff0c\u73b0\u6210\u7684\u80fd\u5b89\u88c5\u4e00\u4e0b\u5c31\u641e\u5b9a\u7684\u5e94\u8be5\u662f\u65e0\u3002\u603b\u4e4b\u542c\u8d77\u6765\u8fd8\u4e0d\u5982\u5c31\u7b80\u5355\u7528login2see\u003C\/p\u003E","renderFailed":false,"mentionedByCount":1,"canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"5687"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30153"}]},"likes":{"data":[]}}},{"type":"posts","id":"30153","attributes":{"number":9,"createdAt":"2024-05-16T18:11:35+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/8\u0022 class=\u0022PostMention\u0022 data-id=\u002230152\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u65b9\u6cd5\u4e00\u8fd8\u5f97\u52a0\u767b\u5f55\u72b6\u6001\u5224\u65ad\uff0c\u4e5f\u4e0d\u7b80\u5355\u4e86\u2026\u2026\u003C\/p\u003E","renderFailed":false,"mentionedByCount":1,"canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"5687"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"polls":{"data":[]},"mentionedBy":{"data":[{"type":"posts","id":"30156"}]},"likes":{"data":[]}}},{"type":"posts","id":"30156","attributes":{"number":10,"createdAt":"2024-05-17T07:44:01+00:00","contentType":"comment","contentHtml":"\u003Cp\u003E\u003Ca href=\u0022https:\/\/discuss.flarum.org.cn\/d\/15648\/9\u0022 class=\u0022PostMention\u0022 data-id=\u002230153\u0022 rel=\u0022\u0022 target=\u0022\u0022\u003E\u5bd2\u51b0\u51bd\u003C\/a\u003E \u597d\u7684\uff0c\u770b\u6765\u53ea\u80fd\u627e\u4eba\u4e8c\u5f00\u63d2\u4ef6\u4e86\u3002\u8c22\u8c22\u4f60\u003C\/p\u003E","renderFailed":false,"mentionedByCount":0,"canEdit":false,"canDelete":false,"canHide":false,"canFlag":false,"isApproved":true,"canApprove":false,"canViewEditHistory":false,"canDeleteEditHistory":false,"canRollbackEditHistory":false,"revisionCount":0,"achievements":[],"canStartPoll":false,"canBanIP":false,"canLike":false,"likesCount":0},"relationships":{"user":{"data":{"type":"users","id":"8666"}},"discussion":{"data":{"type":"discussions","id":"15648"}},"polls":{"data":[]},"mentionedBy":{"data":[]},"likes":{"data":[]}}},{"type":"tags","id":"2","attributes":{"name":"\u6c42\u52a9","description":"\u83b7\u53d6\u652f\u6301\u5e2e\u52a9\uff0c\u5305\u62ec\u4f46\u4e0d\u9650\u4e8e\u5b89\u88c5\u3001\u8bbe\u7f6e\u3001\u4f7f\u7528 Flarum\u3002","slug":"support","color":"#4b93d1","backgroundUrl":null,"backgroundMode":null,"icon":"icon fas fa-wrench","discussionCount":1651,"position":3,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-05-22T05:52:08+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":true,"reminders":true,"template":"\u3010\u4ee5\u4e0b\u5747\u53ef\u5220\u9664\u3011\n\u63d0\u95ee\u524d\u8bf7\u52a1\u5fc5\u4ed4\u7ec6\u9605\u8bfb [\u5982\u4f55\u6392\u67e5\u6545\u969c](https:\/\/docs.flarum.org\/zh\/troubleshoot) \u548c [\u5e38\u89c1\u95ee\u9898](https:\/\/iflarum.cn\/faq)\u3002\n\n\u95ee\u9898\u63cf\u8ff0\uff08\u62a5\u9519\u5185\u5bb9\uff09\uff1a\n\n\n\u5df2\u5c1d\u8bd5\u7684\u89e3\u51b3\u529e\u6cd5\uff08\u6f14\u793a\u7f51\u5740\u6216\u56fe\u7247\uff09\uff1a"}},{"type":"tags","id":"39","attributes":{"name":"\u5df2\u89e3\u51b3","description":"\u5df2\u89e3\u51b3\u7684\u95ee\u9898\u3002","slug":"solved","color":"#6dbb3e","backgroundUrl":null,"backgroundMode":null,"icon":"fas fa-check-circle","discussionCount":189,"position":null,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-05-17T07:44:01+00:00","canStartDiscussion":false,"canAddToDiscussion":false,"isQnA":true,"reminders":true,"template":""}}]}}</script>
+
+        <script>
+            const data = JSON.parse(document.getElementById('flarum-json-payload').textContent);
+            document.getElementById('flarum-loading').style.display = 'none';
+
+            try {
+                flarum.core.app.load(data);
+                flarum.core.app.bootExtensions(flarum.extensions);
+                flarum.core.app.boot();
+            } catch (e) {
+                var error = document.getElementById('flarum-loading-error');
+                error.innerHTML += document.getElementById('flarum-content').textContent;
+                error.style.display = 'block';
+                throw e;
+            }
+        </script>
+
+        
+    
+
+</body>

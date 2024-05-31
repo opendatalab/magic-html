@@ -7,6 +7,7 @@ import json
 import jieba
 
 jieba.setLogLevel(logging.INFO)
+from datetime import datetime
 from tabulate import tabulate
 import numpy as np
 
@@ -53,15 +54,37 @@ def rouge_eval(ref, cand):
     return t
 
 
-def evaluate_result(datas):
+def evaluate_result(datas, name=""):
     scores = []
     prec = []
     rec = []
+    current_scores = {}
+    down_num = 0
+    up_dum = 0
     for x in datas:
         scores.append(rouge_eval(x["content"], x["extract_content"]))
-    for item in scores:
+    for idx, item in enumerate(scores):
         prec.append(item["prec"])
         rec.append(item["rec"])
+        if name == "magic_html":
+            if ori_scores.get(datas[idx]["url"], ""):
+                if item['f1'] > ori_scores[datas[idx]["url"]]['f1']:
+                    up_dum += 1
+                    # print(datas[idx]["url"], item['f1'], 'up', item['f1'] - ori_scores[datas[idx]["url"]]['f1'])
+                elif item['f1'] < ori_scores[datas[idx]["url"]]['f1']:
+                    down_num += 1
+                    # print(datas[idx]["url"], item['f1'], 'down', item['f1'] - ori_scores[datas[idx]["url"]]['f1'])
+            current_scores[datas[idx]["url"]] = {
+                "f1": item['f1']
+            }
+            if item['f1'] < 0.5:
+                print(datas[idx]["url"], item['f1'])
+    if name == "magic_html":
+        print('magic_html', 'up:', up_dum, 'down:', down_num)
+        now = datetime.now()
+        current_time = now.strftime("%Y-%m-%d_%H-%M-%S")
+        with open(f'data/forum/scores/{current_time}.json', 'w', encoding='utf-8') as f:
+            f.write(json.dumps(current_scores, ensure_ascii=False))
 
     prec_mean = np.array(prec).mean()
     rec_mean = np.array(rec).mean()
@@ -108,7 +131,7 @@ def run_magic_html(name):
             ]
         )
     global_info["func"].append(name)
-    evaluate_result(datas)
+    evaluate_result(datas, name=name)
 
 
 def run_trafilatura(name):
@@ -164,7 +187,10 @@ def run_goose3(name):
     g = Goose()
     datas = deepcopy(global_datas)
     for x in datas:
-        x["extract_content"] = g.extract(raw_html=x["html"]).cleaned_text
+        try:
+            x["extract_content"] = g.extract(raw_html=x["html"]).cleaned_text
+        except:
+            x["extract_content"] = ""
     global_info["func"].append(name)
     evaluate_result(datas)
 
@@ -198,6 +224,14 @@ def run_gne(name):
     evaluate_result(datas)
 
 
+# magic_html每条测试数据分数变化
+ori_scores = {}
+try:
+    with open('data/forum/scores/ori.json', 'r', encoding='utf-8') as f:
+        ori_scores = json.loads(f.read())
+except:
+    pass
+
 # 自定义需要对比的方法
 all_funcs = {
     "magic_html": run_magic_html,
@@ -221,20 +255,20 @@ print('''
 ╒══════════════════════╤═════════════╤════════════╤═══════════╕
 │ func                 │   prec_mean │   rec_mean │   f1_mean │
 ╞══════════════════════╪═════════════╪════════════╪═══════════╡
-│ magic_html           │    0.752323 │   0.964762 │  0.845401 │
+│ magic_html           │    0.796252 │  0.826819  │ 0.811248  │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ trafilatura          │    0.711983 │   0.568848 │  0.632418 │
+│ trafilatura          │    0.716009 │  0.695947  │ 0.705835  │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ trafilatura_fallback │    0.781724 │   0.557774 │  0.651028 │
+│ trafilatura_fallback │    0.730304 │  0.691328  │ 0.710282  │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ readability-lxml     │    0.55441  │   0.228667 │  0.323788 │
+│ readability-lxml     │    0.788018 │  0.445087  │ 0.568867  │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ newspaper3k          │    0.716421 │   0.19569  │  0.307411 │
+│ newspaper3k          │    0.596976 │  0.298322  │ 0.397837  │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ goose3               │    0.551646 │   0.147048 │  0.2322   │
+│ goose3               │    0.675835 │  0.312969  │ 0.427821  │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ justext              │    0.542019 │   0.204443 │  0.296899 │
+│ justext              │    0.175889 │  0.0517628 │ 0.0799863 │
 ├──────────────────────┼─────────────┼────────────┼───────────┤
-│ gne                  │    0.846939 │   0.125834 │  0.219114 │
+│ gne                  │    0.81003  │  0.389709  │ 0.526241  │
 ╘══════════════════════╧═════════════╧════════════╧═══════════╛
 '''.strip())

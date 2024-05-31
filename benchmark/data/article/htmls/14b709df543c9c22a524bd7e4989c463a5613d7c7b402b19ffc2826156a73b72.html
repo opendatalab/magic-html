@@ -1,0 +1,688 @@
+<head><style class="ariareader ariareader--user-agent" media="screen" id="ariai642t9ayxvc" data-for="result" isaria="true">.ariafocus{outline:none;}body.useOldFixed [aria-fixedOldHidden=true],.ariaHide{display:none !important;}:focus{outline:none !important;}</style><script async="" src="//webd.home.news.cn/webdig.js?z=1"></script><meta name="source" content="新华网"> <meta name="publishdate" content="2024-05-09"> <meta name="contentid" content="202405093dd6e33cc6d749fbaae01fea337ff400"> <meta name="subject" content=""> <meta name="catalogs" content="01002002050"> <meta name="author" content=""> <meta name="publishedtype" content="1"> <meta name="filetype" content="0"> <meta name="pagetype" content="1"> <meta name="templateId" content="51fcab8603d348d09b9d46e583a1b7ef"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <meta content="telephone=no" name="format-detection"> <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1"> <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport"> <script type="text/javascript" src="https://imgs.news.cn/global/lib/swiper/swiper3.4.2/swiper.min.js"></script><link rel="stylesheet" href="https://imgs.news.cn/global/lib/swiper/swiper3.4.2/swiper.min.css"><script type="text/javascript" src="https://player.v.news.cn/player/sdk/h5/DHYPlayer-latest.min.js"></script><style>
+:-webkit-full-screen {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+:-moz-full-screen {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+:-ms-full-screen {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+:-ms-fullscreen {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+:fullscreen {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.player-container {
+    display: block;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #000;
+    position: relative;
+    padding: 0;
+    font-size: 0.8em;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 20em;
+}
+
+.player-container .dhy-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.player-container .dhy-video-fit {
+    object-position: 'center top';
+    object-fit: 'contain';
+}
+
+.player-container .load-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    opacity: 0.85;
+    text-align: left;
+    border: 6px solid rgba(43, 51, 63, 0.7);
+    box-sizing: border-box;
+    background-clip: padding-box;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.load-layer:before,
+.load-layer:after {
+    content: "";
+    position: absolute;
+    margin: -6px;
+    box-sizing: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    opacity: 1;
+    border: inherit;
+    border-color: transparent;
+    border-top-color: white;
+}
+
+.load-layer:before,
+.load-layer:after {
+    -webkit-animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade 1.1s linear infinite;
+    animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade 1.1s linear infinite;
+}
+
+.load-layer:before {
+    border-top-color: rgb(255, 255, 255);
+}
+
+.load-layer:after {
+    border-top-color: rgb(255, 255, 255);
+    -webkit-animation-delay: 0.44s;
+    animation-delay: 0.44s;
+}
+
+@keyframes vjs-spinner-spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes vjs-spinner-spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes vjs-spinner-fade {
+    0% {
+        border-top-color: #007FFF;
+        ;
+    }
+    20% {
+        border-top-color: #007FFF;
+        ;
+    }
+    35% {
+        border-top-color: white;
+    }
+    60% {
+        border-top-color: #007FFF;
+        ;
+    }
+    100% {
+        border-top-color: #007FFF;
+        ;
+    }
+}
+
+@-webkit-keyframes vjs-spinner-fade {
+    0% {
+        border-top-color: #007FFF;
+        ;
+    }
+    20% {
+        border-top-color: #007FFF;
+        ;
+    }
+    35% {
+        border-top-color: white;
+    }
+    60% {
+        border-top-color: #007FFF;
+        ;
+    }
+    100% {
+        border-top-color: #007FFF;
+        ;
+    }
+}
+
+video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+video:-webkit-full-screen {
+    position: fixed !important;
+}
+
+.player-container .play-layer {
+    height: 4em;
+    width: 4em;
+    position: absolute;
+    margin: -25px 0 0 -25px;
+    padding: 0;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 101;
+}
+
+.player-container .play-layer-center {
+    left: 50%;
+    top: 50%;
+}
+
+.player-container .play-layer-leftTop {
+    left: 3rem;
+    top: 20%;
+}
+
+.player-container .play-layer-rightTop {
+    left: 94%;
+    top: 20%;
+}
+
+.player-container .play-layer-leftBottom {
+    left: 2rem;
+    bottom: 3rem;
+}
+
+.player-container .play-layer-rightBottom {
+    left: 94%;
+    bottom: 3rem;
+}
+
+.player-container .poster-layer {
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-color: #000000;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
+
+.player-has-started .poster-layer {
+    display: none;
+  }
+
+.player-container .FullScreen>img {
+    width: 16px !important;
+}
+
+.player-container .quality-layer {
+    cursor: pointer;
+    right: 2em;
+    bottom: 3em;
+    position: absolute;
+    z-index: 101;
+    width: 60px;
+}
+
+.player-container .quality-layer .quality-item {
+    margin: 0px;
+    padding: 0px;
+    width: 3.0em;
+}
+
+.player-container .quality-layer .quality-item li {
+    list-style-type: none;
+    line-height: 1.5em;
+    background-color: rgba(43, 51, 63, 0.5);
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: center;
+    min-width: 4em;
+    height: 2.0em;
+    line-height: 2.0em;
+}
+
+.li-active{
+    color: #007FFF;
+}
+
+.player-control-text {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.player-container .msg-layer {
+    position: absolute;
+    color: #e0e8f1;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+}
+
+.player-container .control-bar .playrate-select  {
+    cursor: pointer;
+}
+
+.player-container .playrate-layer {
+    right: 2em;
+    bottom: 3em;
+    position: absolute;
+    z-index: 101;
+    width: 60px;
+}
+
+.player-container .playrate-layer .playrate-item {
+    margin: 0px;
+    padding: 0px;
+    width: 3.0em;
+}
+
+.player-container .playrate-layer .playrate-item li {
+    list-style-type: none;
+    line-height: 1.5em;
+    background-color: rgba(43, 51, 63, 0.5);
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: center;
+    min-width: 4em;
+    height: 2.0em;
+    line-height: 2.0em;
+}
+
+.player-container .logo-layer {
+    position: absolute;
+}
+
+.logo-layer>img {
+    max-width: 200px;
+    max-height: 150px;
+}
+
+.player-container .logo-layer-leftTop {
+    left: 0em;
+}
+
+.player-container .logo-layer-leftBottom {
+    bottom: 2em;
+}
+
+.player-container .logo-layer-rightTop {
+    right: 1em;
+}
+
+.player-container .logo-layer-rightBottom {
+    right: 1em;
+    bottom: 2em;
+}
+
+.player-container .control-bar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: visibility 0.1s, opacity 0.1s;
+    -moz-transition: visibility 0.1s, opacity 0.1s;
+    -o-transition: visibility 0.1s, opacity 0.1s;
+    transition: visibility 0.1s, opacity 0.1s;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3.0em;
+}
+
+.player-container>.default {
+    background-color: rgba(43, 51, 63, 0.5)
+}
+
+.player-container>.transparent {
+   background-color: #10101054;
+}
+
+.player-container .control-bar img {
+    max-width: 30px;
+    max-height: 30px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+.watermark {
+    margin-top: 0.5em !important;
+}
+.watermark>img{
+    max-width: 100px !important;
+    width: 100px !important;
+    max-height: 28px !important;
+    height: 28px !important;
+}
+
+.player-container .control-bar-live {
+    display: block;
+}
+
+.player-container .inactive {
+    opacity: 0;
+}
+
+.player-container .PlayToggle {
+    float: left;
+}
+
+.player-container .transparent .btn-playing {
+    background: #272424b3;
+    height: 2.2em !important;
+    line-height: 2.2em !important;
+    margin: 0.5em 0 0 0 !important;
+    border-radius: 5px;
+    width: 40px;
+    padding-top: 0px;
+}
+
+.player-container .control-bar .btn-playing {
+    outline: none;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 2.5em;
+    margin-left: 0.2em;
+    -webkit-box-flex: none;
+    -moz-box-flex: none;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    line-height: 3.0em;
+    float: left;
+}
+
+.player-container .control-bar .btn-playrate {
+    padding-top: 0px;
+}
+
+.player-container .control-bar .time-view,
+.quality-select {
+    outline: none;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 3.0em;
+    margin: 0 0.5em 0 0.5em;
+    -webkit-box-flex: none;
+    -moz-box-flex: none;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    float: left;
+    line-height: 3.2em;
+    cursor: pointer;
+}
+
+.player-container .control-bar .control-slider-container {
+    position: absolute;
+    height: 0.3em;
+    background-color: #ad9e9e;
+    width: 100%;
+    bottom: 3em;
+    margin: 0 1.0em 0 0em;
+    cursor: pointer;
+}
+
+
+
+.player-container .control-bar .control-buttons-container {
+    position: relative;
+    width: 100%;
+}
+
+.player-container .control-bar .control-slider-container .control-slider-scrub {
+    position: relative;
+    width: 0.8em;
+    height: 0.8em;
+    bottom: 0.5em;
+    margin-left: -2px;
+    background-color: #007FFF;
+    border-radius: 50%;
+}
+
+.player-container .control-bar .control-slider-container .control-slider-loaded {
+    height: 0.3em;
+    width: 0;
+    max-width: 100%;
+    background-color: #007FFF;
+}
+
+.player-container .control-bar .control-slider-container .time-tooltip{
+    background-color:  #007FFF;
+    border-radius: 0.3em;
+    color: #fff;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding: 6px 8px 8px 8px;
+    pointer-events: none;
+    position: absolute;
+    top: -30px;
+    visibility: hidden;
+    z-index: 1;
+    height: 12.8px;
+    line-height: 15.8px
+}
+
+.player-container .control-bar .control-slider-container:hover{
+    height: 0.6em;
+}
+.player-container .control-bar .control-slider-container:hover .control-slider-loaded{
+    height: 0.6em;
+}
+.player-container .control-bar .control-slider-container:hover .control-slider-scrub{
+    bottom: 0.8em;
+    width: 1.0em;
+    height: 1.0em;
+}
+
+.time-tooltip-hover{
+    display: block !important;
+    visibility: visible !important;
+}
+
+.player-container .control-bar .compent {
+    position: relative;
+    margin: 0.8em 0.5em 0 0.5em;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    flex: none;
+    cursor: pointer;
+}
+
+.player-container .control-bar .component-blank {
+    position: relative;
+    margin: 0.5em 0.5em 0 0.5em;
+    display: -webkit-inline-box;
+    display: inline;
+}
+
+.compent-img>img {
+    width: 1.3em;
+    height: 1.3em;
+    margin-top: 0.2em;
+}
+
+.player-container .control-bar .fullscreen {
+    position: relative;
+    margin: 0.5em 0.5em 0 1.5em;
+    height: 1.7em;
+    width: 1.7em;
+    -moz-background-size: 100% 98%;
+    background-size: 100% 98%;
+    flex: none;
+    cursor: pointer;
+    float: right;
+}
+
+.player-fullscreen {
+    position: fixed;
+    z-index: 3147483647;
+    overflow: hidden;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.player-fullscreen-iframe {
+    position: absolute;
+    z-index: 3147483647;
+    overflow: hidden;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.player-fullscreen>.control-bar,
+.player-fullscreen>.load-layer,
+.player-fullscreen>.play-layer,
+.player-fullscreen>.msg-layer {
+    z-index: 3147483647;
+}
+
+.player-fullscreen>.load-layer,
+.player-fullscreen>.msg-layer {
+    top: 50%;
+}
+
+.vjs-control-text {
+    display: none;
+}
+
+.time-current-text,
+.time-total-text {
+    float: left;
+}
+
+:focus {
+    outline: none;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+    margin-left: 1.0em !important;
+    margin-right: 0.5em !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.wechatX5fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.player-container .volume-bar{
+    background-color: #ad9e9e;
+    width: 100px;
+    height: 2px;
+    max-width: 100px;
+    margin: 1.4em 0em 0.1em 0.0em !important
+}
+.player-container .volume-loaded{
+    background-color: #007FFF;
+    width: 60px;
+    height: 2px;
+    max-width: 100px;
+}
+.player-container .volume-slider-scrub{
+    position: relative;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    bottom: 0.36em;
+    background-color: #ad9e9e;
+}
+.player-container .volume-slider-scrub:hover{
+    background-color: #007FFF;
+}
+.player-container .replay-icon>img{
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.player-container .default-custom-postion{
+    position: relative;
+    z-index: 110;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3MvZGh5UGxheWVyLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksc0JBQXNCO0lBQ3RCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLHNCQUFzQjtJQUN0Qix1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxzQkFBc0I7SUFDdEIsdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksc0JBQXNCO0lBQ3RCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLHNCQUFzQjtJQUN0Qix1QkFBdUI7QUFDM0I7O0FBRUE7SUFDSSxjQUFjO0lBQ2Qsc0JBQXNCO0lBQ3RCLGNBQWM7SUFDZCxzQkFBc0I7SUFDdEIsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixnQkFBZ0I7SUFDaEIsY0FBYztJQUNkLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIseUNBQXlDO0lBQ3pDLHlCQUF5QjtJQUN6QixzQkFBc0I7SUFDdEIscUJBQXFCO0lBQ3JCLGlCQUFpQjtJQUNqQixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLE1BQU07SUFDTixPQUFPO0lBQ1AsV0FBVztJQUNYLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSw2QkFBNkI7SUFDN0IscUJBQXFCO0FBQ3pCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLFFBQVE7SUFDUixTQUFTO0lBQ1QsdUJBQXVCO0lBQ3ZCLGFBQWE7SUFDYixnQkFBZ0I7SUFDaEIsdUNBQXVDO0lBQ3ZDLHNCQUFzQjtJQUN0Qiw0QkFBNEI7SUFDNUIsV0FBVztJQUNYLFlBQVk7SUFDWixtQkFBbUI7QUFDdkI7O0FBRUE7O0lBRUksV0FBVztJQUNYLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLGNBQWM7SUFDZCxlQUFlO0lBQ2Ysc0JBQXNCO0lBQ3RCLFVBQVU7SUFDVixlQUFlO0lBQ2YseUJBQXlCO0lBQ3pCLHVCQUF1QjtBQUMzQjs7QUFFQTs7SUFFSSx1SEFBdUg7SUFDdkgsK0dBQStHO0FB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QkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsb0JBQW9CO0lBQ3BCLG1CQUFtQjtJQUNuQixzQkFBc0I7SUFDdEIsdUJBQXVCO0FBQzNCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQixvQkFBb0I7SUFDcEIsbUJBQW1CO0lBQ25CLHNCQUFzQjtJQUN0Qix1QkFBdUI7QUFDM0I7O0FBRUE7Ozs7SUFJSSxtQkFBbUI7QUFDdkI7O0FBRUE7O0lBRUksUUFBUTtBQUNaOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQTs7SUFFSSxXQUFXO0FBQ2Y7O0FBRUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksV0FBVztBQUNmOztBQUVBO0lBQ0ksWUFBWTtJQUNaLDZCQUE2QjtJQUM3Qiw4QkFBOEI7QUFDbEM7O0FBRUE7SUFDSSxhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksZUFBZTtJQUNmLE1BQU07SUFDTixPQUFPO0lBQ1Asb0JBQW9CO0lBQ3BCLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLHlCQUF5QjtJQUN6QixZQUFZO0lBQ1osV0FBVztJQUNYLGdCQUFnQjtJQUNoQjtBQUNKO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsV0FBVztJQUNYLFdBQVc7SUFDWCxnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1osYUFBYTtJQUNiLGtCQUFrQjtJQUNsQixjQUFjO0lBQ2QseUJBQXlCO0FBQzdCO0FBQ0E7SUFDSSx5QkFBeUI7QUFDN0I7QUFDQTtJQUNJLHNCQUFzQjtJQUN0Qix1QkFBdUI7SUFDdkIsZUFBZTtJQUNmLGdCQUFnQjtBQUNwQjtBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLFlBQVk7QUFDaEIiLCJzb3VyY2VzQ29udGVudCI6WyJcclxuOi13ZWJraXQtZnVsbC1zY3JlZW4ge1xyXG4gICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuICAgIGhlaWdodDogMTAwJSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG46LW1vei1mdWxsLXNjcmVlbiB7XHJcbiAgICB3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xyXG4gICAgaGVpZ2h0OiAxMDAlICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbjotbXMtZnVsbC1zY3JlZW4ge1xyXG4gICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuICAgIGhlaWdodDogMTAwJSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG46LW1zLWZ1bGxzY3JlZW4ge1xyXG4gICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuICAgIGhlaWdodDogMTAwJSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG46ZnVsbHNjcmVlbiB7XHJcbiAgICB3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xyXG4gICAgaGVpZ2h0OiAxMDAlICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIHtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIGNvbG9yOiAjZmZmZmZmO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwMDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICBmb250LXNpemU6IDAuOGVtO1xyXG4gICAgbGluZS1oZWlnaHQ6IDE7XHJcbiAgICBmb250LXdlaWdodDogbm9ybWFsO1xyXG4gICAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gICAgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XHJcbiAgICAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lO1xyXG4gICAgLW1vei11c2VyLXNlbGVjdDogbm9uZTtcclxuICAgIC1tcy11c2VyLXNlbGVjdDogbm9uZTtcclxuICAgIHVzZXItc2VsZWN0OiBub25lO1xyXG4gICAgaGVpZ2h0OiAyMGVtO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuZGh5LXZpZGVvIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogMDtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLmRoeS12aWRlby1maXQge1xyXG4gICAgb2JqZWN0LXBvc2l0aW9uOiAnY2VudGVyIHRvcCc7XHJcbiAgICBvYmplY3QtZml0OiAnY29udGFpbic7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5sb2FkLWxheWVyIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogNTAlO1xyXG4gICAgbGVmdDogNTAlO1xyXG4gICAgbWFyZ2luOiAtMjVweCAwIDAgLTI1cHg7XHJcbiAgICBvcGFjaXR5OiAwLjg1O1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIGJvcmRlcjogNnB4IHNvbGlkIHJnYmEoNDMsIDUxLCA2MywgMC43KTtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICBiYWNrZ3JvdW5kLWNsaXA6IHBhZGRpbmctYm94O1xyXG4gICAgd2lkdGg6IDUwcHg7XHJcbiAgICBoZWlnaHQ6IDUwcHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAyNXB4O1xyXG59XHJcblxyXG4ubG9hZC1sYXllcjpiZWZvcmUsXHJcbi5sb2FkLWxheWVyOmFmdGVyIHtcclxuICAgIGNvbnRlbnQ6IFwiXCI7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBtYXJnaW46IC02cHg7XHJcbiAgICBib3gtc2l6aW5nOiBpbmhlcml0O1xyXG4gICAgd2lkdGg6IGluaGVyaXQ7XHJcbiAgICBoZWlnaHQ6IGluaGVyaXQ7XHJcbiAgICBib3JkZXItcmFkaXVzOiBpbmhlcml0O1xyXG4gICAgb3BhY2l0eTogMTtcclxuICAgIGJvcmRlcjogaW5oZXJpdDtcclxuICAgIGJvcmRlci1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICBib3JkZXItdG9wLWNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLmxvYWQtbGF5ZXI6YmVmb3JlLFxyXG4ubG9hZC1sYXllcjphZnRlciB7XHJcbiAgICAtd2Via2l0LWFuaW1hdGlvbjogdmpzLXNwaW5uZXItc3BpbiAxLjFzIGN1YmljLWJlemllcigwLjYsIDAuMiwgMCwgMC44KSBpbmZpbml0ZSwgdmpzLXNwaW5uZXItZmFkZSAxLjFzIGxpbmVhciBpbmZpbml0ZTtcclxuICAgIGFuaW1hdGlvbjogdmpzLXNwaW5uZXItc3BpbiAxLjFzIGN1YmljLWJlemllcigwLjYsIDAuMiwgMCwgMC44KSBpbmZpbml0ZSwgdmpzLXNwaW5uZXItZmFkZSAxLjFzIGxpbmVhciBpbmZpbml0ZTtcclxufVxyXG5cclxuLmxvYWQtbGF5ZXI6YmVmb3JlIHtcclxuICAgIGJvcmRlci10b3AtY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KTtcclxufVxyXG5cclxuLmxvYWQtbGF5ZXI6YWZ0ZXIge1xyXG4gICAgYm9yZGVyLXRvcC1jb2xvcjogcmdiKDI1NSwgMjU1LCAyNTUpO1xyXG4gICAgLXdlYmtpdC1hbmltYXRpb24tZGVsYXk6IDAuNDRzO1xyXG4gICAgYW5pbWF0aW9uLWRlbGF5OiAwLjQ0cztcclxufVxyXG5cclxuQGtleWZyYW1lcyB2anMtc3Bpbm5lci1zcGluIHtcclxuICAgIDEwMCUge1xyXG4gICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XHJcbiAgICB9XHJcbn1cclxuXHJcbkAtd2Via2l0LWtleWZyYW1lcyB2anMtc3Bpbm5lci1zcGluIHtcclxuICAgIDEwMCUge1xyXG4gICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcclxuICAgIH1cclxufVxyXG5cclxuQGtleWZyYW1lcyB2anMtc3Bpbm5lci1mYWRlIHtcclxuICAgIDAlIHtcclxuICAgICAgICBib3JkZXItdG9wLWNvbG9yOiAjMDA3RkZGO1xyXG4gICAgICAgIDtcclxuICAgIH1cclxuICAgIDIwJSB7XHJcbiAgICAgICAgYm9yZGVyLXRvcC1jb2xvcjogIzAwN0ZGRjtcclxuICAgICAgICA7XHJcbiAgICB9XHJcbiAgICAzNSUge1xyXG4gICAgICAgIGJvcmRlci10b3AtY29sb3I6IHdoaXRlO1xyXG4gICAgfVxyXG4gICAgNjAlIHtcclxuICAgICAgICBib3JkZXItdG9wLWNvbG9yOiAjMDA3RkZGO1xyXG4gICAgICAgIDtcclxuICAgIH1cclxuICAgIDEwMCUge1xyXG4gICAgICAgIGJvcmRlci10b3AtY29sb3I6ICMwMDdGRkY7XHJcbiAgICAgICAgO1xyXG4gICAgfVxyXG59XHJcblxyXG5ALXdlYmtpdC1rZXlmcmFtZXMgdmpzLXNwaW5uZXItZmFkZSB7XHJcbiAgICAwJSB7XHJcbiAgICAgICAgYm9yZGVyLXRvcC1jb2xvcjogIzAwN0ZGRjtcclxuICAgICAgICA7XHJcbiAgICB9XHJcbiAgICAyMCUge1xyXG4gICAgICAgIGJvcmRlci10b3AtY29sb3I6ICMwMDdGRkY7XHJcbiAgICAgICAgO1xyXG4gICAgfVxyXG4gICAgMzUlIHtcclxuICAgICAgICBib3JkZXItdG9wLWNvbG9yOiB3aGl0ZTtcclxuICAgIH1cclxuICAgIDYwJSB7XHJcbiAgICAgICAgYm9yZGVyLXRvcC1jb2xvcjogIzAwN0ZGRjtcclxuICAgICAgICA7XHJcbiAgICB9XHJcbiAgICAxMDAlIHtcclxuICAgICAgICBib3JkZXItdG9wLWNvbG9yOiAjMDA3RkZGO1xyXG4gICAgICAgIDtcclxuICAgIH1cclxufVxyXG5cclxudmlkZW86Oi13ZWJraXQtbWVkaWEtY29udHJvbHMtZW5jbG9zdXJlIHtcclxuICAgIGRpc3BsYXk6IG5vbmUgIWltcG9ydGFudDtcclxufVxyXG5cclxudmlkZW86LXdlYmtpdC1mdWxsLXNjcmVlbiB7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQgIWltcG9ydGFudDtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLnBsYXktbGF5ZXIge1xyXG4gICAgaGVpZ2h0OiA0ZW07XHJcbiAgICB3aWR0aDogNGVtO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbWFyZ2luOiAtMjVweCAwIDAgLTI1cHg7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgb3BhY2l0eTogMTtcclxuICAgIHotaW5kZXg6IDEwMTtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLnBsYXktbGF5ZXItY2VudGVyIHtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRvcDogNTAlO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAucGxheS1sYXllci1sZWZ0VG9wIHtcclxuICAgIGxlZnQ6IDNyZW07XHJcbiAgICB0b3A6IDIwJTtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLnBsYXktbGF5ZXItcmlnaHRUb3Age1xyXG4gICAgbGVmdDogOTQlO1xyXG4gICAgdG9wOiAyMCU7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5wbGF5LWxheWVyLWxlZnRCb3R0b20ge1xyXG4gICAgbGVmdDogMnJlbTtcclxuICAgIGJvdHRvbTogM3JlbTtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLnBsYXktbGF5ZXItcmlnaHRCb3R0b20ge1xyXG4gICAgbGVmdDogOTQlO1xyXG4gICAgYm90dG9tOiAzcmVtO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAucG9zdGVyLWxheWVyIHtcclxuICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogNTAlIDUwJTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDAwMDA7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiAwO1xyXG4gICAgcmlnaHQ6IDA7XHJcbiAgICBib3R0b206IDA7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcblxyXG4ucGxheWVyLWhhcy1zdGFydGVkIC5wb3N0ZXItbGF5ZXIge1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxuICB9XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuRnVsbFNjcmVlbj5pbWcge1xyXG4gICAgd2lkdGg6IDE2cHggIWltcG9ydGFudDtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLnF1YWxpdHktbGF5ZXIge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgcmlnaHQ6IDJlbTtcclxuICAgIGJvdHRvbTogM2VtO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgei1pbmRleDogMTAxO1xyXG4gICAgd2lkdGg6IDYwcHg7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5xdWFsaXR5LWxheWVyIC5xdWFsaXR5LWl0ZW0ge1xyXG4gICAgbWFyZ2luOiAwcHg7XHJcbiAgICBwYWRkaW5nOiAwcHg7XHJcbiAgICB3aWR0aDogMy4wZW07XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5xdWFsaXR5LWxheWVyIC5xdWFsaXR5LWl0ZW0gbGkge1xyXG4gICAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xyXG4gICAgbGluZS1oZWlnaHQ6IDEuNWVtO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg0MywgNTEsIDYzLCAwLjUpO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC1zaXplOiAxLjJlbTtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIG1pbi13aWR0aDogNGVtO1xyXG4gICAgaGVpZ2h0OiAyLjBlbTtcclxuICAgIGxpbmUtaGVpZ2h0OiAyLjBlbTtcclxufVxyXG5cclxuLmxpLWFjdGl2ZXtcclxuICAgIGNvbG9yOiAjMDA3RkZGO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRyb2wtdGV4dCB7XHJcbiAgICBib3JkZXI6IDA7XHJcbiAgICBjbGlwOiByZWN0KDAgMCAwIDApO1xyXG4gICAgaGVpZ2h0OiAxcHg7XHJcbiAgICBtYXJnaW46IC0xcHg7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHdpZHRoOiAxcHg7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5tc2ctbGF5ZXIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgY29sb3I6ICNlMGU4ZjE7XHJcbiAgICBmb250LXNpemU6IDEuMmVtO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5jb250cm9sLWJhciAucGxheXJhdGUtc2VsZWN0ICB7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5wbGF5cmF0ZS1sYXllciB7XHJcbiAgICByaWdodDogMmVtO1xyXG4gICAgYm90dG9tOiAzZW07XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB6LWluZGV4OiAxMDE7XHJcbiAgICB3aWR0aDogNjBweDtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLnBsYXlyYXRlLWxheWVyIC5wbGF5cmF0ZS1pdGVtIHtcclxuICAgIG1hcmdpbjogMHB4O1xyXG4gICAgcGFkZGluZzogMHB4O1xyXG4gICAgd2lkdGg6IDMuMGVtO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAucGxheXJhdGUtbGF5ZXIgLnBsYXlyYXRlLWl0ZW0gbGkge1xyXG4gICAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xyXG4gICAgbGluZS1oZWlnaHQ6IDEuNWVtO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSg0MywgNTEsIDYzLCAwLjUpO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMnB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC1zaXplOiAxLjJlbTtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIG1pbi13aWR0aDogNGVtO1xyXG4gICAgaGVpZ2h0OiAyLjBlbTtcclxuICAgIGxpbmUtaGVpZ2h0OiAyLjBlbTtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLmxvZ28tbGF5ZXIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG59XHJcblxyXG4ubG9nby1sYXllcj5pbWcge1xyXG4gICAgbWF4LXdpZHRoOiAyMDBweDtcclxuICAgIG1heC1oZWlnaHQ6IDE1MHB4O1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAubG9nby1sYXllci1sZWZ0VG9wIHtcclxuICAgIGxlZnQ6IDBlbTtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLmxvZ28tbGF5ZXItbGVmdEJvdHRvbSB7XHJcbiAgICBib3R0b206IDJlbTtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLmxvZ28tbGF5ZXItcmlnaHRUb3Age1xyXG4gICAgcmlnaHQ6IDFlbTtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLmxvZ28tbGF5ZXItcmlnaHRCb3R0b20ge1xyXG4gICAgcmlnaHQ6IDFlbTtcclxuICAgIGJvdHRvbTogMmVtO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIge1xyXG4gICAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgICBkaXNwbGF5OiAtd2Via2l0LWZsZXg7XHJcbiAgICBkaXNwbGF5OiAtbXMtZmxleGJveDtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHZpc2liaWxpdHk6IHZpc2libGU7XHJcbiAgICBvcGFjaXR5OiAxO1xyXG4gICAgLXdlYmtpdC10cmFuc2l0aW9uOiB2aXNpYmlsaXR5IDAuMXMsIG9wYWNpdHkgMC4xcztcclxuICAgIC1tb3otdHJhbnNpdGlvbjogdmlzaWJpbGl0eSAwLjFzLCBvcGFjaXR5IDAuMXM7XHJcbiAgICAtby10cmFuc2l0aW9uOiB2aXNpYmlsaXR5IDAuMXMsIG9wYWNpdHkgMC4xcztcclxuICAgIHRyYW5zaXRpb246IHZpc2liaWxpdHkgMC4xcywgb3BhY2l0eSAwLjFzO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBib3R0b206IDA7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgcmlnaHQ6IDA7XHJcbiAgICBoZWlnaHQ6IDMuMGVtO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lcj4uZGVmYXVsdCB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDQzLCA1MSwgNjMsIDAuNSlcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXI+LnRyYW5zcGFyZW50IHtcclxuICAgYmFja2dyb3VuZC1jb2xvcjogIzEwMTAxMDU0O1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIgaW1nIHtcclxuICAgIG1heC13aWR0aDogMzBweDtcclxuICAgIG1heC1oZWlnaHQ6IDMwcHg7XHJcbiAgICB3aWR0aDogMjBweDtcclxuICAgIGhlaWdodDogMjBweDtcclxuICAgIG1hcmdpbjogMDtcclxufVxyXG4ud2F0ZXJtYXJrIHtcclxuICAgIG1hcmdpbi10b3A6IDAuNWVtICFpbXBvcnRhbnQ7XHJcbn1cclxuLndhdGVybWFyaz5pbWd7XHJcbiAgICBtYXgtd2lkdGg6IDEwMHB4ICFpbXBvcnRhbnQ7XHJcbiAgICB3aWR0aDogMTAwcHggIWltcG9ydGFudDtcclxuICAgIG1heC1oZWlnaHQ6IDI4cHggIWltcG9ydGFudDtcclxuICAgIGhlaWdodDogMjhweCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXItbGl2ZSB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLmluYWN0aXZlIHtcclxuICAgIG9wYWNpdHk6IDA7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5QbGF5VG9nZ2xlIHtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAudHJhbnNwYXJlbnQgLmJ0bi1wbGF5aW5nIHtcclxuICAgIGJhY2tncm91bmQ6ICMyNzI0MjRiMztcclxuICAgIGhlaWdodDogMi4yZW0gIWltcG9ydGFudDtcclxuICAgIGxpbmUtaGVpZ2h0OiAyLjJlbSAhaW1wb3J0YW50O1xyXG4gICAgbWFyZ2luOiAwLjVlbSAwIDAgMCAhaW1wb3J0YW50O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG4gICAgd2lkdGg6IDQwcHg7XHJcbiAgICBwYWRkaW5nLXRvcDogMHB4O1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIgLmJ0bi1wbGF5aW5nIHtcclxuICAgIG91dGxpbmU6IG5vbmU7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgaGVpZ2h0OiAyLjVlbTtcclxuICAgIG1hcmdpbi1sZWZ0OiAwLjJlbTtcclxuICAgIC13ZWJraXQtYm94LWZsZXg6IG5vbmU7XHJcbiAgICAtbW96LWJveC1mbGV4OiBub25lO1xyXG4gICAgLXdlYmtpdC1mbGV4OiBub25lO1xyXG4gICAgLW1zLWZsZXg6IG5vbmU7XHJcbiAgICBmbGV4OiBub25lO1xyXG4gICAgbGluZS1oZWlnaHQ6IDMuMGVtO1xyXG4gICAgZmxvYXQ6IGxlZnQ7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5jb250cm9sLWJhciAuYnRuLXBsYXlyYXRlIHtcclxuICAgIHBhZGRpbmctdG9wOiAwcHg7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5jb250cm9sLWJhciAudGltZS12aWV3LFxyXG4ucXVhbGl0eS1zZWxlY3Qge1xyXG4gICAgb3V0bGluZTogbm9uZTtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIG1hcmdpbjogMDtcclxuICAgIHBhZGRpbmc6IDA7XHJcbiAgICBoZWlnaHQ6IDMuMGVtO1xyXG4gICAgbWFyZ2luOiAwIDAuNWVtIDAgMC41ZW07XHJcbiAgICAtd2Via2l0LWJveC1mbGV4OiBub25lO1xyXG4gICAgLW1vei1ib3gtZmxleDogbm9uZTtcclxuICAgIC13ZWJraXQtZmxleDogbm9uZTtcclxuICAgIC1tcy1mbGV4OiBub25lO1xyXG4gICAgZmxleDogbm9uZTtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG4gICAgbGluZS1oZWlnaHQ6IDMuMmVtO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIgLmNvbnRyb2wtc2xpZGVyLWNvbnRhaW5lciB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICBoZWlnaHQ6IDAuM2VtO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2FkOWU5ZTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgYm90dG9tOiAzZW07XHJcbiAgICBtYXJnaW46IDAgMS4wZW0gMCAwZW07XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuXHJcblxyXG5cclxuLnBsYXllci1jb250YWluZXIgLmNvbnRyb2wtYmFyIC5jb250cm9sLWJ1dHRvbnMtY29udGFpbmVyIHtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIgLmNvbnRyb2wtc2xpZGVyLWNvbnRhaW5lciAuY29udHJvbC1zbGlkZXItc2NydWIge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgd2lkdGg6IDAuOGVtO1xyXG4gICAgaGVpZ2h0OiAwLjhlbTtcclxuICAgIGJvdHRvbTogMC41ZW07XHJcbiAgICBtYXJnaW4tbGVmdDogLTJweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDdGRkY7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5jb250cm9sLWJhciAuY29udHJvbC1zbGlkZXItY29udGFpbmVyIC5jb250cm9sLXNsaWRlci1sb2FkZWQge1xyXG4gICAgaGVpZ2h0OiAwLjNlbTtcclxuICAgIHdpZHRoOiAwO1xyXG4gICAgbWF4LXdpZHRoOiAxMDAlO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwN0ZGRjtcclxufVxyXG5cclxuLnBsYXllci1jb250YWluZXIgLmNvbnRyb2wtYmFyIC5jb250cm9sLXNsaWRlci1jb250YWluZXIgLnRpbWUtdG9vbHRpcHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICAjMDA3RkZGO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMC4zZW07XHJcbiAgICBjb2xvcjogI2ZmZjtcclxuICAgIGZsb2F0OiByaWdodDtcclxuICAgIGZvbnQtZmFtaWx5OiBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmO1xyXG4gICAgZm9udC1zaXplOiAxZW07XHJcbiAgICBwYWRkaW5nOiA2cHggOHB4IDhweCA4cHg7XHJcbiAgICBwb2ludGVyLWV2ZW50czogbm9uZTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHRvcDogLTMwcHg7XHJcbiAgICB2aXNpYmlsaXR5OiBoaWRkZW47XHJcbiAgICB6LWluZGV4OiAxO1xyXG4gICAgaGVpZ2h0OiAxMi44cHg7XHJcbiAgICBsaW5lLWhlaWdodDogMTUuOHB4XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5jb250cm9sLWJhciAuY29udHJvbC1zbGlkZXItY29udGFpbmVyOmhvdmVye1xyXG4gICAgaGVpZ2h0OiAwLjZlbTtcclxufVxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIgLmNvbnRyb2wtc2xpZGVyLWNvbnRhaW5lcjpob3ZlciAuY29udHJvbC1zbGlkZXItbG9hZGVke1xyXG4gICAgaGVpZ2h0OiAwLjZlbTtcclxufVxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIgLmNvbnRyb2wtc2xpZGVyLWNvbnRhaW5lcjpob3ZlciAuY29udHJvbC1zbGlkZXItc2NydWJ7XHJcbiAgICBib3R0b206IDAuOGVtO1xyXG4gICAgd2lkdGg6IDEuMGVtO1xyXG4gICAgaGVpZ2h0OiAxLjBlbTtcclxufVxyXG5cclxuLnRpbWUtdG9vbHRpcC1ob3ZlcntcclxuICAgIGRpc3BsYXk6IGJsb2NrICFpbXBvcnRhbnQ7XHJcbiAgICB2aXNpYmlsaXR5OiB2aXNpYmxlICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC5jb250cm9sLWJhciAuY29tcGVudCB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBtYXJnaW46IDAuOGVtIDAuNWVtIDAgMC41ZW07XHJcbiAgICAtbW96LWJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7XHJcbiAgICBmbGV4OiBub25lO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIgLmNvbXBvbmVudC1ibGFuayB7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBtYXJnaW46IDAuNWVtIDAuNWVtIDAgMC41ZW07XHJcbiAgICBkaXNwbGF5OiAtd2Via2l0LWlubGluZS1ib3g7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmU7XHJcbn1cclxuXHJcbi5jb21wZW50LWltZz5pbWcge1xyXG4gICAgd2lkdGg6IDEuM2VtO1xyXG4gICAgaGVpZ2h0OiAxLjNlbTtcclxuICAgIG1hcmdpbi10b3A6IDAuMmVtO1xyXG59XHJcblxyXG4ucGxheWVyLWNvbnRhaW5lciAuY29udHJvbC1iYXIgLmZ1bGxzY3JlZW4ge1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgbWFyZ2luOiAwLjVlbSAwLjVlbSAwIDEuNWVtO1xyXG4gICAgaGVpZ2h0OiAxLjdlbTtcclxuICAgIHdpZHRoOiAxLjdlbTtcclxuICAgIC1tb3otYmFja2dyb3VuZC1zaXplOiAxMDAlIDk4JTtcclxuICAgIGJhY2tncm91bmQtc2l6ZTogMTAwJSA5OCU7XHJcbiAgICBmbGV4OiBub25lO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG59XHJcblxyXG4ucGxheWVyLWZ1bGxzY3JlZW4ge1xyXG4gICAgcG9zaXRpb246IGZpeGVkO1xyXG4gICAgei1pbmRleDogMzE0NzQ4MzY0NztcclxuICAgIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgICBsZWZ0OiAwICFpbXBvcnRhbnQ7XHJcbiAgICB0b3A6IDAgIWltcG9ydGFudDtcclxuICAgIGJvdHRvbTogMCAhaW1wb3J0YW50O1xyXG4gICAgcmlnaHQ6IDAgIWltcG9ydGFudDtcclxuICAgIHdpZHRoOiAxMDAlICFpbXBvcnRhbnQ7XHJcbiAgICBoZWlnaHQ6IDEwMCUgIWltcG9ydGFudDtcclxufVxyXG5cclxuLnBsYXllci1mdWxsc2NyZWVuLWlmcmFtZSB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB6LWluZGV4OiAzMTQ3NDgzNjQ3O1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICAgIGxlZnQ6IDAgIWltcG9ydGFudDtcclxuICAgIHRvcDogMCAhaW1wb3J0YW50O1xyXG4gICAgYm90dG9tOiAwICFpbXBvcnRhbnQ7XHJcbiAgICByaWdodDogMCAhaW1wb3J0YW50O1xyXG4gICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuICAgIGhlaWdodDogMTAwJSAhaW1wb3J0YW50O1xyXG59XHJcblxyXG4ucGxheWVyLWZ1bGxzY3JlZW4+LmNvbnRyb2wtYmFyLFxyXG4ucGxheWVyLWZ1bGxzY3JlZW4+LmxvYWQtbGF5ZXIsXHJcbi5wbGF5ZXItZnVsbHNjcmVlbj4ucGxheS1sYXllcixcclxuLnBsYXllci1mdWxsc2NyZWVuPi5tc2ctbGF5ZXIge1xyXG4gICAgei1pbmRleDogMzE0NzQ4MzY0NztcclxufVxyXG5cclxuLnBsYXllci1mdWxsc2NyZWVuPi5sb2FkLWxheWVyLFxyXG4ucGxheWVyLWZ1bGxzY3JlZW4+Lm1zZy1sYXllciB7XHJcbiAgICB0b3A6IDUwJTtcclxufVxyXG5cclxuLnZqcy1jb250cm9sLXRleHQge1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxufVxyXG5cclxuLnRpbWUtY3VycmVudC10ZXh0LFxyXG4udGltZS10b3RhbC10ZXh0IHtcclxuICAgIGZsb2F0OiBsZWZ0O1xyXG59XHJcblxyXG46Zm9jdXMge1xyXG4gICAgb3V0bGluZTogbm9uZTtcclxufVxyXG5cclxuLmZsb2F0TGVmdCB7XHJcbiAgICBmbG9hdDogbGVmdDtcclxufVxyXG5cclxuLmZsb2F0UmlnaHQge1xyXG4gICAgZmxvYXQ6IHJpZ2h0O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEuMGVtICFpbXBvcnRhbnQ7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDAuNWVtICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5oaWRkZW4ge1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxufVxyXG5cclxuLndlY2hhdFg1ZnVsbHNjcmVlbiB7XHJcbiAgICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgICB0b3A6IDA7XHJcbiAgICBsZWZ0OiAwO1xyXG4gICAgbWFyZ2luOiAwICFpbXBvcnRhbnQ7XHJcbiAgICBwYWRkaW5nOiAwICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5wbGF5ZXItY29udGFpbmVyIC52b2x1bWUtYmFye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2FkOWU5ZTtcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIGhlaWdodDogMnB4O1xyXG4gICAgbWF4LXdpZHRoOiAxMDBweDtcclxuICAgIG1hcmdpbjogMS40ZW0gMGVtIDAuMWVtIDAuMGVtICFpbXBvcnRhbnRcclxufVxyXG4ucGxheWVyLWNvbnRhaW5lciAudm9sdW1lLWxvYWRlZHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDdGRkY7XHJcbiAgICB3aWR0aDogNjBweDtcclxuICAgIGhlaWdodDogMnB4O1xyXG4gICAgbWF4LXdpZHRoOiAxMDBweDtcclxufVxyXG4ucGxheWVyLWNvbnRhaW5lciAudm9sdW1lLXNsaWRlci1zY3J1YntcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHdpZHRoOiAwLjdlbTtcclxuICAgIGhlaWdodDogMC43ZW07XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBib3R0b206IDAuMzZlbTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNhZDllOWU7XHJcbn1cclxuLnBsYXllci1jb250YWluZXIgLnZvbHVtZS1zbGlkZXItc2NydWI6aG92ZXJ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA3RkZGO1xyXG59XHJcbi5wbGF5ZXItY29udGFpbmVyIC5yZXBsYXktaWNvbj5pbWd7XHJcbiAgICB3aWR0aDogMTZweCAhaW1wb3J0YW50O1xyXG4gICAgaGVpZ2h0OiAxNnB4ICFpbXBvcnRhbnQ7XHJcbiAgICBtYXJnaW4tdG9wOiAycHg7XHJcbiAgICBtYXJnaW4tbGVmdDogNXB4O1xyXG59XHJcbi5wbGF5ZXItY29udGFpbmVyIC5kZWZhdWx0LWN1c3RvbS1wb3N0aW9ue1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgei1pbmRleDogMTEwO1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head><body aria-status="false" aria-ofstatus="false" aria-basefontsize="16"><a id="ariaTipText" role="pagedescription" aria-label="欢迎进入 李强在新疆调研时强调 彰显特色优势 提高开放水平 在高质量发展中增进民生福祉促进长治久安-新华网,盲人用户使用操作智能引导，请按快捷键Ctrl+Alt+R；阅读详细操作说明请按快捷键Ctrl+Alt+问号键。" aria-atomic="true" href="javascript:void(0)" class="skipAutoFix" style="width: 1px; height: 1px;"><img src="" style="width:1px !important;height:1px !important;position:absolute;top:0;"></a><style>.mob-top {background: #024ac2;position: relative;z-index: 990;}.mob-top .mob-top-upper {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 15px;height: 68px;width: 100%;}.mob-top .mob-top-upper .logo {float: left;font-size: 0;}.mob-top .mob-top-upper .logo img {width: auto;height: 38px;display: inline-block;vertical-align: top;}.mob-top .mob-top-upper .logo i {font-size: 12px;color: #fff;}.mob-top .mob-top-upper .wza {float: right;margin-top: 12px;margin-left: 10px;font-size: 12px;color: #fff;}.mob-top .mob-top-upper .search-box {float: right;margin-top: 12px;width: 17px;height: 18px;background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAA5CAYAAACWJGMLAAAEsUlEQVRogdWabYgVVRjH/3uzFtd2Na1wezHEtpTcNEqjl7WQolL6kImQZPShyJSlD4IvEBSSgURBgUkfMjK2sDD8YEGRKGSGH6QkLUOFMsV39yJqvv/jiXMu4+xzZs7MnTt79g8P3Jk55znPb87MuWeec5pIoiA1A5gEoBPAXQBuAjAcQBuACoCTAKoADgPYZexnACeKCsBqUAE+pgOYDWAKgFsy1hXInwCsNXaygHgA6amc9jLJX1mcDpJ8i+TNdcT0v+WpNIvkzgJh4jpFchnJ5jKgbiT5dQNh4tpD8qk8UL4DRReANQDaPcruAbAdwE4Ah8zAcBpAK4CRxocMJPcAGOXh7w0AS32CrMmDfKbHXd1H8m2Sk0k2ed7Rq0k+TPJ9ksdS/H9Z5OP3Qkpj+0l2kxxc58t9HclFJHsT2vq2CKjHUoBWkGytEyZu7SR7EtrsqQfqjgTHp0k+WzBM3F5KaH9ZXqjdDoeHSI5rMJA1ed/OO+J4MivUOw5HB8zjUQaQtfscYGdItvlCjXEAnSM5umQgaw86YlrrC/Wjw8HT/QRkbb4jrilpUPc7Kq7qZyBrG5TYtqdBaZXkf2NQIFAyTbvs01sVM7OQ6cpUZcKxBMDFTFOUxukIgHcV76+5pkmLlTtwLJAeitowkhdjcZ4l2aL11EzlDnwcSA9FVTUfk1E1mw/VmgTqBgD3Kg5WlxdrJq1SCj8ePRCoR5RCf5lPhxC1EcCZWFxdcagJSuAbAwUSnTd5jajuBDDCHgvUWKViqL1kFY+vCcA4eyBQtymV9pUSWn79rdQcbX8I1BClwNEAQaI6opxrtT8q0YOIqiUGmEe9Sp02+0OgLisFrgoKoa8qyrlL9odcPKUUGFZigHk0XKlTy+5WHKnekUEh9JWWqqs9kgK1VymgjYghSYvvQBRql1KgM3Cou5VztWFeoLYpBbSpUyhqATA5FotkhfdHoTYDuBAr1G7WmkLUNADXxOLaHD2wo99WJfhXAoWaq5z75oqjhMTGuQLSyUXbKCXOs/E47Z/YFwq9dPGChtzr/HpTqbkOwL9XnIkQrnbchaGB9FKHEp/ogXjZ6IHWtaL1gUD9osSWmiKDyfFp6u5nIFcq/CEfqBYlW2P1RD8BuVZAvnPV0U6+6ICiSdiXCTQ9IZYRWaDEvnI4khWIR0sCeiYB6Pmkuq4Lsm77e4LThQ0GWp7Q9qdp9ZMuXk/ycIJzyb1PKBimi+S2hDZpRrzb80KJ3Uryz5RGVpIcXyfMpJS13rh6zV9QLiixa0lu8WhovVnN7/AEGUvyVZKbMsBE9Y9Z1e/jO8suspWOyaSmHQB+M984VbNyItOuoSaV1RnN09WhPwBMNAlOdZrkY7PNHSpDu83eimpKW1vyPH5xk70T75G81CAw+TpYGtlwJe9bmn6oF8qa7LX4yGMLjq8OmqFcWzCf6uFjXRFQ1mQhbA7JNTkezb0kPyE5g+SQlHaSZhdWPVkHCh81m7WuDgDjzdqXDA6DzYAhu8qOmxfc7jbLEsBzAD5PKbO4aKgyNA/AiqR2tPRt6PoQwOtJMQ7EnrJaDmChdmEgQ4k+ANAdO/fZQIcSSSpvjklyfg9gyX847VsiOiWvxwAAAABJRU5ErkJggg==") 0 0 no-repeat;-webkit-background-size: auto 100%;-moz-background-size: auto 100%;background-size: auto 100%;}.mob-top .mob-top-upper .pc {float: right;margin-top: 12px;margin-left:  10px;font-size: 12px;color: #fff;}.mob-top .mob-top-upper .pc img {margin-right: 5px;height: 17px;width: auto;}.mob-top .mob-top-upper .pc a {color: #fff;}.mob-top .mob-top-nav {position: relative;width: 100%;font-size: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;overflow: hidden;padding: 5px 2%;background: #f5f5f5; border:0!important;}.mob-top .mob-top-nav.fixed {position: fixed;top: 0;z-index: 999999;-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;background: #fff;}.mob-top .mob-top-nav .part {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;display: -webkit-box;display: -webkit-flex;display: -moz-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-webkit-align-items: center;-moz-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: justify;-webkit-justify-content: space-between;-moz-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;background: #fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;padding: 10px 5px 5px 5px;width:100%;}.mob-top .mob-top-nav .top-nav-pro {position: relative;width: -moz-calc(100% - 22px);width: calc(100% - 22px);color: #5b5b5b;font-size: 0;}.mob-top .mob-top-nav .top-nav-pro:after {content: "";width: 10px;height: 100%;display: block;position: absolute;right: 0;top: 0;z-index: 3;background: -webkit-gradient(linear,left top,right top,from(rgba(255, 255, 255, 0)),to(#fff));background: -webkit-linear-gradient(left,rgba(255, 255, 255, 0) 0,#fff 100%);background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, #fff 100%);background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff 100%);}.mob-top .mob-top-nav .top-nav-pro .top-nav-pro-cont {white-space: nowrap;overflow-y: hidden;overflow-x: auto;}.mob-top .mob-top-nav .top-nav-pro .top-nav-pro-cont a {position: relative;display: inline-block;margin-right: 10px;font-size: 16px;line-height: 26px;padding: 0 8px;color: #024ac2;}.mob-top .mob-top-nav .top-nav-pro .top-nav-pro-cont a:last-child {margin-right: 0;}.mob-top .mob-top-nav .top-nav-pro .top-nav-pro-cont a.active {font-size: 20px;color: #fff;background: #024ac2;-webkit-border-radius: 0 5px 5px 0;-moz-border-radius: 0 5px 5px 0;border-radius: 0 5px 5px 0;}.mob-top .mob-top-nav .top-nav-menu {width: 14px;}.mob-top .mob-top-nav .top-nav-menu .menu-box {height: 14px;width: 14px;position: relative;}.mob-top .mob-top-nav .top-nav-menu .menu-box .bar {height: 2px;width: 14px;display: block;position: absolute;background-color: #024ac2;-webkit-border-radius: 1px;-moz-border-radius: 1px;border-radius: 1px;-webkit-transition: 0.4s;-moz-transition: 0.4s;transition: 0.4s;}.mob-top .mob-top-nav .top-nav-menu .menu-box .bar:nth-of-type(1) {top: 0;width: 10px;}.mob-top .mob-top-nav .top-nav-menu .menu-box .bar:nth-of-type(1):after {content: "";position: absolute;right: -4px;top: -0.6px;width: 3px;height: 3px;background: #e50020;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}.mob-top .mob-top-nav .top-nav-menu .menu-box .bar:nth-of-type(2) {top: 6px;}.mob-top .mob-top-nav .top-nav-menu .menu-box .bar:nth-of-type(3) {top: 12px;}.mob-top .mob-top-nav .top-nav-menu .menu-box.active .bar:nth-of-type(1) {top: 7.5px;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);-webkit-transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;-moz-transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s,-moz-transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s,-webkit-transform 0.3s ease-out 0.5s, -moz-transform 0.3s ease-out 0.5s;}.mob-top .mob-top-nav .top-nav-menu .menu-box.active .bar:nth-of-type(2) {opacity: 0;}.mob-top .mob-top-nav .top-nav-menu .menu-box.active .bar:nth-of-type(3) {top: 6px;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);-webkit-transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;-moz-transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s,-moz-transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s,-webkit-transform 0.3s ease-out 0.5s, -moz-transform 0.3s ease-out 0.5s;}.mob-map {position: fixed;top: 0;right: 0;left: 0;width: 100%;height: 0;z-index: 999;overflow-y: auto;overflow-x: hidden;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background: #024ac2;}.mob-map .mob-map-close {height: 14px;width: 14px;position: absolute;right: 22px;top: 16px;}.mob-map .mob-map-close .bar {height: 2px;width: 14px;display: block;position: absolute;background-color: #024ac2;-webkit-border-radius: 1px;-moz-border-radius: 1px;border-radius: 1px;-webkit-transition: 0.4s;-moz-transition: 0.4s;transition: 0.4s;}.mob-map .mob-map-close .bar:nth-of-type(1) {width: 10px;top: 7.5px;-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);-webkit-transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;-moz-transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s,-moz-transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s,-webkit-transform 0.3s ease-out 0.5s, -moz-transform 0.3s ease-out 0.5s;}.mob-map .mob-map-close .bar:nth-of-type(1):after {content: "";position: absolute;right: -4px;top: -0.6px;width: 3px;height: 3px;background: #e50020;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}.mob-map .mob-map-close .bar:nth-of-type(2) {top: 6px;opacity: 0;}.mob-map .mob-map-close .bar:nth-of-type(3) {top: 6px;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);-webkit-transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, -webkit-transform 0.3s ease-out 0.5s;-moz-transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s,-moz-transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s;transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s,-webkit-transform 0.3s ease-out 0.5s, -moz-transform 0.3s ease-out 0.5s;}.mob-map .mob-map-banner {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 15px;height: 68px;position: relative;z-index: 990;}.mob-map .mob-map-banner .logo {float: left;font-size: 0;}.mob-map .mob-map-banner .logo img {width: auto;height: 38px;display: inline-block;vertical-align: top;}.mob-map .mob-map-banner .logo i {font-size: 12px;color: #fff;}.mob-map .mob-map-cont {position: relative;-webkit-border-radius: 22px 22px 0 0;-moz-border-radius: 22px 22px 0 0;border-radius: 22px 22px 0 0;background: #fff;}.mob-map .mob-map-title {position: relative;text-align: center;font-size: 18px;line-height: 48px;height: 48px;font-weight: 700;color: #212121;border-bottom: 1px solid #b8b8b8;}.mob-map .mob-map-part {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding: 18px 18px;border-bottom: 2px solid #f0f0f0;}.mob-map .mob-map-part:last-child {border-bottom: 0;}.mob-map .mob-map-part .mob-map-type {margin-bottom: 15px;font-size: 18px;font-weight: 700;color: #212121;}.mob-map .mob-map-part ul {width: 102%;}.mob-map .mob-map-part ul li {float: left;margin-right: 2%;margin-bottom: 10px;width: 23%;height: 32px;line-height: 32px;font-size: 13px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;text-align: center;color: #212121;background: #eeeff1;}.mob-map .mob-map-part ul li a {color: #212121;}.mob-map .mob-map-part ul li.rs {width: 48%;}.mob-map .mob-map-part.mob-map-pro {padding-top: 0.711111rem;}.mob-map .mob-map-part.mob-map-pro ul li {font-size: 18px;font-weight: 600;}</style><div class="mob-top domMob domMobile" style=""><div class="mob-top-upper clearfix"><div class="logo"><img src="http://www.news.cn/2022newhomepro/mobile/images/logo.png" alt=""><i>手机版</i></div><div class="wza"><a href="javascript:void(0)" onclick="top.aria.start()" style="color:#fff;" for="wza">网站无障碍</a></div><div class="pc"><a href="http://www.news.cn/?f=pad"><img src="http://www.news.cn/2022newhomepro/mobile/images/mac.png" alt=""><i>PC版本</i></a></div><a class="search-box" href="http://so.news.cn/mobile/index"></a></div><div class="mob-top-nav"><div class="part"><div class="top-nav-pro"><div class="top-nav-pro-cont"><a class="active" href="http://m.news.cn">首页</a><a href="http://www.news.cn/politics/xxjxs/index.htm">学习进行时</a><a href="http://www.news.cn/politics/leaders/index.htm">高层</a><a href="http://www.news.cn/politicspro/mobile/index.html">时政</a><a href="http://www.news.cn/politics/xhrs/index.html">人事</a><a href="http://www.news.cn/worldpro/mobile/index.html">国际</a><a href="http://www.news.cn/fortunepro/mobile/index.html">财经</a><a href="http://www.news.cn/comments/index.html">网评</a><a href="http://www.news.cn/gangao/index.html">港澳</a><a href="http://www.news.cn/tw/index.html">台湾</a><a href="http://www.news.cn/sikepro/">思客智库</a><a href="http://www.news.cn/world/globalink/index.html">全球连线</a><a href="http://education.news.cn/index.htm">教育</a><a href="http://www.news.cn/tech/">科技</a><a href="http://www.news.cn/science/index.htm">科普</a><a href="http://sports.news.cn/index.htm">体育</a><a href="http://www.news.cn/culture/">文化</a><a href="http://www.news.cn/health/">健康</a><a href="http://www.news.cn/milpro/">军事</a><a href="http://www.news.cn/talking/index.html">访谈</a><a href="http://www.news.cn/video/">视频</a><a href="http://www.news.cn/photo/index.htm">图片</a><a href="http://www.news.cn/politics/zywj/index.htm">中央文件</a></div></div><div class="top-nav-menu"><div class="menu-box" id="menu"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div></div></div></div><div class="mob-map domMob domMobile" id="map"><div class="mob-map-banner"><div class="logo"><img src="http://www.news.cn/2022newhomepro/mobile/images/logo.png" alt=""><i>手机版</i></div></div><div class="mob-map-cont"><div class="mob-map-title">网站地图</div><div class="mob-map-close"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div><div class="mob-map-part"><ul class="clearfix"><li><a href="http://www.news.cn/politics/xxjxs/index.htm">学习进行时</a></li><li><a href="http://www.news.cn/politics/leaders/index.htm">高层</a></li><li><a href="http://www.news.cn/politicspro/mobile/index.html">时政</a></li><li><a href="http://www.news.cn/politics/xhrs/index.html">人事</a></li><li><a href="http://www.news.cn/worldpro/mobile/index.html">国际</a></li><li><a href="http://www.news.cn/fortunepro/mobile/index.html">财经</a></li><li><a href="http://www.news.cn/comments/index.html">网评</a></li><li><a href="http://www.news.cn/gangao/index.html">港澳</a></li><li><a href="http://www.news.cn/tw/index.html">台湾</a></li><li><a href="http://www.news.cn/sikepro/">思客智库</a></li><li><a href="http://www.news.cn/world/globalink/index.html">全球连线</a></li><li><a href="http://education.news.cn/index.htm">教育</a></li><li><a href="http://www.news.cn/tech/">科技</a></li><li><a href="http://www.news.cn/science/index.htm">科普</a></li><li><a href="http://sports.news.cn/index.htm">体育</a></li><li><a href="http://www.news.cn/culture/">文化</a></li><li><a href="http://www.news.cn/health/">健康</a></li><li><a href="http://www.news.cn/milpro/">军事</a></li><li><a href="http://www.news.cn/talking/index.html">访谈</a></li><li><a href="http://www.news.cn/video/">视频</a></li><li><a href="http://www.news.cn/photo/index.htm">图片</a></li><li><a href="http://www.news.cn/politics/zywj/index.htm">中央文件</a></li><li><a href="http://www.news.cn/money/index.html">金融</a></li><li><a href="http://www.news.cn/auto/index.html">汽车</a></li><li><a href="http://www.news.cn/food/index.html">食品</a></li><li><a href="http://www.xinhuanet.com/house/index.html">人居</a></li><li><a href="http://www.news.cn/info/index.html">信息化</a></li><li><a href="http://xczx.news.cn/">乡村振兴</a></li><li><a href="http://www.news.cn/info/xbsyzg/index.html">溯源中国</a></li><li><a href="http://city.news.cn/">城市</a></li><li><a href="http://www.news.cn/travel/index.html">旅游</a></li><li><a href="http://www.news.cn/energy/index.html">能源</a></li><li><a href="http://www.news.cn/expo/index.html">会展</a></li><li><a href="http://www.news.cn/caipiao/index.html">彩票</a></li><li><a href="http://www.news.cn/ent/index.html">娱乐</a></li><li><a href="http://www.news.cn/fashion/index.html">时尚</a></li><li><a href="http://www.news.cn/book/index.html">悦读</a></li><li><a href="http://www.news.cn/gongyi/index.html">公益</a></li><li><a href="http://www.news.cn/shuhua/index.html">书画</a></li><li><a href="http://www.news.cn/silkroad/index.html">一带一路</a></li><li><a href="http://www.news.cn/asia/chinese/index.html">亚太网</a></li><li><a href="http://www.news.cn/finance/">上市公司</a></li><li><a href="http://www.news.cn/ci/">文化产业</a></li></ul></div><div class="mob-map-part"><div class="mob-map-type">地方频道</div><ul class="clearfix"><li><a href="http://m.news.cn/bj.htm">北京</a></li><li><a href="http://m.news.cn/tj.htm">天津</a></li><li><a href="http://m.news.cn/he.htm">河北</a></li><li><a href="http://m.news.cn/sx.htm">山西</a></li><li><a href="http://m.news.cn/ln.htm">辽宁</a></li><li><a href="http://m.news.cn/jl.htm">吉林</a></li><li><a href="http://m.news.cn/sh.htm">上海</a></li><li><a href="http://m.news.cn/js.htm">江苏</a></li><li><a href="http://m.news.cn/zj.htm">浙江</a></li><li><a href="http://m.news.cn/ah.htm">安徽</a></li><li><a href="http://m.news.cn/fj.htm">福建</a></li><li><a href="http://m.news.cn/jx.htm">江西</a></li><li><a href="http://m.news.cn/sd.htm">山东</a></li><li><a href="http://m.news.cn/ha.htm">河南</a></li><li><a href="http://m.news.cn/hb.htm">湖北</a></li><li><a href="http://m.news.cn/hn.htm">湖南</a></li><li><a href="http://m.news.cn/gd.htm">广东</a></li><li><a href="http://m.news.cn/gx.htm">广西</a></li><li><a href="http://m.news.cn/hq.htm">海南</a></li><li><a href="http://m.news.cn/cq.htm">重庆</a></li><li><a href="http://m.news.cn/sc.htm">四川</a></li><li><a href="http://m.news.cn/gz.htm">贵州</a></li><li><a href="http://m.news.cn/yn.htm">云南</a></li><li><a href="http://m.news.cn/xz.htm">西藏</a></li><li><a href="http://m.news.cn/sn.htm">陕西</a></li><li><a href="http://m.news.cn/gs.htm">甘肃</a></li><li><a href="http://m.news.cn/qh.htm">青海</a></li><li><a href="http://m.news.cn/nx.htm">宁夏</a></li><li><a href="http://m.news.cn/xj.htm">新疆</a></li><li><a href="http://m.news.cn/nmg.htm">内蒙古</a></li><li><a href="http://m.news.cn/hlj.htm">黑龙江</a></li></ul></div><div class="mob-map-part"><div class="mob-map-type">多语种频道</div><ul class="clearfix"><li><a href="https://english.news.cn/home.htm" target="_blank">English</a></li><li><a href="https://spanish.news.cn/index.htm" target="_blank">Español</a></li><li><a href="https://french.news.cn/index.htm" target="_blank">Français</a></li><li><a href="https://arabic.news.cn/index.htm" target="_blank">عربى</a></li><li class="rs"><a href="https://russian.news.cn/index.htm" target="_blank">Русский язык</a></li><li><a href="https://jp.news.cn/index.htm" target="_blank">日本語</a></li><li><a href="https://kr.news.cn/index.htm" target="_blank">한국어</a></li><li><a href="https://german.news.cn/index.htm" target="_blank">Deutsch</a></li><li><a href="https://portuguese.news.cn/index.htm" target="_blank">Português</a></li></ul></div></div></div><style>.top .part{width:1200px;}.top .top-upper{width:100%;height:40px;background:#024ac2}.top .top-upper .slogan{width:163px;height:40px;background:url(http://www.news.cn/2023homepro/images/slogan.png) center center no-repeat}.top .top-upper .top-upper-cont{font-size:0}.top .top-upper .top-upper-cont .channel{position:relative;z-index:30;display:inline-block;margin-left:22px;font-size:12px;line-height:40px;color:#fff;cursor:pointer}.top .top-upper .top-upper-cont .channel a{color:#fff}.top .top-upper .top-upper-cont .channel span{padding-right:15px;background:url(http://www.news.cn/2023homepro/images/icon-down.png) right center no-repeat}.top .top-upper .top-upper-cont .channel .sub{display:none;position:absolute;top:40px;line-height:26px;padding:10px;width:510px;-webkit-box-shadow:0 2px 5px #ccc;-moz-box-shadow:0 2px 5px #ccc;box-shadow:0 2px 5px #ccc;background:#fff;border:1px solid #ccc;border-top:0}.top .top-upper .top-upper-cont .channel .sub a{display:inline-block;color:#666;margin-left:5px;margin-right:5px}.top .top-upper .top-upper-cont .channel:hover .sub{display:block}.top .top-upper .top-upper-cont .newspapers .sub{left:-18px}.top .top-upper .top-upper-cont .local .sub{left:-103px}.top .top-upper .top-upper-cont .contract .sub{left:-136px;width:458px}.top .top-upper .top-upper-cont .client{padding-left:24px;background:url(http://www.news.cn/2023homepro/images/icon-phone.png) left center no-repeat;color:#fff}.top .top-upper .top-upper-cont .client a{color:#fff}.top .top-upper .top-upper-cont .client .sub{width:100px;left:-30px}.top .top-upper .top-upper-cont .client img{width:100px;height:100px}.top .top-upper .top-upper-cont .wap{margin-left:16px;padding-left:24px;background:url(http://www.news.cn/2023homepro/images/icon-wap.png) left center no-repeat;color:#fff}.top .top-upper .top-upper-cont .wap a{color:#fff}.top .top-upper .top-upper-cont .wap .sub{width:100px;left:-30px}.top .top-upper .top-upper-cont .wap img{width:100px;height:100px}.top .top-upper .top-upper-cont .search{margin-left:16px;padding-left:22px;background:url(http://www.news.cn/2023homepro/images/icon-search.png) left center no-repeat;color:#fff}.top .top-upper .top-upper-cont .search a{color:#fff}.top .top-cont{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:10px 0;height:90px;width:100%;border-bottom:1px solid #e4e4e4;background:#fff}.top .top-cont .logo img{height:100%;width:auto}.top .top-cont .company{margin-left:10px}.top .top-cont .company a,.top .top-cont .company span{font-size:14px;line-height:24px;display:block;color:#666}.top .top-cont .company .stock{font-weight:700;font-size:12px}.top .top-cont .company .stock i{color:#378de4}.top .top-cont .nav{width:950px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:8px 0;font-size:0;white-space:nowrap}.top .top-cont .nav .nav-item a{margin-left:9.5px;line-height:28px;display:inline-block;vertical-align:top;font-size:14px;color:#404040}.top .top-cont .nav .nav-item.nav-bottom a{margin-left:9.2px}</style><div class="top domPc domPC"><div class="top-upper"> <div class="part clearfix"> <div class="slogan left"> </div><div class="top-upper-cont right"><div class="channel foreign"><span>ENGLISH</span><div class="sub"><div class="sub-cont"><a href="https://english.news.cn/home.htm" target="_blank">English</a><a href="https://spanish.news.cn/index.htm" target="_blank">Español</a><a href="https://french.news.cn/index.htm" target="_blank">Français</a><a href="https://arabic.news.cn/index.htm" target="_blank">عربى</a><a href="https://russian.news.cn/index.htm" target="_blank">Русский язык</a><a href="https://jp.news.cn/index.htm" target="_blank">日本語</a><a href="https://kr.news.cn/index.htm" target="_blank">한국어</a><a href="https://german.news.cn/index.htm" target="_blank">Deutsch</a><a href="https://portuguese.news.cn/index.htm" target="_blank">Português</a></div></div></div><div class="channel newspapers"><span>新华报刊</span><div class="sub"><div class="sub-cont"><a href="http://mrdx.xinhuanet.com/index.htm" target="_blank"> 新华每日电讯 </a><a href="http://www.jjckb.cn" target="_blank"> 经济参考 </a><a href="http://lw.news.cn" target="_blank"> 瞭望 </a><a href="http://www.banyuetan.org/" target="_blank"> 半月谈 </a><a href="http://www.cs.com.cn/" target="_blank"> 中证报 </a><a href="http://www.cnstock.com/" target="_blank"> 上证报 </a><a href="http://paper.news.cn/bkdy/zgjz.htm" target="_blank"> 中国记者 </a><a href="http://www.chinatopbrands.net/index.htm" target="_blank"> 中国名牌 </a><a href="http://www.scimedia.cn/" target="_blank"> 中国传媒科技 </a><a href="globe/globe.htm" target="_blank"> 环球 </a><a href="http://paper.news.cn/bkdy/lwdf.htm" target="_blank"> 瞭望东方周刊 </a><a href="http://www.cankaoxiaoxi.com/" target="_blank"> 参考消息 </a><a href="http://www.xinhuapub.com" target="_blank"> 新华出版社 </a><a href="https://www.lwinst.com/Liems/web/getMoreJournal.htm?type=02" target="_blank"> 财经国家周刊 </a></div></div></div><div class="channel local"><span>地方频道</span><div class="sub"><div class="sub-cont"><a href="http://www.bj.news.cn/index.htm" target="_blank"> 北京 </a><a href="http://www.tj.news.cn/index.htm" target="_blank"> 天津 </a><a href="http://www.he.news.cn/index.htm" target="_blank"> 河北 </a><a href="http://www.sx.news.cn/index.htm" target="_blank"> 山西 </a><a href="http://www.ln.news.cn/index.htm" target="_blank"> 辽宁 </a><a href="http://www.jl.news.cn/index.htm" target="_blank"> 吉林 </a><a href="http://www.sh.news.cn/index.htm" target="_blank"> 上海 </a><a href="http://www.js.news.cn/index.htm" target="_blank"> 江苏 </a><a href="http://www.zj.news.cn/index.htm" target="_blank"> 浙江 </a><a href="http://www.ah.news.cn/index.htm" target="_blank"> 安徽 </a><a href="http://www.fj.news.cn/index.htm" target="_blank"> 福建 </a><a href="http://www.jx.news.cn/index.htm" target="_blank"> 江西 </a><a href="http://www.sd.news.cn/index.htm" target="_blank"> 山东 </a><a href="http://www.ha.news.cn/index.htm" target="_blank"> 河南 </a><a href="http://www.hb.news.cn/index.htm" target="_blank"> 湖北 </a><a href="http://www.hn.news.cn/index.htm" target="_blank"> 湖南 </a><a href="http://www.gd.news.cn/index.htm" target="_blank"> 广东 </a><a href="http://www.gx.news.cn/index.htm" target="_blank"> 广西 </a><a href="http://www.hq.news.cn/index.htm" target="_blank"> 海南 </a><a target="_blank" href="http://www.cq.news.cn/index.htm"> 重庆 </a><a target="_blank" href="http://www.sc.news.cn/index.htm"> 四川 </a><a target="_blank" href="http://www.gz.news.cn/index.htm"> 贵州 </a><a target="_blank" href="http://www.yn.news.cn/index.htm"> 云南 </a><a target="_blank" href="http://tibet.news.cn/index.htm"> 西藏 </a><a target="_blank" href="http://www.sn.news.cn/index.htm"> 陕西 </a><a target="_blank" href="http://www.gs.news.cn/index.htm"> 甘肃 </a><a target="_blank" href="http://www.qh.news.cn/index.htm"> 青海 </a><a target="_blank" href="http://www.nx.news.cn/index.htm"> 宁夏 </a><a target="_blank" href="http://www.xj.news.cn/index.htm"> 新疆 </a><a target="_blank" href="http://www.nmg.news.cn/index.htm"> 内蒙古 </a><a target="_blank" href="http://www.hlj.news.cn/index.htm"> 黑龙江 </a><a target="_blank" href="http://bt.news.cn/index.htm"> 兵团 </a><a target="_blank" href="http://wx.news.cn/index.htm"> 无锡 </a><a target="_blank" href="http://csj.news.cn/index.htm"> 长三角</a></div></div></div><div class="channel contract"><span>承建网站</span><div class="sub"><div class="sub-cont"><a href="http://www.gov.cn/" target="_blank">中国政府网</a><a href="http://www.wenming.cn/" target="_blank">中国文明网</a><a href="http://www.cidca.gov.cn/" target="_blank">国家国际发展合作署</a><a href="http://www.emerinfo.cn/" target="_blank">中国应急信息网</a><a href="http://www.xiongan.gov.cn/" target="_blank">中国雄安官网</a><a href="http://www.piyao.org.cn/" target="_blank">中国互联网联合辟谣平台</a><a href="http://www.zgjx.cn/" target="_blank"> 中国记协网 </a><a href="http://www.cngongji.cn/" target="_blank"> 国家公祭网 </a><a href="http://www.news.cn/science/kpzg.htm" target="_blank"> 科普中国 </a><a href="http://www.nea.gov.cn/" target="_blank"> 国家能源局网站 </a><a href="http://www.gjxfj.gov.cn/" target="_blank"> 国家信访局网站 </a><a href="http://www.nncc626.com/" target="_blank"> 中国禁毒网 </a></div></div></div><div class="channel ChineseType"><a href="http://big5.news.cn/gate/big5/www.news.cn" target="_blank">中文/繁体</a></div><div class="channel accessibility"><a href="javascript:void(0)" onclick="top.aria.start()" for="wza">网站无障碍</a></div><div class="channel client"><a href="https://app.xinhuanet.com/" target="_blank">客户端</a></div><div class="channel wap">手机版<div class="sub"><div class="sub-cont"> <img src="http://www.news.cn/2023homepro/images/qrcode-wap.png" alt=""></div></div></div><div class="channel search"><a href="http://so.news.cn/" target="_blank">站内搜索</a></div></div></div></div><div class="top-cont"><div class="part clearfix"> <div class="logo left"><a href="http://www.news.cn/" target="_blank"><img src="http://www.news.cn/2023homepro/images/logo.png" alt=""></a></div><div class="company left"><span>新华通讯社主办</span><a href="http://www.news.cn/company/" target="_blank">公司官网</a><span class="stock">股票代码：<i>603888</i></span></div><div class="nav right"><div class="nav-item nav-top"><a href="http://www.news.cn/politics/xxjxs/index.htm" target="_blank">学习进行时</a><a href="http://www.news.cn/politics/leaders/" target="_blank">高层</a><a href="http://www.news.cn/politics/" target="_blank">时政</a><a href="http://www.news.cn/politics/xhrs/index.html" target="_blank">人事</a><a href="http://www.news.cn/world/" target="_blank">国际</a><a href="http://www.news.cn/fortune/index.htm" target="_blank">财经</a><a href="http://www.news.cn/comments/index.html" target="_blank">网评</a><a href="http://www.news.cn/gangao/index.html" target="_blank">港澳</a><a href="http://www.news.cn/tw/index.html" target="_blank">台湾</a><a href="http://www.news.cn/sikepro/" target="_blank">思客智库</a><a href="http://www.news.cn/world/globalink/index.html" target="_blank">全球连线</a><a href="http://education.news.cn/index.htm" target="_blank">教育</a><a href="http://www.news.cn/tech/" target="_blank">科技</a><a href="http://www.news.cn/science/index.htm" target="_blank">科普</a><a href="http://sports.news.cn/index.htm" target="_blank">体育</a><a href="http://www.news.cn/culture/" target="_blank">文化</a><a href="http://www.news.cn/health/" target="_blank">健康</a><a href="http://www.news.cn/milpro/" target="_blank">军事</a><a href="http://www.news.cn/talking/index.html" target="_blank">访谈</a><a href="http://www.news.cn/video/" target="_blank">视频</a><a href="http://www.news.cn/photo/index.htm" target="_blank">图片</a><a href="http://www.news.cn/politics/zywj/index.htm" target="_blank">中央文件</a></div><div class="nav-item nav-bottom"><a href="http://www.news.cn/money/index.html" target="_blank">金融</a><a href="http://www.news.cn/auto/index.html" target="_blank">汽车</a><a href="http://www.news.cn/food/index.html" target="_blank">食品</a><a href="http://www.xinhuanet.com/house/index.html" target="_blank">房产</a><a href="http://www.news.cn/info/index.html" target="_blank">信息化</a><a href="http://xczx.news.cn/" target="_blank">乡村振兴</a><a href="http://www.news.cn/info/xbsyzg/index.html" target="_blank">溯源中国</a><a href="http://city.news.cn/" target="_blank">城市</a><a href="http://www.news.cn/travel/index.html" target="_blank">旅游</a><a href="http://www.news.cn/energy/index.html" target="_blank">能源</a><a href="http://www.news.cn/expo/index.html" target="_blank">会展</a><a href="http://www.news.cn/caipiao/index.html" target="_blank">彩票</a><a href="http://www.news.cn/ent/index.html" target="_blank">娱乐</a><a href="http://www.news.cn/fashion/index.html" target="_blank">时尚</a><a href="http://www.news.cn/book/index.html" target="_blank">悦读</a><a href="http://www.news.cn/gongyi/index.html" target="_blank">公益</a><a href="http://www.news.cn/shuhua/index.html" target="_blank">书画</a><a href="http://www.news.cn/silkroad/index.html" target="_blank">一带一路</a><a href="http://www.news.cn/asia/chinese/index.html" target="_blank">亚太网</a><a href="http://www.news.cn/finance/" target="_blank">上市公司</a><a href="http://www.news.cn/ci/" target="_blank">文化产业</a></div></div></div></div></div><div data="datasource:202405093dd6e33cc6d749fbaae01fea337ff400" datatype="content"><meta name="keywords" content="李强"></div> <div data="datasource:202405093dd6e33cc6d749fbaae01fea337ff400" datatype="content"><meta name="description" content="李强在新疆调研时强调 彰显特色优势 提高开放水平 在高质量发展中增进民生福祉促进长治久安-"></div> <title data="datasource:202405093dd6e33cc6d749fbaae01fea337ff400" datatype="content">
+            李强在新疆调研时强调 彰显特色优势 提高开放水平 在高质量发展中增进民生福祉促进长治久安-新华网
+        </title> <base target="_blank"> <link rel="stylesheet" href="https://lib.xinhuanet.com/common/reset.css"> <link rel="stylesheet" href="https://lib.xinhuanet.com/swiper/swiper3.4.2/swiper.min.css"> <link rel="stylesheet" href="https://www.news.cn/detail/css/cb_detail_2021.css"> <link rel="stylesheet" href="https://www.news.cn/2021detail/css/detail-sanwu.css"> <link rel="stylesheet" href="https://www.news.cn/detail/css/cb_videoPlayer.css"> <script src="https://lib.xinhuanet.com/jquery/jquery1.12.4/jquery.min.js"></script> <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script> <script src="https://lib.xinhuanet.com/common/share.js"></script> <div class="fix-ewm domPC" data="datasource:202405093dd6e33cc6d749fbaae01fea337ff400" datatype="content"><img src="https://www.news.cn/detail2020/images/ewm.png" width="94" alt=""> <div class="fxd"><span class="fxd-wx"></span> <a href="http://service.weibo.com/share/share.php?url=http://www.news.cn/politics/leaders/20240509/3dd6e33cc6d749fbaae01fea337ff400/c.html&amp;title=李强在新疆调研时强调 彰显特色优势 提高开放水平 在高质量发展中增进民生福祉促进长治久安" class="fxd-wb" target="_blank"></a> <span class="fxd-xcx"></span> <span class="fxd-khd"></span> <div class="fxd-wx-ewm"><img src="zxcode_202405093dd6e33cc6d749fbaae01fea337ff400.jpg"></div> <div class="fxd-xcx-ewm"><img src="https://contentapi.news.cn/xcimg/qr/xinhuawang_202405093dd6e33cc6d749fbaae01fea337ff400.png"></div> <div class="fxd-khd-ewm"><img src="https://www.news.cn/politics/newpage2020/images/qrcode-app.png"></div></div></div> <div class="domPC"><script src="https://www.news.cn/2021homepro/scripts/smallTop.js"></script></div><script type="text/javascript" async="" defer="" charset="utf-8" src="//wza.news.cn/dist/aria.js?appid=7c11fb3e5d5e6bc07fc782d63ab71188" wapforceoldfixed="false" loaddata="false" id="ariascripts"></script> <div class="domMobile"><script src="https://www.news.cn/2021mobile/scripts/toppx.js"></script></div> <div class="header domPC" data="datasource:202405093dd6e33cc6d749fbaae01fea337ff400" datatype="content"><div class="header-top clearfix"><div class="header-nav left"><a href="https://www.news.cn/" target="_blank">新华网</a> &gt; <a class="curColumn" href="http://www.news.cn/politics/" target="_blank">时政</a> &gt; 正文</div></div> <div class="header-cont clearfix"><div class="header-time left"><span class="year"><em>2024</em></span> <span class="day">05/09</span> <span class="time">22:27:02</span></div> <div class="source">来源：新华网
+                </div> <div class="head-line clearfix"><h1><span class="title" style="font-size: 33px;">李强在新疆调研时强调 彰显特色优势 提高开放水平 在高质量发展中增进民生福祉促进长治久安</span> <span class="btn-audio"></span></h1> <audio id="audioDom" src="" loop="loop" class="hide"></audio> <div class="pageShare"><div class="setFont">字体：
+                            <span id="fontSmall">小</span> <span id="fontNormal" class="active">中</span> <span id="fontBig">大</span></div> <div class="share">
+                            分享到：<a href="javascript:void(0)" class="wx"></a><a href="http://service.weibo.com/share/share.php?url=http://www.news.cn/politics/leaders/20240509/3dd6e33cc6d749fbaae01fea337ff400/c.html&amp;title=李强在新疆调研时强调 彰显特色优势 提高开放水平 在高质量发展中增进民生福祉促进长治久安" class="wb" target="_blank"></a><a href="javascript:void(0)" class="xcx"></a><a href="javascript:void(0)" class="khd"></a> <div class="wx-ewm"><img src="zxcode_202405093dd6e33cc6d749fbaae01fea337ff400.jpg"></div> <div class="xcx-ewm"><img src="https://contentapi.news.cn/xcimg/qr/xinhuawang_202405093dd6e33cc6d749fbaae01fea337ff400.png"></div> <div class="khd-ewm"><img src="https://www.news.cn/politics/newpage2020/images/qrcode-app.png"></div></div></div></div></div></div> <div class="mheader domMobile"><h1><span class="title">李强在新疆调研时强调 彰显特色优势 提高开放水平 在高质量发展中增进民生福祉促进长治久安</span></h1> <div class="info">
+                2024-05-09 22:27:02
+                <span>
+                    来源：新华网
+                </span></div></div> <div class="main clearfix"><div class="main-left"><div id="detail" data="datasource:202405093dd6e33cc6d749fbaae01fea337ff400" datatype="content"><span id="detailContent"><p></p><div id="DH-PLAYERID0"><div class="player-container tag-id-98786" tabindex="0" style="margin: 0px auto 10px; width: 640px; height: 360px;"><video id="dhy-video" class="dhy-video" tabindex="0" poster="https://vodpub6.v.news.cn/yqfbzx-original/20240519/image/7c51c274-8990-46a6-9538-57e6152d6ae7.png" playsinline="true" preload="auto" x5-playsinline="true" webkit-playsinline="true" src="https://vodpub6.v.news.cn/yqfbzx-original/20240519/4651fed68cdb4745baeff69123e3e318.mp4"></video><div class="danmu-layer" id="danmu-layer-tag-id-98786" tabindex="0" style="position: absolute; left: 0px; top: 2px; width: 100%; height: 70%; z-index: 100; color: rgb(255, 255, 255); overflow: hidden;"><div class="danmakuTimer-danmu-layer-tag-id-98786"></div></div><div class="load-layer hidden" tabindex="0"><span class="player-control-text">Play Video</span></div><div class="msg-layer" tabindex="0"><span class="player-msg-text"></span></div><div class="poster-layer hidden" tabindex="-1" style="background-image: url(&quot;https://vodpub6.v.news.cn/yqfbzx-original/20240519/image/7c51c274-8990-46a6-9538-57e6152d6ae7.png&quot;);"></div><div class="control-bar transparent" tabindex="0" style="background: none;"><div class="control-buttons-container" tabindex="0"><div class="compent PlayToggle" tabindex="0" role="button" aria-icon="true" aria-disabled="false"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAEO0lEQVRogc2aX4jVRRTHP2vbrsKWZbu2WZsV1AbrUoKyEkXQH6KHHt1MhCiJDIJIFEF8qIcgwQdfRN/yz/pSoNuTQRAYsgtB1lKKBUKkSVLEbiuoW+6Rs5xZzk73yu/3m7nd+4Vhhju/Oec75ze/M2fO3DYRoQFoA+4CbgB/N0JBewYZK4AXgGeBAeAx4G7Xr+T/As4B3wFngRPArylKq1q8A9gIvAE8YxYugwngyRTiZS2uz78F7AQeqNGvVvwJuARccUvmHuAJoNeeuxSN08n3A0eBq4WYqMULliER+V4WYkZERkVko4jcV0DOUhF5XEQ63G9PicisSR0pyqfIQ7qcthrJgCkR+VBElpeYeL2yyckdz0W8XUQ+iax8RETuzUA4lMUiclhEvjHrJxNX0sciKw9nJJxUbrU8RhzpiyKyqlVI34r4Nkf6goisbCXSWmr58SHga/PVuus9DfxQ0m02HIsiBeqnDxhpzGe3HGlqEH/b7Wi6GXzaBE4eS4CDwBjQt6DHrZsO+wiDB+ltgbW8yn1rp/3G5S2+Cbjf2vuA3ytYSLf3nhymNpwBRqy9Ghie73GzO2kzuy4iPRUttF9E/hSRVzJa/UER+ce4nYrdYZ+LF44nKDlqMlTWXhHpzER+1Mnt80vlZReafpbhFaus94Bxi89TcdzJfQnnVdaFlQN8mUFRgK7Lb4HXE+V84dprccQHrP4F+CNRSYwuc2lHgDsqyrgM/GbtQRzxfqvPZaW8EOq11PprKo4/Y/UcVyV+G7DUfoxPJrnxKHAK2FJB7mWrl+laXxS9visNJq7oBN6tMG7Kte+Mt/z/Az8u2EiK41/35JzFp90PXQ0mfsC8wtkKY/3KmG63vMe0dazISNJjEtgMHEuQEbhpqH0jLJXzVvfXGZSCMUtNpJDGbWRzXAPxCasfzhgkzQIfWYYrKWtlnB6x9hzXQHzMat1Sn09UgrnVF4Fd0UdVFc+5kGTcEz9h273i1QQFp4FRO4x8lYFwwAarxbjWDWu7W+AQEUqPcRLj+J+DxCGr9by5NaO1UvG+OwMfmpflZtbpjm6TLXJ06zUuIbdT8+h2HfjY2hq77GkBa+9xcZRym5nviWbYHmVkm5lyG3Y8JozbfH+tAUMuM6uvabAJpAfdElEu6+Jn6g3c3sQU3ErTGbC91nP1Bjcr6TngHIQYh7YyxLEv+PMozby+gaTXm46A0ejmojBxLbdb0t3jYOYNqttkehw23XXHFRGsr2pHdJWiH84HiRPoNhmTTu6M6aq5PMoSD2XI3JLHNbu12FDwekWfec2STtciWROmoxCfsvecevB4B9jh8owemt74Gbjozq9ddrWo8fRDNcZo2mE3sL9UJFnxNWt48KYFPbNSHrM2dnPVNF2Ou/w+i5fDlXi/26YDpuziVnMjJy3kvZCitFF/QtAYKJBX0noaygfgJsI00YX19pVQAAAAAElFTkSuQmCC" style="width: 50px; height: 50px; max-height: 50px; margin-top: -25px;"></div><div class="time-view" tabindex="0" style="display: none;"><div class="control-text time-current-text" tabindex="0">0:00</div><div class="control-text time-total-text" tabindex="0">/2:54</div></div><div class="compent FullScreen floatRight" tabindex="0" role="button" aria-disabled="false" style="display: none;"><img src=" data:image/svg+xml,%3csvg viewBox='0 0 14 14' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3e %3cdesc%3eCreated with Lunacy%3c/desc%3e %3cpath d='M8.34343 0.471381C8.34343 0.754209 8.53199 0.942761 8.81481 0.942761L12.3973 0.942761L7.91919 5.42088C7.73064 5.60943 7.73064 5.89226 7.91919 6.08081C8.10774 6.26936 8.39057 6.26936 8.57912 6.08081L13.0572 1.60269L13.0572 5.18518C13.0572 5.46801 13.2458 5.65657 13.5286 5.65657C13.8114 5.65657 14 5.46801 14 5.18518L14 0.471381C14 0.188552 13.8114 0 13.5286 0L8.81481 0C8.53199 0 8.34343 0.188552 8.34343 0.471381C8.34343 0.754209 8.53199 0.942761 8.81481 0.942761L12.3973 0.942761L7.91919 5.42088C7.73064 5.60943 7.73064 5.89226 7.91919 6.08081C8.10774 6.26936 8.39057 6.26936 8.57912 6.08081L13.0572 1.60269L13.0572 5.18518C13.0572 5.46801 13.2458 5.65657 13.5286 5.65657C13.8114 5.65657 14 5.46801 14 5.18518L14 0.471381C14 0.188552 13.8114 0 13.5286 0L8.81481 0C8.53199 0 8.34343 0.188552 8.34343 0.471381ZM5.42088 7.91919L0.942761 12.3973L0.942761 8.81481C0.942761 8.53199 0.754209 8.34343 0.471381 8.34343C0.188552 8.34343 0 8.53199 0 8.81481L0 13.5286C0 13.8114 0.188552 14 0.471381 14L5.18518 14C5.46801 14 5.65657 13.8114 5.65657 13.5286C5.65657 13.2458 5.46801 13.0572 5.18518 13.0572L1.60269 13.0572L6.08081 8.57912C6.26936 8.39057 6.26936 8.10774 6.08081 7.91919C5.93939 7.73064 5.60943 7.73064 5.42088 7.91919L5.42088 7.91919L0.942761 12.3973L0.942761 8.81481C0.942761 8.53199 0.754209 8.34343 0.471381 8.34343C0.188552 8.34343 0 8.53199 0 8.81481L0 13.5286C0 13.8114 0.188552 14 0.471381 14L5.18518 14C5.46801 14 5.65657 13.8114 5.65657 13.5286C5.65657 13.2458 5.46801 13.0572 5.18518 13.0572L1.60269 13.0572L6.08081 8.57912C6.26936 8.39057 6.26936 8.10774 6.08081 7.91919C5.93939 7.73064 5.60943 7.73064 5.42088 7.91919L5.42088 7.91919Z' id='Shape' fill='%23FFFFFF' stroke='none' /%3e %3c/svg%3e"></div><div class="compent volume-bar floatRight" tabindex="0" role="button" style="display: none;"><div class="volume-loaded" tabindex="0" role="button" style="width: 60px;"></div><div tabindex="0" class="volume-slider-scrub vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="left: 60%;"></div></div><div class="compent volume floatRight" tabindex="0" role="button" aria-disabled="false" style="display: none;"><img src=" data:image/svg+xml,%3csvg width='19px' height='14px' viewBox='0 0 19 14' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3e %3cdesc%3eCreated with Lunacy%3c/desc%3e %3cg id='mute'%3e %3cpath d='M1.50744 0.757533C1.36162 0.568179 1.21566 0.378761 1.02117 0.227235L0.875346 0.113644C0.680828 -0.0378815 0.389078 -0.0378815 0.194559 0.113644C6.84731e-05 0.265149 6.84731e-05 0.492438 0.194559 0.643942L0.34038 0.757533C0.486337 0.871231 0.583569 0.984822 0.680828 1.13633L0.729417 1.17426C1.65337 2.27271 1.45885 3.25756 0.145889 4.35603C-0.0486296 4.50753 -0.0486296 4.73482 0.145889 4.88632C0.243148 4.96209 0.34038 5 0.486337 5C0.632157 5 0.729417 4.96209 0.826648 4.88632C2.43138 3.52268 2.67446 2.1212 1.50744 0.757533Z' transform='translate(13.41176 4)' id='Path' fill='%23FFFFFF' stroke='none' /%3e %3cpath d='M1.67473 0.487896C1.53133 0.32527 1.38795 0.203266 1.24446 0.121953C1.0532 -0.0406509 0.766327 -0.0406509 0.575064 0.121953C0.383828 0.284579 0.383828 0.528495 0.575064 0.691122L0.909815 0.975729C1.14883 1.26027 1.43572 1.50421 1.67473 1.82944C3.4916 4.14667 2.67747 6.45997 0.143427 8.69591C-0.0478091 8.85853 -0.0478091 9.10245 0.143427 9.26505C0.239059 9.34637 0.334691 9.38708 0.478179 9.38708C0.621559 9.38708 0.717191 9.34637 0.812822 9.26505C3.63373 6.78522 4.49575 4.02476 2.48759 1.42289C2.20072 1.05704 1.91383 0.772412 1.67473 0.487896Z' transform='translate(14.52941 2)' id='Path' fill='%23FFFFFF' stroke='none' /%3e %3cpath d='M9.41898 0.0965707C8.8931 -0.106724 8.22371 0.0152805 7.69783 0.421732L4.06404 3.06428L2.34277 3.06428C1.05189 3.06428 0 3.99928 0 5.05628L0 9.04031C0 10.1786 1.05189 11.0323 2.34277 11.0323L3.82503 11.0323L7.69783 13.6342C8.08022 13.8781 8.5106 14 8.8931 14C9.08434 14 9.32335 13.9594 9.46684 13.8781C9.99275 13.6748 10.2796 13.187 10.2796 12.5365L10.2796 1.47873C10.2796 0.828275 9.99275 0.299796 9.41898 0.0965707ZM9.32335 12.5772C9.32335 12.9024 9.22775 13.1057 9.03648 13.187C8.84522 13.2683 8.55835 13.187 8.27148 13.0244L4.15967 10.2599L2.34277 10.2599C1.57778 10.2599 0.956263 9.73146 0.956263 9.081L0.956263 5.09691C0.956263 4.44642 1.57778 3.91797 2.34277 3.91797L4.39868 3.91797L8.27148 1.11288C8.55835 0.909565 8.79747 0.828275 8.98873 0.909565C9.17997 0.990878 9.32335 1.23482 9.32335 1.56005L9.32335 12.5772Z' id='Fill-3' fill='%23FFFFFF' stroke='none' /%3e %3c/g%3e %3c/svg%3e"></div></div><div class="control-slider-container" tabindex="0" style="display: none;"><div class="control-slider-loaded tag-id-98786" tabindex="0"></div><div class="time-tooltip" aria-hidden="true"></div><div tabindex="0" class="control-slider-scrub tag-id-98786 vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div></div><div id="ads-layer" classname="ads-layer" style="
+        position: relative;
+      "><div classname="ads-start-layer" style="
+        position: absolute;
+      "></div><div class="ads-paused-layer"></div><div class="ads-playing-layer"></div><div class="ads-end-layer"></div></div></div></div><p>  新华社乌鲁木齐5月9日电（记者邹伟）中共中央政治局常委、国务院总理李强5月7日至9日在新疆调研。他强调，要深入贯彻习近平总书记在新时代推动西部大开发座谈会上的重要讲话精神和新时代党的治疆方略，立足资源禀赋培育壮大特色优势产业，提高对内对外开放水平，在高质量发展中增进民生福祉、促进长治久安。</p><p>  李强先后来到乌鲁木齐市、昌吉回族自治州、新疆生产建设兵团第六师五家渠市，走进园区、企业、游牧民定居点等，与各族干部群众深入交流。在乌鲁木齐国际陆港区，李强听取陆港区建设运营汇报，视频察看中欧班列（乌鲁木齐）集结中心和阿拉山口、霍尔果斯口岸实时情况，与工作人员交谈，对通关便利化实施效果等予以肯定。李强指出，新疆正在推进丝绸之路经济带核心区建设，要更好链接内陆省份与沿线国家，推动深化经贸合作，打造向西开放的桥头堡。要增强中欧班列大通道功能，促进沿线产业发展，特别是推动重点园区建设，营造良好产业生态。得知实施免签政策后境外来疆人员大幅增加，李强表示，要围绕商贸、教育、医疗、文化、旅游等领域，加强国际往来、扩大人文交流。</p><p>  李强前往金风科技、特变电工、九圣禾种业、昌吉溢达纺织、天鹅棉机、新业能化等企业，察看生产线和产品展示，详细了解企业生产研发、市场开拓等情况，对企业创新发展成果表示赞许。李强指出，要顺应能源变革和信息化浪潮，立足资源禀赋，挖掘潜力空间，大力发展能源、煤化工、农业和农产品加工、装备制造等特色优势产业，发挥龙头企业带动作用，打造完整产业链。要用好我国大市场、大工程、大应用等独特优势，支持企业加大研发投入、加快技术积累和迭代，积极参与标准制定，创建优质品牌，在市场竞争中接受检验、赢得主动。要深化东中西部合作，更好保障国家粮食、能源资源、重要产业链供应链安全。</p><p>  位于昌吉市的天鹅小镇，有500多户游牧民定居。李强来到这里，走进群众家中，细致询问住得好不好、收入怎么样、看病和孩子上学是否方便等。李强说，要多措并举带动群众就业增收，办好民生实事，传承发展民族文化，促进各族群众手足相亲、团结互助，生活越来越好。李强勉励当地干部继续抓好基层治理，更好服务群众安居乐业、维护社会和谐稳定。</p><p>  李强充分肯定新疆经济社会发展成就，希望新疆深入贯彻习近平总书记关于新疆工作的重要指示精神，扎实苦干、久久为功，推动各项工作再上新台阶，为全国发展大局作出更大贡献。</p><p>  马兴瑞、吴政隆参加调研。</p></span> <div id="articleEdit"><span class="tiyi1 domPC"><a href="javascript:void(0);" class="advise">【纠错】</a> <div id="advisebox01" class="tiyi01" style="display:none;"><div><iframe id="jc_link1" border="0" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" noresize="noresize" scrolling="no" vspale="0" style="width:600px;height:350px;float:left;"></iframe></div> <div class="tiyi03"><div id="jc_close1" style="cursor:pointer;"><img src="https://www.news.cn/images/syicon/space.gif" width="24" height="24" border="0"></div></div></div></span> <span class="editor"> 【责任编辑:王頔】 </span></div></div> <div class="columBox relatedNews" data="datasource:202405093dd6e33cc6d749fbaae01fea337ff400" datatype="content"> <div class="col-cont"><ul></ul></div></div> <div class="nextpage clearfix" style="display:none"><div class="nextpage-tit">阅读下一篇：</div> <div class="nextpage-cont"><a href="###"></a></div></div></div></div> <div class="foot"><script src="https://lib.xinhuanet.com/common/foot.js"></script></div><style>.lib-foot{margin-top:40px;padding:20px 0;font-size:14px;line-height:26px;text-align:center;color:#fff;background:#024ac2}@media screen and (max-width: 768px) {.lib-foot {margin-top: 10px;font-size:12px}}</style><div class="lib-foot"><p>Copyright © 2000 - 2024 XINHUANET.com　All Rights Reserved.</p><p>制作单位：新华网股份有限公司　　版权所有：新华网股份有限公司</p></div> <div data="datasource:202405093dd6e33cc6d749fbaae01fea337ff400" datatype="content"><div id="fontsize" style="display:none;">
+                33
+            </div> <div id="fontcolor" style="display:none;">
+                
+            </div> <div id="wxpic" style="display:none;"><img src=""></div> <div id="wxtitle" style="display:none;">
+                李强在新疆调研时强调 彰显特色优势 提高开放水平 在高质量发展中增进民生福祉促进长治久安
+            </div></div> <script>
+        //微信分享图功能
+        var wxfxPic = $.trim($("#wxpic").find("img").attr("src"));
+        var wxfxTit = $.trim($("#wxtitle").html());
+        var detaiWxPic = $("#wxsharepic").attr("src");
+        if (wxfxPic == "") {
+            wxfxPic = 'https://lib.news.cn/common/sharelogo.jpg';
+        } else {
+            wxfxPic = window.location.href.replace("c.html", wxfxPic)
+        }
+        wxConfig({
+            title: wxfxTit,
+            desc: '新华网，让新闻离你更近！',
+            link: window.location.href,
+            imgUrl: wxfxPic
+        });
+
+    </script> <script src="https://www.news.cn/global/detail/xhCommonFun.js"></script> <script src="https://www.news.cn/2021homepro/scripts/fixedNav.js"></script> <script src="https://www.news.cn/2021detail/js/xh-column.js"></script> <script src="https://www.news.cn/2021detail/js/cb-video.js"></script> <script src="https://www.news.cn/detail/js/pager.js"></script> <script src="https://www.news.cn/detail/js/cb_detail_sanwu_20220721.js"></script><script src="//imgs.news.cn/webdig/xinhua_webdig.js" language="javascript" type="text/javascript" async=""></script></body>

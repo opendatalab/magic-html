@@ -738,7 +738,6 @@ class BaseExtractor:
                         self.remove_node(descendant)
                         sk_flg = False
                     else:
-                        # dl.getparent().remove(dl)
                         self.remove_node(dl)
             else:
                 need_del_par.append(descendant)
@@ -779,11 +778,11 @@ class BaseExtractor:
                     # 增加判断是否包含评论 再决定是否删除
                     break_flg = False
                     for c_xpath in Forum_XPATH[:-1]:
-                        if elem.xpath(c_xpath.replace(".//*", "self::*")):
+                        if elem.xpath(c_xpath):
                             break_flg = True
                             break
                     if break_flg:
-                        break
+                        continue
                 self.remove_node(elem)
             except AttributeError:
                 pass

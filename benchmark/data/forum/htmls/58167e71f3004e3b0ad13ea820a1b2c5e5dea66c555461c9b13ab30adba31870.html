@@ -1,0 +1,551 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FlaskBB is a forum software written in Flask">
+    <meta name="author" content="FlaskBB Team">
+    <meta name="csrf-token" content="IjVjMDQxZjQ2YTc0NGMzNTc3YzYxZjI4MmJhNjE2ODM4ZTZmYjY1MzEi.ZlP0jQ.DFFcBCUvSMtJbnw1PAiNRPemcEQ">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+
+    <title>
+        can't see any routes - Topic - FlaskBB
+    </title>
+
+    
+    <!-- style -->
+    <link rel="stylesheet" href="/static/app.css">
+    
+
+    
+    
+    
+
+    
+    
+    
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light border-bottom flaskbb-navbar" role="navigation">
+            <div class="container">
+                <a class="navbar-brand topnav" href="/">FlaskBB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topnav-collapse" aria-controls="topnav-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="topnav-collapse">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://flaskbb.org">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://flaskbb.org/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://flaskbb.readthedocs.io">Documentation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /.container -->
+        </nav>
+    </header>
+
+    <!-- main forum layout -->
+    <div class="flaskbb-layout">
+        <div class="container pb-3">
+
+            <!-- forum header - place for the project title and subtitle -->
+            
+            <div class="flaskbb-header">
+                <div class="flaskbb-meta">
+                    <div class="flaskbb-title">FlaskBB</div>
+                    <div class="flaskbb-subtitle">A lightweight forum software in Flask</div>
+                </div>
+            </div>
+            
+
+            <!-- forum menu - contains all the navigation items -->
+            
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light flaskbb-navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav me-auto">
+
+    
+    
+<li class="nav-item">
+    <a class="nav-link " href="/portal/">
+        <i class="fas fa-home"></i> Portal
+    </a>
+</li>
+
+    
+
+
+
+                            
+<li class="nav-item">
+    <a class="nav-link active" href="/">
+        <i class="far fa-comment"></i> Forum
+    </a>
+</li>
+
+                            
+<li class="nav-item">
+    <a class="nav-link " href="/memberlist">
+        <i class="far fa-user"></i> Memberlist
+    </a>
+</li>
+
+                            
+<li class="nav-item">
+    <a class="nav-link " href="/search">
+        <i class="fas fa-search"></i> Search
+    </a>
+</li>
+
+
+                            
+
+
+                        </ul>
+
+
+                        
+                            <!-- Not logged in - Login/Register -->
+                            <div class="btn-group">
+                                <a class="btn btn-primary" href="/auth/login">
+                                    <span class="fa fa-user fa-fw"></span> Login
+                                </a>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    
+                                    
+                                    <li>
+                                        <a class="dropdown-item" href="/auth/register">
+                                            <span class="fas fa-user-plus fa-fw"></span> Register
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a class="dropdown-item" href="/auth/reset-password">
+                                            <span class="fas fa-undo fa-fw"></span> Reset Password
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a class="dropdown-item" href="/auth/activate">
+                                            <span class="fas fa-fw fa-user-check"></span> Activate Account
+                                        </a>
+                                    </li>
+                                    
+
+                                </ul>
+                            </div>
+                        
+
+
+                    </div>
+                </div>
+            </nav>
+
+            
+
+            <!-- Place for all the (flashed) messages -->
+            
+            <div id="flashed-messages">
+                
+    
+
+            </div>
+            
+
+            <!-- the actual content block -->
+            
+
+
+
+<div class="topic-view">
+    <ol class="breadcrumb flaskbb-breadcrumb bg-light">
+        <li class="breadcrumb-item"><a href="/">Forum</a></li>
+        <li class="breadcrumb-item"><a href="/category/1-flaskbb">FlaskBB</a></li>
+        <li class="breadcrumb-item"><a href="/forum/4-development">Development</a></li>
+        <li class="breadcrumb-item active">can't see any routes</li>
+    </ol>
+
+    <div class="row controls-row pt-0">
+    <div class="col me-auto g-0">
+        
+<ul class="pagination">
+    
+    
+    <li class="page-item disabled"><a class="page-link" href="#"><span class="pages-label">Pages</span></a></li>
+        
+            
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            
+        
+    
+</ul>
+
+    </div> <!-- end span pagination -->
+
+ 
+</div>
+
+    
+
+
+    <div class="card topic">
+        <div class="card-header topic-header">
+            <a href="/topic/2322-can-t-see-any-routes">can't see any routes</a>
+        </div>
+        <div class="card-body topic-body">
+            
+            <div id="2841" class="row post-row">
+
+                <div class="author col-md-2 col-sm-3 col-12">
+                    <!-- Registered User -->
+                    
+                    <div class="author-name"><h4><a href="/user/junchen">junchen</a></h4></div>
+
+                    <!-- check if user is online or not -->
+                    
+                    <div class="author-offline" data-bs-toggle="tooltip" title="" data-bs-original-title="offline" aria-label="offline"></div>
+                    
+                    <div class="author-title"><h5>Member</h5></div>
+
+                    
+
+                    
+
+                    <div class="author-registered">Joined: <time datetime="2020-03-28T00:43:27.625257+01:00" data-what_to_display="date-only">2020年3月28日</time></div>
+                    <div class="author-posts">Posts: 2</div>
+
+                    <div class="author-pm">
+    
+</div>
+
+                    
+
+                    
+                </div>
+
+                <div class="post-box col-md-10 col-sm-9 col-12">
+
+                    <div class="post-meta row">
+                        <div class="col-auto me-auto g-0">
+                            <!-- Creation date / Date modified -->
+                            <a href="/post/2841">
+                                <time datetime="2020-03-28T00:47:23.158782+01:00" data-what_to_display="date-and-time">2020年3月28日 07:47</time>
+                            </a>
+                            
+                        </div>
+
+                        <!-- Post number -->
+                        <div class="col-auto g-0">
+                            <strong>#1</strong>
+                        </div>
+                    </div>
+
+                        <div class="post-content" id="pid2841">
+                            
+
+                        
+
+                        <p>most Flask app would have routes like <a href="/user/app">@app</a>.route('/', methods=['GET', 'POST']) etc...<br>
+how come i dont see any <a href="/user/route">@route</a> annotation in the source code?</p>
+
+
+                        
+
+                        <!-- Signature Begin -->
+                        
+                        <!-- Signature End -->
+                    </div>
+
+                        <div class="post-footer">
+
+                            <!-- Report/Edit/Delete/Quote Post-->
+                            <div class="post-menu float-end">
+                            
+
+                            
+
+                            
+
+                            <!-- Delete Post/Topic -->
+                            
+                                
+                            
+
+                            
+
+                            <!-- Hide Post -->
+                            
+
+                            
+                            </div> <!-- end post-menu -->
+                        </div> <!-- end footer -->
+
+                </div>
+            </div>
+            
+            <div id="2842" class="row post-row">
+
+                <div class="author col-md-2 col-sm-3 col-12">
+                    <!-- Registered User -->
+                    
+                    <div class="author-name"><h4><a href="/user/sh4nks">sh4nks</a></h4></div>
+
+                    <!-- check if user is online or not -->
+                    
+                    <div class="author-offline" data-bs-toggle="tooltip" title="" data-bs-original-title="offline" aria-label="offline"></div>
+                    
+                    <div class="author-title"><h5>Administrator</h5></div>
+
+                    
+
+                    
+                        <div class="author-avatar"><img src="https://i.imgur.com/WWbAoNZ.jpg" alt="avatar"></div>
+                    
+
+                    <div class="author-registered">Joined: <time datetime="2015-07-09T13:16:01.490237+02:00" data-what_to_display="date-only">2015年7月9日</time></div>
+                    <div class="author-posts">Posts: 139</div>
+
+                    <div class="author-pm">
+    
+</div>
+
+                    
+
+                    
+                </div>
+
+                <div class="post-box col-md-10 col-sm-9 col-12">
+
+                    <div class="post-meta row">
+                        <div class="col-auto me-auto g-0">
+                            <!-- Creation date / Date modified -->
+                            <a href="/post/2842">
+                                <time datetime="2020-03-30T09:20:15.206087+02:00" data-what_to_display="date-and-time">2020年3月30日 15:20</time>
+                            </a>
+                            
+                        </div>
+
+                        <!-- Post number -->
+                        <div class="col-auto g-0">
+                            <strong>#2</strong>
+                        </div>
+                    </div>
+
+                        <div class="post-content" id="pid2842">
+                            
+
+                        
+
+                        <p>You can see the views here:<br>
+<a href="https://github.com/flaskbb/flaskbb/blob/master/flaskbb/forum/views.py#L1113">https://github.com/flaskbb/flaskbb/blob/master/flaskbb/forum/views.py#L1113</a></p>
+<p>flask has more ways to register routes. We decided to use the above approach which we thought works best with our plugin architecture</p>
+
+
+                        
+
+                        <!-- Signature Begin -->
+                        
+                        <div class="post-signature d-none d-sm-block">
+                        <hr>
+                            <p>Cheers! <img draggable="false" class="emoji" alt="🍻" src="https://twemoji.maxcdn.com/v/13.1.0/svg/1f37b.svg"></p>
+
+                        </div>
+                        
+                        <!-- Signature End -->
+                    </div>
+
+                        <div class="post-footer">
+
+                            <!-- Report/Edit/Delete/Quote Post-->
+                            <div class="post-menu float-end">
+                            
+
+                            
+
+                            
+
+                            <!-- Delete Post/Topic -->
+                            
+                                
+
+                            
+
+                            
+
+                            <!-- Hide Post -->
+                            
+
+                            
+                            </div> <!-- end post-menu -->
+                        </div> <!-- end footer -->
+
+                </div>
+            </div>
+            
+
+        </div> <!-- end topic-body -->
+    </div> <!-- end topic -->
+
+    <div class="pt-2">
+        <div class="row controls-row pt-0">
+    <div class="col me-auto g-0">
+        
+<ul class="pagination">
+    
+    
+    <li class="page-item disabled"><a class="page-link" href="#"><span class="pages-label">Pages</span></a></li>
+        
+            
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            
+        
+    
+</ul>
+
+    </div> <!-- end span pagination -->
+
+ 
+</div>
+    </div>
+
+    
+
+</div>
+
+
+            <div class="modal fade" id="confirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Are you sure?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure that you want to perform this action? This action is irreversible.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger confirmBtn">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- Modal -->
+<div class="modal fade" id="editor-help" tabindex="-1" role="dialog" aria-labelledby="editor-help">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editor-help">Markdown Cheatsheet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="cheatsheet">
+                    <h2>Emojis</h2>
+                    <div class="emojis">
+                        To enter emoji, type a colon and let the editor autocomplete the emoji short name for you. A full list of available emoji can be found <a href="https://unicode.org/emoji/charts/full-emoji-list.html">here</a>.
+                    </div>
+
+                    <h2>Typography</h2>
+                    <div class="typography">
+                        <span>
+                            # Header1 <br>
+                            ## Header2 <br>
+                        </span>
+                        <span>
+                            * Unordered item1 <br>
+                            * Unordered item2 <br>
+                        </span>
+                        <span>
+                            1. Ordered item1 <br>
+                            2. Ordered item2 <br>
+                        </span>
+                    </div>
+                    <p class="text-center" style="margin-top: 1em;">*<em>Emphasized text</em>*</p>
+                    <p class="text-center">**<strong>Bold Text</strong>**</p>
+                    <p class="text-center">*** (Horizontal rule)</p>
+                    <p class="text-center">&gt; Blockquote</p>
+                    <h2>Links</h2>
+                    <p class="text-center">[Google](http://www.google.com)</p>
+                    <p class="text-center">[Google](http://www.google.com "Google")</p>
+                    <h2>Images</h2>
+                    <p class="text-center">![Img Description](/path/to/kittens.jpg)</p>
+                    <p class="text-center">[![Description](http://kittens.com/kitty.jpg)](http://google.com)</p>
+                    <h2>Code</h2>
+                    <div class="code-hints" style="margin-top: 2em;">
+                        <div class="code-example row">
+                            <span class="offset-3 col-3">
+                            ```python<br>
+                            print "Hello world"<br>
+                            ```
+                            </span>
+
+                            <span class="col-3 markup"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">"Hello World"</span>
+</pre></div>
+</span>
+                        </div>
+                    </div>
+                    <p class="credit text-center" style="bottom: 10px; position: absolute; left: 0; right: 0; margin: 0 auto">
+                        <small>For a more detailed info visit the <a href="http://daringfireball.net/projects/markdown/basics">official Markdown website</a></small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div> <!-- end container -->
+
+        <!-- the forum footer -->
+        
+        <footer class="flaskbb-footer footer mt-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-sm-6">
+                        <div class="text-muted text-start"></div>
+                    </div>
+                    <div class="col-8 col-sm-6">
+                        <div class="text-muted text-end">
+                            powered by <a href="https://flaskbb.org">FlaskBB</a>
+                        </div>
+                        <div class="text-muted text-end">
+                            © 2013 - 2024 <a href="https://flaskbb.org">FlaskBB Team</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+    </div> <!-- end flaskbb-layout -->
+
+    
+    <script src="/static/vendors.js"></script>
+    <script src="/static/app.js"></script>
+
+    <script type="text/javascript">
+        const FORUM_URL_PREFIX = "";
+    </script>
+    
+
+    
+    
+    
+
+
+</body>
