@@ -2,6 +2,7 @@
 
 import os
 import re
+import logging
 from gzip import decompress
 
 import numpy as np
@@ -65,9 +66,13 @@ latex_image_class_names = [
 
 
 def _translator():
-    import py_asciimath.translator.translator as _translator
+    old_log_level = logging.getLogger().level
+    try:
+        import py_asciimath.translator.translator as _translator
 
-    return _translator
+        return _translator
+    finally:
+        logging.getLogger().setLevel(old_log_level)
 
 
 def ASCIIMath2Tex(*args, **kwargs):
