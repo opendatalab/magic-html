@@ -448,6 +448,14 @@ class Document:
                     reason = "less than 3x <p>s than <input>s"
                     to_remove = True
                 elif content_length < MIN_LEN and counts["img"] == 0:
+                    # 代码块内容过短，导致删除
+                    if el.tag in ['code', 'pre']:
+                        continue
+                    if ancestor_node_check(el, ['code', 'pre']):
+                        continue
+                    # 保留table中的链接
+                    if el.tag in ['ul', 'li', 'div', 'p'] and ancestor_node_check(el, ['td']):
+                        continue
                     reason = (
                             "too short content length %s without a single image"
                             % content_length
