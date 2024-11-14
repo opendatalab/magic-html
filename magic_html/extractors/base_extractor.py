@@ -760,6 +760,9 @@ class BaseExtractor:
             elemtext = trim(elem.text_content())
             result, templist = link_density_test(elem, elemtext, favor_precision)
             if result is True and img_div_check(elem):
+                # 保留table中的链接
+                if tagname in ['ul', 'li', 'div', 'p'] and ancestor_node_check(elem, ['td']):
+                    continue
                 deletions.append(elem)
             elif backtracking is True and len(templist) > 0:  # if?
                 myelems[elemtext].append(elem)

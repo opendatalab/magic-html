@@ -1,5 +1,5 @@
 Brotli
-cchardet
+cchardet==2.2.0a2
 charset_normalizer
 lxml<5.2.0
 numpy

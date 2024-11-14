@@ -173,6 +173,13 @@ def fromstring_bytes(htmlobject):
     return tree
 
 
+def ancestor_node_check(node: HtmlElement, tags: list):
+    for tag in tags:
+        if node.xpath(f'ancestor::{tag}[1]'):
+            return True
+    return False
+
+
 def load_html(htmlobject):
     if isinstance(htmlobject, HtmlElement):
         return htmlobject
