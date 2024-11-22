@@ -454,7 +454,7 @@ class Document:
                     if ancestor_node_check(el, ['code', 'pre']):
                         continue
                     # 保留table中的链接
-                    if el.tag in ['ul', 'li', 'div', 'p'] and ancestor_node_check(el, ['td']):
+                    if el.tag in ['ul', 'div'] and ancestor_node_check(el, ['td']):
                         continue
                     reason = (
                             "too short content length %s without a single image"
@@ -473,12 +473,24 @@ class Document:
                         ptest_len = text_len("".join(ptest))
                         if ptest_len >= MIN_LEN and link_density <= 0.3:
                             continue
+                    if tag == "table":
+                        if len(el.xpath('.//tr[1]/td')) >=2:
+                            continue
+                    if tag == "div":
+                        if el.xpath('.//table'):
+                            continue
                     reason = "too many links %.3f for its weight %s" % (
                         link_density,
                         weight,
                     )
                     to_remove = True
                 elif weight >= 25 and link_density > 0.5:
+                    if tag == "table":
+                        if len(el.xpath('.//tr[1]/td')) >= 2:
+                            continue
+                    if tag == "div":
+                        if el.xpath('.//table'):
+                            continue
                     reason = "too many links %.3f for its weight %s" % (
                         link_density,
                         weight,

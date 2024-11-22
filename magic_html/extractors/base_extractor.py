@@ -94,6 +94,9 @@ class BaseExtractor:
                                 continue
                     except:
                         pass
+
+                if ancestor_node_check(subtree, ['code', 'pre']):
+                    continue
                 self.remove_node(subtree)
         if with_backup is False:
             return tree
@@ -616,6 +619,12 @@ class BaseExtractor:
             if pparent in need_del_par or pparent in skip_par:
                 continue
             siblings = descendant.xpath(f"following-sibling::{tagname}")
+
+            if 'list' in descendant.get("class", "") and len(descendant.xpath('./a')) >= 5:
+                need_del_par.append(descendant)
+                need_del_par.extend(siblings)
+                continue
+
             nn = [descendant]
             nn.extend(siblings)
             txt_max_num = 0

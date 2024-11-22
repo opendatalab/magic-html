@@ -23,6 +23,10 @@ class ArticleExtractor(BaseExtractor):
         if base_href and "http" in base_href[0]:
             base_url = base_href[0]
 
+        if "://blog.csdn.net/" in base_url:
+            for dtree in tree.xpath('//div[@id="content_views"]//ul[@class="pre-numbering"]'):
+                self.remove_node(dtree)
+
         # 标签转换, 增加数学标签处理
         format_tree = self.convert_tags(tree, base_url=base_url)
 

@@ -23,7 +23,7 @@ def parse_requirements(filename):
 def get_version():
     command = ["git", "describe", "--tags"]
     try:
-        version = subprocess.check_output(command).strip()
+        version = subprocess.check_output(command).decode().strip()
         version_parts = version.split("-")
         if len(version_parts) > 1 and version_parts[0].startswith(
             "magic_html"
