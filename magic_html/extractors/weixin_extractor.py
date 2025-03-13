@@ -26,7 +26,10 @@ class WeixinExtractor(BaseExtractor):
 
         # 文章区域
         try:
-            body_tree = tree.xpath('.//*[@id="img-content"]')[0]
+            body_tree_match = tree.xpath('.//*[@id="img-content"]')
+            if not body_tree_match:
+                body_tree_match = tree.xpath('.//*[@id="js_content"]')
+            body_tree = body_tree_match[0]
         except:
             raise ValueError
 
