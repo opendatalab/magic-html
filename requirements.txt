@@ -1,7 +1,8 @@
 Brotli
 cchardet==2.2.0a2
 charset_normalizer
-lxml<5.2.0
+lxml>=6.1.0
+lxml_html_clean
 numpy
 py_asciimath
 urllib3

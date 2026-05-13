@@ -39,9 +39,8 @@ class ForumExtractor(BaseExtractor):
 
         # 论坛等独有
         body_html_tree = fromstring(body_html)
-        try:
-            body_tree = body_html_tree.body
-        except:
+        body_tree = body_html_tree.body
+        if body_tree is None:
             body_tree = Element("body")
             body_tree.extend(body_html_tree)
         main_ids = body_tree.xpath(f".//@{Unique_ID}")

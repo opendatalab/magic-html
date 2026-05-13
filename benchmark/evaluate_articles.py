@@ -217,7 +217,10 @@ def run_gne(name):
     extractor = GeneralNewsExtractor()
     datas = deepcopy(global_datas)
     for x in datas:
-        x["extract_content"] = extractor.extract(x["html"])["content"]
+        try:
+            x["extract_content"] = extractor.extract(x["html"])["content"]
+        except:
+            x["extract_content"] = ""
     global_info["func"].append(name)
     evaluate_result(datas)
 
