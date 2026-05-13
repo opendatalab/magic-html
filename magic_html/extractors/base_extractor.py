@@ -154,7 +154,7 @@ class BaseExtractor:
             elem.tag = "div"
 
         for expression in cleaning_list + ["form"]:
-            for element in tree.getiterator(expression):
+            for element in tree.iter(expression):
                 # 针对form 标签特殊处理
                 if element.tag == "form":
                     ptest = element.xpath(".//text()[not(ancestor::a)]")
@@ -598,7 +598,7 @@ class BaseExtractor:
                 absolute_url = urljoin(base_url, src_url)
                 node.attrib["src"] = absolute_url
 
-            if node.tag.lower() == "div" and not node.getchildren():
+            if node.tag.lower() == "div" and not list(node):
                 node.tag = "p"
 
             class_name = node.get("class")

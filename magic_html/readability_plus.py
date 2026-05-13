@@ -126,7 +126,7 @@ class Document:
             self.html = self._parse(self.input)
             if self.xpath:
                 root = self.html.getroottree()
-                for i in self.html.getiterator():
+                for i in self.html.iter():
                     i.attrib["x"] = root.getpath(i)
         return self.html
 
@@ -200,7 +200,7 @@ class Document:
             output = document_fromstring("<div/>")
         best_elem = best_candidate["elem"]
         parent = best_elem.getparent()
-        siblings = parent.getchildren() if parent is not None else [best_elem]
+        siblings = list(parent) if parent is not None else [best_elem]
         for sibling in siblings:
             append = False
             if sibling is best_elem:
@@ -230,7 +230,7 @@ class Document:
                 if html_partial:
                     output.append(sibling)
                 else:
-                    output.getchildren()[0].getchildren()[0].append(sibling)
+                    list(list(output)[0])[0].append(sibling)
         return output
 
     def select_best_candidate(self, candidates):

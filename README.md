@@ -22,7 +22,7 @@ magic-html提供了一套工具，能够轻松地从HTML中提取主体区域内
 ## 安装
 
 ```shell
-pip install https://github.com/opendatalab/magic-html/releases/download/magic_html-0.1.2-released/magic_html-0.1.2-py3-none-any.whl
+pip install https://github.com/opendatalab/magic-html/releases/download/magic_html-0.1.6-released/magic_html-0.1.6-py3-none-any.whl
 ```
 
 

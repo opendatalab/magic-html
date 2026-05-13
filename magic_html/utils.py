@@ -8,7 +8,7 @@ from gzip import decompress
 import numpy as np
 from lxml import etree
 from lxml.html import Element, HtmlElement, HTMLParser, fromstring, tostring
-from lxml.html.clean import Cleaner
+from lxml_html_clean import Cleaner
 from urllib3.response import HTTPResponse
 from magic_html.config import Unique_ID
 
@@ -208,7 +208,7 @@ def load_html(htmlobject):
 
 
 def is_empty_element(node: HtmlElement):
-    return not node.getchildren() and not node.text
+    return not list(node) and not node.text
 
 
 def iter_node(element: HtmlElement):
@@ -261,11 +261,11 @@ def alias(element):
 
     # 直接将当前子节点属性展示上来
     nth = ""
-    for child in element.getchildren():
+    for child in list(element):
         if child.tag in ["dt", "dd", "li"]:
             try:
                 # 子节点个数
-                nth += str(len(list(child.getchildren())))
+                nth += str(len(list(child)))
             except:
                 pass
             continue
